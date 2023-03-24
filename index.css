@@ -41,7 +41,7 @@
   }
 
   header {
-    margin-top: 2%;
+    margin-top: 5%;
     text-align: center;
     display: flex;
     flex-direction: column;
@@ -109,9 +109,10 @@
     text-decoration: none;
   }
 
-  p{
+  /*p{
     text-align: center;
   }
+  */
   @keyframes spin{
     from{transform:rotate(0deg)}
     to{transform:rotate(360deg)}	
