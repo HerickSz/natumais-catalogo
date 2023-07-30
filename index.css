@@ -1,4 +1,5 @@
-  body, html {
+  body,
+  html {
     overflow: hidden;
     margin: 0;
     padding: 0;
@@ -48,15 +49,15 @@
     align-items: center;
   }
 
-  header > img {
-    width: 6em;
-    height: 6em;
+  header>img {
+    width: 15em;
+    height: 15em;
     border-radius: 100%;
     border: 1px solid #fff;
     box-shadow: rgb(28 32 93 / 24%) 0px 2px 8px 0px;
   }
 
-  header > h1 {
+  header>h1 {
     display: inline-block;
     font-size: 0.8em;
     font-weight: bold;
@@ -77,31 +78,39 @@
     max-width: 480px;
   }
 
-  ul > li {
+  ul>li {
     background-color: #fffa;
     backdrop-filter: blur(10px) saturate(160%) contrast(180%);
     -webkit-backdrop-filter: blur(10px) saturate(160%) contrast(180%);
     border-radius: 10em;
     margin: 1.4em 0;
     box-shadow: rgb(28 32 93 / 24%) 0px 2px 8px 0px;
+    transition: 1s ease-out;
+    border: 5px solid transparent;
   }
 
-  ul > li > a {
+  ul>li>a {
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
     gap: 0.5em;
     padding: 1em;
+    font-size: 1.2em;
+
   }
 
-  ul li:hover img{
-    
-    animation: spin 4s infinite;
+
+
+  ul li:hover img {
+    animation: bounce 1s infinite alternate;
+    -webkit-animation: bounce 1s infinite alternate;
   }
-  ul li:hover{
+
+
+  ul li:hover {
     background-color: hsl(0, 0%, 100%);
-    transition:  1s ease-out;
+    border: 5px solid hsla(0, 100%, 50%, 0.726);
   }
 
   a {
@@ -113,7 +122,22 @@
     text-align: center;
   }
   */
-  @keyframes spin{
-    from{transform:rotate(0deg)}
-    to{transform:rotate(360deg)}	
+  @keyframes bounce {
+    from {
+      transform: translateY(0px);
+    }
+
+    to {
+      transform: translateY(-10px);
+    }
+  }
+
+  @-webkit-keyframes bounce {
+    from {
+      transform: translateY(0px);
+    }
+
+    to {
+      transform: translateY(-10px);
+    }
   }
