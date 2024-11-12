@@ -1,0 +1,263 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400&display=swap');
+
+
+
+
+.card2 {
+    display: flex;
+    justify-content: center;
+    width: 350px;
+    height: 400px;
+    position: relative;
+    background-color: #fff;
+    border-radius: 20px;
+    box-shadow: 0px 35px 80px rgba(0, 0, 0, 0.15);
+    transition: 0.5s;
+    cursor: pointer;
+}
+
+.card2:hover {
+    height: 450px;
+}
+
+.card2 .img-box {
+    position: absolute;
+    width: 250px;
+    height: auto;
+    top: 0px;
+    transition: 0.5s;
+}
+
+.card2:hover .img-box {
+    top: -100px;
+    scale: 0.75;
+}
+
+.card2 .img-box img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.card2 .content2 {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+    position: absolute;
+    top: 260px;
+    width: 100%;
+    padding: 0px 30px;
+    text-align: center;
+    height: 60px;
+    overflow: hidden;
+    transition: 0.5s;
+}
+
+
+.cardhover {
+    display: flex;
+    padding: 5%;
+    gap: 5%;
+    justify-content: center;
+}
+
+.card2:hover .content2 {
+    top: 130px;
+    height: 750px;
+}
+
+.card2 .read-more {
+    background: linear-gradient(90deg, #0a0e08, #198754);
+    padding: 12px;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 8px;
+    transition: 0.3s ease-in;
+}
+
+.card2 .read-more:hover {
+    background: linear-gradient(90deg, #198754, #0a0e08);
+    color: #fff;
+    text-decoration: none;
+    border-radius: 8px;
+    transform: scale(1.1);
+}
+
+select {
+    border: 1px solid #ff523b;
+    padding: 5px;
+
+
+}
+
+select:focus {
+    outline: none;
+
+}
+
+.page-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 80px;
+}
+
+.page-btn span {
+    display: inline-block;
+    border: 1px solid #198754;
+    margin-left: 10px;
+    width: 40px;
+    height: 40px;
+    text-align: center;
+    line-height: 40px;
+    cursor: pointer;
+}
+
+.page-btn span:hover {
+    color: #fff;
+    background: #198754;
+    transform: translateY(-5px);
+    transition: transform 0.5s;
+}
+
+
+.info {
+    width: 100%;
+    padding: 5px;
+    display: none;
+    transition: .1s ease-in;
+    color: #fff;
+    background-color: #198754;
+
+}
+
+
+
+.detalhes {
+    color: #ff523b;
+}
+
+
+.btinfo:hover>.info {
+    cursor: pointer;
+    display: block;
+    position: absolute;
+    right: 5%;
+    z-index: 999999;
+    border: 1px solid transparent;
+    border-radius: 10px;
+    text-align: center;
+
+}
+
+
+.btinfo:hover>.button-buy {
+    display: none;
+    transition: .1s ease-in;
+}
+
+
+@media (max-width: 1800px) {
+    nav.show .menu {
+        right: 0;
+        opacity: 1;
+        visibility: visible;
+        background-size: contain;
+        background-repeat: no-repeat;
+        height: 100vh;
+        background-image: url(./images/backmobilenav2.png);
+        width: 100vw;
+        position: fixed;
+        top: 0;
+        left: 0%;
+        display: grid;
+        place-content: center;
+        border: 1px solid green;
+        background-color: #fff;
+    }
+
+    .cardhover {
+        margin-top: 10%;
+        display: flex;
+        justify-content: space-around;
+        flex-wrap: wrap;
+        row-gap: 6rem;
+        column-gap: 0.5rem;
+    }
+
+    .card2 {
+        display: flex;
+        justify-content: center;
+        width: 300px;
+        height: 360px;
+        position: relative;
+        background-color: #fff;
+        border-radius: 20px;
+        box-shadow: 0px 35px 80px rgba(0, 0, 0, 0.15);
+        transition: 0.5s;
+        cursor: pointer;
+    }
+
+
+    .card2 .content2 {
+        display: flex;
+        flex-direction: column;
+        gap: 18px;
+        position: absolute;
+        top: 260px;
+        width: 100%;
+        padding: 0px 30px;
+        text-align: center;
+        height: 50px;
+        overflow: hidden;
+        transition: 0.5s;
+    }
+
+    body {
+        margin: 5rem 0 0;
+    }
+
+
+}
+
+
+@media (max-width: 420px) {
+    nav.show .menu {
+        right: 0;
+        opacity: 1;
+        visibility: visible;
+        background-size: cover;
+        background-repeat: no-repeat;
+        height: 100vh;
+        background-image: url(./images/backmobilenav.png);
+        width: 100vw;
+        position: fixed;
+        top: 0;
+        left: 0%;
+        display: grid;
+        place-content: center;
+        border-bottom: 5px solid green;
+        background-color: transparent;
+    }
+
+    .cardhover {
+        margin-top: 13%;
+        display: flex;
+        justify-content: space-around;
+        flex-wrap: wrap;
+        row-gap: 6rem;
+        column-gap: 0.5rem;
+    }
+
+    .card a {
+        position: absolute;
+        top: 90%;
+        right: 50px;
+        left: 5%;
+        width: 90%;
+        padding: 0.4rem 1rem;
+    }
+
+
+}
