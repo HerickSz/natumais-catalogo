@@ -63,6 +63,61 @@
             class="logo-detail">Novos Produtos!</span>
         </p>
 
+        <h1 class="searchh">Pesquisa de Produtos</h1>
+      <input type="text" id="searchInput" placeholder="Pesquisar produto..." onkeyup="searchProducts()">
+      <style>
+        /* Estilo para o título com a classe searchh */
+.searchh {
+  color: #28a745; /* Verde preferencial */
+  text-align: center; /* Centraliza o título */
+  font-size: 1.5em; /* Tamanho da fonte */
+  margin: 20px 0; /* Margens superior e inferior */
+}
+
+/* Estilo para o input */
+#searchInput {
+  width: 100%; /* Largura total */
+  max-width: 400px; /* Largura máxima */
+  padding: 10px; /* Espaçamento interno */
+  border: 2px solid #28a745; /* Borda verde */
+  border-radius: 5px; /* Cantos arredondados */
+  font-size: 1em; /* Tamanho da fonte */
+  margin: 0 auto; /* Centraliza o input */
+  display: block; /* Exibe como bloco */
+  transition: border-color 0.3s; /* Transição suave para a borda */
+  margin-bottom: 10px;
+}
+
+/* Efeito ao focar no input */
+#searchInput:focus {
+  border-color: #218838; /* Verde mais escuro ao focar */
+  outline: none; /* Remove o contorno padrão */
+}
+
+        
+.hidden {
+  display: none;
+}
+    </style>
+     <script>
+      function searchProducts() {
+          const input = document.getElementById('searchInput').value.toLowerCase();
+          const cards = document.querySelectorAll('.card');
+
+          cards.forEach(card => {
+              const title = card.querySelector('.title').textContent.toLowerCase();
+              const code = card.querySelector('.card-info .title').textContent.toLowerCase();
+
+              // Verifica se a entrada do usuário está contida no título ou no código
+              if (title.includes(input) || code.includes(input)) {
+                  card.classList.remove('hidden');
+              } else {
+                  card.classList.add('hidden');
+              }
+          });
+      }
+  </script>
+
         <h2 style="text-align: center;background-color: rgb(245 245 245);" class="title">Solorgan Página 3</h2>
         <div class="page-btn">
           <a href="solorgan.html"> <span>1</span></a>
@@ -75,210 +130,324 @@
 
           <div class="card">
             <p class="title">CÚRCUMA C/ PIMENTA PRETA 60 CAPS</p>
-
-            <img class="img2" src="../public/images/solorgan/curcumapimentapreta60caps.png"
-              alt="Pré-visualização do produto">
+            <img class="img2" src="../public/images/solorgan/curcumapimentapreta60caps.png" alt="CÚRCUMA C/ PIMENTA PRETA 60 CAPS">
             <div class="card-info">
-              <!--<p class="tag">Fonte verde</p><-->
-              <p class="title">COD: 1230</p>
-
-              <p class="shipping"></p>
-              <p class="shipping">Entrega a combinar</p>
+                <p class="title">COD: 1230</p>
+                <p class="shipping">Entrega a combinar</p>
             </div>
-
-            <div class="btinfo"><a class="button-buy">Detalhes</a>
-              <p class="info">Cúrcuma com Pimenta Preta é uma combinação chave, uma vez que a Pimenta Preta aumenta a
-                absorção da curcumina pelo organismo. </p>
+            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#productModal1">
+                Detalhes
+            </button>
+        
+            <!-- Modal 1 -->
+            <div class="modal fade" id="productModal1" tabindex="-1" aria-labelledby="productModalLabel1" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="productModalLabel1">CÚRCUMA C/ PIMENTA PRETA 60 CAPS</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fechar"></button>
+                        </div>
+                        <div class="modal-body">
+                            <img class="imgmodal" src="../public/images/solorgan/curcumapimentapreta60caps.png" alt="CÚRCUMA C/ PIMENTA PRETA 60 CAPS">
+                            <p>Cúrcuma com Pimenta Preta é uma combinação chave, uma vez que a Pimenta Preta aumenta a absorção da curcumina pelo organismo.</p>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+                        </div>
+                    </div>
+                </div>
             </div>
-          </div>
-          <div class="card">
-            <p class="title">ALCACHOFRA C/ 60 CAPS</p>
-            <img class="img2" src="../public/images/solorgan/alcachofra60caps.png" alt="Pré-visualização do produto">
-            <div class="card-info">
-              <!--<p class="tag">Fonte verde</p><-->
-              <p class="title">COD 60: 1234 </p>
-
-              <p class="shipping"></p>
-              <p class="shipping">Entrega a combinar</p>
-            </div>
-
-            <div class="btinfo"><a class="button-buy">Detalhes</a>
-              <p class="info">Alivia o desconforto abdominal, gases e náuseas.
-              </p>
-
-            </div>
-          </div>
-          <div class="card">
-            <p class="title"> MAGNÉSIO DIMALATO C/ 60 CAPS</p>
-            <img class="img2" src="../public/images/solorgan/magnesiodimalato60caps.png"
-              alt="Pré-visualização do produto">
-            <div class="card-info">
-              <!--<p class="tag">Fonte verde</p><-->
-              <p class="title">COD 60: 1264
-              </p>
-              <p class="shipping"></p>
-            </div>
-
-            <div class="btinfo"><a class="button-buy">Detalhes</a>
-              <p class="info">O magnésio dimalato é um suplemento alimentar que combina magnésio com ácido málico. O
-                magnésio é um mineral essencial que ajuda na contração e relaxamento dos músculos, e o ácido málico é um
-                ácido orgânico que fornece energia para as células.</p>
-              <p class="shipping">Entrega a combinar</p>
-            </div>
-          </div>
-
-          <div class="card">
-            <p class="title">ÔMEGA 3 C/ 60/120</p>
-            <img class="img2" src="../public/images/solorgan/omega360120caps.png" alt="Pré-visualização do produto">
-            <div class="card-info">
-              <!--<p class="tag">Fonte verde</p><-->
-              <p class="title">COD 60: 1311 </br>
-                COD 120: 1310</p>
-
-
-              <p class="shipping"></p>
-              <p class="shipping">Entrega a combinar</p>
-            </div>
-
-            <div class="btinfo"><a class="button-buy">Detalhes</a>
-              <p class="info">Tem ação anti-inflamatória, podendo ser utilizado para controlar os níveis de colesterol e
-                glicemia ou prevenir doenças cardiovasculares e cerebrais, além de melhorar a memória e a disposição.
-              </p>
-            </div>
-          </div>
-
-          <div class="card">
-            <p class="title">ESPINHEIRA SANTA C/60 CAPS</p>
-            <img class="img2" src="../public/images/solorgan/espinheirasanta60caps.png"
-              alt="Pré-visualização do produto">
-            <div class="card-info">
-              <!--<p class="tag">Fonte verde</p><-->
-              <p class="title">COD 60: 1546
-              </p>
-              <p class="shipping"></p>
-              <p class="shipping">Entrega a combinar</p>
-            </div>
-
-            <div class="btinfo"><a class="button-buy">Detalhes</a>
-              <p class="info">A espinheira-santa é uma planta medicinal brasileira, amplamente utilizada na medicina
-                popular no tratamento de gastrite e indigestão.</p>
-            </div>
-          </div>
-
-          <div class="card">
-            <p class="title">ISOFLAVONA COM AMORA C/ 60 CAPS</p>
-
-            <img class="img2" src="../public/images/solorgan/isoflavonaamora60caps.png"
-              alt="Pré-visualização do produto">
-            <div class="card-info">
-              <!--<p class="tag">Fonte verde</p><-->
-              <p class="title">COD 60: 1556
-              </p>
-
-
-              <p class="shipping"></p>
-              <p class="shipping">Entrega a combinar</p>
-            </div>
-
-            <div class="btinfo"><a class="button-buy">Detalhes</a>
-              <p class="info">Combinados, estes ativos proporcionam ação anti-inflamatória, cicatrizante e diurética,
-                ajudando o organismo a funcionar melhor. Eles atuam no reforço contra doenças hepáticas e renais, na
-                regulação de hormônios e no tratamento de lesões bucais diversas.
-              </p>
-            </div>
-          </div>
         </div>
-    </section>
+        
+        <div class="card">
+            <p class="title">ALCACHOFRA C/ 60 CAPS</p>
+            <img class="img2" src="../public/images/solorgan/alcachofra60caps.png" alt="ALCACHOFRA C/ 60 CAPS">
+            <div class="card-info">
+                <p class="title">COD 60: 1234</p>
+                <p class="shipping">Entrega a combinar</p>
+            </div>
+            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#productModal2">
+                Detalhes
+            </button>
+        
+            <!-- Modal 2 -->
+            <div class="modal fade" id="productModal2" tabindex="-1" aria-labelledby="productModalLabel2" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="productModalLabel2">ALCACHOFRA C/ 60 CAPS</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fechar"></button>
+                        </div>
+                        <div class="modal-body">
+                            <img class="imgmodal" src="../public/images/solorgan/alcachofra60caps.png" alt="ALCACHOFRA C/ 60 CAPS">
+                            <p>Alivia o desconforto abdominal, gases e náuseas.</p>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="card">
+            <p class="title">MAGNÉSIO DIMALATO C/ 60 CAPS</p>
+            <img class="img2" src="../public/images/solorgan/magnesiodimalato60caps.png" alt="MAGNÉSIO DIMALATO C/ 60 CAPS">
+            <div class="card-info">
+                <p class="title">COD 60: 1264</p>
+                <p class="shipping">Entrega a combinar</p>
+            </div>
+            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#productModal3">
+                Detalhes
+            </button>
+        
+            <!-- Modal 3 -->
+            <div class="modal fade" id="productModal3" tabindex="-1" aria-labelledby="productModalLabel3" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="productModalLabel3">MAGNÉSIO DIMALATO C/ 60 CAPS</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fechar"></button>
+                        </div>
+                        <div class="modal-body">
+                            <img class="imgmodal" src="../public/images/solorgan/magnesiodimalato60caps.png" alt="MAGNÉSIO DIMALATO C/ 60 CAPS">
+                            <p>O magnésio dimalato é um suplemento alimentar que combina magnésio com ácido málico. O magnésio é um mineral essencial que ajuda na contração e relaxamento dos músculos, e o ácido málico é um ácido orgânico que fornece energia para as células.</p>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="card">
+            <p class="title">ÔMEGA 3 C/ 60/120 CAPS</p>
+            <img class="img2" src="../public/images/solorgan/omega360120caps.png" alt="ÔMEGA 3 C/ 60/120 CAPS">
+            <div class="card-info">
+                <p class="title">COD 60: 1311</br>COD 120: 1310</p>
+                <p class="shipping">Entrega a combinar</p>
+            </div>
+            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#productModal4">
+                Detalhes
+            </button>
+        
+            <!-- Modal 4 -->
+            <div class="modal fade" id="productModal4" tabindex="-1" aria-labelledby="productModalLabel4" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="productModalLabel4">ÔMEGA 3 C/ 60/120 CAPS</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fechar"></button>
+                        </div>
+                        <div class="modal-body">
+                            <img class="imgmodal" src="../public/images/solorgan/omega360120caps.png" alt="ÔMEGA 3 C/ 60/120 CAPS">
+                            <p>Tem ação anti-inflamatória, podendo ser utilizado para controlar os níveis de colesterol e glicemia ou prevenir doenças cardiovasculares e cerebrais, além de melhorar a memória e a disposição.</p>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="card">
+            <p class="title">ESPINHEIRA SANTA C/ 60 CAPS</p>
+            <img class="img2" src="../public/images/solorgan/espinheirasanta60caps.png" alt="ESPINHEIRA SANTA C/ 60 CAPS">
+            <div class="card-info">
+                <p class="title">COD 60: 1546</p>
+                <p class="shipping">Entrega a combinar</p>
+            </div>
+            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#productModal5">
+                Detalhes
+            </button>
+        
+            <!-- Modal 5 -->
+            <div class="modal fade" id="productModal5" tabindex="-1" aria-labelledby="productModalLabel5" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="productModalLabel5">ESPINHEIRA SANTA C/ 60 CAPS</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fechar"></button>
+                        </div>
+                        <div class="modal-body">
+                            <img class="imgmodal" src="../public/images/solorgan/espinheirasanta60caps.png" alt="ESPINHEIRA SANTA C/ 60 CAPS">
+                            <p>A espinheira-santa é uma planta medicinal brasileira, amplamente utilizada na medicina popular no tratamento de gastrite e indigestão.</p>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="card">
+            <p class="title">ISOFLAVONA COM AMORA C/ 60 CAPS</p>
+            <img class="img2" src="../public/images/solorgan/isoflavonaamora60caps.png" alt="ISOFLAVONA COM AMORA C/ 60 CAPS">
+            <div class="card-info">
+                <p class="title">COD 60: 1556</p>
+                <p class="shipping">Entrega a combinar</p>
+            </div>
+            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#productModal6">
+                Detalhes
+            </button>
+        
+            <!-- Modal 6 -->
+            <div class="modal fade" id="productModal6" tabindex="-1" aria-labelledby="productModalLabel6" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="productModalLabel6">ISOFLAVONA COM AMORA C/ 60 CAPS</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fechar"></button>
+                        </div>
+                        <div class="modal-body">
+                            <img class="imgmodal" src="../public/images/solorgan/isoflavonaamora60caps.png" alt="ISOFLAVONA COM AMORA C/ 60 CAPS">
+                            <p>Combinados, estes ativos proporcionam ação anti-inflamatória, cicatrizante e diurética, ajudando o organismo a funcionar melhor. Eles atuam no reforço contra doenças hepáticas e renais, na regulação de hormônios e no tratamento de lesões bucais diversas.</p>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        
+   
     </br></br>
 
     <div class="divider-1"></div>
 
 
-    <section class="product-list wrapper">
-
-
-      <div class="cards-container">
+    
         <div class="card">
           <p class="title">VALERIANA C/ 60/120 CAPS</p>
-          <img class="img2" src="../public/images/solorgan/valeriana60caps.png" alt="Pré-visualização do produto">
+          <img class="img2" src="../public/images/solorgan/valeriana60caps.png" alt="VALERIANA C/ 60/120 CAPS">
           <div class="card-info">
-            <!--<p class="tag">Fonte verde</p><-->
-            <p class="title">COD 60: 1557
-            </p>
-            </p>
-
-            <p class="shipping"></p>
-            <p class="shipping">Entrega a combinar</p>
+              <p class="title">COD 60: 1557</p>
+              <p class="shipping">Entrega a combinar</p>
           </div>
-
-          <div class="btinfo"><a class="button-buy">Detalhes</a>
-            <p class="info">A valeriana é usada, principalmente, como sedativo e ajuda para dormir, especialmente em
-              partes da Europa. </br> Algumas pessoas também tomam valeriana para dor de cabeça, depressão, sintomas da
-              menopausa, síndrome pré-menstrual, batimentos cardíacos irregulares e tremores.</p>
-
+          <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#productModal1557">
+              Detalhes
+          </button>
+      
+          <!-- Modal 1557 -->
+          <div class="modal fade" id="productModal1557" tabindex="-1" aria-labelledby="productModalLabel1557" aria-hidden="true">
+              <div class="modal-dialog modal-dialog-centered">
+                  <div class="modal-content">
+                      <div class="modal-header">
+                          <h5 class="modal-title" id="productModalLabel1557">VALERIANA C/ 60/120 CAPS</h5>
+                          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fechar"></button>
+                      </div>
+                      <div class="modal-body">
+                          <img class="imgmodal" src="../public/images/solorgan/valeriana60caps.png" alt="VALERIANA C/ 60/120 CAPS">
+                          <p>A valeriana é usada, principalmente, como sedativo e ajuda para dormir, especialmente em partes da Europa. Algumas pessoas também tomam valeriana para dor de cabeça, depressão, sintomas da menopausa, síndrome pré-menstrual, batimentos cardíacos irregulares e tremores.</p>
+                      </div>
+                      <div class="modal-footer">
+                          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+                      </div>
+                  </div>
+              </div>
           </div>
-        </div>
-        <div class="card">
+      </div>
+      
+      <div class="card">
           <p class="title">AMORA C/120 CAPS</p>
-          <img class="img2" src="../public/images/solorgan/amora120caps.png" alt="Pré-visualização do produto">
+          <img class="img2" src="../public/images/solorgan/amora120caps.png" alt="AMORA C/120 CAPS">
           <div class="card-info">
-            <!--<p class="tag">Fonte verde</p><-->
-            <p class="title">COD 120: 1580</p>
-            </p>
-
-
-            <p class="shipping"></p>
-            <p class="shipping">Entrega a combinar</p>
+              <p class="title">COD 120: 1580</p>
+              <p class="shipping">Entrega a combinar</p>
           </div>
-
-          <div class="btinfo"><a class="button-buy">Detalhes</a>
-            <p class="info">O extrato de Amora pode auxiliar no alívio do conjunto de sintomas ligados às alterações
-              hormonais que ocorrem antes e após a menopausa, como os fogachos (ondas de calor), insônia, fadiga, dores
-              de cabeça, nervosismo, entre outros desconfortos.</p>
+          <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#productModal1580">
+              Detalhes
+          </button>
+      
+          <!-- Modal 1580 -->
+          <div class="modal fade" id="productModal1580" tabindex="-1" aria-labelledby="productModalLabel1580" aria-hidden="true">
+              <div class="modal-dialog modal-dialog-centered">
+                  <div class="modal-content">
+                      <div class="modal-header">
+                          <h5 class="modal-title" id="productModalLabel1580">AMORA C/120 CAPS</h5>
+                          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fechar"></button>
+                      </div>
+                      <div class="modal-body">
+                          <img class="imgmodal" src="../public/images/solorgan/amora120caps.png" alt="AMORA C/120 CAPS">
+                          <p>O extrato de Amora pode auxiliar no alívio do conjunto de sintomas ligados às alterações hormonais que ocorrem antes e após a menopausa, como os fogachos (ondas de calor), insônia, fadiga, dores de cabeça, nervosismo, entre outros desconfortos.</p>
+                      </div>
+                      <div class="modal-footer">
+                          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+                      </div>
+                  </div>
+              </div>
           </div>
-        </div>
-        <div class="card">
+      </div>
+      
+      <div class="card">
           <p class="title">DOLOMITA COM VITAMINA D C/ 60 CAPS</p>
-          <img class="img2" src="../public/images/solorgan/dolomitavitaminaD60caps.png"
-            alt="Pré-visualização do produto">
+          <img class="img2" src="../public/images/solorgan/dolomitavitaminaD60caps.png" alt="DOLOMITA COM VITAMINA D C/ 60 CAPS">
           <div class="card-info">
-            <!--<p class="tag">Fonte verde</p><-->
-            <p class="title">COD: 1622
-            </p>
-
-            <p class="shipping"></p>
-            <p class="shipping">Entrega a combinar</p>
+              <p class="title">COD: 1622</p>
+              <p class="shipping">Entrega a combinar</p>
           </div>
-
-          <div class="btinfo"><a class="button-buy">Detalhes</a>
-            <p class="info">É um ótimo aliado da pele, a dolomita contém propriedades que utilizada como máscara facial
-              possui facilidade em penetrar os poros da pele, ajudando relaxar, desafinar, fortalecer, tonificar, </br>
-              cicatrizar revitalizar a pele, e limpa-la de forma natural e saudável sem nenhum efeito colateral e
-              resultados imediatos.</p>
-
+          <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#productModal1622">
+              Detalhes
+          </button>
+      
+          <!-- Modal 1622 -->
+          <div class="modal fade" id="productModal1622" tabindex="-1" aria-labelledby="productModalLabel1622" aria-hidden="true">
+              <div class="modal-dialog modal-dialog-centered">
+                  <div class="modal-content">
+                      <div class="modal-header">
+                          <h5 class="modal-title" id="productModalLabel1622">DOLOMITA COM VITAMINA D C/ 60 CAPS</h5>
+                          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fechar"></button>
+                      </div>
+                      <div class="modal-body">
+                          <img class="imgmodal" src="../public/images/solorgan/dolomitavitaminaD60caps.png" alt="DOLOMITA COM VITAMINA D C/ 60 CAPS">
+                          <p>É um ótimo aliado da pele, a dolomita contém propriedades que utilizada como máscara facial possui facilidade em penetrar os poros da pele, ajudando a relaxar, desafinar, fortalecer, tonificar, cicatrizar, revitalizar a pele, e limpá-la de forma natural e saudável sem nenhum efeito colateral e resultados imediatos.</p>
+                      </div>
+                      <div class="modal-footer">
+                          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+                      </div>
+                  </div>
+              </div>
           </div>
-        </div>
-
-        <div class="card">
+      </div>
+      
+      <div class="card">
           <p class="title">CASTANHA DA ÍNDIA C/ 60/120 CAPS</p>
-          <img class="img2" src="../public/images/solorgan/castanhaindia60120caps.png"
-            alt="Pré-visualização do produto">
+          <img class="img2" src="../public/images/solorgan/castanhaindia60120caps.png" alt="CASTANHA DA ÍNDIA C/ 60/120 CAPS">
           <div class="card-info">
-            <!--<p class="tag">Fonte verde</p><-->
-            <p class="title">
-              COD 60: 1751 </br>
-              COD 120: 1750</p>
-            </p>
-            <p class="shipping"></p>
-            <p class="shipping">Entrega a combinar</p>
+              <p class="title">COD 60: 1751</br>COD 120: 1750</p>
+              <p class="shipping">Entrega a combinar</p>
           </div>
-
-          <div class="btinfo"><a class="button-buy">Detalhes</a>
-            <p class="info">Evita a oxidação das células de gordura, controlando os níveis de colesterol e
-              triglicerídeos no sangue e ajudando, assim, a evitar o surgimento de situações como infarto, aterosclerose
-              e derrame.</p>
+          <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#productModal1751">
+              Detalhes
+          </button>
+      
+          <!-- Modal 1751 -->
+          <div class="modal fade" id="productModal1751" tabindex="-1" aria-labelledby="productModalLabel1751" aria-hidden="true">
+              <div class="modal-dialog modal-dialog-centered">
+                  <div class="modal-content">
+                      <div class="modal-header">
+                          <h5 class="modal-title" id="productModalLabel1751">CASTANHA DA ÍNDIA C/ 60/120 CAPS</h5>
+                          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fechar"></button>
+                      </div>
+                      <div class="modal-body">
+                          <img class="imgmodal" src="../public/images/solorgan/castanhaindia60120caps.png" alt="CASTANHA DA ÍNDIA C/ 60/120 CAPS">
+                          <p>Evita a oxidação das células de gordura, controlando os níveis de colesterol e triglicerídeos no sangue e ajudando, assim, a evitar o surgimento de situações como infarto, aterosclerose e derrame.</p>
+                      </div>
+                      <div class="modal-footer">
+                          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+                      </div>
+                  </div>
+              </div>
           </div>
-        </div>
+      </div>
+      
+      </div>
+      
 
     </section>
     </br></br> </section>
@@ -388,7 +557,7 @@
 
             setInterval(refreshTime, 1000);</script>
 
-          <a style="color: #fff;" href="https://www.instagram.com/heerick.gg/" target="_blank"><p style="position: relative;" class="mt-5">byHerick&copy;
+          <a style="color: #fff;" href="https://www.instagram.com/hericksouza.gg/" target="_blank"><p style="position: relative;" class="mt-5">byHerick&copy;
           </p></a>
 
         </div>

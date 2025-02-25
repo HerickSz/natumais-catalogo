@@ -63,6 +63,61 @@
         <p class="title" style="text-align: center;color: rgb(0, 0, 0); font-size: 20px;">Confira nossos <span
             class="logo-detail">Novos Produtos!</span>
         </p>
+
+        <h1 class="searchh">Pesquisa de Produtos</h1>
+      <input type="text" id="searchInput" placeholder="Pesquisar produto..." onkeyup="searchProducts()">
+      <style>
+        /* Estilo para o título com a classe searchh */
+.searchh {
+  color: #28a745; /* Verde preferencial */
+  text-align: center; /* Centraliza o título */
+  font-size: 1.5em; /* Tamanho da fonte */
+  margin: 20px 0; /* Margens superior e inferior */
+}
+
+/* Estilo para o input */
+#searchInput {
+  width: 100%; /* Largura total */
+  max-width: 400px; /* Largura máxima */
+  padding: 10px; /* Espaçamento interno */
+  border: 2px solid #28a745; /* Borda verde */
+  border-radius: 5px; /* Cantos arredondados */
+  font-size: 1em; /* Tamanho da fonte */
+  margin: 0 auto; /* Centraliza o input */
+  display: block; /* Exibe como bloco */
+  transition: border-color 0.3s; /* Transição suave para a borda */
+  margin-bottom: 10px;
+}
+
+/* Efeito ao focar no input */
+#searchInput:focus {
+  border-color: #218838; /* Verde mais escuro ao focar */
+  outline: none; /* Remove o contorno padrão */
+}
+
+        
+.hidden {
+  display: none;
+}
+    </style>
+     <script>
+      function searchProducts() {
+          const input = document.getElementById('searchInput').value.toLowerCase();
+          const cards = document.querySelectorAll('.card');
+
+          cards.forEach(card => {
+              const title = card.querySelector('.title').textContent.toLowerCase();
+              const code = card.querySelector('.card-info .title').textContent.toLowerCase();
+
+              // Verifica se a entrada do usuário está contida no título ou no código
+              if (title.includes(input) || code.includes(input)) {
+                  card.classList.remove('hidden');
+              } else {
+                  card.classList.add('hidden');
+              }
+          });
+      }
+  </script>
         <div class="page-btn">
           <a class="active-span" href="fonte-verde.html"><span>1</span></a>
           <a class="active-span" href="fonte-verde2.html"><span>2</span></a>
@@ -76,383 +131,563 @@
         <div class="cards-container">
           <div class="card">
             <p class="title">GARRA DC C/60</p>
-            <img class="img2" src=".././public/images/fonte verde/garraDC 60caps.png" alt="Pré-visualização do produto">
+            <img class="img2" src="../public/images/fonte verde/garraDC 60caps.png" alt="GARRA DC C/60">
             <div class="card-info">
-              <!--<p class="tag">Fonte verde</p><-->
-              <p class="title">COD:95</p>
-
-
-
-              <!--<p class="shipping">12UN /CX</p>-->
-              <p class="shipping">Entrega a combinar</p>
+                <p class="title">COD: 95</p>
+                <p class="shipping">Entrega a combinar</p>
             </div>
-
-            <div class="btinfo"><a class="button-buy">Detalhes</a>
-              <p class="info">Trata a artrite, inflamações das articulações, ajuda ao combate da fibromialgia, tendinite
-                e artrose.</p>
+            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#productModal95">
+                Detalhes
+            </button>
+            <!-- Modal -->
+            <div class="modal fade" id="productModal95" tabindex="-1" aria-labelledby="productModalLabel95" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="productModalLabel95">GARRA DC C/60</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fechar"></button>
+                        </div>
+                        <div class="modal-body">
+                            <img class="imgmodal" src="../public/images/fonte verde/garraDC 60caps.png" alt="GARRA DC C/60">
+                            <p>Trata a artrite, inflamações das articulações, ajuda ao combate da fibromialgia, tendinite e artrose.</p>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+                        </div>
+                    </div>
+                </div>
             </div>
-          </div>
-          <div class="card">
-            <p class="title">GINKGO BILOBA C/60 CAPS</p>
-            <img class="img2" src=".././public/images/fonte verde/ginkgo biloba 60caps.png"
-              alt="Pré-visualização do produto">
-            <div class="card-info">
-              <!--<p class="tag">Fonte verde</p><-->
-              <p class="title">COD:98</p>
-
-
-              <!--<p class="shipping">12UN /CX</p>-->
-              <p class="shipping">Entrega a combinar</p>
-            </div>
-
-            <div class="btinfo"><a class="button-buy">Detalhes</a>
-              <p class="info">Melhora o rendimento e concentração no dia a dia, melhora o fluxo sanguíneo, e tem forte
-                ação anti-inflamatória e antioxidante.</p>
-            </div>
-          </div>
-          <div class="card">
-            <p class="title">GINKGO BILOBA COM GINSENG C/60 CAPS</p>
-            <img class="img2" src=".././public/images/fonte verde/ginkgoBiGinseng 60caps.png"
-              alt="Pré-visualização do produto">
-            <div class="card-info">
-              <!--<p class="tag">Fonte verde</p><-->
-              <p class="title">COD:99</p>
-
-
-              <!--<p class="shipping">12UN /CX</p>-->
-              <p class="shipping">Entrega a combinar</p>
-            </div>
-
-            <div class="btinfo"><a class="button-buy">Detalhes</a>
-              <p class="info">É um suplemento com função estimulante e antioxidante, que melhora a circulação sanguínea
-                e é conhecido por estimular, revitalizar e reduzir a fadiga, estresse e cansaço físico, sendo assim,
-                aumentando a disposição.</p>
-            </div>
-          </div>
-
-          <div class="card">
-            <p class="title">GINKGO BILOBA C/ CASTANHA DA ÍNDIA C/60 CAPS</p>
-            <img class="img2" src=".././public/images/fonte verde/ginkgoBiCastanhaIndia60caps.png"
-              alt="Pré-visualização do produto">
-            <div class="card-info">
-              <!--<p class="tag">Fonte verde</p><-->
-              <p class="title">Cod:100</p>
-
-
-              <!--<p class="shipping">12UN /CX</p>-->
-              <p class="shipping">Entrega a combinar</p>
-            </div>
-
-            <div class="btinfo"><a class="button-buy">Detalhes</a>
-              <p class="info">melhora a circulação sanguínea
-                e estimula, revitaliza e reduz a fadiga</br> A castanha da Índia combate
-                inflamações,
-                varizes, e dores nas pernas e cólicas menstruais.</p>
-            </div>
-          </div>
-
-          <div class="card">
-            <p class="title">GINSENG C/60 CAPS</p>
-            <img class="img2" src=".././public/images/fonte verde/Ginseng 60caps.png" alt="Pré-visualização do produto">
-            <div class="card-info">
-              <!--<p class="tag">Fonte verde</p><-->
-              <p class="title">Cod:101</p>
-
-
-              <!--<p class="shipping">12UN /CX</p>-->
-              <p class="shipping">Entrega a combinar</p>
-            </div>
-
-            <div class="btinfo"><a class="button-buy">Detalhes</a>
-              <p class="info">É um tônico revigorante que auxilía a manutenção da memória e no combate ao estresse
-                físico e mental. </br>
-                Trata a ciruculação, a diabetes, insônia e não engorda.</p>
-            </div>
-          </div>
-
-          <div class="card">
-            <p class="title">GRAVIOLA C/60 CAPS</p>
-            <img class="img2" src=".././public/images/fonte verde/graviola 60caps.png"
-              alt="Pré-visualização do produto">
-            <div class="card-info">
-              <!--<p class="tag">Fonte verde</p><-->
-              <p class="title">Cod:102</p>
-
-
-              <!--<p class="shipping">12UN /CX</p>-->
-              <p class="shipping">Entrega a combinar</p>
-            </div>
-
-            <div class="btinfo"><a class="button-buy">Detalhes</a>
-              <p class="info">Rica em vitaminas minerais, ajuda no tratamento do câncer. </br>
-                É rica em fibras e é utilizada para o controle da diabetes, constipação e no processo de emagrecimento.
-              </p>
-            </div>
-          </div>
-
         </div>
-      </div>
-    </section>
+        
+        <div class="card">
+            <p class="title">GINKGO BILOBA C/60 CAPS</p>
+            <img class="img2" src="../public/images/fonte verde/ginkgo biloba 60caps.png" alt="GINKGO BILOBA C/60 CAPS">
+            <div class="card-info">
+                <p class="title">COD: 98</p>
+                <p class="shipping">Entrega a combinar</p>
+            </div>
+            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#productModal98">
+                Detalhes
+            </button>
+            <!-- Modal -->
+            <div class="modal fade" id="productModal98" tabindex="-1" aria-labelledby="productModalLabel98" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="productModalLabel98">GINKGO BILOBA C/60 CAPS</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fechar"></button>
+                        </div>
+                        <div class="modal-body">
+                            <img class="imgmodal" src="../public/images/fonte verde/ginkgo biloba 60caps.png" alt="GINKGO BILOBA C/60 CAPS">
+                            <p>Melhora o rendimento e concentração no dia a dia, melhora o fluxo sanguíneo, e tem forte ação anti-inflamatória e antioxidante.</p>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="card">
+            <p class="title">GINKGO BILOBA COM GINSENG C/60 CAPS</p>
+            <img class="img2" src="../public/images/fonte verde/ginkgoBiGinseng 60caps.png" alt="GINKGO BILOBA COM GINSENG C/60 CAPS">
+            <div class="card-info">
+                <p class="title">COD: 99</p>
+                <p class="shipping">Entrega a combinar</p>
+            </div>
+            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#productModal99">
+                Detalhes
+            </button>
+            <!-- Modal -->
+            <div class="modal fade" id="productModal99" tabindex="-1" aria-labelledby="productModalLabel99" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="productModalLabel99">GINKGO BILOBA COM GINSENG C/60 CAPS</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fechar"></button>
+                        </div>
+                        <div class="modal-body">
+                            <img class="imgmodal" src="../public/images/fonte verde/ginkgoBiGinseng 60caps.png" alt="GINKGO BILOBA COM GINSENG C/60 CAPS">
+                            <p>É um suplemento com função estimulante e antioxidante, que melhora a circulação sanguínea e é conhecido por estimular, revitalizar e reduzir a fadiga, estresse e cansaço físico, sendo assim, aumentando a disposição.</p>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="card">
+            <p class="title">GINKGO BILOBA C/ CASTANHA DA ÍNDIA C/60 CAPS</p>
+            <img class="img2" src="../public/images/fonte verde/ginkgoBiCastanhaIndia60caps.png" alt="GINKGO BILOBA C/ CASTANHA DA ÍNDIA C/60 CAPS">
+            <div class="card-info">
+                <p class="title">COD: 100</p>
+                <p class="shipping">Entrega a combinar</p>
+            </div>
+            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#productModal100">
+                Detalhes
+            </button>
+            <!-- Modal -->
+            <div class="modal fade" id="productModal100" tabindex="-1" aria-labelledby="productModalLabel100" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="productModalLabel100">GINKGO BILOBA C/ CASTANHA DA ÍNDIA C/60 CAPS</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fechar"></button>
+                        </div>
+                        <div class="modal-body">
+                            <img class="imgmodal" src="../public/images/fonte verde/ginkgoBiCastanhaIndia60caps.png" alt="GINKGO BILOBA C/ CASTANHA DA ÍNDIA C/60 CAPS">
+                            <p>Melhora a circulação sanguínea e estimula, revitaliza e reduz a fadiga. A castanha da Índia combate inflamações, varizes, e dores nas pernas e cólicas menstruais.</p>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="card">
+            <p class="title">GINSENG C/60 CAPS</p>
+            <img class="img2" src="../public/images/fonte verde/Ginseng 60caps.png" alt="GINSENG C/60 CAPS">
+            <div class="card-info">
+                <p class="title">COD: 101</p>
+                <p class="shipping">Entrega a combinar</p>
+            </div>
+            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#productModal101">
+                Detalhes
+            </button>
+            <!-- Modal -->
+            <div class="modal fade" id="productModal101" tabindex="-1" aria-labelledby="productModalLabel101" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="productModalLabel101">GINSENG C/60 CAPS</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fechar"></button>
+                        </div>
+                        <div class="modal-body">
+                            <img class="imgmodal" src="../public/images/fonte verde/Ginseng 60caps.png" alt="GINSENG C/60 CAPS">
+                            <p>É um tônico revigorante que auxilia a manutenção da memória e no combate ao estresse físico e mental. Trata a circulação, a diabetes, insônia e não engorda.</p>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="card">
+            <p class="title">GRAVIOLA C/60 CAPS</p>
+            <img class="img2" src="../public/images/fonte verde/graviola 60caps.png" alt="GRAVIOLA C/60 CAPS">
+            <div class="card-info">
+                <p class="title">COD: 102</p>
+                <p class="shipping">Entrega a combinar</p>
+            </div>
+            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#productModal102">
+                Detalhes
+            </button>
+            <!-- Modal -->
+            <div class="modal fade" id="productModal102" tabindex="-1" aria-labelledby="productModalLabel102" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="productModalLabel102">GRAVIOLA C/60 CAPS</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fechar"></button>
+                        </div>
+                        <div class="modal-body">
+                            <img class="imgmodal" src="../public/images/fonte verde/graviola 60caps.png" alt="GRAVIOLA C/60 CAPS">
+                            <p>Rica em vitaminas minerais, ajuda no tratamento do câncer. É rica em fibras e é utilizada para o controle da diabetes, constipação e no processo de emagrecimento.</p>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+
+       
+      
+  
     </br></br>
 
     <div class="divider-1"></div>
 
 
-    <section class="product-list wrapper">
-
-
-      <div class="cards-container">
+    
         <div class="card">
           <p class="title">GUARANÁ DO AMAZONAS C/60 CAPS</p>
-          <img class="img2" src=".././public/images/fonte verde/guaranaAmazonas 60caps.png"
-            alt="Pré-visualização do produto">
+          <img class="img2" src="../public/images/fonte verde/guaranaAmazonas 60caps.png" alt="GUARANÁ DO AMAZONAS C/60 CAPS">
           <div class="card-info">
-            <!--<p class="tag">Fonte verde</p><-->
-            <p class="title">Cod:103</p>
-
-
-            <!--<p class="shipping">12UN /CX</p>-->
-            <p class="shipping">Entrega a combinar</p>
+              <p class="title">Cod: 103</p>
+              <p class="shipping">Entrega a combinar</p>
           </div>
-
-          <div class="btinfo"><a class="button-buy">Detalhes</a>
-            <p class="info">Melhora a nitidez mental, a digestão, o metabolismo, além de ser usada para melhorar o
-              desempenho físico e aliviar dores de cabeça e por fim controlar níveis de açucar e colesterol.
-            </p>
+          <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#productModal103">
+              Detalhes
+          </button>
+          <!-- Modal -->
+          <div class="modal fade" id="productModal103" tabindex="-1" aria-labelledby="productModalLabel103" aria-hidden="true">
+              <div class="modal-dialog modal-dialog-centered">
+                  <div class="modal-content">
+                      <div class="modal-header">
+                          <h5 class="modal-title" id="productModalLabel103">GUARANÁ DO AMAZONAS C/60 CAPS</h5>
+                          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fechar"></button>
+                      </div>
+                      <div class="modal-body">
+                          <img class="imgmodal" src="../public/images/fonte verde/guaranaAmazonas 60caps.png" alt="GUARANÁ DO AMAZONAS C/60 CAPS">
+                          <p>Melhora a nitidez mental, a digestão, o metabolismo, além de ser usada para melhorar o desempenho físico e aliviar dores de cabeça e por fim controlar níveis de açúcar e colesterol.</p>
+                      </div>
+                      <div class="modal-footer">
+                          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+                      </div>
+                  </div>
+              </div>
           </div>
-        </div>
-
-
-        <div class="card">
+      </div>
+      
+      <div class="card">
           <p class="title">GENGIBRE C/60 CAPS</p>
-          <img class="img2" src=".././public/images/fonte verde/gengibre 60caps.png" alt="Pré-visualização do produto">
+          <img class="img2" src="../public/images/fonte verde/gengibre 60caps.png" alt="GENGIBRE C/60 CAPS">
           <div class="card-info">
-            <!--<p class="tag">Fonte verde</p><-->
-            <p class="title">COD:104
-            </p>
-
-
-
-            <!--<p class="shipping">12UN /CX</p>-->
-            <p class="shipping">Entrega a combinar</p>
+              <p class="title">COD: 104</p>
+              <p class="shipping">Entrega a combinar</p>
           </div>
-
-          <div class="btinfo"><a class="button-buy">Detalhes</a>
-            <p class="info">Protege o corpo contra bactérias e fungos, rico em vitamina B6 e minerais como potássio,
-              magnéssio e cobre, queima a gordura corporal.</br>
+          <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#productModal104">
+              Detalhes
+          </button>
+          <!-- Modal -->
+          <div class="modal fade" id="productModal104" tabindex="-1" aria-labelledby="productModalLabel104" aria-hidden="true">
+              <div class="modal-dialog modal-dialog-centered">
+                  <div class="modal-content">
+                      <div class="modal-header">
+                          <h5 class="modal-title" id="productModalLabel104">GENGIBRE C/60 CAPS</h5>
+                          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fechar"></button>
+                      </div>
+                      <div class="modal-body">
+                          <img class="imgmodal" src="../public/images/fonte verde/gengibre 60caps.png" alt="GENGIBRE C/60 CAPS">
+                          <p>Protege o corpo contra bactérias e fungos, rico em vitamina B6 e minerais como potássio, magnésio e cobre, queima a gordura corporal.</p>
+                      </div>
+                      <div class="modal-footer">
+                          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+                      </div>
+                  </div>
+              </div>
           </div>
-        </div>
-        <div class="card">
+      </div>
+      
+      <div class="card">
           <p class="title">FUMOFIM C/60 CAPS</p>
-          <img class="img2" src="../public/images/fonte-vida/about.png" alt="Pré-visualização do produto">
+          <img class="img2" src="../public/images/fonte-vida/about.png" alt="FUMOFIM C/60 CAPS">
           <div class="card-info">
-            <!--<p class="tag">Fonte verde</p><-->
-            <p class="title">COD:105
-            </p>
-
-
-            <!--<p class="shipping">12UN /CX</p>-->
-            <p class="shipping">Entrega a combinar</p>
+              <p class="title">COD: 105</p>
+              <p class="shipping">Entrega a combinar</p>
           </div>
-
-          <div class="btinfo"><a class="button-buy">Detalhes</a>
-            <p class="info">Ajuda a controlar o efeito da nicotina e induz a parar de fumar.</p>
+          <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#productModal105">
+              Detalhes
+          </button>
+          <!-- Modal -->
+          <div class="modal fade" id="productModal105" tabindex="-1" aria-labelledby="productModalLabel105" aria-hidden="true">
+              <div class="modal-dialog modal-dialog-centered">
+                  <div class="modal-content">
+                      <div class="modal-header">
+                          <h5 class="modal-title" id="productModalLabel105">FUMOFIM C/60 CAPS</h5>
+                          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fechar"></button>
+                      </div>
+                      <div class="modal-body">
+                          <img class="imgmodal" src="../public/images/fonte-vida/about.png" alt="FUMOFIM C/60 CAPS">
+                          <p>Ajuda a controlar o efeito da nicotina e induz a parar de fumar.</p>
+                      </div>
+                      <div class="modal-footer">
+                          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+                      </div>
+                  </div>
+              </div>
           </div>
-        </div>
-        <div class="card">
+      </div>
+      
+      <div class="card">
           <p class="title">HIBISCO C/60 CAPS</p>
-          <img class="img2" src=".././public/images/fonte verde/hibisco 60caps.png" alt="Pré-visualização do produto">
+          <img class="img2" src="../public/images/fonte verde/hibisco 60caps.png" alt="HIBISCO C/60 CAPS">
           <div class="card-info">
-            <!--<p class="tag">Fonte verde</p><-->
-            <p class="title">COD:106
-            </p>
-
-
-            <!--<p class="shipping">12UN /CX</p>-->
+              <p class="title">COD: 106</p>
+              <p class="shipping">Entrega a combinar</p>
           </div>
-
-          <div class="btinfo"><a class="button-buy">Detalhes</a>
-            <p class="info">O Hibisco ajuda na pressão sanguínea, evita doenças e problemas nos rins, tendo em sua
-              composição uma ação anti-oxidante.</p>
+          <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#productModal106">
+              Detalhes
+          </button>
+          <!-- Modal -->
+          <div class="modal fade" id="productModal106" tabindex="-1" aria-labelledby="productModalLabel106" aria-hidden="true">
+              <div class="modal-dialog modal-dialog-centered">
+                  <div class="modal-content">
+                      <div class="modal-header">
+                          <h5 class="modal-title" id="productModalLabel106">HIBISCO C/60 CAPS</h5>
+                          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fechar"></button>
+                      </div>
+                      <div class="modal-body">
+                          <img class="imgmodal" src="../public/images/fonte verde/hibisco 60caps.png" alt="HIBISCO C/60 CAPS">
+                          <p>O Hibisco ajuda na pressão sanguínea, evita doenças e problemas nos rins, tendo em sua composição uma ação anti-oxidante.</p>
+                      </div>
+                      <div class="modal-footer">
+                          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+                      </div>
+                  </div>
+              </div>
           </div>
-        </div>
-
-        <div class="card">
+      </div>
+      
+      <div class="card">
           <p class="title">ISOFLAVONA C/ 60 CAPS</p>
-          <img class="img2" src=".././public/images/fonte verde/isoflavona 60caps.png"
-            alt="Pré-visualização do produto">
+          <img class="img2" src="../public/images/fonte verde/isoflavona 60caps.png" alt="ISOFLAVONA C/ 60 CAPS">
           <div class="card-info">
-            <!--<p class="tag">Fonte verde</p><-->
-            <p class="title">COD:111
-            </p>
-
-            <!--<p class="shipping">12UN /CX</p>-->
-            <p class="shipping">Entrega a combinar</p>
+              <p class="title">COD: 111</p>
+              <p class="shipping">Entrega a combinar</p>
           </div>
-
-          <div class="btinfo"><a class="button-buy">Detalhes</a>
-            <p class="info">Grande aliado das mulheres, alivia sintomas da menopausa, insônias e dores de cabeça. </br>
-              Aumenta o sistema imunológico e age na prevenção de doenças como o câncer de mama.</p>
+          <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#productModal111">
+              Detalhes
+          </button>
+          <!-- Modal -->
+          <div class="modal fade" id="productModal111" tabindex="-1" aria-labelledby="productModalLabel111" aria-hidden="true">
+              <div class="modal-dialog modal-dialog-centered">
+                  <div class="modal-content">
+                      <div class="modal-header">
+                          <h5 class="modal-title" id="productModalLabel111">ISOFLAVONA C/ 60 CAPS</h5>
+                          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fechar"></button>
+                      </div>
+                      <div class="modal-body">
+                          <img class="imgmodal" src="../public/images/fonte verde/isoflavona 60caps.png" alt="ISOFLAVONA C/ 60 CAPS">
+                          <p>Grande aliado das mulheres, alivia sintomas da menopausa, insônias e dores de cabeça. Aumenta o sistema imunológico e age na prevenção de doenças como o câncer de mama.</p>
+                      </div>
+                      <div class="modal-footer">
+                          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+                      </div>
+                  </div>
+              </div>
           </div>
-        </div>
-
-        <div class="card">
+      </div>
+      
+      <div class="card">
           <p class="title">ISOFLAVONA COM AMORA C/60 & 120 CAPS</p>
-          <img class="img2" src=".././public/images/fonte verde/isoflavonaAmora 60caps.png"
-            alt="Pré-visualização do produto">
+          <img class="img2" src="../public/images/fonte verde/isoflavonaAmora 60caps.png" alt="ISOFLAVONA COM AMORA C/60 & 120 CAPS">
           <div class="card-info">
-            <!--<p class="tag">Fonte verde</p><-->
-            <p class="title">COD 60:112 </br>
-              COD 120:113
-            </p>
-
-
-            <!--<p class="shipping">12UN /CX</p>-->
-            <p class="shipping">Entrega a combinar</p>
+              <p class="title">COD 60:112 </br> COD 120:113</p>
+              <p class="shipping">Entrega a combinar</p>
           </div>
-
-          <div class="btinfo"><a class="button-buy">Detalhes</a>
-            <p class="info">Grande aliado das mulheres, alivia sintomas da menopausa, insônias e dores de cabeça. </br>
-              A Amora é rica em minerais como o potássio, magnésio e manganês, excelente aliado na prevenção à acidentes
-              vasculares.</p>
+          <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#productModal112">
+              Detalhes
+          </button>
+          <!-- Modal -->
+          <div class="modal fade" id="productModal112" tabindex="-1" aria-labelledby="productModalLabel112" aria-hidden="true">
+              <div class="modal-dialog modal-dialog-centered">
+                  <div class="modal-content">
+                      <div class="modal-header">
+                          <h5 class="modal-title" id="productModalLabel112">ISOFLAVONA COM AMORA C/60 & 120 CAPS</h5>
+                          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fechar"></button>
+                      </div>
+                      <div class="modal-body">
+                          <img class="imgmodal" src="../public/images/fonte verde/isoflavonaAmora 60caps.png" alt="ISOFLAVONA COM AMORA C/60 & 120 CAPS">
+                          <p>Grande aliado das mulheres, alivia sintomas da menopausa, insônias e dores de cabeça. A Amora é rica em minerais como o potássio, magnésio e manganês, excelente aliado na prevenção à acidentes vasculares.</p>
+                      </div>
+                      <div class="modal-footer">
+                          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+                      </div>
+                  </div>
+              </div>
           </div>
-        </div>
-
-
-    </section>
+      </div>
+      
     </br></br>
 
     <div class="divider-1"></div>
-    <section class="product-list wrapper">
-
-      <div class="cards-container">
+   
         <div class="card">
           <p class="title">DIABÉTICO C/60 CAPS</p>
-          <img class="img2" src=".././public/images/fonte verde/diabetico 60caps.png" alt="Pré-visualização do produto">
+          <img class="img2" src="../public/images/fonte verde/diabetico 60caps.png" alt="DIABÉTICO C/60 CAPS">
           <div class="card-info">
-            <!--<p class="tag">Fonte verde</p><-->
-            <p class="title">COD: 76
-            </p>
-
-            <!--<p class="shipping">12UN /CX</p>-->
-            <p class="shipping">Entrega a combinar</p>
-
+              <p class="title">COD: 76</p>
+              <p class="shipping">Entrega a combinar</p>
           </div>
-          <div class="btinfo"><a class="button-buy">Detalhes</a>
-            <p class="info">É rico em carboidratos, proteínas, sais minerais, vitaminas. </br>
-              Usado para tratamento de diabetes e abaixar níveis de glicose no sangue, perfeito redutor de açúcar</p>
-
+          <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#productModal76">
+              Detalhes
+          </button>
+          <!-- Modal -->
+          <div class="modal fade" id="productModal76" tabindex="-1" aria-labelledby="productModalLabel76" aria-hidden="true">
+              <div class="modal-dialog modal-dialog-centered">
+                  <div class="modal-content">
+                      <div class="modal-header">
+                          <h5 class="modal-title" id="productModalLabel76">DIABÉTICO C/60 CAPS</h5>
+                          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fechar"></button>
+                      </div>
+                      <div class="modal-body">
+                          <img class="imgmodal" src="../public/images/fonte verde/diabetico 60caps.png" alt="DIABÉTICO C/60 CAPS">
+                          <p>É rico em carboidratos, proteínas, sais minerais e vitaminas. Usado para tratamento de diabetes e para abaixar níveis de glicose no sangue, sendo um perfeito redutor de açúcar.</p>
+                      </div>
+                      <div class="modal-footer">
+                          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+                      </div>
+                  </div>
+              </div>
           </div>
-
-        </div>
-
-
-        <div class="card">
+      </div>
+      
+      <div class="card">
           <p class="title">KAWA KAWA C/60 CAPS</p>
-          <img class="img2" src=".././public/images/fonte verde/kawakawa 60caps.png" alt="Pré-visualização do produto">
+          <img class="img2" src="../public/images/fonte verde/kawakawa 60caps.png" alt="KAWA KAWA C/60 CAPS">
           <div class="card-info">
-            <!--<p class="tag">Fonte verde</p><-->
-            <p class="title">COD: 114
-            </p>
-
-
-            <!--<p class="shipping">12UN /CX</p>-->
-            <p class="shipping">Entrega a combinar</p>
-
+              <p class="title">COD: 114</p>
+              <p class="shipping">Entrega a combinar</p>
           </div>
-          <div class="btinfo"><a class="button-buy">Detalhes</a>
-            <p class="info">O Kawa Kawa alivia a dor de cabeça, é capaz de destruir fungos, e tem efeito terapêutico no
-              sistema límbico(sistema do cérebro que controla as emoções).</p>
+          <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#productModal114">
+              Detalhes
+          </button>
+          <!-- Modal -->
+          <div class="modal fade" id="productModal114" tabindex="-1" aria-labelledby="productModalLabel114" aria-hidden="true">
+              <div class="modal-dialog modal-dialog-centered">
+                  <div class="modal-content">
+                      <div class="modal-header">
+                          <h5 class="modal-title" id="productModalLabel114">KAWA KAWA C/60 CAPS</h5>
+                          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fechar"></button>
+                      </div>
+                      <div class="modal-body">
+                          <img class="imgmodal" src="../public/images/fonte verde/kawakawa 60caps.png" alt="KAWA KAWA C/60 CAPS">
+                          <p>O Kawa Kawa alivia a dor de cabeça, é capaz de destruir fungos, e tem efeito terapêutico no sistema límbico (sistema do cérebro que controla as emoções).</p>
+                      </div>
+                      <div class="modal-footer">
+                          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+                      </div>
+                  </div>
+              </div>
           </div>
-
-        </div>
-        <div class="card">
-          <p class="title">LEVEDO DE CERVEJA C/60CAPS</p>
-          <img class="img2" src=".././public/images/fonte verde/levedoCerveja 60caps.png"
-            alt="Pré-visualização do produto">
+      </div>
+      
+      <div class="card">
+          <p class="title">LEVEDO DE CERVEJA C/60 CAPS</p>
+          <img class="img2" src="../public/images/fonte verde/levedoCerveja 60caps.png" alt="LEVEDO DE CERVEJA C/60 CAPS">
           <div class="card-info">
-            <!--<p class="tag">Fonte verde</p><-->
-            <p class="title">COD:116
-            </p>
-
-
-            <!--<p class="shipping">12UN /CX</p>-->
-            <p class="shipping">Entrega a combinar</p>
+              <p class="title">COD: 116</p>
+              <p class="shipping">Entrega a combinar</p>
           </div>
-
-          <div class="btinfo"><a class="button-buy">Detalhes</a>
-            <p class="info">Possui vitamina B3 e sais minerais, como o potássio, magnésio e fósforo. </br> Age na flora
-              intestinal e trata prisões de ventre.</p>
+          <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#productModal116">
+              Detalhes
+          </button>
+          <!-- Modal -->
+          <div class="modal fade" id="productModal116" tabindex="-1" aria-labelledby="productModalLabel116" aria-hidden="true">
+              <div class="modal-dialog modal-dialog-centered">
+                  <div class="modal-content">
+                      <div class="modal-header">
+                          <h5 class="modal-title" id="productModalLabel116">LEVEDO DE CERVEJA C/60 CAPS</h5>
+                          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fechar"></button>
+                      </div>
+                      <div class="modal-body">
+                          <img class="imgmodal" src="../public/images/fonte verde/levedoCerveja 60caps.png" alt="LEVEDO DE CERVEJA C/60 CAPS">
+                          <p>Possui vitamina B3 e sais minerais, como o potássio, magnésio e fósforo. Age na flora intestinal e trata prisões de ventre.</p>
+                      </div>
+                      <div class="modal-footer">
+                          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+                      </div>
+                  </div>
+              </div>
           </div>
-        </div>
+      </div>
+      
 
-
-    </section>
     </br></br>
 
     <div class="divider-1"></div>
-    <section class="product-list wrapper">
-      <!--<h2 style="text-align: center;">produtos
-        <span class="material-symbols-outlined">Totalmente Naturais</span>
-      </h2><-->
-
-      <div class="cards-container">
+    
         <div class="card">
           <p class="title">MAÇÂ PERUANA C/60 CAPS</p>
-          <img class="img2" src=".././public/images/fonte verde/macaperuana 60caps.png"
-            alt="Pré-visualização do produto">
+          <img class="img2" src="../public/images/fonte verde/macaperuana 60caps.png" alt="MAÇÂ PERUANA C/60 CAPS">
           <div class="card-info">
-            <!--<p class="tag">Fonte verde</p><-->
-            <p class="title">COD:119
-            </p>
-
-            <!--<p class="shipping">12UN /CX</p>-->
-            <p class="shipping">Entrega a combinar</p>
+              <p class="title">COD:119</p>
+              <p class="shipping">Entrega a combinar</p>
           </div>
-
-          <div class="btinfo"><a class="button-buy">Detalhes</a>
-            <p class="info">Potente extrato de vitaminas e anti-oxidante, repleto de proteínas, fibras, lipídios.</p>
+          <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#productModal119">
+              Detalhes
+          </button>
+          <!-- Modal -->
+          <div class="modal fade" id="productModal119" tabindex="-1" aria-labelledby="productModalLabel119" aria-hidden="true">
+              <div class="modal-dialog modal-dialog-centered">
+                  <div class="modal-content">
+                      <div class="modal-header">
+                          <h5 class="modal-title" id="productModalLabel119">MAÇÂ PERUANA C/60 CAPS</h5>
+                          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fechar"></button>
+                      </div>
+                      <div class="modal-body">
+                          <img class="imgmodal" src="../public/images/fonte verde/macaperuana 60caps.png" alt="MAÇÂ PERUANA C/60 CAPS">
+                          <p>Potente extrato de vitaminas e anti-oxidante, repleto de proteínas, fibras e lipídios.</p>
+                      </div>
+                      <div class="modal-footer">
+                          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+                      </div>
+                  </div>
+              </div>
           </div>
-        </div>
-
-        <div class="card">
+      </div>
+      
+      <div class="card">
           <p class="title">MAMICA DE CADELA C/60 CAPS</p>
-          <img class="img2" src=".././public/images/fonte verde/mamicaCadela 60caps.png"
-            alt="Pré-visualização do produto">
+          <img class="img2" src="../public/images/fonte verde/mamicaCadela 60caps.png" alt="MAMICA DE CADELA C/60 CAPS">
           <div class="card-info">
-            <!--<p class="tag">Fonte verde</p><-->
-            <p class="title">COD:120
-            </p>
-
-
-            <!--<p class="shipping">12UN /CX</p>-->
-            <p class="shipping">Entrega a combinar</p>
+              <p class="title">COD:120</p>
+              <p class="shipping">Entrega a combinar</p>
           </div>
-
-          <div class="btinfo"><a class="button-buy">Detalhes</a>
-            <p class="info">Indicada para dores e inflamações, provém repigmentação da pele e age contra doenças
-              dermatológicas e má circulação, utilizada também para gripes, resfriados e bronquite.</p>
+          <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#productModal120">
+              Detalhes
+          </button>
+          <!-- Modal -->
+          <div class="modal fade" id="productModal120" tabindex="-1" aria-labelledby="productModalLabel120" aria-hidden="true">
+              <div class="modal-dialog modal-dialog-centered">
+                  <div class="modal-content">
+                      <div class="modal-header">
+                          <h5 class="modal-title" id="productModalLabel120">MAMICA DE CADELA C/60 CAPS</h5>
+                          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fechar"></button>
+                      </div>
+                      <div class="modal-body">
+                          <img class="imgmodal" src="../public/images/fonte verde/mamicaCadela 60caps.png" alt="MAMICA DE CADELA C/60 CAPS">
+                          <p>Indicada para dores e inflamações, provém repigmentação da pele e age contra doenças dermatológicas e má circulação. Utilizada também para gripes, resfriados e bronquite.</p>
+                      </div>
+                      <div class="modal-footer">
+                          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+                      </div>
+                  </div>
+              </div>
           </div>
-        </div>
-
-        <div class="card">
+      </div>
+      
+      <div class="card">
           <p class="title">MARACUJÁ C/60 CAPS</p>
-          <img class="img2" src=".././public/images/fonte verde/maracuja 60caps.png" alt="Pré-visualização do produto">
+          <img class="img2" src="../public/images/fonte verde/maracuja 60caps.png" alt="MARACUJÁ C/60 CAPS">
           <div class="card-info">
-            <!--<p class="tag">Fonte verde</p><-->
-            <p class="title">COD:121
-            </p>
-
-
-            <!--<p class="shipping">12UN /CX</p>-->
-            <p class="shipping">Entrega a combinar</p>
+              <p class="title">COD:121</p>
+              <p class="shipping">Entrega a combinar</p>
           </div>
-
-          <div class="btinfo"><a class="button-buy">Detalhes</a>
-            <p class="info">Calmante natural, que auxilia na pressão arterial, possui ação sedativa e relaxante, além de
-              ajudar no sono.</p>
+          <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#productModal121">
+              Detalhes
+          </button>
+          <!-- Modal -->
+          <div class="modal fade" id="productModal121" tabindex="-1" aria-labelledby="productModalLabel121" aria-hidden="true">
+              <div class="modal-dialog modal-dialog-centered">
+                  <div class="modal-content">
+                      <div class="modal-header">
+                          <h5 class="modal-title" id="productModalLabel121">MARACUJÁ C/60 CAPS</h5>
+                          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fechar"></button>
+                      </div>
+                      <div class="modal-body">
+                          <img class="imgmodal" src="../public/images/fonte verde/maracuja 60caps.png" alt="MARACUJÁ C/60 CAPS">
+                          <p>Calmante natural, que auxilia na pressão arterial, possui ação sedativa e relaxante, além de ajudar no sono.</p>
+                      </div>
+                      <div class="modal-footer">
+                          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+                      </div>
+                  </div>
+              </div>
           </div>
-        </div>
+      </div>
+      
 
 
         <!-- <div style="width: 20rem;height: auto;" class="card">
@@ -631,7 +866,7 @@
 
             setInterval(refreshTime, 1000);</script>
 
-          <a style="color: #fff;" href="https://www.instagram.com/heerick.gg/" target="_blank"><p style="position: relative;" class="mt-5">byHerick&copy;
+          <a style="color: #fff;" href="https://www.instagram.com/hericksouza.gg/" target="_blank"><p style="position: relative;" class="mt-5">byHerick&copy;
           </p></a>
 
         </div>

@@ -125,3 +125,23 @@ $('.slider-principal2').slick({
   autoplay: true,
   autoplaySpeed: 5000,
 });
+
+/* pesquisa 
+
+function searchProducts() {
+            const input = document.getElementById('searchInput').value.toLowerCase();
+            const cards = document.querySelectorAll('.card');
+
+            cards.forEach(card => {
+                const title = card.querySelector('.title').textContent.toLowerCase();
+                const code = card.querySelector('.card-info .title').textContent.toLowerCase();
+
+                // Verifica se a entrada do usuário está contida no título ou no código
+                if (title.includes(input) || code.includes(input)) {
+                    card.classList.remove('hidden');
+                } else {
+                    card.classList.add('hidden');
+                }
+            });
+        }
+        */

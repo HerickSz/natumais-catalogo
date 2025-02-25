@@ -722,6 +722,9 @@ ul {
   padding-left: 0px;
 }
 
+/*====  INPUT pesquisa ============================ */
+
+
 @media (max-width: 500px) {
   .header-image {
     padding: 10px 0;

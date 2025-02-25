@@ -64,6 +64,61 @@
             class="logo-detail">Novos Produtos!</span>
         </p>
 
+        <h1 class="searchh">Pesquisa de Produtos</h1>
+      <input type="text" id="searchInput" placeholder="Pesquisar produto..." onkeyup="searchProducts()">
+      <style>
+        /* Estilo para o título com a classe searchh */
+.searchh {
+  color: #28a745; /* Verde preferencial */
+  text-align: center; /* Centraliza o título */
+  font-size: 1.5em; /* Tamanho da fonte */
+  margin: 20px 0; /* Margens superior e inferior */
+}
+
+/* Estilo para o input */
+#searchInput {
+  width: 100%; /* Largura total */
+  max-width: 400px; /* Largura máxima */
+  padding: 10px; /* Espaçamento interno */
+  border: 2px solid #28a745; /* Borda verde */
+  border-radius: 5px; /* Cantos arredondados */
+  font-size: 1em; /* Tamanho da fonte */
+  margin: 0 auto; /* Centraliza o input */
+  display: block; /* Exibe como bloco */
+  transition: border-color 0.3s; /* Transição suave para a borda */
+  margin-bottom: 10px;
+}
+
+/* Efeito ao focar no input */
+#searchInput:focus {
+  border-color: #218838; /* Verde mais escuro ao focar */
+  outline: none; /* Remove o contorno padrão */
+}
+
+        
+.hidden {
+  display: none;
+}
+    </style>
+     <script>
+      function searchProducts() {
+          const input = document.getElementById('searchInput').value.toLowerCase();
+          const cards = document.querySelectorAll('.card');
+
+          cards.forEach(card => {
+              const title = card.querySelector('.title').textContent.toLowerCase();
+              const code = card.querySelector('.card-info .title').textContent.toLowerCase();
+
+              // Verifica se a entrada do usuário está contida no título ou no código
+              if (title.includes(input) || code.includes(input)) {
+                  card.classList.remove('hidden');
+              } else {
+                  card.classList.add('hidden');
+              }
+          });
+      }
+  </script>
+
         <h2 style="text-align: center;background-color: rgb(245 245 245);" class="title">Fonte Vida Página 4</h2>
         <div class="page-btn">
           <a href="fonte-vida.html"> <span>1</span></a>
@@ -78,262 +133,352 @@
 
           <div class="card">
             <p class="title">HIBÍSCO C/ CAVALINHA 120CAPS</p>
-
-            <img class="img2" src="../public/images/fonte-vida/hibiscoCavalinha120caps.png"
-              alt="Pré-visualização do produto">
+            <img class="img2" src="../public/images/fonte-vida/hibiscoCavalinha120caps.png" alt="HIBÍSCO C/ CAVALINHA 120CAPS">
             <div class="card-info">
-              <!--<p class="tag">Fonte verde</p><-->
-              <p class="title">
-                COD 120: 1592</p>
-
-              <!--<p class="shipping">12UN /CX</p>-->
-              <p class="shipping">Entrega a combinar</p>
+                <p class="title">COD 120: 1592</p>
+                <p class="shipping">Entrega a combinar</p>
             </div>
-
-            <div class="btinfo"><a class="button-buy">Detalhes</a>
-              <p class="info">Apresenta ação diurética e laxativa leve, atuando como um ótimo coadjuvante na perda de
-                peso.</p>
+            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#productModal1592">Detalhes</button>
+            <!-- Modal -->
+            <div class="modal fade" id="productModal1592" tabindex="-1" aria-labelledby="productModalLabel1592" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="productModalLabel1592">HIBÍSCO C/ CAVALINHA 120CAPS</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fechar"></button>
+                        </div>
+                        <div class="modal-body">
+                            <img class="imgmodal" src="../public/images/fonte-vida/hibiscoCavalinha120caps.png" alt="HIBÍSCO C/ CAVALINHA 120CAPS">
+                            <p>Apresenta ação diurética e laxativa leve, atuando como um ótimo coadjuvante na perda de peso.</p>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+                        </div>
+                    </div>
+                </div>
             </div>
-          </div>
-          <div class="card">
-            <p class="title">AMORA C/60 & 120CAPS</p>
-            <img class="img2" src="../public/images/fonte-vida/amora60120caps.png" alt="Pré-visualização do produto">
-            <div class="card-info">
-              <!--<p class="tag">Fonte verde</p><-->
-              <p class="title">
-                COD 60: 1682</br>
-                COD 120: 1627
-              </p>
-
-              <!--<p class="shipping">12UN /CX</p>-->
-              <p class="shipping">Entrega a combinar</p>
-            </div>
-
-            <div class="btinfo"><a class="button-buy">Detalhes</a>
-              <p class="info">Ajuda na absorção do ferro das refeições. Auxilia na redução dos sintomas de menopausa
-                como ondas de calor, insônia, secura vaginal e alterações de memória. Ajuda a melhorar a proteção do
-                coração de danos causados pelos radicais livres.
-              </p>
-
-            </div>
-          </div>
-          <div class="card">
-            <p class="title">BERINJELA C/ 60 CAPS</p>
-            <img class="img2" src="../public/images/fonte-vida/about.png" alt="Pré-visualização do produto">
-            <div class="card-info">
-              <!--<p class="tag">Fonte verde</p><-->
-              <p class="title">COD 60: 1629</br>
-              </p>
-              <!--<p class="shipping">12UN /CX</p>-->
-            </div>
-
-            <div class="btinfo"><a class="button-buy">Detalhes</a>
-              <p class="info"> 1- Melhora o colesterol bom (HDL) no organismo; </br>
-                2- Auxilia na diminuição de placas de gorduras nas artérias; </br>
-                3- Aumenta a secreção da bile, isto é, auxilia no emagrecimento, pois a bile é responsável por quebrar
-                as gorduras na alimentação.</p>
-              <p class="shipping">Entrega a combinar</p>
-            </div>
-          </div>
-
-          <div class="card">
-            <p class="title">CANELA DE VELHO C/ 60CAPS</p>
-            <img class="img2" src="../public/images/fonte-vida/canelavelho60caps.png" alt="Pré-visualização do produto">
-            <div class="card-info">
-              <!--<p class="tag">Fonte verde</p><-->
-              <p class="title">
-                COD 60: 1657
-              </p>
-
-
-              <!--<p class="shipping">12UN /CX</p>-->
-              <p class="shipping">Entrega a combinar</p>
-            </div>
-
-            <div class="btinfo"><a class="button-buy">Detalhes</a>
-              <p class="info">Ela é utilizada para aliviar dores provenientes de outros tipos de inflamações além das
-                articulares, como torcicolos, tendinites, reumatismos, bursites, torções nos pés, hérnias de disco e
-                dores na coluna.</p>
-            </div>
-          </div>
-
-          <div class="card">
-            <p class="title">COMPOSTO CIRCULATÓRIO C/ 60CAPS</p>
-            <img class="img2" src="../public/images/fonte-vida/compostocircu60caps.png"
-              alt="Pré-visualização do produto">
-            <div class="card-info">
-              <!--<p class="tag">Fonte verde</p><-->
-              <p class="title">COD 60: 1691</p>
-
-
-              <!--<p class="shipping">12UN /CX</p>-->
-              <p class="shipping">Entrega a combinar</p>
-            </div>
-
-            <div class="btinfo"><a class="button-buy">Detalhes</a>
-              <p class="info">Ativam a circulação arterial e venosa auxiliando na prevenção e tratamento de varizes,
-                aliviando as dores e os inchaços das pernas e auxiliando no combate à celulite.</p>
-            </div>
-          </div>
-
-          <div class="card">
-            <p class="title">SAÚDE DA MULHER C/60 CAPS</p>
-            <img class="img2" src="../public/images/fonte-vida/saudemulher60caps.png" alt="Pré-visualização do produto">
-            <div class="card-info">
-              <!--<p class="tag">Fonte verde</p><-->
-              <p class="title">COD 60:1702
-
-              </p>
-
-
-              <!--<p class="shipping">12UN /CX</p>-->
-              <p class="shipping">Entrega a combinar</p>
-            </div>
-
-            <div class="btinfo"><a class="button-buy">Detalhes</a>
-              <p class="info">É indicado como regulador menstrual, nas cólicas menstruais, perturbações da menopausa e
-                manifestações agudas ou crônicas das dismenorreias (cólicas menstruais), nas irregularidades do fluxo
-                menstrual.
-              </p>
-            </div>
-          </div>
-
         </div>
-      </div>
-    </section>
+        
+        <div class="card">
+            <p class="title">AMORA C/60 & 120CAPS</p>
+            <img class="img2" src="../public/images/fonte-vida/amora60120caps.png" alt="AMORA C/60 & 120CAPS">
+            <div class="card-info">
+                <p class="title">COD 60: 1682</br>COD 120: 1627</p>
+                <p class="shipping">Entrega a combinar</p>
+            </div>
+            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#productModal1682">Detalhes</button>
+            <!-- Modal -->
+            <div class="modal fade" id="productModal1682" tabindex="-1" aria-labelledby="productModalLabel1682" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="productModalLabel1682">AMORA C/60 & 120CAPS</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fechar"></button>
+                        </div>
+                        <div class="modal-body">
+                            <img class="imgmodal" src="../public/images/fonte-vida/amora60120caps.png" alt="AMORA C/60 & 120CAPS">
+                            <p>Ajuda na absorção do ferro das refeições. Auxilia na redução dos sintomas de menopausa como ondas de calor, insônia, secura vaginal e alterações de memória. Ajuda a melhorar a proteção do coração de danos causados pelos radicais livres.</p>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="card">
+            <p class="title">BERINJELA C/ 60 CAPS</p>
+            <img class="img2" src="../public/images/fonte-vida/about.png" alt="BERINJELA C/ 60 CAPS">
+            <div class="card-info">
+                <p class="title">COD 60: 1629</p>
+                <p class="shipping">Entrega a combinar</p>
+            </div>
+            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#productModal1629">Detalhes</button>
+            <!-- Modal -->
+            <div class="modal fade" id="productModal1629" tabindex="-1" aria-labelledby="productModalLabel1629" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="productModalLabel1629">BERINJELA C/ 60 CAPS</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fechar"></button>
+                        </div>
+                        <div class="modal-body">
+                            <img class="imgmodal" src="../public/images/fonte-vida/about.png" alt="BERINJELA C/ 60 CAPS">
+                            <p>1- Melhora o colesterol bom (HDL) no organismo; <br> 2- Auxilia na diminuição de placas de gorduras nas artérias; <br> 3- Aumenta a secreção da bile, auxiliando no emagrecimento, pois a bile é responsável por quebrar as gorduras na alimentação.</p>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="card">
+            <p class="title">CANELA DE VELHO C/ 60CAPS</p>
+            <img class="img2" src="../public/images/fonte-vida/canelavelho60caps.png" alt="CANELA DE VELHO C/ 60CAPS">
+            <div class="card-info">
+                <p class="title">COD 60: 1657</p>
+                <p class="shipping">Entrega a combinar</p>
+            </div>
+            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#productModal1657">Detalhes</button>
+            <!-- Modal -->
+            <div class="modal fade" id="productModal1657" tabindex="-1" aria-labelledby="productModalLabel1657" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="productModalLabel1657">CANELA DE VELHO C/ 60CAPS</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fechar"></button>
+                        </div>
+                        <div class="modal-body">
+                            <img class="imgmodal" src="../public/images/fonte-vida/canelavelho60caps.png" alt="CANELA DE VELHO C/ 60CAPS">
+                            <p>Ela é utilizada para aliviar dores provenientes de outros tipos de inflamações além das articulares, como torcicolos, tendinites, reumatismos, bursites, torções nos pés, hérnias de disco e dores na coluna.</p>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="card">
+            <p class="title">COMPOSTO CIRCULATÓRIO C/ 60CAPS</p>
+            <img class="img2" src="../public/images/fonte-vida/compostocircu60caps.png" alt="COMPOSTO CIRCULATÓRIO C/ 60CAPS">
+            <div class="card-info">
+                <p class="title">COD 60: 1691</p>
+                <p class="shipping">Entrega a combinar</p>
+            </div>
+            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#productModal1691">Detalhes</button>
+            <!-- Modal -->
+            <div class="modal fade" id="productModal1691" tabindex="-1" aria-labelledby="productModalLabel1691" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="productModalLabel1691">COMPOSTO CIRCULATÓRIO C/ 60CAPS</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fechar"></button>
+                        </div>
+                        <div class="modal-body">
+                            <img class="imgmodal" src="../public/images/fonte-vida/compostocircu60caps.png" alt="COMPOSTO CIRCULATÓRIO C/ 60CAPS">
+                            <p>Ativam a circulação arterial e venosa auxiliando na prevenção e tratamento de varizes, aliviando as dores e os inchaços das pernas e auxiliando no combate à celulite.</p>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="card">
+            <p class="title">SAÚDE DA MULHER C/60 CAPS</p>
+            <img class="img2" src="../public/images/fonte-vida/saudemulher60caps.png" alt="SAÚDE DA MULHER C/60 CAPS">
+            <div class="card-info">
+                <p class="title">COD 60:1702</p>
+                <p class="shipping">Entrega a combinar</p>
+            </div>
+            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#productModal1702">Detalhes</button>
+            <!-- Modal -->
+            <div class="modal fade" id="productModal1702" tabindex="-1" aria-labelledby="productModalLabel1702" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="productModalLabel1702">SAÚDE DA MULHER C/60 CAPS</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fechar"></button>
+                        </div>
+                        <div class="modal-body">
+                            <img class="imgmodal" src="../public/images/fonte-vida/saudemulher60caps.png" alt="SAÚDE DA MULHER C/60 CAPS">
+                            <p>É indicado como regulador menstrual, nas cólicas menstruais, perturbações da menopausa e manifestações agudas ou crônicas das dismenorreias (cólicas menstruais), nas irregularidades do fluxo menstrual.</p>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+
+          
+
+       
+      
+  
     </br></br>
 
     <div class="divider-1"></div>
 
 
-    <section class="product-list wrapper">
-
-
-      <div class="cards-container">
+    
         <div class="card">
           <p class="title">CASCA SAGRADA 60CAPS</p>
-          <img class="img2" src="../public/images/fonte-vida/cascarasagrada60caps.png"
-            alt="Pré-visualização do produto">
+          <img class="img2" src="../public/images/fonte-vida/cascarasagrada60caps.png" alt="CASCA SAGRADA 60CAPS">
           <div class="card-info">
-            <!--<p class="tag">Fonte verde</p><-->
-            <p class="title">
-              COD 60: 1715
-            </p>
-
-            <!--<p class="shipping">12UN /CX</p>-->
-            <p class="shipping">Entrega a combinar</p>
+              <p class="title">COD 60: 1715</p>
+              <p class="shipping">Entrega a combinar</p>
           </div>
-
-          <div class="btinfo"><a class="button-buy">Detalhes</a>
-            <p class="info">É uma erva medicinal utilizada pelos nativos nor- te-americanos desde a antiguidade
-              cujo efeito esperado é o laxativo. Ela age provocando uma irritação intestinal que ocasiona o aumento dos
-              movimentos peristálticos.</p>
-
+          <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#productModal1715">Detalhes</button>
+          <!-- Modal -->
+          <div class="modal fade" id="productModal1715" tabindex="-1" aria-labelledby="productModalLabel1715" aria-hidden="true">
+              <div class="modal-dialog modal-dialog-centered">
+                  <div class="modal-content">
+                      <div class="modal-header">
+                          <h5 class="modal-title" id="productModalLabel1715">CASCA SAGRADA 60CAPS</h5>
+                          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fechar"></button>
+                      </div>
+                      <div class="modal-body">
+                          <img class="imgmodal" src="../public/images/fonte-vida/cascarasagrada60caps.png" alt="CASCA SAGRADA 60CAPS">
+                          <p>É uma erva medicinal utilizada pelos nativos norte-americanos desde a antiguidade cujo efeito esperado é o laxativo. Ela age provocando uma irritação intestinal que ocasiona o aumento dos movimentos peristálticos.</p>
+                      </div>
+                      <div class="modal-footer">
+                          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+                      </div>
+                  </div>
+              </div>
           </div>
-        </div>
-        <div class="card">
+      </div>
+      
+      <div class="card">
           <p class="title">CARDO MARIANO C/60 CAPS</p>
-          <img class="img2" src="../public/images/fonte-vida/cardomariano60caps.png" alt="Pré-visualização do produto">
+          <img class="img2" src="../public/images/fonte-vida/cardomariano60caps.png" alt="CARDO MARIANO C/60 CAPS">
           <div class="card-info">
-            <!--<p class="tag">Fonte verde</p><-->
-            <p class="title">COD 60: 1725
-            </p>
-
-
-            <!--<p class="shipping">12UN /CX</p>-->
-            <p class="shipping">Entrega a combinar</p>
+              <p class="title">COD 60: 1725</p>
+              <p class="shipping">Entrega a combinar</p>
           </div>
-
-          <div class="btinfo"><a class="button-buy">Detalhes</a>
-            <p class="info">Auxilia na redução da inflamação do corpo, por ter propriedades anti-inflamatórias. Ajuda a
-              ter uma melhora na digestão,pois estimula a produção de bile. Auxilia no aumento da imunidade, pois
-              estimula a produção de glóbulos brancos. </p>
+          <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#productModal1725">Detalhes</button>
+          <!-- Modal -->
+          <div class="modal fade" id="productModal1725" tabindex="-1" aria-labelledby="productModalLabel1725" aria-hidden="true">
+              <div class="modal-dialog modal-dialog-centered">
+                  <div class="modal-content">
+                      <div class="modal-header">
+                          <h5 class="modal-title" id="productModalLabel1725">CARDO MARIANO C/60 CAPS</h5>
+                          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fechar"></button>
+                      </div>
+                      <div class="modal-body">
+                          <img class="imgmodal" src="../public/images/fonte-vida/cardomariano60caps.png" alt="CARDO MARIANO C/60 CAPS">
+                          <p>Auxilia na redução da inflamação do corpo, por ter propriedades anti-inflamatórias. Ajuda a ter uma melhora na digestão, pois estimula a produção de bile. Auxilia no aumento da imunidade, pois estimula a produção de glóbulos brancos.</p>
+                      </div>
+                      <div class="modal-footer">
+                          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+                      </div>
+                  </div>
+              </div>
           </div>
-        </div>
-        <div class="card">
+      </div>
+      
+      <div class="card">
           <p class="title">ÓLEO SEMENTE DE ABÓBORA C/ 60CAPS</p>
-          <img class="img2" src="../public/images/fonte-vida/sementeabobora60caps.png"
-            alt="Pré-visualização do produto">
+          <img class="img2" src="../public/images/fonte-vida/sementeabobora60caps.png" alt="ÓLEO SEMENTE DE ABÓBORA C/ 60CAPS">
           <div class="card-info">
-            <!--<p class="tag">Fonte verde</p><-->
-            <p class="title">COD: 1728
-            </p>
-
-            <!--<p class="shipping">12UN /CX</p>-->
-            <p class="shipping">Entrega a combinar</p>
+              <p class="title">COD: 1728</p>
+              <p class="shipping">Entrega a combinar</p>
           </div>
-
-          <div class="btinfo"><a class="button-buy">Detalhes</a>
-            <p class="info">O Óleo de Semente de Abóbora é rico em Potássio, Magnésio, Zinco, Vitaminas do Complexo B,
-              Vitamina B9 e Ômegas 6 e 9, que ajudam na imunidade, saúda da próstata e do fígado, equalização dos níveis
-              de colesterol e ação anti-inflamatória.
-            </p>
-
+          <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#productModal1728">Detalhes</button>
+          <!-- Modal -->
+          <div class="modal fade" id="productModal1728" tabindex="-1" aria-labelledby="productModalLabel1728" aria-hidden="true">
+              <div class="modal-dialog modal-dialog-centered">
+                  <div class="modal-content">
+                      <div class="modal-header">
+                          <h5 class="modal-title" id="productModalLabel1728">ÓLEO SEMENTE DE ABÓBORA C/ 60CAPS</h5>
+                          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fechar"></button>
+                      </div>
+                      <div class="modal-body">
+                          <img class="imgmodal" src="../public/images/fonte-vida/sementeabobora60caps.png" alt="ÓLEO SEMENTE DE ABÓBORA C/ 60CAPS">
+                          <p>O Óleo de Semente de Abóbora é rico em Potássio, Magnésio, Zinco, Vitaminas do Complexo B, Vitamina B9 e Ômegas 6 e 9, que ajudam na imunidade, saúde da próstata e do fígado, equalização dos níveis de colesterol e ação anti-inflamatória.</p>
+                      </div>
+                      <div class="modal-footer">
+                          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+                      </div>
+                  </div>
+              </div>
           </div>
-        </div>
-
-        <div class="card">
-          <p class="title">UXI AMARELO C/ UNHA DE GATO + </br> BARBATIMÃO</br> C/120 CAPS</p>
-          <img class="img2" src="../public/images/fonte-vida/uxiamarelobarbaUnhagato120caps.png"
-            alt="Pré-visualização do produto">
+      </div>
+      
+      <div class="card">
+          <p class="title">UXI AMARELO C/ UNHA DE GATO + BARBATIMÃO C/120 CAPS</p>
+          <img class="img2" src="../public/images/fonte-vida/uxiamarelobarbaUnhagato120caps.png" alt="UXI AMARELO C/ UNHA DE GATO + BARBATIMÃO C/120 CAPS">
           <div class="card-info">
-            <!--<p class="tag">Fonte verde</p><-->
-            <p class="title">COD 120: 1742
-            </p>
-
-
-            <!--<p class="shipping">12UN /CX</p>-->
-            <p class="shipping">Entrega a combinar</p>
+              <p class="title">COD 120: 1742</p>
+              <p class="shipping">Entrega a combinar</p>
           </div>
-
-          <div class="btinfo"><a class="button-buy">Detalhes</a>
-            <p class="info">Combinação de dois super aliados da natureza que vem surpreendendo médicos e pacientes no
-              bem estar e na saúde da mulher. Poucas pessoas sabem dos benefícios que esta combinação traz quando o
-              assunto se refere a miomas ou alguma inflamaçãodos ovários e útero.
-            </p>
+          <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#productModal1742">Detalhes</button>
+          <!-- Modal -->
+          <div class="modal fade" id="productModal1742" tabindex="-1" aria-labelledby="productModalLabel1742" aria-hidden="true">
+              <div class="modal-dialog modal-dialog-centered">
+                  <div class="modal-content">
+                      <div class="modal-header">
+                          <h5 class="modal-title" id="productModalLabel1742">UXI AMARELO C/ UNHA DE GATO + BARBATIMÃO C/120 CAPS</h5>
+                          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fechar"></button>
+                      </div>
+                      <div class="modal-body">
+                          <img class="imgmodal" src="../public/images/fonte-vida/uxiamarelobarbaUnhagato120caps.png" alt="UXI AMARELO C/ UNHA DE GATO + BARBATIMÃO C/120 CAPS">
+                          <p>Combinação de dois super aliados da natureza que vem surpreendendo médicos e pacientes no bem-estar e na saúde da mulher. Poucas pessoas sabem dos benefícios que esta combinação traz quando o assunto se refere a miomas ou alguma inflamação dos ovários e útero.</p>
+                      </div>
+                      <div class="modal-footer">
+                          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+                      </div>
+                  </div>
+              </div>
           </div>
-        </div>
-
-        <div class="card">
+      </div>
+      
+      <div class="card">
           <p class="title">MORO + CROMO C/60 CAPS</p>
-          <img class="img2" src="../public/images/fonte-vida/moro60cps.png" alt="Pré-visualização do produto">
+          <img class="img2" src="../public/images/fonte-vida/moro60cps.png" alt="MORO + CROMO C/60 CAPS">
           <div class="card-info">
-            <!--<p class="tag">Fonte verde</p><-->
-            <p class="title">COD 60: 1747
-            </p>
-
-
-            <!--<p class="shipping">12UN /CX</p>-->
-            <p class="shipping">Entrega a combinar</p>
+              <p class="title">COD 60: 1747</p>
+              <p class="shipping">Entrega a combinar</p>
           </div>
-
-          <div class="btinfo"><a class="button-buy">Detalhes</a>
-            <p class="info">Possui ação antioxidante e anti-inflamatória que pode auxiliar no controle do peso e redução
-              de medidas.</p>
+          <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#productModal1747">Detalhes</button>
+          <!-- Modal -->
+          <div class="modal fade" id="productModal1747" tabindex="-1" aria-labelledby="productModalLabel1747" aria-hidden="true">
+              <div class="modal-dialog modal-dialog-centered">
+                  <div class="modal-content">
+                      <div class="modal-header">
+                          <h5 class="modal-title" id="productModalLabel1747">MORO + CROMO C/60 CAPS</h5>
+                          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fechar"></button>
+                      </div>
+                      <div class="modal-body">
+                          <img class="imgmodal" src="../public/images/fonte-vida/moro60cps.png" alt="MORO + CROMO C/60 CAPS">
+                          <p>Possui ação antioxidante e anti-inflamatória que pode auxiliar no controle do peso e redução de medidas.</p>
+                      </div>
+                      <div class="modal-footer">
+                          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+                      </div>
+                  </div>
+              </div>
           </div>
-        </div>
-
-        <div class="card">
+      </div>
+      
+      <div class="card">
           <p class="title">GINKGO BILOBA C/ 60CAPS</p>
-          <img class="img2" src="../public/images/fonte-vida/ginkgobiloba60caps.png" alt="Pré-visualização do produto">
+          <img class="img2" src="../public/images/fonte-vida/ginkgobiloba60caps.png" alt="GINKGO BILOBA C/ 60CAPS">
           <div class="card-info">
-            <!--<p class="tag">Fonte verde</p><-->
-            <p class="title">
-              COD 60: 1748
-            </p>
-
-
-            <!--<p class="shipping">12UN /CX</p>-->
-            <p class="shipping">Entrega a combinar</p>
+              <p class="title">COD 60: 1748</p>
+              <p class="shipping">Entrega a combinar</p>
           </div>
-
-          <div class="btinfo"><a class="button-buy">Detalhes</a>
-            <p class="info">O Ginkgo atua sobre a circulação em vários níveis, melhorando a irrigação periférica,
-              ativando o metabolismo celular e diminuindo o risco de trombose. Previne acidentes vasculares e
-              envelhecimento pela sua ação antioxidante.
-            </p>
+          <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#productModal1748">Detalhes</button>
+          <!-- Modal -->
+          <div class="modal fade" id="productModal1748" tabindex="-1" aria-labelledby="productModalLabel1748" aria-hidden="true">
+              <div class="modal-dialog modal-dialog-centered">
+                  <div class="modal-content">
+                      <div class="modal-header">
+                          <h5 class="modal-title" id="productModalLabel1748">GINKGO BILOBA C/ 60CAPS</h5>
+                          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fechar"></button>
+                      </div>
+                      <div class="modal-body">
+                          <img class="imgmodal" src="../public/images/fonte-vida/ginkgobiloba60caps.png" alt="GINKGO BILOBA C/ 60CAPS">
+                          <p>O Ginkgo atua sobre a circulação em vários níveis, melhorando a irrigação periférica, ativando o metabolismo celular e diminuindo o risco de trombose. Previne acidentes vasculares e envelhecimento pela sua ação antioxidante.</p>
+                      </div>
+                      <div class="modal-footer">
+                          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+                      </div>
+                  </div>
+              </div>
           </div>
-        </div>
+      </div>
+      
     </section>
     </br></br> </section>
 
@@ -485,7 +630,7 @@
 
             setInterval(refreshTime, 1000);</script>
 
-          <a style="color: #fff;" href="https://www.instagram.com/heerick.gg/" target="_blank"><p style="position: relative;" class="mt-5">byHerick&copy;
+          <a style="color: #fff;" href="https://www.instagram.com/hericksouza.gg/" target="_blank"><p style="position: relative;" class="mt-5">byHerick&copy;
           </p></a>
 
         </div>

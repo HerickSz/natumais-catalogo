@@ -42,7 +42,7 @@
         <ul class="grid">
           <li><a class="title" href="../index.html">Início </a></li>
           <li><a class="title" href="../index.html#produtos">Produtos</a></li>
-          <li><a style="color: red;" class="title" href="../index.html">Voltar</a></li>
+          <li><a style="color: red;" class="title" href="../grupos-med-cosm/med-cosm-marcas.html">Voltar</a></li>
         </ul>
       </div>
       <!-- /menu -->
@@ -66,142 +66,251 @@
             class="logo-detail">Novos Produtos!</span>
         </p>
 
+        <h1 class="searchh">Pesquisa de Produtos</h1>
+      <input type="text" id="searchInput" placeholder="Pesquisar produto..." onkeyup="searchProducts()">
+      <style>
+        /* Estilo para o título com a classe searchh */
+.searchh {
+  color: #28a745; /* Verde preferencial */
+  text-align: center; /* Centraliza o título */
+  font-size: 1.5em; /* Tamanho da fonte */
+  margin: 20px 0; /* Margens superior e inferior */
+}
+
+/* Estilo para o input */
+#searchInput {
+  width: 100%; /* Largura total */
+  max-width: 400px; /* Largura máxima */
+  padding: 10px; /* Espaçamento interno */
+  border: 2px solid #28a745; /* Borda verde */
+  border-radius: 5px; /* Cantos arredondados */
+  font-size: 1em; /* Tamanho da fonte */
+  margin: 0 auto; /* Centraliza o input */
+  display: block; /* Exibe como bloco */
+  transition: border-color 0.3s; /* Transição suave para a borda */
+  margin-bottom: 10px;
+}
+
+/* Efeito ao focar no input */
+#searchInput:focus {
+  border-color: #218838; /* Verde mais escuro ao focar */
+  outline: none; /* Remove o contorno padrão */
+}
+
+        
+.hidden {
+  display: none;
+}
+    </style>
+     <script>
+      function searchProducts() {
+          const input = document.getElementById('searchInput').value.toLowerCase();
+          const cards = document.querySelectorAll('.card');
+
+          cards.forEach(card => {
+              const title = card.querySelector('.title').textContent.toLowerCase();
+              const code = card.querySelector('.card-info .title').textContent.toLowerCase();
+
+              // Verifica se a entrada do usuário está contida no título ou no código
+              if (title.includes(input) || code.includes(input)) {
+                  card.classList.remove('hidden');
+              } else {
+                  card.classList.add('hidden');
+              }
+          });
+      }
+  </script>
+
         <h2 style="text-align: center;background-color: rgb(245 245 245);" class="title">Fashion</h2>
         <div class="page-btn">
           <a class="active-span" href="fashion.html"><span style="background:#198754; color: #fff;">1</span></a>
 
         </div>
-
+        
 
         <div class="cards-container">
 
           <div class="card">
             <p class="title">SEBO DE CARNEIRO TRADICIONAL 200ML</p>
-
-            <img class="img2" src="../public/images/fashion/sebocarneiro200ml.png" alt="Pré-visualização do produto">
+            <img class="img2" src="../public/images/fashion/sebocarneiro200ml.png" alt="SEBO DE CARNEIRO TRADICIONAL 200ML">
             <div class="card-info">
-              <!--<p class="tag">Fonte verde</p><-->
-              <p class="title">COD: 685</p>
-
-              <p class="shipping"></p>
-              <p class="shipping">Entrega a combinar</p>
+                <p class="title">COD: 685</p>
+                <p class="shipping">Entrega a combinar</p>
             </div>
-
-            <div class="btinfo"><a class="button-buy">Detalhes</a>
-              <p class="info">Hidratante para todos tipos de pele.</p>
+            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#productModal685">Detalhes</button>
+            <!-- Modal -->
+            <div class="modal fade" id="productModal685" tabindex="-1" aria-labelledby="productModalLabel685" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="productModalLabel685">SEBO DE CARNEIRO TRADICIONAL 200ML</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fechar"></button>
+                        </div>
+                        <div class="modal-body">
+                            <img class="imgmodal" src="../public/images/fashion/sebocarneiro200ml.png" alt="SEBO DE CARNEIRO TRADICIONAL 200ML">
+                            <p>Hidratante para todos tipos de pele.</p>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+                        </div>
+                    </div>
+                </div>
             </div>
-          </div>
-          <div class="card">
-            <p class="title">SEBO DE CARNEIRO ESFOLIANTE 200ML</p>
-            <img class="img2" src="../public/images/fashion/sebocarneiroEsfoliante200ml.png"
-              alt="Pré-visualização do produto">
-            <div class="card-info">
-              <!--<p class="tag">Fonte verde</p><-->
-              <p class="title">COD:686</p>
-
-              <p class="shipping"></p>
-              <p class="shipping">Entrega a combinar</p>
-            </div>
-
-            <div class="btinfo"><a class="button-buy">Detalhes</a>
-              <p class="info">Hidratante para todos tipos de pele que faz a função de esfoliante retirando a pele morta.
-              </p>
-
-            </div>
-          </div>
-          <div class="card">
-            <p class="title">SEBO DE CARNEIRO RELAXANTE 200ML</p>
-            <img class="img2" src="../public/images/fashion/sebocarneiroRelaxante200ml.png"
-              alt="Pré-visualização do produto">
-            <div class="card-info">
-              <!--<p class="tag">Fonte verde</p><-->
-              <p class="title">COD:687</p>
-
-
-              <p class="shipping"></p>
-            </div>
-
-            <div class="btinfo"><a class="button-buy">Detalhes</a>
-              <p class="info">Hidratante para todos tipos de pele, relaxante com ação refrescante, restabelece o
-                equilíbrio hídrico, protege e restaura a
-                maciez da pele.</p>
-              <p class="shipping">Entrega a combinar</p>
-            </div>
-          </div>
-
-          <div class="card">
-            <p class="title">CARTILAGEM DE TUBARÃO 200ML</p>
-            <img class="img2" src="../public/images/fashion/cartilagemTubarao200ml.png"
-              alt="Pré-visualização do produto">
-            <div class="card-info">
-              <!--<p class="tag">Fonte verde</p><-->
-              <p class="title">Cod:688</p>
-
-
-              <p class="shipping"></p>
-              <p class="shipping">Entrega a combinar</p>
-            </div>
-
-            <div class="btinfo"><a class="button-buy">Detalhes</a>
-              <p class="info">
-                O massageador Cartilagem de Tubarão é um produto elaborado com cartilagem de tubarão (complexo proteico
-                formado por proteínas e colágeno) e extrato de Arnica. Seu uso oferece absorção rápida e ação
-                refrescante, proporcionando através da massagem, sensação de bem estar e conforto.</p>
-            </div>
-          </div>
-
-          <div class="card">
-            <p class="title">ARNICA SPORT 200ML</p>
-            <img class="img2" src="../public/images/fashion/arnicaSportBisnaga200ml.png"
-              alt="Pré-visualização do produto">
-            <div class="card-info">
-              <!--<p class="tag">Fonte verde</p><-->
-              <p class="title">COD:689</p>
-
-
-              <p class="shipping"></p>
-              <p class="shipping">Entrega a combinar</p>
-            </div>
-
-            <div class="btinfo"><a class="button-buy">Detalhes</a>
-              <p class="info">O Massageador Arnica Sport é um produto elaborado com extratos selecionados e seu uso
-                oferece absorção rápida e ação refrescante, proporcionando através da massagem, sensação de bem estar e
-                conforto.</p>
-            </div>
-          </div>
-
-          <div class="card">
-            <p class="title">CREME MASSAGEADOR 200g</p>
-            <img class="img2" src="../public/images/fashion/crememassageador200g.png" alt="Pré-visualização do produto">
-            <div class="card-info">
-              <!--<p class="tag">Fonte verde</p><-->
-              <p class="title">COD:691
-              </p>
-
-
-              <p class="shipping"></p>
-              <p class="shipping">Entrega a combinar</p>
-            </div>
-
-            <div class="btinfo"><a class="button-buy">Detalhes</a>
-              <p class="info">O Creme Massageador Fashion é um produto elaborado com ativos selecionados, como Sebo de
-                Carneiro e extratos de Arnica, Alecrim, Centella Asiática e Mastruço. Seu uso oferece absorção rápida,
-                ação refrescante e através da massagem, sensação de bem-estar e conforto.</p>
-            </div>
-          </div>
-
+        
         </div>
-      </div>
-    </section>
+        
+        <div class="card">
+            <p class="title">SEBO DE CARNEIRO ESFOLIANTE 200ML</p>
+            <img class="img2" src="../public/images/fashion/sebocarneiroEsfoliante200ml.png" alt="SEBO DE CARNEIRO ESFOLIANTE 200ML">
+            <div class="card-info">
+                <p class="title">COD:686</p>
+                <p class="shipping">Entrega a combinar</p>
+            </div>
+            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#productModal686">Detalhes</button>
+            <!-- Modal -->
+            <div class="modal fade" id="productModal686" tabindex="-1" aria-labelledby="productModalLabel686" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="productModalLabel686">SEBO DE CARNEIRO ESFOLIANTE 200ML</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fechar"></button>
+                        </div>
+                        <div class="modal-body">
+                            <img class="imgmodal" src="../public/images/fashion/sebocarneiroEsfoliante200ml.png" alt="SEBO DE CARNEIRO ESFOLIANTE 200ML">
+                            <p>Hidratante para todos tipos de pele que faz a função de esfoliante retirando a pele morta.</p>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="card">
+            <p class="title">SEBO DE CARNEIRO RELAXANTE 200ML</p>
+            <img class="img2" src="../public/images/fashion/sebocarneiroRelaxante200ml.png" alt="SEBO DE CARNEIRO RELAXANTE 200ML">
+            <div class="card-info">
+                <p class="title">COD:687</p>
+                <p class="shipping">Entrega a combinar</p>
+            </div>
+            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#productModal687">Detalhes</button>
+            <!-- Modal -->
+            <div class="modal fade" id="productModal687" tabindex="-1" aria-labelledby="productModalLabel687" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="productModalLabel687">SEBO DE CARNEIRO RELAXANTE 200ML</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fechar"></button>
+                        </div>
+                        <div class="modal-body">
+                            <img class="imgmodal" src="../public/images/fashion/sebocarneiroRelaxante200ml.png" alt="SEBO DE CARNEIRO RELAXANTE 200ML">
+                            <p>Hidratante para todos tipos de pele, relaxante com ação refrescante, restabelece o equilíbrio hídrico, protege e restaura a maciez da pele.</p>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="card">
+            <p class="title">CARTILAGEM DE TUBARÃO 200ML</p>
+            <img class="img2" src="../public/images/fashion/cartilagemTubarao200ml.png" alt="CARTILAGEM DE TUBARÃO 200ML">
+            <div class="card-info">
+                <p class="title">Cod:688</p>
+                <p class="shipping">Entrega a combinar</p>
+            </div>
+            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#productModal688">Detalhes</button>
+            <!-- Modal -->
+            <div class="modal fade" id="productModal688" tabindex="-1" aria-labelledby="productModalLabel688" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="productModalLabel688">CARTILAGEM DE TUBARÃO 200ML</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fechar"></button>
+                        </div>
+                        <div class="modal-body">
+                            <img class="imgmodal" src="../public/images/fashion/cartilagemTubarao200ml.png" alt="CARTILAGEM DE TUBARÃO 200ML">
+                            <p>O massageador Cartilagem de Tubarão é um produto elaborado com cartilagem de tubarão (complexo proteico formado por proteínas e colágeno) e extrato de Arnica. Seu uso oferece absorção rápida e ação refrescante, proporcionando através da massagem, sensação de bem-estar e conforto.</p>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="card">
+            <p class="title">ARNICA SPORT 200ML</p>
+            <img class="img2" src="../public/images/fashion/arnicaSportBisnaga200ml.png" alt="ARNICA SPORT 200ML">
+            <div class="card-info">
+                <p class="title">COD:689</p>
+                <p class="shipping">Entrega a combinar</p>
+            </div>
+            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#productModal689">Detalhes</button>
+            <!-- Modal -->
+            <div class="modal fade" id="productModal689" tabindex="-1" aria-labelledby="productModalLabel689" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="productModalLabel689">ARNICA SPORT 200ML</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fechar"></button>
+                        </div>
+                        <div class="modal-body">
+                            <img class="imgmodal" src="../public/images/fashion/arnicaSportBisnaga200ml.png" alt="ARNICA SPORT 200ML">
+                            <p>O Massageador Arnica Sport é um produto elaborado com extratos selecionados e seu uso oferece absorção rápida e ação refrescante, proporcionando através da massagem, sensação de bem-estar e conforto.</p>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="card">
+            <p class="title">CREME MASSAGEADOR 200g</p>
+            <img class="img2" src="../public/images/fashion/crememassageador200g.png" alt="CREME MASSAGEADOR 200g">
+            <div class="card-info">
+                <p class="title">COD:691</p>
+                <p class="shipping">Entrega a combinar</p>
+            </div>
+            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#productModal691">Detalhes</button>
+            <!-- Modal -->
+            <div class="modal fade" id="productModal691" tabindex="-1" aria-labelledby="productModalLabel691" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="productModalLabel691">CREME MASSAGEADOR 200g</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fechar"></button>
+                        </div>
+                        <div class="modal-body">
+                            <img class="imgmodal" src="../public/images/fashion/crememassageador200g.png" alt="CREME MASSAGEADOR 200g">
+                            <p>O Creme Massageador Fashion é um produto elaborado com ativos selecionados, como Sebo de Carneiro e extratos de Arnica, Alecrim, Centella Asiática e Mastruço. Seu uso oferece absorção rápida, ação refrescante e através da massagem, sensação de bem-estar e conforto.</p>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+
+          
+
+       
+      
+  
     </br></br>
 
     <div class="divider-1"></div>
 
 
-    <section class="product-list wrapper">
-
-
-      <div class="cards-container">
+    
         <!--
         <div class="card">
           <p class="title">SABONETE ÍNTIMO UNISSEX 200g</p>
@@ -243,87 +352,116 @@
         </div>-->
         <div class="card">
           <p class="title">ERVAS MILAGROSAS 150g</p>
-          <img class="img2" src="../public/images/fashion/ervasmilagrosas150g.png" alt="Pré-visualização do produto">
+          <img class="img2" src="../public/images/fashion/ervasmilagrosas150g.png" alt="ERVAS MILAGROSAS 150g">
           <div class="card-info">
-            <!--<p class="tag">Fonte verde</p><-->
-            <p class="title">COD:705
-            </p>
-
-            <p class="shipping"></p>
-            <p class="shipping">Entrega a combinar</p>
+              <p class="title">COD:705</p>
+              <p class="shipping">Entrega a combinar</p>
           </div>
-
-          <div class="btinfo"><a class="button-buy">Detalhes</a>
-            <p class="info">A pomada para Massagem Muscular Fashion possui extratos naturais de Arnica, Castanha da
-              Índia, Centella Asiática e LegActif (composto com Vara de Ouro, Extrato de pele de Limão e Extrato de
-              Gilbarbeira), que proporcionam, através da massagem, o relaxamento muscular e a sensação de frescor e
-              conforto.</p>
-
+          <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#productModal705">Detalhes</button>
+          <!-- Modal -->
+          <div class="modal fade" id="productModal705" tabindex="-1" aria-labelledby="productModalLabel705" aria-hidden="true">
+              <div class="modal-dialog modal-dialog-centered">
+                  <div class="modal-content">
+                      <div class="modal-header">
+                          <h5 class="modal-title" id="productModalLabel705">ERVAS MILAGROSAS 150g</h5>
+                          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fechar"></button>
+                      </div>
+                      <div class="modal-body">
+                          <img class="imgmodal" src="../public/images/fashion/ervasmilagrosas150g.png" alt="ERVAS MILAGROSAS 150g">
+                          <p>A pomada para Massagem Muscular Fashion possui extratos naturais de Arnica, Castanha da Índia, Centella Asiática e LegActif (composto com Vara de Ouro, Extrato de pele de Limão e Extrato de Gilbarbeira), que proporcionam, através da massagem, o relaxamento muscular e a sensação de frescor e conforto.</p>
+                      </div>
+                      <div class="modal-footer">
+                          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+                      </div>
+                  </div>
+              </div>
           </div>
-        </div>
-
-        <div class="card">
+      </div>
+      
+      <div class="card">
           <p class="title">SEBO DE CARNEIRO C/ UREIA 200ML</p>
-          <img class="img2" src="../public/images/fashion/sebocarneiroureia200ml.png" alt="Pré-visualização do produto">
+          <img class="img2" src="../public/images/fashion/sebocarneiroureia200ml.png" alt="SEBO DE CARNEIRO C/ UREIA 200ML">
           <div class="card-info">
-            <!--<p class="tag">Fonte verde</p><-->
-            <p class="title">COD:1121
-            </p>
-
-
-            <p class="shipping"></p>
-            <p class="shipping">Entrega a combinar</p>
+              <p class="title">COD:1121</p>
+              <p class="shipping">Entrega a combinar</p>
           </div>
-
-          <div class="btinfo"><a class="button-buy">Detalhes</a>
-            <p class="info">O Creme Hidratante Sebo de Carneiro Ureia 10% Fashion foi desenvolvido para hidratação
-              profunda e duradoura das áreas mais ressecadas da pele. Além de Ureia, possui ativos importantes, tais
-              como Lanolina, Manteiga de Karité e Cacau. Seu uso restabelece o equilíbrio hídrico, protege e restaura a
-              maciez da pele.</p>
+          <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#productModal1121">Detalhes</button>
+          <!-- Modal -->
+          <div class="modal fade" id="productModal1121" tabindex="-1" aria-labelledby="productModalLabel1121" aria-hidden="true">
+              <div class="modal-dialog modal-dialog-centered">
+                  <div class="modal-content">
+                      <div class="modal-header">
+                          <h5 class="modal-title" id="productModalLabel1121">SEBO DE CARNEIRO C/ UREIA 200ML</h5>
+                          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fechar"></button>
+                      </div>
+                      <div class="modal-body">
+                          <img class="imgmodal" src="../public/images/fashion/sebocarneiroureia200ml.png" alt="SEBO DE CARNEIRO C/ UREIA 200ML">
+                          <p>O Creme Hidratante Sebo de Carneiro Ureia 10% Fashion foi desenvolvido para hidratação profunda e duradoura das áreas mais ressecadas da pele. Além de Ureia, possui ativos importantes, tais como Lanolina, Manteiga de Karité e Cacau. Seu uso restabelece o equilíbrio hídrico, protege e restaura a maciez da pele.</p>
+                      </div>
+                      <div class="modal-footer">
+                          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+                      </div>
+                  </div>
+              </div>
           </div>
-        </div>
-
-        <div class="card">
+      </div>
+      
+      <div class="card">
           <p class="title">SEBO DE CARNEIRO C/ UREIA 430ML</p>
-          <img class="img2" src="../public/images/fashion/sebocarneiroureia430mll.png"
-            alt="Pré-visualização do produto">
+          <img class="img2" src="../public/images/fashion/sebocarneiroureia430mll.png" alt="SEBO DE CARNEIRO C/ UREIA 430ML">
           <div class="card-info">
-            <!--<p class="tag">Fonte verde</p><-->
-            <p class="title">COD:1122
-            </p>
-
-
-            <p class="shipping"></p>
-            <p class="shipping">Entrega a combinar</p>
+              <p class="title">COD:1122</p>
+              <p class="shipping">Entrega a combinar</p>
           </div>
-
-          <div class="btinfo"><a class="button-buy">Detalhes</a>
-            <p class="info">O Creme Hidratante Sebo de Carneiro Ureia 10% Fashion foi desenvolvido para hidratação
-              profunda e duradoura das áreas mais ressecadas da pele. Além de Ureia, possui ativos importantes, tais
-              como Lanolina, Manteiga de Karité e Cacau. Seu uso restabelece o equilíbrio hídrico, protege e restaura a
-              maciez da pele.</p>
+          <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#productModal1122">Detalhes</button>
+          <!-- Modal -->
+          <div class="modal fade" id="productModal1122" tabindex="-1" aria-labelledby="productModalLabel1122" aria-hidden="true">
+              <div class="modal-dialog modal-dialog-centered">
+                  <div class="modal-content">
+                      <div class="modal-header">
+                          <h5 class="modal-title" id="productModalLabel1122">SEBO DE CARNEIRO C/ UREIA 430ML</h5>
+                          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fechar"></button>
+                      </div>
+                      <div class="modal-body">
+                          <img class="imgmodal" src="../public/images/fashion/sebocarneiroureia430mll.png" alt="SEBO DE CARNEIRO C/ UREIA 430ML">
+                          <p>O Creme Hidratante Sebo de Carneiro Ureia 10% Fashion foi desenvolvido para hidratação profunda e duradoura das áreas mais ressecadas da pele. Além de Ureia, possui ativos importantes, tais como Lanolina, Manteiga de Karité e Cacau. Seu uso restabelece o equilíbrio hídrico, protege e restaura a maciez da pele.</p>
+                      </div>
+                      <div class="modal-footer">
+                          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+                      </div>
+                  </div>
+              </div>
           </div>
-        </div>
-
-        <div class="card">
+      </div>
+      
+      <div class="card">
           <p class="title">ARNICA EXTRA FORTE 200ML</p>
-          <img class="img2" src="../public/images/fashion/arnicaBisnagaextraforte200ml.png"
-            alt="Pré-visualização do produto">
+          <img class="img2" src="../public/images/fashion/arnicaBisnagaextraforte200ml.png" alt="ARNICA EXTRA FORTE 200ML">
           <div class="card-info">
-            <!--<p class="tag">Fonte verde</p><-->
-            <p class="title">COD:1457
-            </p>
-
-
-            <p class="shipping"></p>
-            <p class="shipping">Entrega a combinar</p>
+              <p class="title">COD:1457</p>
+              <p class="shipping">Entrega a combinar</p>
           </div>
-
-          <div class="btinfo"><a class="button-buy">Detalhes</a>
-            <p class="info">Com extrato de arnica, proporciona efeito relaxante e refrescante através da massagem, além
-              da sensação de conforto e bem-estar.</p>
+          <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#productModal1457">Detalhes</button>
+          <!-- Modal -->
+          <div class="modal fade" id="productModal1457" tabindex="-1" aria-labelledby="productModalLabel1457" aria-hidden="true">
+              <div class="modal-dialog modal-dialog-centered">
+                  <div class="modal-content">
+                      <div class="modal-header">
+                          <h5 class="modal-title" id="productModalLabel1457">ARNICA EXTRA FORTE 200ML</h5>
+                          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fechar"></button>
+                      </div>
+                      <div class="modal-body">
+                          <img class="imgmodal" src="../public/images/fashion/arnicaBisnagaextraforte200ml.png" alt="ARNICA EXTRA FORTE 200ML">
+                          <p>Com extrato de arnica, proporciona efeito relaxante e refrescante através da massagem, além da sensação de conforto e bem-estar.</p>
+                      </div>
+                      <div class="modal-footer">
+                          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+                      </div>
+                  </div>
+              </div>
           </div>
-        </div>
+      </div>
+      
     </section>
     </br></br> </section>
 
@@ -470,7 +608,7 @@
 
             setInterval(refreshTime, 1000);</script>
 
-          <a style="color: #fff;" href="https://www.instagram.com/heerick.gg/" target="_blank"><p style="position: relative;" class="mt-5">byHerick&copy;
+          <a style="color: #fff;" href="https://www.instagram.com/hericksouza.gg/" target="_blank"><p style="position: relative;" class="mt-5">byHerick&copy;
           </p></a>
 
         </div>

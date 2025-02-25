@@ -66,6 +66,61 @@
             class="logo-detail">Novos Produtos!</span>
         </p>
 
+        <h1 class="searchh">Pesquisa de Produtos</h1>
+      <input type="text" id="searchInput" placeholder="Pesquisar produto..." onkeyup="searchProducts()">
+      <style>
+        /* Estilo para o título com a classe searchh */
+.searchh {
+  color: #28a745; /* Verde preferencial */
+  text-align: center; /* Centraliza o título */
+  font-size: 1.5em; /* Tamanho da fonte */
+  margin: 20px 0; /* Margens superior e inferior */
+}
+
+/* Estilo para o input */
+#searchInput {
+  width: 100%; /* Largura total */
+  max-width: 400px; /* Largura máxima */
+  padding: 10px; /* Espaçamento interno */
+  border: 2px solid #28a745; /* Borda verde */
+  border-radius: 5px; /* Cantos arredondados */
+  font-size: 1em; /* Tamanho da fonte */
+  margin: 0 auto; /* Centraliza o input */
+  display: block; /* Exibe como bloco */
+  transition: border-color 0.3s; /* Transição suave para a borda */
+  margin-bottom: 10px;
+}
+
+/* Efeito ao focar no input */
+#searchInput:focus {
+  border-color: #218838; /* Verde mais escuro ao focar */
+  outline: none; /* Remove o contorno padrão */
+}
+
+        
+.hidden {
+  display: none;
+}
+    </style>
+     <script>
+      function searchProducts() {
+          const input = document.getElementById('searchInput').value.toLowerCase();
+          const cards = document.querySelectorAll('.card');
+
+          cards.forEach(card => {
+              const title = card.querySelector('.title').textContent.toLowerCase();
+              const code = card.querySelector('.card-info .title').textContent.toLowerCase();
+
+              // Verifica se a entrada do usuário está contida no título ou no código
+              if (title.includes(input) || code.includes(input)) {
+                  card.classList.remove('hidden');
+              } else {
+                  card.classList.add('hidden');
+              }
+          });
+      }
+  </script>
+
         <h2 style="text-align: center;background-color: rgb(245 245 245);" class="title">Fonte Verde Página 1</h2>
         <div class="page-btn">
           <a class="active-span" href="../page-fonte-verde-liquid/fonte-lverde.html"><span
@@ -81,357 +136,532 @@
         <div class="cards-container">
           <div class="card">
             <p class="title">ALCACHOFRA 500ML</p>
-            <img class="img2" src="../public/images/fonte verde/alcachofral.png" alt="Pré-visualização do produto">
+            <img class="img2" src="../public/images/fonte verde/alcachofral.png" alt="ALCACHOFRA 500ML">
             <div class="card-info">
-              <!--<p class="tag">Fonte verde</p><-->
-              <p class="title">COD:188</p>
-
-
-              <p class="shipping"></p>
+                <p class="title">COD:188</p>
+                <p class="shipping">Entrega a combinar</p>
             </div>
-
-            <div class="btinfo"><a class="button-buy">Detalhes</a>
-              <p class="info">Proporciona bem estar ao organismo, contém alcachofra
-                medicinal.</p>
-              <p class="shipping">Entrega a combinar</p>
+            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#productModal188">Detalhes</button>
+            <!-- Modal -->
+            <div class="modal fade" id="productModal188" tabindex="-1" aria-labelledby="productModalLabel188" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="productModalLabel188">ALCACHOFRA 500ML</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fechar"></button>
+                        </div>
+                        <div class="modal-body">
+                            <img class="imgmodal" src="../public/images/fonte verde/alcachofral.png" alt="ALCACHOFRA 500ML">
+                            <p>Proporciona bem-estar ao organismo, contém alcachofra medicinal.</p>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+                        </div>
+                    </div>
+                </div>
             </div>
-          </div>
-          <div class="card">
-            <p class="title">AMORA MIURA 500ML</p>
-            <img class="img2" src="../public/images/fonte verde/amora miural.png" alt="Pré-visualização do produto">
-            <div class="card-info">
-              <!--<p class="tag">Fonte verde</p><-->
-              <p class="title">COD:189</p>
-
-
-              <p class="shipping"></p>
-              <p class="shipping">Entrega a combinar</p>
-            </div>
-
-            <div class="btinfo"><a class="button-buy">Detalhes</a>
-              <p class="info">Amora é uma fruta que ajuda no tratamento e prevenção de
-                diabetes, infarto e pressão alta.</p>
-            </div>
-          </div>
-          <div class="card">
-            <p class="title">ANTI DEPRESSIVO 500ML</p>
-            <img class="img2" src="../public/images/fonte verde/antidepressivol.png" alt="Pré-visualização do produto">
-            <div class="card-info">
-              <!--<p class="tag">Fonte verde</p><-->
-              <p class="title">COD:190</p>
-
-
-              <p class="shipping"></p>
-            </div>
-
-            <div class="btinfo"><a class="button-buy">Detalhes</a>
-              <p class="info">Medicamento rico de nutrientes naturais e contribui com a melhora
-                do sono e sem apresentar efeitos colaterais.</p>
-              <p class="shipping">Entrega a combinar</p>
-            </div>
-          </div>
-
-          <div class="card">
-            <p class="title">ANTI INFLAMATORIO 500ML</p>
-            <img class="img2" src="../public/images/fonte verde/antiinflamatoriol.png"
-              alt="Pré-visualização do produto">
-            <div class="card-info">
-              <!--<p class="tag">Fonte verde</p><-->
-              <p class="title">COD:191
-              </p>
-
-              <p class="shipping"></p>
-              <p class="shipping">Entrega a combinar</p>
-            </div>
-
-            <div class="btinfo"><a class="button-buy">Detalhes</a>
-              <p class="info">Age contra: Gripe, resfriados, diarréias, náuseas e vômitos.</p>
-
-            </div>
-          </div>
-
-          <div class="card">
-            <p class="title">BABOSA 500ML</p>
-            <img class="img2" src="../public/images/fonte verde/babosa500mlL.png" alt="Pré-visualização do produto">
-            <div class="card-info">
-              <!--<p class="tag">Fonte verde</p><-->
-              <p class="title">COD:192</p>
-
-
-              <p class="shipping"></p>
-              <p class="shipping">Entrega a combinar</p>
-            </div>
-
-            <div class="btinfo"><a class="button-buy">Detalhes</a>
-              <p class="info">É uma planta medicinal, que favorece a cicatrização de feridas e queimaduras, além de
-                previnir a cárie dentária.</br>
-                Usada também no tratamento da beleza, principalmente no cabelo e na pele.</p>
-            </div>
-          </div>
-
-          <div class="card">
-            <p class="title">BERINJELA 500ML </p>
-            <img class="img2" src="../public/images/fonte verde/berinjela500ml.png" alt="Pré-visualização do produto">
-            <div class="card-info">
-              <!--<p class="tag">Fonte verde</p><-->
-              <p class="title">COD:193
-              </p>
-
-
-              <p class="shipping"></p>
-              <p class="shipping">Entrega a combinar</p>
-            </div>
-
-            <div class="btinfo"><a class="button-buy">Detalhes</a>
-              <p class="info">Beringela auxilia na redução dos níveis de Colesterol, Glicose e Ácido Úrico, além de
-                reduzir as dores do Reumatismo.</p>
-            </div>
-          </div>
-
         </div>
-      </div>
-    </section>
+        
+        <div class="card">
+            <p class="title">AMORA MIURA 500ML</p>
+            <img class="img2" src="../public/images/fonte verde/amora miural.png" alt="AMORA MIURA 500ML">
+            <div class="card-info">
+                <p class="title">COD:189</p>
+                <p class="shipping">Entrega a combinar</p>
+            </div>
+            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#productModal189">Detalhes</button>
+            <!-- Modal -->
+            <div class="modal fade" id="productModal189" tabindex="-1" aria-labelledby="productModalLabel189" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="productModalLabel189">AMORA MIURA 500ML</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fechar"></button>
+                        </div>
+                        <div class="modal-body">
+                            <img class="imgmodal" src="../public/images/fonte verde/amora miural.png" alt="AMORA MIURA 500ML">
+                            <p>Amora é uma fruta que ajuda no tratamento e prevenção de diabetes, infarto e pressão alta.</p>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="card">
+            <p class="title">ANTI DEPRESSIVO 500ML</p>
+            <img class="img2" src="../public/images/fonte verde/antidepressivol.png" alt="ANTI DEPRESSIVO 500ML">
+            <div class="card-info">
+                <p class="title">COD:190</p>
+                <p class="shipping">Entrega a combinar</p>
+            </div>
+            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#productModal190">Detalhes</button>
+            <!-- Modal -->
+            <div class="modal fade" id="productModal190" tabindex="-1" aria-labelledby="productModalLabel190" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="productModalLabel190">ANTI DEPRESSIVO 500ML</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fechar"></button>
+                        </div>
+                        <div class="modal-body">
+                            <img class="imgmodal" src="../public/images/fonte verde/antidepressivol.png" alt="ANTI DEPRESSIVO 500ML">
+                            <p>Medicamento rico em nutrientes naturais e contribui com a melhora do sono, sem apresentar efeitos colaterais.</p>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="card">
+            <p class="title">ANTI INFLAMATORIO 500ML</p>
+            <img class="img2" src="../public/images/fonte verde/antiinflamatoriol.png" alt="ANTI INFLAMATORIO 500ML">
+            <div class="card-info">
+                <p class="title">COD:191</p>
+                <p class="shipping">Entrega a combinar</p>
+            </div>
+            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#productModal191">Detalhes</button>
+            <!-- Modal -->
+            <div class="modal fade" id="productModal191" tabindex="-1" aria-labelledby="productModalLabel191" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="productModalLabel191">ANTI INFLAMATORIO 500ML</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fechar"></button>
+                        </div>
+                        <div class="modal-body">
+                            <img class="imgmodal" src="../public/images/fonte verde/antiinflamatoriol.png" alt="ANTI INFLAMATORIO 500ML">
+                            <p>Age contra gripe, resfriados, diarréias, náuseas e vômitos.</p>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="card">
+            <p class="title">BABOSA 500ML</p>
+            <img class="img2" src="../public/images/fonte verde/babosa500mlL.png" alt="BABOSA 500ML">
+            <div class="card-info">
+                <p class="title">COD:192</p>
+                <p class="shipping">Entrega a combinar</p>
+            </div>
+            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#productModal192">Detalhes</button>
+            <!-- Modal -->
+            <div class="modal fade" id="productModal192" tabindex="-1" aria-labelledby="productModalLabel192" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="productModalLabel192">BABOSA 500ML</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fechar"></button>
+                        </div>
+                        <div class="modal-body">
+                            <img class="imgmodal" src="../public/images/fonte verde/babosa500mlL.png" alt="BABOSA 500ML">
+                            <p>É uma planta medicinal, que favorece a cicatrização de feridas e queimaduras, além de prevenir a cárie dentária. Usada também no tratamento da beleza, principalmente no cabelo e na pele.</p>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="card">
+            <p class="title">BERINJELA 500ML</p>
+            <img class="img2" src="../public/images/fonte verde/berinjela500ml.png" alt="BERINJELA 500ML">
+            <div class="card-info">
+                <p class="title">COD:193</p>
+                <p class="shipping">Entrega a combinar</p>
+            </div>
+            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#productModal193">Detalhes</button>
+            <!-- Modal -->
+            <div class="modal fade" id="productModal193" tabindex="-1" aria-labelledby="productModalLabel193" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="productModalLabel193">BERINJELA 500ML</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fechar"></button>
+                        </div>
+                        <div class="modal-body">
+                            <img class="imgmodal" src="../public/images/fonte verde/berinjela500ml.png" alt="BERINJELA 500ML">
+                            <p>Auxilia na redução dos níveis de colesterol, glicose e ácido úrico, além de reduzir as dores do reumatismo.</p>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+
+          
+
+       
+      
+  
     </br></br>
 
     <div class="divider-1"></div>
 
 
-    <section class="product-list wrapper">
-
-
-      <div class="cards-container">
+    
         <div class="card">
           <p class="title">CALMANTE 500ML</p>
-          <img class="img2" src="../public/images/fonte verde/calmantel.png" alt="Pré-visualização do produto">
+          <img class="img2" src="../public/images/fonte verde/calmantel.png" alt="CALMANTE 500ML">
           <div class="card-info">
-            <!--<p class="tag">Fonte verde</p><-->
-            <p class="title">COD:194
-            </p>
-
-            <p class="shipping"></p>
-            <p class="shipping">Entrega a combinar</p>
+              <p class="title">COD:194</p>
+              <p class="shipping">Entrega a combinar</p>
           </div>
-
-          <div class="btinfo"><a class="button-buy">Detalhes</a>
-            <p class="info">Ajuda no relaxamento muscular, dimunui o nível de estresse e tensão nervosa. Auxilía no
-              combate à insônia e redur a ansiedade.</p>
-
+          <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#productModal194">Detalhes</button>
+          <!-- Modal -->
+          <div class="modal fade" id="productModal194" tabindex="-1" aria-labelledby="productModalLabel194" aria-hidden="true">
+              <div class="modal-dialog modal-dialog-centered">
+                  <div class="modal-content">
+                      <div class="modal-header">
+                          <h5 class="modal-title" id="productModalLabel194">CALMANTE 500ML</h5>
+                          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fechar"></button>
+                      </div>
+                      <div class="modal-body">
+                          <img class="imgmodal" src="../public/images/fonte verde/calmantel.png" alt="CALMANTE 500ML">
+                          <p>Ajuda no relaxamento muscular, diminui o nível de estresse e tensão nervosa. Auxilia no combate à insônia e reduz a ansiedade.</p>
+                      </div>
+                      <div class="modal-footer">
+                          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+                      </div>
+                  </div>
+              </div>
           </div>
-        </div>
-        <div class="card">
+      </div>
+      
+      <div class="card">
           <p class="title">CANELA DE VELHO 500ML</p>
-          <img class="img2" src="../public/images/fonte verde/caneladvelho 500ml.png" alt="Pré-visualização do produto">
+          <img class="img2" src="../public/images/fonte verde/caneladvelho 500ml.png" alt="CANELA DE VELHO 500ML">
           <div class="card-info">
-            <!--<p class="tag">Fonte verde</p><-->
-            <p class="title">COD:195
-            </p>
-
-
-            <p class="shipping"></p>
-            <p class="shipping">Entrega a combinar</p>
+              <p class="title">COD:195</p>
+              <p class="shipping">Entrega a combinar</p>
           </div>
-
-          <div class="btinfo"><a class="button-buy">Detalhes</a>
-            <p class="info">Auxilía na Artrose, reumatismo, circulação, aumenta a defesa do corpo e previne o
-              envelhecimento.</p>
+          <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#productModal195">Detalhes</button>
+          <!-- Modal -->
+          <div class="modal fade" id="productModal195" tabindex="-1" aria-labelledby="productModalLabel195" aria-hidden="true">
+              <div class="modal-dialog modal-dialog-centered">
+                  <div class="modal-content">
+                      <div class="modal-header">
+                          <h5 class="modal-title" id="productModalLabel195">CANELA DE VELHO 500ML</h5>
+                          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fechar"></button>
+                      </div>
+                      <div class="modal-body">
+                          <img class="imgmodal" src="../public/images/fonte verde/caneladvelho 500ml.png" alt="CANELA DE VELHO 500ML">
+                          <p>Auxilia na artrose, reumatismo, circulação, aumenta a defesa do corpo e previne o envelhecimento.</p>
+                      </div>
+                      <div class="modal-footer">
+                          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+                      </div>
+                  </div>
+              </div>
           </div>
-        </div>
-        <div class="card">
+      </div>
+      
+      <div class="card">
           <p class="title">CANELA DE VELHO COM SUCUPIRA 500ML</p>
-          <img class="img2" src="../public/images/fonte verde/caneladvelhoSUCUPIRAL.png"
-            alt="Pré-visualização do produto">
+          <img class="img2" src="../public/images/fonte verde/caneladvelhoSUCUPIRAL.png" alt="CANELA DE VELHO COM SUCUPIRA 500ML">
           <div class="card-info">
-            <!--<p class="tag">Fonte verde</p><-->
-            <p class="title">COD:196
-            </p>
-            <p class="shipping"></p>
-            <p class="shipping">Entrega a combinar</p>
+              <p class="title">COD:196</p>
+              <p class="shipping">Entrega a combinar</p>
           </div>
-
-          <div class="btinfo"><a class="button-buy">Detalhes</a>
-            <p class="info">Auxilia na Artrose, reumatismo, circulação, aumenta a defesa do corpo e previne o
-              envelhecimento.</br>A Sucupira faz o tratamento de úlcera no estômago, feridas na pele, alivía a dor e
-              inflamações no organismo..</p>
+          <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#productModal196">Detalhes</button>
+          <!-- Modal -->
+          <div class="modal fade" id="productModal196" tabindex="-1" aria-labelledby="productModalLabel196" aria-hidden="true">
+              <div class="modal-dialog modal-dialog-centered">
+                  <div class="modal-content">
+                      <div class="modal-header">
+                          <h5 class="modal-title" id="productModalLabel196">CANELA DE VELHO COM SUCUPIRA 500ML</h5>
+                          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fechar"></button>
+                      </div>
+                      <div class="modal-body">
+                          <img class="imgmodal" src="../public/images/fonte verde/caneladvelhoSUCUPIRAL.png" alt="CANELA DE VELHO COM SUCUPIRA 500ML">
+                          <p>Auxilia na artrose, reumatismo, circulação, aumenta a defesa do corpo e previne o envelhecimento. A Sucupira faz o tratamento de úlcera no estômago, feridas na pele, alivia a dor e inflamações no organismo.</p>
+                      </div>
+                      <div class="modal-footer">
+                          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+                      </div>
+                  </div>
+              </div>
           </div>
-        </div>
-
-        <div class="card">
+      </div>
+      
+      <div class="card">
           <p class="title">COLUMAX 500ML</p>
-          <img class="img2" src="../public/images/fonte verde/columax500ml.png" alt="Pré-visualização do produto">
+          <img class="img2" src="../public/images/fonte verde/columax500ml.png" alt="COLUMAX 500ML">
           <div class="card-info">
-            <!--<p class="tag">Fonte verde</p><-->
-            <p class="title">COD:206
-            </p>
-            <p class="shipping"></p>
-            <p class="shipping">Entrega a combinar</p>
+              <p class="title">COD:206</p>
+              <p class="shipping">Entrega a combinar</p>
           </div>
-
-          <div class="btinfo"><a class="button-buy">Detalhes</a>
-            <p class="info">Auxilia no tratamento e prevenção de bico de papagaio, hérnia de disco, escoliose,
-              inflamações, dores lombares e pernas.</p>
+          <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#productModal206">Detalhes</button>
+          <!-- Modal -->
+          <div class="modal fade" id="productModal206" tabindex="-1" aria-labelledby="productModalLabel206" aria-hidden="true">
+              <div class="modal-dialog modal-dialog-centered">
+                  <div class="modal-content">
+                      <div class="modal-header">
+                          <h5 class="modal-title" id="productModalLabel206">COLUMAX 500ML</h5>
+                          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fechar"></button>
+                      </div>
+                      <div class="modal-body">
+                          <img class="imgmodal" src="../public/images/fonte verde/columax500ml.png" alt="COLUMAX 500ML">
+                          <p>Auxilia no tratamento e prevenção de bico de papagaio, hérnia de disco, escoliose, inflamações, dores lombares e pernas.</p>
+                      </div>
+                      <div class="modal-footer">
+                          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+                      </div>
+                  </div>
+              </div>
           </div>
-        </div>
-
-        <div class="card">
+      </div>
+      
+      <div class="card">
           <p class="title">DIABETICO 500ML</p>
-          <img class="img2" src="../public/images/fonte verde/diabetico500ml.png" alt="Pré-visualização do produto">
+          <img class="img2" src="../public/images/fonte verde/diabetico500ml.png" alt="DIABETICO 500ML">
           <div class="card-info">
-            <!--<p class="tag">Fonte verde</p><-->
-            <p class="title">COD:208
-            </p>
-            <p class="shipping"></p>
-            <p class="shipping">Entrega a combinar</p>
+              <p class="title">COD:208</p>
+              <p class="shipping">Entrega a combinar</p>
           </div>
-
-          <div class="btinfo"><a class="button-buy">Detalhes</a>
-            <p class="info">Rico em carboidratos, proteínas, sais minerais, vitaminas. </br>
-              Aliado ao tratamento da diabetes.</p>
+          <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#productModal208">Detalhes</button>
+          <!-- Modal -->
+          <div class="modal fade" id="productModal208" tabindex="-1" aria-labelledby="productModalLabel208" aria-hidden="true">
+              <div class="modal-dialog modal-dialog-centered">
+                  <div class="modal-content">
+                      <div class="modal-header">
+                          <h5 class="modal-title" id="productModalLabel208">DIABETICO 500ML</h5>
+                          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fechar"></button>
+                      </div>
+                      <div class="modal-body">
+                          <img class="imgmodal" src="../public/images/fonte verde/diabetico500ml.png" alt="DIABETICO 500ML">
+                          <p>Rico em carboidratos, proteínas, sais minerais, vitaminas. Aliado ao tratamento da diabetes.</p>
+                      </div>
+                      <div class="modal-footer">
+                          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+                      </div>
+                  </div>
+              </div>
           </div>
-        </div>
-
-        <div class="card">
+      </div>
+      
+      <div class="card">
           <p class="title">DIGESTIVO 500ML</p>
-          <img class="img2" src="../public/images/fonte verde/digestivo500ml.png" alt="Pré-visualização do produto">
+          <img class="img2" src="../public/images/fonte verde/digestivo500ml.png" alt="DIGESTIVO 500ML">
           <div class="card-info">
-            <!--<p class="tag">Fonte verde</p><-->
-            <p class="title">COD:209
-            </p>
-
-
-            <p class="shipping"></p>
-            <p class="shipping">Entrega a combinar</p>
+              <p class="title">COD:209</p>
+              <p class="shipping">Entrega a combinar</p>
           </div>
-
-          <div class="btinfo"><a class="button-buy">Detalhes</a>
-            <p class="info">Regulariza funções do fígado, vesícula biliar e intestinos. </br>
-              Uso para ganho de massa magra e enzimas do pâncreas.</p>
+          <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#productModal209">Detalhes</button>
+          <!-- Modal -->
+          <div class="modal fade" id="productModal209" tabindex="-1" aria-labelledby="productModalLabel209" aria-hidden="true">
+              <div class="modal-dialog modal-dialog-centered">
+                  <div class="modal-content">
+                      <div class="modal-header">
+                          <h5 class="modal-title" id="productModalLabel209">DIGESTIVO 500ML</h5>
+                          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fechar"></button>
+                      </div>
+                      <div class="modal-body">
+                          <img class="imgmodal" src="../public/images/fonte verde/digestivo500ml.png" alt="DIGESTIVO 500ML">
+                          <p>Regulariza funções do fígado, vesícula biliar e intestinos. Uso para ganho de massa magra e enzimas do pâncreas.</p>
+                      </div>
+                      <div class="modal-footer">
+                          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+                      </div>
+                  </div>
+              </div>
           </div>
-        </div>
+      </div>
+      
     </section>
     </br></br>
 
     <div class="divider-1"></div>
-    <section class="product-list wrapper">
-
-      <div class="cards-container">
+   
         <div class="card">
           <p class="title">ELIXIR DE INHAME 500ML</p>
-          <img class="img2" src="../public/images/fonte verde/elixirinhame 500ml.png" alt="Pré-visualização do produto">
+          <img class="img2" src="../public/images/fonte verde/elixirinhame 500ml.png" alt="ELIXIR DE INHAME 500ML">
           <div class="card-info">
-            <!--<p class="tag">Fonte verde</p><-->
-            <p class="title">COD:210
-            </p>
-
-
-            <p class="shipping"></p>
-            <p class="shipping">Entrega a combinar</p>
-
+              <p class="title">COD:210</p>
+              <p class="shipping">Entrega a combinar</p>
           </div>
-          <div class="btinfo"><a class="button-buy">Detalhes</a>
-            <p class="info">Solução fitoterápica, usada para eliminar toxinas do organismo, aliviar dores provocadas por
-              cólicas ou reumatismo e facilitar a digestão. </br>
-              Compõem vitamina B6 que regulariza os níveis de progesterona e facilita a ovulação.</p>
+          <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#productModal210">Detalhes</button>
+          <!-- Modal -->
+          <div class="modal fade" id="productModal210" tabindex="-1" aria-labelledby="productModalLabel210" aria-hidden="true">
+              <div class="modal-dialog modal-dialog-centered">
+                  <div class="modal-content">
+                      <div class="modal-header">
+                          <h5 class="modal-title" id="productModalLabel210">ELIXIR DE INHAME 500ML</h5>
+                          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fechar"></button>
+                      </div>
+                      <div class="modal-body">
+                          <img class="imgmodal" src="../public/images/fonte verde/elixirinhame 500ml.png" alt="ELIXIR DE INHAME 500ML">
+                          <p>Solução fitoterápica, usada para eliminar toxinas do organismo, aliviar dores provocadas por cólicas ou reumatismo e facilitar a digestão. Compõe vitamina B6 que regulariza os níveis de progesterona e facilita a ovulação.</p>
+                      </div>
+                      <div class="modal-footer">
+                          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+                      </div>
+                  </div>
+              </div>
           </div>
-
-        </div>
-
-        <div class="card">
+      </div>
+      
+      <div class="card">
           <p class="title">ESPINHEIRA SANTA 500ML</p>
-          <img class="img2" src="../public/images/fonte verde/espinheirasanta 500ml.png"
-            alt="Pré-visualização do produto">
+          <img class="img2" src="../public/images/fonte verde/espinheirasanta 500ml.png" alt="ESPINHEIRA SANTA 500ML">
           <div class="card-info">
-            <!--<p class="tag">Fonte verde</p><-->
-            <p class="title">COD:213
-            </p>
-
-
-            <p class="shipping"></p>
-            <p class="shipping">Entrega a combinar</p>
-
+              <p class="title">COD:213</p>
+              <p class="shipping">Entrega a combinar</p>
           </div>
-          <div class="btinfo"><a class="button-buy">Detalhes</a>
-            <p class="info">É de grande importância para a saúde do estômago, rico em taninos e tem ação cicatrizante,
-              controla a produção de ácido clorídrico no órgão minimizando a gastrite, azia e queimação.</p>
+          <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#productModal213">Detalhes</button>
+          <!-- Modal -->
+          <div class="modal fade" id="productModal213" tabindex="-1" aria-labelledby="productModalLabel213" aria-hidden="true">
+              <div class="modal-dialog modal-dialog-centered">
+                  <div class="modal-content">
+                      <div class="modal-header">
+                          <h5 class="modal-title" id="productModalLabel213">ESPINHEIRA SANTA 500ML</h5>
+                          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fechar"></button>
+                      </div>
+                      <div class="modal-body">
+                          <img class="imgmodal" src="../public/images/fonte verde/espinheirasanta 500ml.png" alt="ESPINHEIRA SANTA 500ML">
+                          <p>É de grande importância para a saúde do estômago, rico em taninos e tem ação cicatrizante, controla a produção de ácido clorídrico no órgão minimizando a gastrite, azia e queimação.</p>
+                      </div>
+                      <div class="modal-footer">
+                          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+                      </div>
+                  </div>
+              </div>
           </div>
-
-        </div>
-        <div class="card">
+      </div>
+      
+      <div class="card">
           <p class="title">FUMOFIM 500ML</p>
-          <img class="img2" src="../public/images/fonte verde/fumofim 500ml.png" alt="Pré-visualização do produto">
+          <img class="img2" src="../public/images/fonte verde/fumofim 500ml.png" alt="FUMOFIM 500ML">
           <div class="card-info">
-            <!--<p class="tag">Fonte verde</p><-->
-            <p class="title">COD:214
-            </p>
-            <p class="shipping"></p>
-            <p class="shipping">Entrega a combinar</p>
+              <p class="title">COD:214</p>
+              <p class="shipping">Entrega a combinar</p>
           </div>
-
-          <div class="btinfo"><a class="button-buy">Detalhes</a>
-            <p class="info">Ajuda a controlar o efeito da nicotina e induz a parar de fumar.</p>
+          <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#productModal214">Detalhes</button>
+          <!-- Modal -->
+          <div class="modal fade" id="productModal214" tabindex="-1" aria-labelledby="productModalLabel214" aria-hidden="true">
+              <div class="modal-dialog modal-dialog-centered">
+                  <div class="modal-content">
+                      <div class="modal-header">
+                          <h5 class="modal-title" id="productModalLabel214">FUMOFIM 500ML</h5>
+                          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fechar"></button>
+                      </div>
+                      <div class="modal-body">
+                          <img class="imgmodal" src="../public/images/fonte verde/fumofim 500ml.png" alt="FUMOFIM 500ML">
+                          <p>Ajuda a controlar o efeito da nicotina e induz a parar de fumar.</p>
+                      </div>
+                      <div class="modal-footer">
+                          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+                      </div>
+                  </div>
+              </div>
           </div>
-        </div>
+      </div>
+      
 
 
     </section>
     </br></br>
 
     <div class="divider-1"></div>
-    <section class="product-list wrapper">
-      <!--<h2 style="text-align: center;">produtos
-        <span class="material-symbols-outlined">Totalmente Naturais</span>
-      </h2><-->
-
-      <div class="cards-container">
+    
         <div class="card">
           <p class="title">GOTAS DO ZECA 100ML</p>
-          <img class="img2" src="../public/images/fonte verde/gotaszeca100ml.png" alt="Pré-visualização do produto">
+          <img class="img2" src="../public/images/fonte verde/gotaszeca100ml.png" alt="GOTAS DO ZECA 100ML">
           <div class="card-info">
-            <!--<p class="tag">Fonte verde</p><-->
-            <p class="title">COD:216
-            </p>
-            <p class="shipping"></p>
-            <p class="shipping">Entrega a combinar</p>
+              <p class="title">COD:216</p>
+              <p class="shipping">Entrega a combinar</p>
           </div>
-
-          <div class="btinfo"><a class="button-buy">Detalhes</a>
-            <p class="info">A base de ervas medicinais, ajuda a eliminar os males de: Estômago, fígado, diabetes, rins e
-              bexiga e demais males do corpo.</p>
+          <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#productModal216">Detalhes</button>
+          <!-- Modal -->
+          <div class="modal fade" id="productModal216" tabindex="-1" aria-labelledby="productModalLabel216" aria-hidden="true">
+              <div class="modal-dialog modal-dialog-centered">
+                  <div class="modal-content">
+                      <div class="modal-header">
+                          <h5 class="modal-title" id="productModalLabel216">GOTAS DO ZECA 100ML</h5>
+                          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fechar"></button>
+                      </div>
+                      <div class="modal-body">
+                          <img class="imgmodal" src="../public/images/fonte verde/gotaszeca100ml.png" alt="GOTAS DO ZECA 100ML">
+                          <p>A base de ervas medicinais, ajuda a eliminar os males de: Estômago, fígado, diabetes, rins e bexiga e demais males do corpo.</p>
+                      </div>
+                      <div class="modal-footer">
+                          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+                      </div>
+                  </div>
+              </div>
           </div>
-        </div>
-
-        <div class="card">
+      </div>
+      
+      <div class="card">
           <p class="title">MAÇÃ PERUANA 500ML</p>
-          <img class="img2" src="../public/images/fonte verde/macaperuana500ml.png" alt="Pré-visualização do produto">
+          <img class="img2" src="../public/images/fonte verde/macaperuana500ml.png" alt="MAÇÃ PERUANA 500ML">
           <div class="card-info">
-            <!--<p class="tag">Fonte verde</p><-->
-            <p class="title">COD:224
-            </p>
-            <p class="shipping"></p>
-            <p class="shipping">Entrega a combinar</p>
+              <p class="title">COD:224</p>
+              <p class="shipping">Entrega a combinar</p>
           </div>
-
-          <div class="btinfo"><a class="button-buy">Detalhes</a>
-            <p class="info">Potente extrato de vitaminas e anti-oxidante, repleto de proteínas, fibras, lipídios.</p>
+          <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#productModal224">Detalhes</button>
+          <!-- Modal -->
+          <div class="modal fade" id="productModal224" tabindex="-1" aria-labelledby="productModalLabel224" aria-hidden="true">
+              <div class="modal-dialog modal-dialog-centered">
+                  <div class="modal-content">
+                      <div class="modal-header">
+                          <h5 class="modal-title" id="productModalLabel224">MAÇÃ PERUANA 500ML</h5>
+                          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fechar"></button>
+                      </div>
+                      <div class="modal-body">
+                          <img class="imgmodal" src="../public/images/fonte verde/macaperuana500ml.png" alt="MAÇÃ PERUANA 500ML">
+                          <p>Potente extrato de vitaminas e anti-oxidante, repleto de proteínas, fibras, lipídios.</p>
+                      </div>
+                      <div class="modal-footer">
+                          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+                      </div>
+                  </div>
+              </div>
           </div>
-        </div>
-
-        <div class="card">
+      </div>
+      
+      <div class="card">
           <p class="title">PASSIFLORA 500ML</p>
-          <img class="img2" src="../public/images/fonte verde/passiflora 500ml.png" alt="Pré-visualização do produto">
+          <img class="img2" src="../public/images/fonte verde/passiflora 500ml.png" alt="PASSIFLORA 500ML">
           <div class="card-info">
-            <!--<p class="tag">Fonte verde</p><-->
-            <p class="title">COD:228
-            </p>
-
-
-            <p class="shipping"></p>
-            <p class="shipping">Entrega a combinar</p>
+              <p class="title">COD:228</p>
+              <p class="shipping">Entrega a combinar</p>
           </div>
-
-          <div class="btinfo"><a class="button-buy">Detalhes</a>
-            <p class="info">Iníbe doenças cardiovasculares, um bom anti-oxidante e possui efeito farmacológico.</p>
+          <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#productModal228">Detalhes</button>
+          <!-- Modal -->
+          <div class="modal fade" id="productModal228" tabindex="-1" aria-labelledby="productModalLabel228" aria-hidden="true">
+              <div class="modal-dialog modal-dialog-centered">
+                  <div class="modal-content">
+                      <div class="modal-header">
+                          <h5 class="modal-title" id="productModalLabel228">PASSIFLORA 500ML</h5>
+                          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fechar"></button>
+                      </div>
+                      <div class="modal-body">
+                          <img class="imgmodal" src="../public/images/fonte verde/passiflora 500ml.png" alt="PASSIFLORA 500ML">
+                          <p>Iníbe doenças cardiovasculares, um bom anti-oxidante e possui efeito farmacológico.</p>
+                      </div>
+                      <div class="modal-footer">
+                          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+                      </div>
+                  </div>
+              </div>
           </div>
-        </div>
+      </div>
+      
 
 
 
@@ -582,7 +812,7 @@
 
             setInterval(refreshTime, 1000);</script>
 
-          <a style="color: #fff;" href="https://www.instagram.com/heerick.gg/" target="_blank"><p style="position: relative;" class="mt-5">byHerick&copy;
+          <a style="color: #fff;" href="https://www.instagram.com/hericksouza.gg/" target="_blank"><p style="position: relative;" class="mt-5">byHerick&copy;
           </p></a>
 
         </div>

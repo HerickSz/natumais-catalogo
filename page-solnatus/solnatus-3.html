@@ -1,0 +1,1408 @@
+<!DOCTYPE html>
+<html lang="pt_BR">
+
+<head>
+  <!-- PAGE INFO -->
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SOL NATUS | 3</title>
+
+  <!-- Icones -->
+  <link rel="stylesheet" href="../assets/fonts/style.css" />
+  <link rel="icon" href="..//logo.png" type="icon/png" sizes="16x16">
+  <!-- Swiper -->
+  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" />
+
+
+  <!-- STYLES -->
+  <link rel="stylesheet" href="../style.css" />
+  <link rel="stylesheet" href="../css2/style2.css">
+  <link rel="stylesheet" href="../css2/nav-bar.css">
+  <link rel="stylesheet" href="../css2/super-offers.css">
+  <link rel="stylesheet" href="../css2/products.css">
+  <link rel="stylesheet" href="../csshover/style.css">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.gstatic.com" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Poppins:wght@400;500;700&display=swap"
+    rel="stylesheet" />
+
+
+
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/5.1.3/css/bootstrap.min.css" rel="stylesheet">
+</head>
+
+<body>
+  <header id="header">
+    <nav class="container">
+      <a class="logo" href="../index.html">Catálogo - Natu<span>Mais</span>
+
+      </a>
+      <!-- menu -->
+      <div class="menu">
+        <ul class="grid">
+          <li><a class="title" href="../index.html">Início </a></li>
+          <li><a class="title" href="../index.html#produtos">Produtos</a></li>
+          <li><a style="color: red;" class="title" href="../page-solnatus/solnatus-2.html">Voltar</a></li>
+        </ul>
+      </div>
+      <!-- /menu -->
+      <div class="toggle icon-menu"></div>
+      <div class="toggle icon-close"></div>
+    </nav>
+  </header>
+
+  <main>
+
+    <section id="inicio" class="super-offers-background">
+      <div id="inicio" class="header-image">
+
+      
+      </div>
+
+      <div class="super-offers wrapper">
+        <h3 style="text-align: center;"><span class="logo-detail">Ofertas do Mês</span> NatuMais</h3>
+        <p class="title" style="text-align: center;color: rgb(0, 0, 0); font-size: 20px;">Confira nossos <span
+            class="logo-detail">Novos Produtos!</span>
+        </p>
+
+        <h1 class="searchh">Pesquisa de Produtos</h1>
+      <input type="text" id="searchInput" placeholder="Pesquisar produto..." onkeyup="searchProducts()">
+      <style>
+        /* Estilo para o título com a classe searchh */
+.searchh {
+  color: #28a745; /* Verde preferencial */
+  text-align: center; /* Centraliza o título */
+  font-size: 1.5em; /* Tamanho da fonte */
+  margin: 20px 0; /* Margens superior e inferior */
+}
+
+/* Estilo para o input */
+#searchInput {
+  width: 100%; /* Largura total */
+  max-width: 400px; /* Largura máxima */
+  padding: 10px; /* Espaçamento interno */
+  border: 2px solid #28a745; /* Borda verde */
+  border-radius: 5px; /* Cantos arredondados */
+  font-size: 1em; /* Tamanho da fonte */
+  margin: 0 auto; /* Centraliza o input */
+  display: block; /* Exibe como bloco */
+  transition: border-color 0.3s; /* Transição suave para a borda */
+  margin-bottom: 10px;
+}
+
+/* Efeito ao focar no input */
+#searchInput:focus {
+  border-color: #218838; /* Verde mais escuro ao focar */
+  outline: none; /* Remove o contorno padrão */
+}
+
+        
+.hidden {
+  display: none;
+}
+    </style>
+     <script>
+      function searchProducts() {
+          const input = document.getElementById('searchInput').value.toLowerCase();
+          const cards = document.querySelectorAll('.card');
+
+          cards.forEach(card => {
+              const title = card.querySelector('.title').textContent.toLowerCase();
+              const code = card.querySelector('.card-info .title').textContent.toLowerCase();
+
+              // Verifica se a entrada do usuário está contida no título ou no código
+              if (title.includes(input) || code.includes(input)) {
+                  card.classList.remove('hidden');
+              } else {
+                  card.classList.add('hidden');
+              }
+          });
+      }
+  </script>
+
+        <h2 style="text-align: center;background-color: rgb(245 245 245);" class="title">Sol Natus Página 3</h2>
+        <div class="page-btn">
+          <a href="solnatus.html"> <span>1</span></a>
+      <a href="solnatus-2.html"> <span>2</span></a> 
+      <a class="active-span" href="solnatus-3.html"><span style="background:#198754; color: #fff;">3</span></a>
+  <a href="solnatus-4.html"> <span>4</span></a>
+  <a href="solnatus-5.html"> <span>5</span></a>
+  <a href="solnatus-6.html"> <span>6</span></a>
+        </div>
+
+
+        <div class="cards-container">
+
+          <div class="cards-container">
+           
+            <div class="card">
+              <p class="title">CHA EUCALIPTO 50 GR</p>
+              <img class="img2" src="../public/images/fonte-vida/about.png" alt="CHA EUCALIPTO 50 GR">
+              <div class="card-info">
+                <p class="title">COD: 431</p>
+                <p class="shipping">Entrega a combinar</p>
+              </div>
+              <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#productModal431">
+                Detalhes
+              </button>
+              <div class="modal fade" id="productModal431" tabindex="-1" aria-labelledby="productModalLabel431" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h5 class="modal-title" id="productModalLabel431">CHA EUCALIPTO 50 GR</h5>
+                      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fechar"></button>
+                    </div>
+                    <div class="modal-body">
+                      <img class="imgmodal" src="../public/images/fonte-vida/about.png" alt="CHA EUCALIPTO 50 GR">
+                      <p>Chá de eucalipto em embalagem de 50g. Conhecido por suas propriedades expectorantes, é utilizado para aliviar sintomas de resfriados e problemas respiratórios.</p>
+                    </div>
+                    <div class="modal-footer">
+                      <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+            <div class="card">
+              <p class="title">CHA FUNCHO 50 GR</p>
+              <img class="img2" src="../public/images/fonte-vida/about.png" alt="CHA FUNCHO 50 GR">
+              <div class="card-info">
+                <p class="title">COD: 432</p>
+                <p class="shipping">Entrega a combinar</p>
+              </div>
+              <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#productModal432">
+                Detalhes
+              </button>
+              <div class="modal fade" id="productModal432" tabindex="-1" aria-labelledby="productModalLabel432" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h5 class="modal-title" id="productModalLabel432">CHA FUNCHO 50 GR</h5>
+                      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fechar"></button>
+                    </div>
+                    <div class="modal-body">
+                      <img class="imgmodal" src="../public/images/fonte-vida/about.png" alt="CHA FUNCHO 50 GR">
+                      <p>Chá de funcho em embalagem de 50g. Utilizado para auxiliar na digestão e aliviar cólicas intestinais, além de ter um sabor adocicado e agradável.</p>
+                    </div>
+                    <div class="modal-footer">
+                      <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+            <div class="card">
+              <p class="title">CHA GARCINIA 50 GR</p>
+              <img class="img2" src="../public/images/fonte-vida/about.png" alt="CHA GARCINIA 50 GR">
+              <div class="card-info">
+                <p class="title">COD: 433</p>
+                <p class="shipping">Entrega a combinar</p>
+              </div>
+              <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#productModal433">
+                Detalhes
+              </button>
+              <div class="modal fade" id="productModal433" tabindex="-1" aria-labelledby="productModalLabel433" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h5 class="modal-title" id="productModalLabel433">CHA GARCINIA 50 GR</h5>
+                      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fechar"></button>
+                    </div>
+                    <div class="modal-body">
+                      <img class="imgmodal" src="../public/images/fonte-vida/about.png" alt="CHA GARCINIA 50 GR">
+                      <p>Chá de garcinia em embalagem de 50g. Conhecido por suas propriedades emagrecedoras, é utilizado para auxiliar no controle de peso e na digestão.</p>
+                    </div>
+                    <div class="modal-footer">
+                      <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+            <div class="card">
+              <p class="title">CHA GINKGO BILOBA 50 GR</p>
+              <img class="img2" src="../public/images/fonte-vida/about.png" alt="CHA GINKGO BILOBA 50 GR">
+              <div class="card-info">
+                <p class="title">COD: 435</p>
+                <p class="shipping">Entrega a combinar</p>
+              </div>
+              <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#productModal435">
+                Detalhes
+              </button>
+              <div class="modal fade" id="productModal435" tabindex="-1" aria-labelledby="productModalLabel435" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h5 class="modal-title" id="productModalLabel435">CHA GINKGO BILOBA 50 GR</h5>
+                      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fechar"></button>
+                    </div>
+                    <div class="modal-body">
+                      <img class="imgmodal" src="../public/images/fonte-vida/about.png" alt="CHA GINKGO BILOBA 50 GR">
+                      <p>Chá de ginkgo biloba em embalagem de 50g. Conhecido por suas propriedades que melhoram a circulação sanguínea e a memória, é utilizado para aumentar a concentração.</p>
+                    </div>
+                    <div class="modal-footer">
+                      <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+            <div class="card">
+              <p class="title">CHA GRAVIOLA 50 GR</p>
+              <img class="img2" src="../public/images/fonte-vida/about.png" alt="CHA GRAVIOLA 50 GR">
+              <div class="card-info">
+                <p class="title">COD: 436</p>
+                <p class="shipping">Entrega a combinar</p>
+              </div>
+              <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#productModal436">
+                Detalhes
+              </button>
+              <div class="modal fade" id="productModal436" tabindex="-1" aria-labelledby="productModalLabel436" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h5 class="modal-title" id="productModalLabel436">CHA GRAVIOLA 50 GR</h5>
+                      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fechar"></button>
+                    </div>
+                    <div class="modal-body">
+                      <img class="imgmodal" src="../public/images/fonte-vida/about.png" alt="CHA GRAVIOLA 50 GR">
+                      <p>Chá de graviola em embalagem de 50g. Conhecido por suas propriedades antioxidantes, é utilizado para fortalecer o sistema imunológico e auxiliar na saúde celular.</p>
+                    </div>
+                    <div class="modal-footer">
+                      <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+            <div class="card">
+              <p class="title">CHA GUACATONGA 50G</p>
+              <img class="img2" src="../public/images/fonte-vida/about.png" alt="CHA GUACATONGA 50G">
+              <div class="card-info">
+                <p class="title">COD: 437</p>
+                <p class="shipping">Entrega a combinar</p>
+              </div>
+              <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#productModal437">
+                Detalhes
+              </button>
+              <div class="modal fade" id="productModal437" tabindex="-1" aria-labelledby="productModalLabel437" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h5 class="modal-title" id="productModalLabel437">CHA GUACATONGA 50G</h5>
+                      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fechar"></button>
+                    </div>
+                    <div class="modal-body">
+                      <img class="imgmodal" src="../public/images/fonte-vida/about.png" alt="CHA GUACATONGA 50G">
+                      <p>Chá de guacatonga em embalagem de 50g. Tradicionalmente utilizado para auxiliar na saúde respiratória e aliviar sintomas de tosse.</p>
+                    </div>
+                    <div class="modal-footer">
+                      <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+            <div class="card">
+              <p class="title">CHA GUACO 50 GR</p>
+              <img class="img2" src="../public/images/fonte-vida/about.png" alt="CHA GUACO 50 GR">
+              <div class="card-info">
+                <p class="title">COD: 438</p>
+                <p class="shipping">Entrega a combinar</p>
+              </div>
+              <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#productModal438">
+                Detalhes
+              </button>
+              <div class="modal fade" id="productModal438" tabindex="-1" aria-labelledby="productModalLabel438" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h5 class="modal-title" id="productModalLabel438">CHA GUACO 50 GR</h5>
+                      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fechar"></button>
+                    </div>
+                    <div class="modal-body">
+                      <img class="imgmodal" src="../public/images/fonte-vida/about.png" alt="CHA GUACO 50 GR">
+                      <p>Chá de guaco em embalagem de 50g. Conhecido por suas propriedades expectorantes, é utilizado para tratar problemas respiratórios e aliviar a tosse.</p>
+                    </div>
+                    <div class="modal-footer">
+                      <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+            <div class="card">
+              <p class="title">CHA HIBISCO 50 GR</p>
+              <img class="img2" src="../public/images/fonte-vida/about.png" alt="CHA HIBISCO 50 GR">
+              <div class="card-info">
+                <p class="title">COD: 439</p>
+                <p class="shipping">Entrega a combinar</p>
+              </div>
+              <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#productModal439">
+                Detalhes
+              </button>
+              <div class="modal fade" id="productModal439" tabindex="-1" aria-labelledby="productModalLabel439" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h5 class="modal-title" id="productModalLabel439">CHA HIBISCO 50 GR</h5>
+                      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fechar"></button>
+                    </div>
+                    <div class="modal-body">
+                      <img class="imgmodal" src="../public/images/fonte-vida/about.png" alt="CHA HIBISCO 50 GR">
+                      <p>Chá de hibisco em embalagem de 50g. Conhecido por suas propriedades antioxidantes, é utilizado para auxiliar na redução da pressão arterial e no controle do colesterol.</p>
+                    </div>
+                    <div class="modal-footer">
+                      <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+            <div class="card">
+              <p class="title">CHA HORTELA 50 GR</p>
+              <img class="img2" src="../public/images/fonte-vida/about.png" alt="CHA HORTELA 50 GR">
+              <div class="card-info">
+                <p class="title">COD: 440</p>
+                <p class="shipping">Entrega a combinar</p>
+              </div>
+              <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#productModal440">
+                Detalhes
+              </button>
+              <div class="modal fade" id="productModal440" tabindex="-1" aria-labelledby="productModalLabel440" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h5 class="modal-title" id="productModalLabel440">CHA HORTELA 50 GR</h5>
+                      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fechar"></button>
+                    </div>
+                    <div class="modal-body">
+                      <img class="imgmodal" src="../public/images/fonte-vida/about.png" alt="CHA HORTELA 50 GR">
+                      <p>Chá de hortelã em embalagem de 50g. Conhecido por suas propriedades digestivas, é utilizado para aliviar desconfortos estomacais e proporcionar frescor.</p>
+                    </div>
+                    <div class="modal-footer">
+                      <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+            <div class="card">
+              <p class="title">CHA IPE ROXO 50 GR</p>
+              <img class="img2" src="../public/images/fonte-vida/about.png" alt="CHA IPE ROXO 50 GR">
+              <div class="card-info">
+                <p class="title">COD: 441</p>
+                <p class="shipping">Entrega a combinar</p>
+              </div>
+              <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#productModal441">
+                Detalhes
+              </button>
+              <div class="modal fade" id="productModal441" tabindex="-1" aria-labelledby="productModalLabel441" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h5 class="modal-title" id="productModalLabel441">CHA IPE ROXO 50 GR</h5>
+                      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fechar"></button>
+                    </div>
+                    <div class="modal-body">
+                      <img class="imgmodal" src="../public/images/fonte-vida/about.png" alt="CHA IPE ROXO 50 GR">
+                      <p>Chá de ipê roxo em embalagem de 50g. Tradicionalmente utilizado para fortalecer o sistema imunológico e auxiliar no tratamento de infecções.</p>
+                    </div>
+                    <div class="modal-footer">
+                      <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+            <div class="card">
+              <p class="title">CHA JABORANDI 50 GR</p>
+              <img class="img2" src="../public/images/fonte-vida/about.png" alt="CHA JABORANDI 50 GR">
+              <div class="card-info">
+                <p class="title">COD: 442</p>
+                <p class="shipping">Entrega a combinar</p>
+              </div>
+              <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#productModal442">
+                Detalhes
+              </button>
+              <div class="modal fade" id="productModal442" tabindex="-1" aria-labelledby="productModalLabel442" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h5 class="modal-title" id="productModalLabel442">CHA JABORANDI 50 GR</h5>
+                      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fechar"></button>
+                    </div>
+                    <div class="modal-body">
+                      <img class="imgmodal" src="../public/images/fonte-vida/about.png" alt="CHA JABORANDI 50 GR">
+                      <p>Chá de jaborandi em embalagem de 50g. Tradicionalmente utilizado para auxiliar na saúde capilar e promover o crescimento dos cabelos.</p>
+                    </div>
+                    <div class="modal-footer">
+                      <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+            <div class="card">
+              <p class="title">CHA JALAPA 50G</p>
+              <img class="img2" src="../public/images/fonte-vida/about.png" alt="CHA JALAPA 50G">
+              <div class="card-info">
+                <p class="title">COD: 1256</p>
+                <p class="shipping">Entrega a combinar</p>
+              </div>
+              <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#productModal1256">
+                Detalhes
+              </button>
+              <div class="modal fade" id="productModal1256" tabindex="-1" aria-labelledby="productModalLabel1256" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h5 class="modal-title" id="productModalLabel1256">CHA JALAPA 50G</h5>
+                      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fechar"></button>
+                    </div>
+                    <div class="modal-body">
+                      <img class="imgmodal" src="../public/images/fonte-vida/about.png" alt="CHA JALAPA 50G">
+                      <p>Chá de jalapa em embalagem de 50g. Conhecido por suas propriedades laxativas, é utilizado para auxiliar no tratamento de constipação.</p>
+                    </div>
+                    <div class="modal-footer">
+                      <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+            <div class="card">
+              <p class="title">CHA LARANJA EM FOLHAS 50G</p>
+              <img class="img2" src="../public/images/fonte-vida/about.png" alt="CHA LARANJA EM FOLHAS 50G">
+              <div class="card-info">
+                <p class="title">COD: 1463</p>
+                <p class="shipping">Entrega a combinar</p>
+              </div>
+              <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#productModal1463">
+                Detalhes
+              </button>
+              <div class="modal fade" id="productModal1463" tabindex="-1" aria-labelledby="productModalLabel1463" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h5 class="modal-title" id="productModalLabel1463">CHA LARANJA EM FOLHAS 50G</h5>
+                      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fechar"></button>
+                    </div>
+                    <div class="modal-body">
+                      <img class="imgmodal" src="../public/images/fonte-vida/about.png" alt="CHA LARANJA EM FOLHAS 50G">
+                      <p>Chá de laranja em folhas em embalagem de 50g. Utilizado para auxiliar na digestão e proporcionar um efeito relaxante.</p>
+                    </div>
+                    <div class="modal-footer">
+                      <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+            <div class="card">
+              <p class="title">CHA LEVANTE 50 GR</p>
+              <img class="img2" src="../public/images/fonte-vida/about.png" alt="CHA LEVANTE 50 GR">
+              <div class="card-info">
+                <p class="title">COD: 446</p>
+                <p class="shipping">Entrega a combinar</p>
+              </div>
+              <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#productModal446">
+                Detalhes
+              </button>
+              <div class="modal fade" id="productModal446" tabindex="-1" aria-labelledby="productModalLabel446" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h5 class="modal-title" id="productModalLabel446">CHA LEVANTE 50 GR</h5>
+                      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fechar"></button>
+                    </div>
+                    <div class="modal-body">
+                      <img class="imgmodal" src="../public/images/fonte-vida/about.png" alt="CHA LEVANTE 50 GR">
+                      <p>Chá levante em embalagem de 50g. Conhecido por suas propriedades energizantes, é utilizado para aumentar a disposição e combater a fadiga.</p>
+                    </div>
+                    <div class="modal-footer">
+                      <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+            <div class="card">
+              <p class="title">CHA LOSNA 50 GR</p>
+              <img class="img2" src="../public/images/fonte-vida/about.png" alt="CHA LOSNA 50 GR">
+              <div class="card-info">
+                <p class="title">COD: 447</p>
+                <p class="shipping">Entrega a combinar</p>
+              </div>
+              <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#productModal447">
+                Detalhes
+              </button>
+              <div class="modal fade" id="productModal447" tabindex="-1" aria-labelledby="productModalLabel447" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h5 class="modal-title" id="productModalLabel447">CHA LOSNA 50 GR</h5>
+                      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fechar"></button>
+                    </div>
+                    <div class="modal-body">
+                      <img class="imgmodal" src="../public/images/fonte-vida/about.png" alt="CHA LOSNA 50 GR">
+                      <p>Chá de losna em embalagem de 50g. Utilizado para auxiliar na digestão e em tratamentos de problemas gastrointestinais.</p>
+                    </div>
+                    <div class="modal-footer">
+                      <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+            
+
+            <div class="card">
+              <p class="title">CHA MACELA 50 GR</p>
+              <img class="img2" src="../public/images/fonte-vida/about.png" alt="CHA MACELA 50 GR">
+              <div class="card-info">
+                <p class="title">COD: 1769</p>
+                <p class="shipping">Entrega a combinar</p>
+              </div>
+              <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#productModal1769">
+                Detalhes
+              </button>
+              <div class="modal fade" id="productModal1769" tabindex="-1" aria-labelledby="productModalLabel1769" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h5 class="modal-title" id="productModalLabel1769">CHA MACELA 50 GR</h5>
+                      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fechar"></button>
+                    </div>
+                    <div class="modal-body">
+                      <img class="imgmodal" src="../public/images/fonte-vida/about.png" alt="CHA MACELA 50 GR">
+                      <p>Chá de macela em embalagem de 50g. Conhecido por suas propriedades calmantes, é utilizado para aliviar a ansiedade e melhorar a qualidade do sono.</p>
+                    </div>
+                    <div class="modal-footer">
+                      <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+            <div class="card">
+              <p class="title">CHA MALVA 50 GR</p>
+              <img class="img2" src="../public/images/fonte-vida/about.png" alt="CHA MALVA 50 GR">
+              <div class="card-info">
+                <p class="title">COD: 449</p>
+                <p class="shipping">Entrega a combinar</p>
+              </div>
+              <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#productModal449">
+                Detalhes
+              </button>
+              <div class="modal fade" id="productModal449" tabindex="-1" aria-labelledby="productModalLabel449" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h5 class="modal-title" id="productModalLabel449">CHA MALVA 50 GR</h5>
+                      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fechar"></button>
+                    </div>
+                    <div class="modal-body">
+                      <img class="imgmodal" src="../public/images/fonte-vida/about.png" alt="CHA MALVA 50 GR">
+                      <p>Chá de malva em embalagem de 50g. Utilizado para aliviar irritações na garganta e auxiliar na saúde respiratória.</p>
+                    </div>
+                    <div class="modal-footer">
+                      <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+            <div class="card">
+              <p class="title">CHA MAMA CADELA 50 GR</p>
+              <img class="img2" src="../public/images/fonte-vida/about.png" alt="CHA MAMA CADELA 50 GR">
+              <div class="card-info">
+                <p class="title">COD: 450</p>
+                <p class="shipping">Entrega a combinar</p>
+              </div>
+              <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#productModal450">
+                Detalhes
+              </button>
+              <div class="modal fade" id="productModal450" tabindex="-1" aria-labelledby="productModalLabel450" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h5 class="modal-title" id="productModalLabel450">CHA MAMA CADELA 50 GR</h5>
+                      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fechar"></button>
+                    </div>
+                    <div class="modal-body">
+                      <img class="imgmodal" src="../public/images/fonte-vida/about.png" alt="CHA MAMA CADELA 50 GR">
+                      <p>Chá de mama cadela em embalagem de 50g. Tradicionalmente utilizado para auxiliar na digestão e aliviar cólicas.</p>
+                    </div>
+                    <div class="modal-footer">
+                      <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+            <div class="card">
+              <p class="title">CHA MANJERICÃO 50 GR</p>
+              <img class="img2" src="../public/images/fonte-vida/about.png" alt="CHA MANJERICÃO 50 GR">
+              <div class="card-info">
+                <p class="title">COD: 451</p>
+                <p class="shipping">Entrega a combinar</p>
+              </div>
+              <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#productModal451">
+                Detalhes
+              </button>
+              <div class="modal fade" id="productModal451" tabindex="-1" aria-labelledby="productModalLabel451" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h5 class="modal-title" id="productModalLabel451">CHA MANJERICÃO 50 GR</h5>
+                      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fechar"></button>
+                    </div>
+                    <div class="modal-body">
+                      <img class="imgmodal" src="../public/images/fonte-vida/about.png" alt="CHA MANJERICÃO 50 GR">
+                      <p>Chá de manjericão em embalagem de 50g. Conhecido por suas propriedades anti-inflamatórias, é utilizado para aliviar dores e promover a digestão.</p>
+                    </div>
+                    <div class="modal-footer">
+                      <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+            <div class="card">
+              <p class="title">CHA MELAO DE SAO CAETANO 50 GR</p>
+              <img class="img2" src="../public/images/fonte-vida/about.png" alt="CHA MELAO DE SAO CAETANO 50 GR">
+              <div class="card-info">
+                <p class="title">COD: 452</p>
+                <p class="shipping">Entrega a combinar</p>
+              </div>
+              <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#productModal452">
+                Detalhes
+              </button>
+              <div class="modal fade" id="productModal452" tabindex="-1" aria-labelledby="productModalLabel452" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h5 class="modal-title" id="productModalLabel452">CHA MELAO DE SAO CAETANO 50 GR</h5>
+                      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fechar"></button>
+                    </div>
+                    <div class="modal-body">
+                      <img class="imgmodal" src="../public/images/fonte-vida/about.png" alt="CHA MELAO DE SAO CAETANO 50 GR">
+                      <p>Chá de melão de São Caetano em embalagem de 50g. Utilizado para auxiliar no controle da glicemia e promover a saúde do fígado.</p>
+                    </div>
+                    <div class="modal-footer">
+                      <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+
+            <div class="card">
+              <p class="title">CHA MELISSA 50 GR</p>
+              <img class="img2" src="../public/images/fonte-vida/about.png" alt="CHA MELISSA 50 GR">
+              <div class="card-info">
+                <p class="title">COD: 453</p>
+                <p class="shipping">Entrega a combinar</p>
+              </div>
+              <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#productModal453">
+                Detalhes
+              </button>
+              <div class="modal fade" id="productModal453" tabindex="-1" aria-labelledby="productModalLabel453" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h5 class="modal-title" id="productModalLabel453">CHA MELISSA 50 GR</h5>
+                      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fechar"></button>
+                    </div>
+                    <div class="modal-body">
+                      <img class="imgmodal" src="../public/images/fonte-vida/about.png" alt="CHA MELISSA 50 GR">
+                      <p>Chá de melissa em embalagem de 50g. Conhecido por suas propriedades calmantes, é utilizado para aliviar a ansiedade e promover um sono tranquilo.</p>
+                    </div>
+                    <div class="modal-footer">
+                      <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+            <div class="card">
+              <p class="title">CHA MULUNGU CASCA 50 GR</p>
+              <img class="img2" src="../public/images/fonte-vida/about.png" alt="CHA MULUNGU CASCA 50 GR">
+              <div class="card-info">
+                <p class="title">COD: 455</p>
+                <p class="shipping">Entrega a combinar</p>
+              </div>
+              <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#productModal455">
+                Detalhes
+              </button>
+              <div class="modal fade" id="productModal455" tabindex="-1" aria-labelledby="productModalLabel455" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h5 class="modal-title" id="productModalLabel455">CHA MULUNGU CASCA 50 GR</h5>
+                      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fechar"></button>
+                    </div>
+                    <div class="modal-body">
+                      <img class="imgmodal" src="../public/images/fonte-vida/about.png" alt="CHA MULUNGU CASCA 50 GR">
+                      <p>Chá de mulungu casca em embalagem de 50g. Tradicionalmente utilizado como sedativo natural, ajuda a aliviar o estresse e a ansiedade.</p>
+                    </div>
+                    <div class="modal-footer">
+                      <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+            <div class="card">
+              <p class="title">CHA OLIVEIRA 50 GR</p>
+              <img class="img2" src="../public/images/fonte-vida/about.png" alt="CHA OLIVEIRA 50 GR">
+              <div class="card-info">
+                <p class="title">COD: 458</p>
+                <p class="shipping">Entrega a combinar</p>
+              </div>
+              <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#productModal458">
+                Detalhes
+              </button>
+              <div class="modal fade" id="productModal458" tabindex="-1" aria-labelledby="productModalLabel458" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h5 class="modal-title" id="productModalLabel458">CHA OLIVEIRA 50 GR</h5>
+                      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fechar"></button>
+                    </div>
+                    <div class="modal-body">
+                      <img class="imgmodal" src="../public/images/fonte-vida/about.png" alt="CHA OLIVEIRA 50 GR">
+                      <p>Chá de oliveira em embalagem de 50g. Conhecido por suas propriedades antioxidantes, é utilizado para auxiliar na saúde cardiovascular.</p>
+                    </div>
+                    <div class="modal-footer">
+                      <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+            <div class="card">
+              <p class="title">CHA PARA TUDO 50 GR</p>
+              <img class="img2" src="../public/images/fonte-vida/about.png" alt="CHA PARA TUDO 50 GR">
+              <div class="card-info">
+                <p class="title">COD: 459</p>
+                <p class="shipping">Entrega a combinar</p>
+              </div>
+              <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#productModal459">
+                Detalhes
+              </button>
+              <div class="modal fade" id="productModal459" tabindex="-1" aria-labelledby="productModalLabel459" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h5 class="modal-title" id="productModalLabel459">CHA PARA TUDO 50 GR</h5>
+                      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fechar"></button>
+                    </div>
+                    <div class="modal-body">
+                      <img class="imgmodal" src="../public/images/fonte-vida/about.png" alt="CHA PARA TUDO 50 GR">
+                      <p>Chá para tudo em embalagem de 50g. Mistura de ervas que promove bem-estar geral, auxiliando na digestão e na imunidade.</p>
+                    </div>
+                    <div class="modal-footer">
+                      <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+            <div class="card">
+              <p class="title">CHA PASSIFLORA 50 GR</p>
+              <img class="img2" src="../public/images/fonte-vida/about.png" alt="CHA PASSIFLORA 50 GR">
+              <div class="card-info">
+                <p class="title">COD: 460</p>
+                <p class="shipping">Entrega a combinar</p>
+              </div>
+              <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#productModal460">
+                Detalhes
+              </button>
+              <div class="modal fade" id="productModal460" tabindex="-1" aria-labelledby="productModalLabel460" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h5 class="modal-title" id="productModalLabel460">CHA PASSIFLORA 50 GR</h5>
+                      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fechar"></button>
+                    </div>
+                    <div class="modal-body">
+                      <img class="imgmodal" src="../public/images/fonte-vida/about.png" alt="CHA PASSIFLORA 50 GR">
+                      <p>Chá de passiflora em embalagem de 50g. Utilizado para promover o relaxamento e a qualidade do sono, ajudando a combater a insônia.</p>
+                    </div>
+                    <div class="modal-footer">
+                      <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+            <div class="card">
+              <p class="title">CHA PATA DE VACA 50 GR</p>
+              <img class="img2" src="../public/images/fonte-vida/about.png" alt="CHA PATA DE VACA 50 GR">
+              <div class="card-info">
+                <p class="title">COD: 461</p>
+                <p class="shipping">Entrega a combinar</p>
+              </div>
+              <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#productModal461">
+                Detalhes
+              </button>
+              <div class="modal fade" id="productModal461" tabindex="-1" aria-labelledby="productModalLabel461" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h5 class="modal-title" id="productModalLabel461">CHA PATA DE VACA 50 GR</h5>
+                      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fechar"></button>
+                    </div>
+                    <div class="modal-body">
+                      <img class="imgmodal" src="../public/images/fonte-vida/about.png" alt="CHA PATA DE VACA 50 GR">
+                      <p>Chá de pata de vaca em embalagem de 50g. Tradicionalmente utilizado para auxiliar no controle da glicemia e promover a saúde dos rins.</p>
+                    </div>
+                    <div class="modal-footer">
+                      <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+            <div class="card">
+              <p class="title">CHA PEDRA UMI INSULINA 50 G</p>
+              <img class="img2" src="../public/images/fonte-vida/about.png" alt="CHA PEDRA UMI INSULINA 50 G">
+              <div class="card-info">
+                <p class="title">COD: 1135</p>
+                <p class="shipping">Entrega a combinar</p>
+              </div>
+              <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#productModal1135">
+                Detalhes
+              </button>
+              <div class="modal fade" id="productModal1135" tabindex="-1" aria-labelledby="productModalLabel1135" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h5 class="modal-title" id="productModalLabel1135">CHA PEDRA UMI INSULINA 50 G</h5>
+                      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fechar"></button>
+                    </div>
+                    <div class="modal-body">
+                      <img class="imgmodal" src="../public/images/fonte-vida/about.png" alt="CHA PEDRA UMI INSULINA 50 G">
+                      <p>Chá de pedra umi insulina em embalagem de 50g. Utilizado para auxiliar no controle da diabetes e regular os níveis de açúcar no sangue.</p>
+                    </div>
+                    <div class="modal-footer">
+                      <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+            <div class="card">
+              <p class="title">CHA PICAO 50 GR</p>
+              <img class="img2" src="../public/images/fonte-vida/about.png" alt="CHA PICAO 50 GR">
+              <div class="card-info">
+                <p class="title">COD: 463</p>
+                <p class="shipping">Entrega a combinar</p>
+              </div>
+              <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#productModal463">
+                Detalhes
+              </button>
+              <div class="modal fade" id="productModal463" tabindex="-1" aria-labelledby="productModalLabel463" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h5 class="modal-title" id="productModalLabel463">CHA PICAO 50 GR</h5>
+                      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fechar"></button>
+                    </div>
+                    <div class="modal-body">
+                      <img class="imgmodal" src="../public/images/fonte-vida/about.png" alt="CHA PICAO 50 GR">
+                      <p>Chá de picão em embalagem de 50g. Conhecido por suas propriedades anti-inflamatórias, é utilizado para aliviar dores e promover a saúde do fígado.</p>
+                    </div>
+                    <div class="modal-footer">
+                      <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+            <div class="card">
+              <p class="title">CHA POEJO 50 GR</p>
+              <img class="img2" src="../public/images/fonte-vida/about.png" alt="CHA POEJO 50 GR">
+              <div class="card-info">
+                <p class="title">COD: 464</p>
+                <p class="shipping">Entrega a combinar</p>
+              </div>
+              <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#productModal464">
+                Detalhes
+              </button>
+              <div class="modal fade" id="productModal464" tabindex="-1" aria-labelledby="productModalLabel464" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h5 class="modal-title" id="productModalLabel464">CHA POEJO 50 GR</h5>
+                      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fechar"></button>
+                    </div>
+                    <div class="modal-body">
+                      <img class="imgmodal" src="../public/images/fonte-vida/about.png" alt="CHA POEJO 50 GR">
+                      <p>Chá de poejo em embalagem de 50g. Utilizado para aliviar problemas respiratórios e auxiliar na digestão.</p>
+                    </div>
+                    <div class="modal-footer">
+                      <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+            <div class="card">
+              <p class="title">CHA PORONGABA 50 GR</p>
+              <img class="img2" src="../public/images/fonte-vida/about.png" alt="CHA PORONGABA 50 GR">
+              <div class="card-info">
+                <p class="title">COD: 465</p>
+                <p class="shipping">Entrega a combinar</p>
+              </div>
+              <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#productModal465">
+                Detalhes
+              </button>
+              <div class="modal fade" id="productModal465" tabindex="-1" aria-labelledby="productModalLabel465" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h5 class="modal-title" id="productModalLabel465">CHA PORONGABA 50 GR</h5>
+                      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fechar"></button>
+                    </div>
+                    <div class="modal-body">
+                      <img class="imgmodal" src="../public/images/fonte-vida/about.png" alt="CHA PORONGABA 50 GR">
+                      <p>Chá de porongaba em embalagem de 50g. Tradicionalmente utilizado para aliviar a ansiedade e promover o relaxamento.</p>
+                    </div>
+                    <div class="modal-footer">
+                      <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+  
+            <div class="card">
+              <p class="title">CHA QUEBRA PEDRA 50 GR</p>
+              <img class="img2" src="../public/images/fonte-vida/about.png" alt="CHA QUEBRA PEDRA 50 GR">
+              <div class="card-info">
+                <p class="title">COD: 466</p>
+                <p class="shipping">Entrega a combinar</p>
+              </div>
+              <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#productModal466">
+                Detalhes
+              </button>
+              <div class="modal fade" id="productModal466" tabindex="-1" aria-labelledby="productModalLabel466" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h5 class="modal-title" id="productModalLabel466">CHA QUEBRA PEDRA 50 GR</h5>
+                      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fechar"></button>
+                    </div>
+                    <div class="modal-body">
+                      <img class="imgmodal" src="../public/images/fonte-vida/about.png" alt="CHA QUEBRA PEDRA 50 GR">
+                      <p>Chá quebra pedra em embalagem de 50g. Tradicionalmente utilizado para auxiliar na dissolução de pedras nos rins e promover a saúde urinária.</p>
+                    </div>
+                    <div class="modal-footer">
+                      <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+            <div class="card">
+              <p class="title">CHA SALSAPARRILHA 50 GR</p>
+              <img class="img2" src="../public/images/fonte-vida/about.png" alt="CHA SALSAPARRILHA 50 GR">
+              <div class="card-info">
+                <p class="title">COD: 467</p>
+                <p class="shipping">Entrega a combinar</p>
+              </div>
+              <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#productModal467">
+                Detalhes
+              </button>
+              <div class="modal fade" id="productModal467" tabindex="-1" aria-labelledby="productModalLabel467" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h5 class="modal-title" id="productModalLabel467">CHA SALSAPARRILHA 50 GR</h5>
+                      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fechar"></button>
+                    </div>
+                    <div class="modal-body">
+                      <img class="imgmodal" src="../public/images/fonte-vida/about.png" alt="CHA SALSAPARRILHA 50 GR">
+                      <p>Chá salsaparilha em embalagem de 50g. Conhecido por suas propriedades depurativas, é utilizado para desintoxicar o organismo e melhorar a saúde da pele.</p>
+                    </div>
+                    <div class="modal-footer">
+                      <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+            <div class="card">
+              <p class="title">CHA SALVIA 50 GR</p>
+              <img class="img2" src="../public/images/fonte-vida/about.png" alt="CHA SALVIA 50 GR">
+              <div class="card-info">
+                <p class="title">COD: 468</p>
+                <p class="shipping">Entrega a combinar</p>
+              </div>
+              <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#productModal468">
+                Detalhes
+              </button>
+              <div class="modal fade" id="productModal468" tabindex="-1" aria-labelledby="productModalLabel468" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h5 class="modal-title" id="productModalLabel468">CHA SALVIA 50 GR</h5>
+                      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fechar"></button>
+                    </div>
+                    <div class="modal-body">
+                      <img class="imgmodal" src="../public/images/fonte-vida/about.png" alt="CHA SALVIA 50 GR">
+                      <p>Chá de sálvia em embalagem de 50g. Utilizado para aliviar sintomas de resfriados e promover a saúde digestiva.</p>
+                    </div>
+                    <div class="modal-footer">
+                      <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+            <div class="card">
+              <p class="title">CHA SEMENTE DE SUCUPIRA 50 GR</p>
+              <img class="img2" src="../public/images/fonte-vida/about.png" alt="CHA SEMENTE DE SUCUPIRA 50 GR">
+              <div class="card-info">
+                <p class="title">COD: 469</p>
+                <p class="shipping">Entrega a combinar</p>
+              </div>
+              <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#productModal469">
+                Detalhes
+              </button>
+              <div class="modal fade" id="productModal469" tabindex="-1" aria-labelledby="productModalLabel469" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h5 class="modal-title" id="productModalLabel469">CHA SEMENTE DE SUCUPIRA 50 GR</h5>
+                      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fechar"></button>
+                    </div>
+                    <div class="modal-body">
+                      <img class="imgmodal" src="../public/images/fonte-vida/about.png" alt="CHA SEMENTE DE SUCUPIRA 50 GR">
+                      <p>Chá de semente de sucupira em embalagem de 50g. Conhecido por suas propriedades anti-inflamatórias, é utilizado para aliviar dores articulares e musculares.</p>
+                    </div>
+                    <div class="modal-footer">
+                      <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+  
+            <div class="card">
+              <p class="title">CHA SENE 50 GR</p>
+              <img class="img2" src="../public/images/fonte-vida/about.png" alt="CHA SENE 50 GR">
+              <div class="card-info">
+                <p class="title">COD: 413</p>
+                <p class="shipping">Entrega a combinar</p>
+              </div>
+              <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#productModal413">
+                Detalhes
+              </button>
+              <div class="modal fade" id="productModal413" tabindex="-1" aria-labelledby="productModalLabel413" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h5 class="modal-title" id="productModalLabel413">CHA SENE 50 GR</h5>
+                      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fechar"></button>
+                    </div>
+                    <div class="modal-body">
+                      <img class="imgmodal" src="../public/images/fonte-vida/about.png" alt="CHA SENE 50 GR">
+                      <p>Chá de sene em embalagem de 50g. Conhecido por suas propriedades laxativas, é utilizado para aliviar a constipação e promover a saúde intestinal.</p>
+                    </div>
+                    <div class="modal-footer">
+                      <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+            <div class="card">
+              <p class="title">CHA TANSAGEM 50 GR</p>
+              <img class="img2" src="../public/images/fonte-vida/about.png" alt="CHA TANSAGEM 50 GR">
+              <div class="card-info">
+                <p class="title">COD: 470</p>
+                <p class="shipping">Entrega a combinar</p>
+              </div>
+              <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#productModal470">
+                Detalhes
+              </button>
+              <div class="modal fade" id="productModal470" tabindex="-1" aria-labelledby="productModalLabel470" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h5 class="modal-title" id="productModalLabel470">CHA TANSAGEM 50 GR</h5>
+                      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fechar"></button>
+                    </div>
+                    <div class="modal-body">
+                      <img class="imgmodal" src="../public/images/fonte-vida/about.png" alt="CHA TANSAGEM 50 GR">
+                      <p>Chá de tansagem em embalagem de 50g. Utilizado para aliviar problemas respiratórios e promover a saúde da pele devido às suas propriedades anti-inflamatórias.</p>
+                    </div>
+                    <div class="modal-footer">
+                      <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+            <div class="card">
+              <p class="title">CHA UNHA DE GATO 50 GR</p>
+              <img class="img2" src="../public/images/fonte-vida/about.png" alt="CHA UNHA DE GATO 50 GR">
+              <div class="card-info">
+                <p class="title">COD: 471</p>
+                <p class="shipping">Entrega a combinar</p>
+              </div>
+              <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#productModal471">
+                Detalhes
+              </button>
+              <div class="modal fade" id="productModal471" tabindex="-1" aria-labelledby="productModalLabel471" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h5 class="modal-title" id="productModalLabel471">CHA UNHA DE GATO 50 GR</h5>
+                      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fechar"></button>
+                    </div>
+                    <div class="modal-body">
+                      <img class="imgmodal" src="../public/images/fonte-vida/about.png" alt="CHA UNHA DE GATO 50 GR">
+                      <p>Chá de unha de gato em embalagem de 50g. Conhecido por suas propriedades anti-inflamatórias e imunomoduladoras, é utilizado para fortalecer o sistema imunológico e auxiliar na saúde das articulações.</p>
+                    </div>
+                    <div class="modal-footer">
+                      <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          
+
+      </div>
+    </section>
+    </br></br>
+     
+    </section>
+    </br></br> </section>
+
+
+    </br></br>
+    <!-------- PAGE BUTTONS------->
+    <div class="page-btn">
+      <a href="solnatus.html"> <span>1</span></a>
+  <a href="solnatus-2.html"> <span>2</span></a> 
+  <a class="active-span" href="solnatus-3.html"><span style="background:#198754; color: #fff;">3</span></a>
+<a href="solnatus-4.html"> <span>4</span></a>
+<a href="solnatus-5.html"> <span>5</span></a>
+<a href="solnatus-6.html"> <span>6</span></a>
+    </div>
+    <div class="divider-1"></div>
+
+  </main>
+
+  <section>
+
+    <section class="mapa" id="produtos">
+      <!--
+      <div class="fotos">
+        <h2 style="text-align: center;" class="title">Produtos Diversos</h2>
+        <div class="slider-principal">
+          <img src="../static/products-image/natumais/1.jpeg" />
+          <img src="../static/products-image/natumais/2.jpeg" />
+          <img src="../static/products-image/natumais/3.jpeg" />
+          <img src="../static/products-image/natumais/4.jpeg" />
+          <img src="../static/products-image/natumais/5.jpeg" />
+        </div>
+      -->
+
+
+      <h2 style="text-align: center; margin-top: 4%;" class="title">Mais Produtos</h2>
+      <p>(clique ou pare o cursor para visualizar)</p>
+      <div class="cardhover">
+        <div class="card2">
+          <div class="img-box">
+            <a href="../page-mentos/mentos.html">
+              <img src="../static/products-image/doces-chicletes-balas/balas.png">
+            </a>
+          </div>
+          <div class="content2">
+            <h2>Mentos</h2>
+            <p>
+              Confira a marca Mentos.
+            </p>
+            <a href="../page-mentos/mentos.html" class="read-more">
+              Ver Catálogo
+            </a>
+          </div>
+        </div>
+        <div class="card2">
+          <div class="img-box">
+            <a href="../page-fonte-verde/tipo-ftverde.html">
+              <img src="../static/products-image/natumais/Fonte verde/logoFonteVerde.png">
+            </a>
+          </div>
+          <div class="content2">
+            <h2>Fonte Verde</h2>
+            <p>
+              Confira os produtos da FONTE VERDE orgânicos que contribuem para a sua saúde, e possuem uma ampla gama de
+              benefícios para a
+              saúde, incluindo propriedades antioxidantes, anti-inflamatórias, relaxantes e digestivas.
+            </p>
+            <a href="page-fonte-verde/tipo-ftverde.html" class="read-more">
+              Ver Catálogo
+            </a>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="divider-1"></div>
+
+      <!-- CONTACT -->
+      <section class="section" id="contact">
+        <div class="container grid">
+          <div class="text">
+            <h2 class="title">Entre em contato com a gente!</h2>
+            <p>
+              Entre em contato conosco, queremos tirar suas dúvidas,
+              ouvir suas críticas e sugestões.
+            </p>
+            <a href="https://api.whatsapp.com/send?phone=553335631647&text=Oláa! Gostaria de um produto" class="button"
+              target="_blank"></i> Entrar em contato</a>
+          </div>
+
+          <div class="links">
+            <ul class="grid">
+              <li><i class="icon-phone"></i> <a href="tel:+55xxxxx"> (33) 333563-1647</a></li>
+              <li><i class="icon-map-pin"></i> Manhuaçu MG</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      </div>
+    </section>
+    <footer class="section">
+      <div class="container grid">
+        <div class="brand">
+          <a class="logo logo-alt" href="#home">Natu<span>Mais </span> ⠀</a>
+
+        </div>
+
+        <div class="social grid">
+          <p style="color: #fff;">Mídias Sociais:</p>
+          <a href="https://www.instagram.com/natumais_/" target="_blank">
+            <i class="icon-instagram"></i>
+          </a>
+          <a href="https://api.whatsapp.com/send?phone=553335631647&text=Oláa!" target="_blank">
+            <svg class="svgwpp" xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="#fff"
+              class="bi bi-whatsapp" viewBox="0 0 16 16">
+              <path
+                d="M13.601 2.326A7.854 7.854 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.933 7.933 0 0 0 3.79.965h.004c4.368 0 7.926-3.558 7.93-7.93A7.898 7.898 0 0 0 13.6 2.326zM7.994 14.521a6.573 6.573 0 0 1-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931 6.557 6.557 0 0 1 1.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592zm3.615-4.934c-.197-.099-1.17-.578-1.353-.646-.182-.065-.315-.099-.445.099-.133.197-.513.646-.627.775-.114.133-.232.148-.43.05-.197-.1-.836-.308-1.592-.985-.59-.525-.985-1.175-1.103-1.372-.114-.198-.011-.304.088-.403.087-.088.197-.232.296-.346.1-.114.133-.198.198-.33.065-.134.034-.248-.015-.347-.05-.099-.445-1.076-.612-1.47-.16-.389-.323-.335-.445-.34-.114-.007-.247-.007-.38-.007a.729.729 0 0 0-.529.247c-.182.198-.691.677-.691 1.654 0 .977.71 1.916.81 2.049.098.133 1.394 2.132 3.383 2.992.47.205.84.326 1.129.418.475.152.904.129 1.246.08.38-.058 1.171-.48 1.338-.943.164-.464.164-.86.114-.943-.049-.084-.182-.133-.38-.232z" />
+            </svg></a>
+        </div>
+        <div style="color: #fff;">
+
+          <script>var data = new Date();
+            var dias = new Array(
+              'Domingo', 'Segunda-feira', 'Terça-feira', 'Quarta-feira', 'Quinta-feira', 'Sexta-feira', 'Sábado'
+            );
+
+            document.write(dias[data.getDay()]);</script>
+          <p id="time"></p>
+        </div>
+      </div>
+    </footer>
+
+
+    <div class="dev" style="background: var(--base-color);">
+      <div style="align-items: center; color: #fff;" class="social grid">
+        <div class="col-md-12 text-center">
+
+
+
+
+
+          <script>var timeDisplay = document.getElementById("time");
+            function refreshTime() {
+              var dateString = new Date().toLocaleString("pt-BR", { timeZone: "America/Sao_Paulo" });
+              var formattedString = dateString.replace(", ", " - ");
+              timeDisplay.innerHTML = formattedString;
+            }
+
+            setInterval(refreshTime, 1000);</script>
+
+          <a style="color: #fff;" href="https://www.instagram.com/hericksouza.gg/" target="_blank"><p style="position: relative;" class="mt-5">byHerick&copy;
+          </p></a>
+
+        </div>
+
+      </div>
+      <p class="dev" style="top:100%; color: #fff; margin: 0 auto; font-size: 12px; text-align: center;">Natumais ©2024
+        - Todos os direitos reservados.</p>
+    </div>
+    </div>
+
+    <a href="#inicio" class="back-to-top"><i class="icon-arrow-up"></i></a>
+
+    <!-- swiper -->
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
+    <!-- scrollreveal -->
+    <script src="https://unpkg.com/scrollreveal"></script>
+
+    <!-- main.js <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3742.9054286502214!2d-42.030741723819375!3d-20.262756548758546!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xbb03c907812fbb%3A0xc1508199696bd20d!2sAlfa%20Odontologia!5e0!3m2!1spt-BR!2sbr!4v1682474612695!5m2!1spt-BR!2sbr"
+            width="600" height="450" allowfullscreen="" loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>-->
+    <script type="text/javascript" src="../CodejqueryMin.js"></script>
+    <script type="text/javascript" src="../jqueryMigrate.js"></script>
+    <script type="text/javascript" src="../slick.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.1.3/js/bootstrap.min.js"></script>
+
+    <script src="../main.js"></script>
+</body>
+
+</html>

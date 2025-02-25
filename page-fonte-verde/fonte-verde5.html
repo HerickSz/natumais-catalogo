@@ -63,6 +63,61 @@
         <p class="title" style="text-align: center;color: rgb(0, 0, 0); font-size: 20px;">Confira nossos <span
             class="logo-detail">Novos Produtos!</span>
         </p>
+
+        <h1 class="searchh">Pesquisa de Produtos</h1>
+      <input type="text" id="searchInput" placeholder="Pesquisar produto..." onkeyup="searchProducts()">
+      <style>
+        /* Estilo para o título com a classe searchh */
+.searchh {
+  color: #28a745; /* Verde preferencial */
+  text-align: center; /* Centraliza o título */
+  font-size: 1.5em; /* Tamanho da fonte */
+  margin: 20px 0; /* Margens superior e inferior */
+}
+
+/* Estilo para o input */
+#searchInput {
+  width: 100%; /* Largura total */
+  max-width: 400px; /* Largura máxima */
+  padding: 10px; /* Espaçamento interno */
+  border: 2px solid #28a745; /* Borda verde */
+  border-radius: 5px; /* Cantos arredondados */
+  font-size: 1em; /* Tamanho da fonte */
+  margin: 0 auto; /* Centraliza o input */
+  display: block; /* Exibe como bloco */
+  transition: border-color 0.3s; /* Transição suave para a borda */
+  margin-bottom: 10px;
+}
+
+/* Efeito ao focar no input */
+#searchInput:focus {
+  border-color: #218838; /* Verde mais escuro ao focar */
+  outline: none; /* Remove o contorno padrão */
+}
+
+        
+.hidden {
+  display: none;
+}
+    </style>
+     <script>
+      function searchProducts() {
+          const input = document.getElementById('searchInput').value.toLowerCase();
+          const cards = document.querySelectorAll('.card');
+
+          cards.forEach(card => {
+              const title = card.querySelector('.title').textContent.toLowerCase();
+              const code = card.querySelector('.card-info .title').textContent.toLowerCase();
+
+              // Verifica se a entrada do usuário está contida no título ou no código
+              if (title.includes(input) || code.includes(input)) {
+                  card.classList.remove('hidden');
+              } else {
+                  card.classList.add('hidden');
+              }
+          });
+      }
+  </script>
         <div class="page-btn">
           <a class="active-span" href="fonte-verde.html"><span>1</span></a>
           <a class="active-span" href="fonte-verde2.html"><span>2</span></a>
@@ -76,381 +131,547 @@
         <div class="cards-container">
           <div class="card">
             <p class="title">SENE C/60 CAPS</p>
-            <img class="img2" src=".././public/images/fonte verde/Sene 60caps.png" alt="Pré-visualização do produto">
+            <img class="img2" src="../public/images/fonte verde/Sene 60caps.png" alt="SENE C/60 CAPS">
             <div class="card-info">
-              <!--<p class="tag">Fonte verde</p><-->
-              <p class="title">COD:161</p>
-
-
-
-              <!--<p class="shipping">12UN /CX</p>-->
-              <p class="shipping">Entrega a combinar</p>
+                <p class="title">COD:161</p>
+                <p class="shipping">Entrega a combinar</p>
             </div>
-
-            <div class="btinfo"><a class="button-buy">Detalhes</a>
-              <p class="info">Indicado para casos de constipação(prisão de ventre) e instestinos desregulados.</br>
-                Possui ação laxativa.</p>
+            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#productModal161">
+                Detalhes
+            </button>
+            <!-- Modal -->
+            <div class="modal fade" id="productModal161" tabindex="-1" aria-labelledby="productModalLabel161" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="productModalLabel161">SENE C/60 CAPS</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fechar"></button>
+                        </div>
+                        <div class="modal-body">
+                            <img class="imgmodal" src="../public/images/fonte verde/Sene 60caps.png" alt="SENE C/60 CAPS">
+                            <p>Indicado para casos de constipação (prisão de ventre) e intestinos desregulados. Possui ação laxativa.</p>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+                        </div>
+                    </div>
+                </div>
             </div>
-
-          </div>
-          <div class="card">
-            <p class="title">SPIRULINA C/60 CAPS</p>
-            <img class="img2" src=".././public/images/fonte verde/spirulina 60caps.png"
-              alt="Pré-visualização do produto">
-            <div class="card-info">
-              <!--<p class="tag">Fonte verde</p><-->
-              <p class="title">COD:163</p>
-
-
-              <!--<p class="shipping">12UN /CX</p>-->
-              <p class="shipping">Entrega a combinar</p>
-            </div>
-
-            <div class="btinfo"><a class="button-buy">Detalhes</a>
-              <p class="info">Suplemento dietético, fonte de proteína e ajuda a complementar a dietados vegetarianos.
-              </p>
-            </div>
-          </div>
-          <div class="card">
-            <p class="title">SUCUPIRA C/60 CAPS</p>
-            <img class="img2" src=".././public/images/fonte verde/sucupira 60caps.png"
-              alt="Pré-visualização do produto">
-            <div class="card-info">
-              <!--<p class="tag">Fonte verde</p><-->
-              <p class="title">COD:164</p>
-
-              <!--<p class="shipping">12UN /CX</p>-->
-              <p class="shipping">Entrega a combinar</p>
-            </div>
-
-            <div class="btinfo"><a class="button-buy">Detalhes</a>
-              <p class="info">Anti-inflamatório, cicatrizante, anti-oxidante, trata artrite e artrose, regula níveis de
-                açucar no sangue.</p>
-
-            </div>
-          </div>
-
-          <div class="card">
-            <p class="title">SUCUPIRA CLORETO DE MAGNÉSIO C/60 CAPS</p>
-            <img class="img2" src=".././public/images/fonte verde/sucupiraCloretoMag 60caps.png"
-              alt="Pré-visualização do produto">
-            <div class="card-info">
-              <!--<p class="tag">Fonte verde</p><-->
-              <p class="title">Cod:165</p>
-
-
-              <!--<p class="shipping">12UN /CX</p>-->
-              <p class="shipping">Entrega a combinar</p>
-            </div>
-
-            <div class="btinfo"><a class="button-buy">Detalhes</a>
-              <p class="info">Anti-inflamatório, cicatrizante, anti-oxidante, trata artrite e artrose, regula níveis de
-                açucar no sangue.</p>
-            </div>
-          </div>
-
-          <div class="card">
-            <p class="title">SUCUPIRA COMPOSTA C/60 CAPS</p>
-            <img class="img2" src=".././public/images/fonte verde/sucupiraComposta 60caps.png"
-              alt="Pré-visualização do produto">
-            <div class="card-info">
-              <!--<p class="tag">Fonte verde</p><-->
-              <p class="title">Cod:166</p>
-
-
-              <!--<p class="shipping">12UN /CX</p>-->
-              <p class="shipping">Entrega a combinar</p>
-            </div>
-
-            <div class="btinfo"><a class="button-buy">Detalhes</a>
-              <p class="info">Anti-inflamatório, cicatrizante, anti-oxidante, trata artrite e artrose, regula níveis
-                de
-                açucar no sangue.</p>
-            </div>
-          </div>
-
-          <div class="card">
-            <p class="title">TRIBULLUS C/120 CAPS</p>
-            <img class="img2" src=".././public/images/fonte verde/tribullus 120caps.png"
-              alt="Pré-visualização do produto">
-            <div class="card-info">
-              <!--<p class="tag">Fonte verde</p><-->
-              <p class="title">Cod:169</p>
-
-
-              <!--<p class="shipping">12UN /CX</p>-->
-              <p class="shipping">Entrega a combinar</p>
-            </div>
-
-            <div class="btinfo"><a class="button-buy">Detalhes</a>
-              <p class="info">Faz com que o corpo libere Luteína e produza testosterona.
-              </p>
-            </div>
-          </div>
-
         </div>
+        
+        <div class="card">
+            <p class="title">SPIRULINA C/60 CAPS</p>
+            <img class="img2" src="../public/images/fonte verde/spirulina 60caps.png" alt="SPIRULINA C/60 CAPS">
+            <div class="card-info">
+                <p class="title">COD:163</p>
+                <p class="shipping">Entrega a combinar</p>
+            </div>
+            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#productModal163">
+                Detalhes
+            </button>
+            <!-- Modal -->
+            <div class="modal fade" id="productModal163" tabindex="-1" aria-labelledby="productModalLabel163" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="productModalLabel163">SPIRULINA C/60 CAPS</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fechar"></button>
+                        </div>
+                        <div class="modal-body">
+                            <img class="imgmodal" src="../public/images/fonte verde/spirulina 60caps.png" alt="SPIRULINA C/60 CAPS">
+                            <p>Suplemento dietético, fonte de proteína e ajuda a complementar a dieta dos vegetarianos.</p>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="card">
+            <p class="title">SUCUPIRA C/60 CAPS</p>
+            <img class="img2" src="../public/images/fonte verde/sucupira 60caps.png" alt="SUCUPIRA C/60 CAPS">
+            <div class="card-info">
+                <p class="title">COD:164</p>
+                <p class="shipping">Entrega a combinar</p>
+            </div>
+            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#productModal164">
+                Detalhes
+            </button>
+            <!-- Modal -->
+            <div class="modal fade" id="productModal164" tabindex="-1" aria-labelledby="productModalLabel164" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="productModalLabel164">SUCUPIRA C/60 CAPS</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fechar"></button>
+                        </div>
+                        <div class="modal-body">
+                            <img class="imgmodal" src="../public/images/fonte verde/sucupira 60caps.png" alt="SUCUPIRA C/60 CAPS">
+                            <p>Anti-inflamatório, cicatrizante, anti-oxidante, trata artrite e artrose, regula níveis de açúcar no sangue.</p>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="card">
+            <p class="title">SUCUPIRA CLORETO DE MAGNÉSIO C/60 CAPS</p>
+            <img class="img2" src="../public/images/fonte verde/sucupiraCloretoMag 60caps.png" alt="SUCUPIRA CLORETO DE MAGNÉSIO C/60 CAPS">
+            <div class="card-info">
+                <p class="title">COD:165</p>
+                <p class="shipping">Entrega a combinar</p>
+            </div>
+            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#productModal165">
+                Detalhes
+            </button>
+            <!-- Modal -->
+            <div class="modal fade" id="productModal165" tabindex="-1" aria-labelledby="productModalLabel165" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="productModalLabel165">SUCUPIRA CLORETO DE MAGNÉSIO C/60 CAPS</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fechar"></button>
+                        </div>
+                        <div class="modal-body">
+                            <img class="imgmodal" src="../public/images/fonte verde/sucupiraCloretoMag 60caps.png" alt="SUCUPIRA CLORETO DE MAGNÉSIO C/60 CAPS">
+                            <p>Anti-inflamatório, cicatrizante, anti-oxidante, trata artrite e artrose, regula níveis de açúcar no sangue.</p>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="card">
+            <p class="title">SUCUPIRA COMPOSTA C/60 CAPS</p>
+            <img class="img2" src="../public/images/fonte verde/sucupiraComposta 60caps.png" alt="SUCUPIRA COMPOSTA C/60 CAPS">
+            <div class="card-info">
+                <p class="title">COD:166</p>
+                <p class="shipping">Entrega a combinar</p>
+            </div>
+            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#productModal166">
+                Detalhes
+            </button>
+            <!-- Modal -->
+            <div class="modal fade" id="productModal166" tabindex="-1" aria-labelledby="productModalLabel166" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="productModalLabel166">SUCUPIRA COMPOSTA C/60 CAPS</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fechar"></button>
+                        </div>
+                        <div class="modal-body">
+                            <img class="imgmodal" src="../public/images/fonte verde/sucupiraComposta 60caps.png" alt="SUCUPIRA COMPOSTA C/60 CAPS">
+                            <p>Anti-inflamatório, cicatrizante, anti-oxidante, trata artrite e artrose, regula níveis de açúcar no sangue.</p>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="card">
+          <p class="title">TRIBULLUS C/120 CAPS</p>
+          <img class="img2" src="../public/images/fonte verde/tribullus 120caps.png" alt="TRIBULLUS C/120 CAPS">
+          <div class="card-info">
+              <p class="title">Cod:169</p>
+              <p class="shipping">Entrega a combinar</p>
+          </div>
+          <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#productModal169">
+              Detalhes
+          </button>
+          <!-- Modal -->
+          <div class="modal fade" id="productModal169" tabindex="-1" aria-labelledby="productModalLabel169" aria-hidden="true">
+              <div class="modal-dialog modal-dialog-centered">
+                  <div class="modal-content">
+                      <div class="modal-header">
+                          <h5 class="modal-title" id="productModalLabel169">TRIBULLUS C/120 CAPS</h5>
+                          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fechar"></button>
+                      </div>
+                      <div class="modal-body">
+                          <img class="imgmodal" src="../public/images/fonte verde/tribullus 120caps.png" alt="TRIBULLUS C/120 CAPS">
+                          <p>Faz com que o corpo libere Luteína e produza testosterona.</p>
+                      </div>
+                      <div class="modal-footer">
+                          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+                      </div>
+                  </div>
+              </div>
+          </div>
       </div>
-    </section>
+      
+
+          
+
+       
+      
+  
     </br></br>
 
     <div class="divider-1"></div>
 
 
-    <section class="product-list wrapper">
-
-
-      <div class="cards-container">
+    
         <div class="card">
           <p class="title">TRIBULLUS (VERDE) C/120 CAPS</p>
-          <img class="img2" src=".././public/images/fonte verde/tribullusVerde 120caps.png"
-            alt="Pré-visualização do produto">
+          <img class="img2" src=".././public/images/fonte verde/tribullusVerde 120caps.png" alt="TRIBULLUS (VERDE) C/120 CAPS">
           <div class="card-info">
-            <!--<p class="tag">Fonte verde</p><-->
-            <p class="title">Cod:170</p>
-
-
-            <!--<p class="shipping">12UN /CX</p>-->
-            <p class="shipping">Entrega a combinar</p>
+              <p class="title">Cod:170</p>
+              <p class="shipping">Entrega a combinar</p>
           </div>
-
-          <div class="btinfo"><a class="button-buy">Detalhes</a>
-            <p class="info">Faz com que o corpo libere Luteína e produza testosterona.
-            </p>
+          <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#productModal170">Detalhes</button>
+          <!-- Modal -->
+          <div class="modal fade" id="productModal170" tabindex="-1" aria-labelledby="productModalLabel170" aria-hidden="true">
+              <div class="modal-dialog modal-dialog-centered">
+                  <div class="modal-content">
+                      <div class="modal-header">
+                          <h5 class="modal-title" id="productModalLabel170">TRIBULLUS (VERDE) C/120 CAPS</h5>
+                          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fechar"></button>
+                      </div>
+                      <div class="modal-body">
+                          <img class="imgmodal" src=".././public/images/fonte verde/tribullusVerde 120caps.png" alt="TRIBULLUS (VERDE) C/120 CAPS">
+                          <p>Faz com que o corpo libere Luteína e produza testosterona.</p>
+                      </div>
+                      <div class="modal-footer">
+                          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+                      </div>
+                  </div>
+              </div>
           </div>
-        </div>
-
-        <div class="card">
+      </div>
+      
+      <div class="card">
           <p class="title">TRIBULLUS TERRESTRIS 1g C/60 CAPS</p>
-          <img class="img2" src=".././public/images/fonte verde/tribullus1g 60caps.png"
-            alt="Pré-visualização do produto">
+          <img class="img2" src=".././public/images/fonte verde/tribullus1g 60caps.png" alt="TRIBULLUS TERRESTRIS 1g C/60 CAPS">
           <div class="card-info">
-            <!--<p class="tag">Fonte verde</p><-->
-            <p class="title">Cod:172</p>
-            <!--<p class="shipping">12UN /CX</p>-->
-            <p class="shipping">Entrega a combinar</p>
+              <p class="title">Cod:172</p>
+              <p class="shipping">Entrega a combinar</p>
           </div>
-
-          <div class="btinfo"><a class="button-buy">Detalhes</a>
-            <p class="info">Faz com que o corpo libere Luteína e produza testosterona.
-            </p>
+          <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#productModal172">Detalhes</button>
+          <!-- Modal -->
+          <div class="modal fade" id="productModal172" tabindex="-1" aria-labelledby="productModalLabel172" aria-hidden="true">
+              <div class="modal-dialog modal-dialog-centered">
+                  <div class="modal-content">
+                      <div class="modal-header">
+                          <h5 class="modal-title" id="productModalLabel172">TRIBULLUS TERRESTRIS 1g C/60 CAPS</h5>
+                          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fechar"></button>
+                      </div>
+                      <div class="modal-body">
+                          <img class="imgmodal" src=".././public/images/fonte verde/tribullus1g 60caps.png" alt="TRIBULLUS TERRESTRIS 1g C/60 CAPS">
+                          <p>Faz com que o corpo libere Luteína e produza testosterona.</p>
+                      </div>
+                      <div class="modal-footer">
+                          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+                      </div>
+                  </div>
+              </div>
           </div>
-        </div>
-
-        <div class="card">
+      </div>
+      
+      <div class="card">
           <p class="title">TRIBULLUS TERRESTRIS COM TAURINA C/60 CAPS</p>
-          <img class="img2" src=".././public/images/fonte verde/tribullusTaurina 60caps.png"
-            alt="Pré-visualização do produto">
+          <img class="img2" src=".././public/images/fonte verde/tribullusTaurina 60caps.png" alt="TRIBULLUS TERRESTRIS COM TAURINA C/60 CAPS">
           <div class="card-info">
-            <!--<p class="tag">Fonte verde</p><-->
-            <p class="title">COD:174
-            </p>
-
-            <!--<p class="shipping">12UN /CX</p>-->
-            <p class="shipping">Entrega a combinar</p>
+              <p class="title">Cod:174</p>
+              <p class="shipping">Entrega a combinar</p>
           </div>
-
-          <div class="btinfo"><a class="button-buy">Detalhes</a>
-            <p class="info">Faz com que o corpo libere Luteína e produza testosterona.</p>
+          <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#productModal174">Detalhes</button>
+          <!-- Modal -->
+          <div class="modal fade" id="productModal174" tabindex="-1" aria-labelledby="productModalLabel174" aria-hidden="true">
+              <div class="modal-dialog modal-dialog-centered">
+                  <div class="modal-content">
+                      <div class="modal-header">
+                          <h5 class="modal-title" id="productModalLabel174">TRIBULLUS TERRESTRIS COM TAURINA C/60 CAPS</h5>
+                          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fechar"></button>
+                      </div>
+                      <div class="modal-body">
+                          <img class="imgmodal" src=".././public/images/fonte verde/tribullusTaurina 60caps.png" alt="TRIBULLUS TERRESTRIS COM TAURINA C/60 CAPS">
+                          <p>Faz com que o corpo libere Luteína e produza testosterona.</p>
+                      </div>
+                      <div class="modal-footer">
+                          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+                      </div>
+                  </div>
+              </div>
           </div>
-        </div>
-        <div class="card">
+      </div>
+      
+      <div class="card">
           <p class="title">TRIBULLUS TERRESTRIS C/60 CAPS</p>
-          <img class="img2" src=".././public/images/fonte verde/tribullus 120caps.png"
-            alt="Pré-visualização do produto">
+          <img class="img2" src=".././public/images/fonte verde/tribullus 120caps.png" alt="TRIBULLUS TERRESTRIS C/60 CAPS">
           <div class="card-info">
-            <!--<p class="tag">Fonte verde</p><-->
-            <p class="title">Cod:175</p>
-
-
-            <!--<p class="shipping">12UN /CX</p>-->
-            <p class="shipping">Entrega a combinar</p>
+              <p class="title">Cod:175</p>
+              <p class="shipping">Entrega a combinar</p>
           </div>
-
-          <div class="btinfo"><a class="button-buy">Detalhes</a>
-            <p class="info">Faz com que o corpo libere Luteína e produza testosterona.
-            </p>
+          <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#productModal175">Detalhes</button>
+          <!-- Modal -->
+          <div class="modal fade" id="productModal175" tabindex="-1" aria-labelledby="productModalLabel175" aria-hidden="true">
+              <div class="modal-dialog modal-dialog-centered">
+                  <div class="modal-content">
+                      <div class="modal-header">
+                          <h5 class="modal-title" id="productModalLabel175">TRIBULLUS TERRESTRIS C/60 CAPS</h5>
+                          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fechar"></button>
+                      </div>
+                      <div class="modal-body">
+                          <img class="imgmodal" src=".././public/images/fonte verde/tribullus 120caps.png" alt="TRIBULLUS TERRESTRIS C/60 CAPS">
+                          <p>Faz com que o corpo libere Luteína e produza testosterona.</p>
+                      </div>
+                      <div class="modal-footer">
+                          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+                      </div>
+                  </div>
+              </div>
           </div>
-        </div>
-
-        <div class="card">
+      </div>
+      
+      <div class="card">
           <p class="title">UNHA DE GATO C/ 60 CAPS</p>
-          <img class="img2" src=".././public/images/fonte verde/unhadegato 60caps.png"
-            alt="Pré-visualização do produto">
+          <img class="img2" src=".././public/images/fonte verde/unhadegato 60caps.png" alt="UNHA DE GATO C/ 60 CAPS">
           <div class="card-info">
-            <!--<p class="tag">Fonte verde</p><-->
-            <p class="title">COD:176
-            </p>
-
-            <!--<p class="shipping">12UN /CX</p>-->
-            <p class="shipping">Entrega a combinar</p>
+              <p class="title">Cod:176</p>
+              <p class="shipping">Entrega a combinar</p>
           </div>
-
-          <div class="btinfo"><a class="button-buy">Detalhes</a>
-            <p class="info">Estimula o sistema imunológico, é utilizado contra a artrite, reumatismo e é um ótimo
-              anti-inflamatório.
-            </p>
+          <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#productModal176">Detalhes</button>
+          <!-- Modal -->
+          <div class="modal fade" id="productModal176" tabindex="-1" aria-labelledby="productModalLabel176" aria-hidden="true">
+              <div class="modal-dialog modal-dialog-centered">
+                  <div class="modal-content">
+                      <div class="modal-header">
+                          <h5 class="modal-title" id="productModalLabel176">UNHA DE GATO C/ 60 CAPS</h5>
+                          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fechar"></button>
+                      </div>
+                      <div class="modal-body">
+                          <img class="imgmodal" src=".././public/images/fonte verde/unhadegato 60caps.png" alt="UNHA DE GATO C/ 60 CAPS">
+                          <p>Estimula o sistema imunológico, é utilizado contra a artrite, reumatismo e é um ótimo anti-inflamatório.</p>
+                      </div>
+                      <div class="modal-footer">
+                          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+                      </div>
+                  </div>
+              </div>
           </div>
-        </div>
-
-        <div class="card">
+      </div>
+      
+      <div class="card">
           <p class="title">UXI AMARELO C/60 CAPS</p>
-          <img class="img2" src=".././public/images/fonte verde/Uxiamarelo 60caps.png"
-            alt="Pré-visualização do produto">
+          <img class="img2" src=".././public/images/fonte verde/Uxiamarelo 60caps.png" alt="UXI AMARELO C/60 CAPS">
           <div class="card-info">
-            <!--<p class="tag">Fonte verde</p><-->
-            <p class="title">COD:178
-            </p>
-
-
-            <!--<p class="shipping">12UN /CX</p>-->
-            <p class="shipping">Entrega a combinar</p>
+              <p class="title">Cod:178</p>
+              <p class="shipping">Entrega a combinar</p>
           </div>
-
-          <div class="btinfo"><a class="button-buy">Detalhes</a>
-            <p class="info">Ajuda no bem estar da mulher, é um ótimo anti-inflamatório, ajudando na desinflamação dos
-              ovários e útero.
-            </p>
+          <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#productModal178">Detalhes</button>
+          <!-- Modal -->
+          <div class="modal fade" id="productModal178" tabindex="-1" aria-labelledby="productModalLabel178" aria-hidden="true">
+              <div class="modal-dialog modal-dialog-centered">
+                  <div class="modal-content">
+                      <div class="modal-header">
+                          <h5 class="modal-title" id="productModalLabel178">UXI AMARELO C/60 CAPS</h5>
+                          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fechar"></button>
+                      </div>
+                      <div class="modal-body">
+                          <img class="imgmodal" src=".././public/images/fonte verde/Uxiamarelo 60caps.png" alt="UXI AMARELO C/60 CAPS">
+                          <p>Ajuda no bem estar da mulher, é um ótimo anti-inflamatório, ajudando na desinflamação dos ovários e útero.</p>
+                      </div>
+                      <div class="modal-footer">
+                          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+                      </div>
+                  </div>
+              </div>
           </div>
-        </div>
-
-
-    </section>
+      </div>
+      
     </br></br>
 
     <div class="divider-1"></div>
-    <section class="product-list wrapper">
-
-      <div class="cards-container">
+   
         <div class="card">
           <p class="title">UXI AMARELO COM UNHA DE GATO C/60 CAPS </p>
-          <img class="img2" src=".././public/images/fonte verde/UXIamarelounhadegato 60caps.png"
-            alt="Pré-visualização do produto">
+          <img class="img2" src=".././public/images/fonte verde/UXIamarelounhadegato 60caps.png" alt="UXI AMARELO COM UNHA DE GATO C/60 CAPS">
           <div class="card-info">
-            <!--<p class="tag">Fonte verde</p><-->
-            <p class="title">COD: 179
-            </p>
-
-            <!--<p class="shipping">12UN /CX</p>-->
-            <p class="shipping">Entrega a combinar</p>
-
+              <p class="title">COD: 179</p>
+              <p class="shipping">Entrega a combinar</p>
           </div>
-          <div class="btinfo"><a class="button-buy">Detalhes</a>
-            <p class="info">Ajudando na desinflamação dos ovários e útero.</br>
-              Combinado com a unha de gato, agem até na gripe e inflamações como artrose.
-            </p>
+          <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#productModal179">Detalhes</button>
+          <!-- Modal -->
+          <div class="modal fade" id="productModal179" tabindex="-1" aria-labelledby="productModalLabel179" aria-hidden="true">
+              <div class="modal-dialog modal-dialog-centered">
+                  <div class="modal-content">
+                      <div class="modal-header">
+                          <h5 class="modal-title" id="productModalLabel179">UXI AMARELO COM UNHA DE GATO C/60 CAPS</h5>
+                          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fechar"></button>
+                      </div>
+                      <div class="modal-body">
+                          <img class="imgmodal" src=".././public/images/fonte verde/UXIamarelounhadegato 60caps.png" alt="UXI AMARELO COM UNHA DE GATO C/60 CAPS">
+                          <p>Ajudando na desinflamação dos ovários e útero. Combinado com a unha de gato, agem até na gripe e inflamações como artrose.</p>
+                      </div>
+                      <div class="modal-footer">
+                          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+                      </div>
+                  </div>
+              </div>
           </div>
-
-        </div>
-
-
-        <div class="card">
+      </div>
+      
+      <div class="card">
           <p class="title">UXI AMARELO UNHA DE GATO & BARBATIMÃO C/120 CAPS</p>
-          <img class="img2" src=".././public/images/fonte verde/uxiUnhagatoBarbatimao60caps.png"
-            alt="Pré-visualização do produto">
+          <img class="img2" src=".././public/images/fonte verde/uxiUnhagatoBarbatimao60caps.png" alt="UXI AMARELO UNHA DE GATO & BARBATIMÃO C/120 CAPS">
           <div class="card-info">
-            <!--<p class="tag">Fonte verde</p><-->
-            <p class="title">COD: 180
-            </p>
-
-            <!--<p class="shipping">12UN /CX</p>-->
-            <p class="shipping">Entrega a combinar</p>
-
+              <p class="title">COD: 180</p>
+              <p class="shipping">Entrega a combinar</p>
           </div>
-          <div class="btinfo"><a class="button-buy">Detalhes</a>
-            <p class="info">Ajuda no tratamento de: </br>
-              Inflamação uterina;</br>
-              Endometriose;</br>
-              Menstruação irregular;</br>
-              Reumatismo e Gastrite;</p>
+          <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#productModal180">Detalhes</button>
+          <!-- Modal -->
+          <div class="modal fade" id="productModal180" tabindex="-1" aria-labelledby="productModalLabel180" aria-hidden="true">
+              <div class="modal-dialog modal-dialog-centered">
+                  <div class="modal-content">
+                      <div class="modal-header">
+                          <h5 class="modal-title" id="productModalLabel180">UXI AMARELO UNHA DE GATO & BARBATIMÃO C/120 CAPS</h5>
+                          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fechar"></button>
+                      </div>
+                      <div class="modal-body">
+                          <img class="imgmodal" src=".././public/images/fonte verde/uxiUnhagatoBarbatimao60caps.png" alt="UXI AMARELO UNHA DE GATO & BARBATIMÃO C/120 CAPS">
+                          <p>Ajuda no tratamento de:
+                              <ul>
+                                  <li>Inflamação uterina</li>
+                                  <li>Endometriose</li>
+                                  <li>Menstruação irregular</li>
+                                  <li>Reumatismo e Gastrite</li>
+                              </ul>
+                          </p>
+                      </div>
+                      <div class="modal-footer">
+                          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+                      </div>
+                  </div>
+              </div>
           </div>
-          <p class="shipping">Entrega a combinar</p>
-        </div>
-        <div class="card">
+      </div>
+      
+      <div class="card">
           <p class="title">VIGRASEX C/60 CAPS</p>
-          <img class="img2" src=".././public/images/fonte verde/vigrasex 60caps.png" alt="Pré-visualização do produto">
+          <img class="img2" src=".././public/images/fonte verde/vigrasex 60caps.png" alt="VIGRASEX C/60 CAPS">
           <div class="card-info">
-            <!--<p class="tag">Fonte verde</p><-->
-            <p class="title">COD:183
-
-            <!--<p class="shipping">12UN /CX</p>-->
-            <p class="shipping">Entrega a combinar</p>
+              <p class="title">COD:183</p>
+              <p class="shipping">Entrega a combinar</p>
           </div>
-
-          <div class="btinfo"><a class="button-buy">Detalhes</a>
-            <p class="info">Proporciona bom desempenho nas atividades sexuais de homens e mulheres.</br>
-              Combate o esgotamento físico, mental, estresse, depressão e ativa a memória.</p>
-
+          <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#productModal183">Detalhes</button>
+          <!-- Modal -->
+          <div class="modal fade" id="productModal183" tabindex="-1" aria-labelledby="productModalLabel183" aria-hidden="true">
+              <div class="modal-dialog modal-dialog-centered">
+                  <div class="modal-content">
+                      <div class="modal-header">
+                          <h5 class="modal-title" id="productModalLabel183">VIGRASEX C/60 CAPS</h5>
+                          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fechar"></button>
+                      </div>
+                      <div class="modal-body">
+                          <img class="imgmodal" src=".././public/images/fonte verde/vigrasex 60caps.png" alt="VIGRASEX C/60 CAPS">
+                          <p>Proporciona bom desempenho nas atividades sexuais de homens e mulheres. Combate o esgotamento físico, mental, estresse, depressão e ativa a memória.</p>
+                      </div>
+                      <div class="modal-footer">
+                          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+                      </div>
+                  </div>
+              </div>
           </div>
-        </div>
-
-
-
-    </section>
+      </div>
+      
     </br></br>
 
     <div class="divider-1"></div>
-    <section class="product-list wrapper">
-      <!--<h2 style="text-align: center;">produtos
-        <span class="material-symbols-outlined">Totalmente Naturais</span>
-      </h2><-->
-
-      <div class="cards-container">
+    
         <div class="card">
           <p class="title">VINAGRE DE MAÇÂ C/60CAPS</p>
-          <img class="img2" src=".././public/images/fonte verde/vinagremaca 60caps.png"
-            alt="Pré-visualização do produto">
+          <img class="img2" src=".././public/images/fonte verde/vinagremaca 60caps.png" alt="VINAGRE DE MAÇÂ C/60CAPS">
           <div class="card-info">
-            <!--<p class="tag">Fonte verde</p><-->
-            <p class="title">COD:184
-            </p>
-
-            <!--<p class="shipping">12UN /CX</p>-->
-            <p class="shipping">Entrega a combinar</p>
+              <p class="title">COD:184</p>
+              <p class="shipping">Entrega a combinar</p>
           </div>
-
-          <div class="btinfo"><a class="button-buy">Detalhes</a>
-            <p class="info">Responsável pela digestão de carboidratos. É fonte de ácido málico da maçã, produz energia e
-              auxilia no combate à bactérias.</p>
+          <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#productModal184">Detalhes</button>
+          <!-- Modal -->
+          <div class="modal fade" id="productModal184" tabindex="-1" aria-labelledby="productModalLabel184" aria-hidden="true">
+              <div class="modal-dialog modal-dialog-centered">
+                  <div class="modal-content">
+                      <div class="modal-header">
+                          <h5 class="modal-title" id="productModalLabel184">VINAGRE DE MAÇÂ C/60CAPS</h5>
+                          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fechar"></button>
+                      </div>
+                      <div class="modal-body">
+                          <img class="imgmodal" src=".././public/images/fonte verde/vinagremaca 60caps.png" alt="VINAGRE DE MAÇÂ C/60CAPS">
+                          <p>Responsável pela digestão de carboidratos. É fonte de ácido málico da maçã, produz energia e auxilia no combate à bactérias.</p>
+                      </div>
+                      <div class="modal-footer">
+                          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+                      </div>
+                  </div>
+              </div>
           </div>
-        </div>
-        <div class="card">
+      </div>
+      
+      <div class="card">
           <p class="title">VITILIGO C/60 CAPS</p>
-          <img class="img2" src=".././public/images/fonte verde/vitiligo 60caps.png" alt="Pré-visualização do produto">
+          <img class="img2" src=".././public/images/fonte verde/vitiligo 60caps.png" alt="VITILIGO C/60 CAPS">
           <div class="card-info">
-            <!--<p class="tag">Fonte verde</p><-->
-            <p class="title">COD:185
-            </p>
-
-
-            <!--<p class="shipping">12UN /CX</p>-->
-            <p class="shipping">Entrega a combinar</p>
+              <p class="title">COD:185</p>
+              <p class="shipping">Entrega a combinar</p>
           </div>
-
-          <div class="btinfo"><a class="button-buy">Detalhes</a>
-            <p class="info">Presente nas cascas dos frutos verdes, promove repigmentação da pele principalmente quem tem
-              (vitiligo), ajuda no tratamentode úlceras gástricas, resfriado, bronquite e má circulação.</p>
+          <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#productModal185">Detalhes</button>
+          <!-- Modal -->
+          <div class="modal fade" id="productModal185" tabindex="-1" aria-labelledby="productModalLabel185" aria-hidden="true">
+              <div class="modal-dialog modal-dialog-centered">
+                  <div class="modal-content">
+                      <div class="modal-header">
+                          <h5 class="modal-title" id="productModalLabel185">VITILIGO C/60 CAPS</h5>
+                          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fechar"></button>
+                      </div>
+                      <div class="modal-body">
+                          <img class="imgmodal" src=".././public/images/fonte verde/vitiligo 60caps.png" alt="VITILIGO C/60 CAPS">
+                          <p>Presente nas cascas dos frutos verdes, promove repigmentação da pele principalmente quem tem vitiligo, ajuda no tratamento de úlceras gástricas, resfriado, bronquite e má circulação.</p>
+                      </div>
+                      <div class="modal-footer">
+                          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+                      </div>
+                  </div>
+              </div>
           </div>
-        </div>
-
-        <div class="card">
+      </div>
+      
+      <div class="card">
           <p class="title">SEMENTE DE ABÓBORA C/60 CAPS</p>
-          <img class="img2" src=".././public/images/fonte verde/sementeAbobora 60caps.png"
-            alt="Pré-visualização do produto">
+          <img class="img2" src=".././public/images/fonte verde/sementeAbobora 60caps.png" alt="SEMENTE DE ABÓBORA C/60 CAPS">
           <div class="card-info">
-            <!--<p class="tag">Fonte verde</p><-->
-            <p class="title">COD:160
-            </p>
-
-
-            <!--<p class="shipping">12UN /CX</p>-->
-            <p class="shipping">Entrega a combinar</p>
+              <p class="title">COD:160</p>
+              <p class="shipping">Entrega a combinar</p>
           </div>
-
-          <div class="btinfo"><a class="button-buy">Detalhes</a>
-            <p class="info">Rica em vitaminas, baixo teor calórico, previne doenças e melhora o funcionamento do
-              organismo.</p>
+          <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#productModal160">Detalhes</button>
+          <!-- Modal -->
+          <div class="modal fade" id="productModal160" tabindex="-1" aria-labelledby="productModalLabel160" aria-hidden="true">
+              <div class="modal-dialog modal-dialog-centered">
+                  <div class="modal-content">
+                      <div class="modal-header">
+                          <h5 class="modal-title" id="productModalLabel160">SEMENTE DE ABÓBORA C/60 CAPS</h5>
+                          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fechar"></button>
+                      </div>
+                      <div class="modal-body">
+                          <img class="imgmodal" src=".././public/images/fonte verde/sementeAbobora 60caps.png" alt="SEMENTE DE ABÓBORA C/60 CAPS">
+                          <p>Rica em vitaminas, baixo teor calórico, previne doenças e melhora o funcionamento do organismo.</p>
+                      </div>
+                      <div class="modal-footer">
+                          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+                      </div>
+                  </div>
+              </div>
           </div>
-        </div>
+      </div>
+      
 
 
         <!-- <div style="width: 20rem;height: auto;" class="card">
@@ -629,7 +850,7 @@
 
             setInterval(refreshTime, 1000);</script>
 
-          <a style="color: #fff;" href="https://www.instagram.com/heerick.gg/" target="_blank"><p style="position: relative;" class="mt-5">byHerick&copy;
+          <a style="color: #fff;" href="https://www.instagram.com/hericksouza.gg/" target="_blank"><p style="position: relative;" class="mt-5">byHerick&copy;
           </p></a>
 
         </div>

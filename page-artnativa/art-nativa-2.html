@@ -1,0 +1,557 @@
+<!DOCTYPE html>
+<html lang="pt_BR">
+
+<head>
+  <!-- PAGE INFO -->
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ART NATIVA | 2</title>
+
+  <!-- Icones -->
+  <link rel="stylesheet" href="../assets/fonts/style.css" />
+  <link rel="icon" href="..//logo.png" type="icon/png" sizes="16x16">
+  <!-- Swiper -->
+  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" />
+
+
+  <!-- STYLES -->
+  <link rel="stylesheet" href="../style.css" />
+  <link rel="stylesheet" href="../css2/style2.css">
+  <link rel="stylesheet" href="../css2/nav-bar.css">
+  <link rel="stylesheet" href="../css2/super-offers.css">
+  <link rel="stylesheet" href="../css2/products.css">
+  <link rel="stylesheet" href="../csshover/style.css">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.gstatic.com" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Poppins:wght@400;500;700&display=swap"
+    rel="stylesheet" />
+
+
+
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/5.1.3/css/bootstrap.min.css" rel="stylesheet">
+</head>
+
+<body>
+  <header id="header">
+    <nav class="container">
+      <a class="logo" href="../index.html">Catálogo - Natu<span>Mais</span>
+
+      </a>
+      <!-- menu -->
+      <div class="menu">
+        <ul class="grid">
+          <li><a class="title" href="../index.html">Início </a></li>
+          <li><a class="title" href="../index.html#produtos">Produtos</a></li>
+          <li><a style="color: red;" class="title" href="../page-artnativa/art-nativa.html">Voltar</a></li>
+        </ul>
+      </div>
+      <!-- /menu -->
+      <div class="toggle icon-menu"></div>
+      <div class="toggle icon-close"></div>
+    </nav>
+  </header>
+
+  <main>
+
+    <section id="inicio" class="super-offers-background">
+      <div id="inicio" class="header-image">
+
+        
+      </div>
+
+      <div class="super-offers wrapper">
+        <h3 style="text-align: center;"><span class="logo-detail">Ofertas do Mês</span> NatuMais</h3>
+        <p class="title" style="text-align: center;color: rgb(0, 0, 0); font-size: 20px;">Confira nossos <span
+            class="logo-detail">Novos Produtos!</span>
+        </p>
+
+        <h1 class="searchh">Pesquisa de Produtos</h1>
+      <input type="text" id="searchInput" placeholder="Pesquisar produto..." onkeyup="searchProducts()">
+      <style>
+        /* Estilo para o título com a classe searchh */
+.searchh {
+  color: #28a745; /* Verde preferencial */
+  text-align: center; /* Centraliza o título */
+  font-size: 1.5em; /* Tamanho da fonte */
+  margin: 20px 0; /* Margens superior e inferior */
+}
+
+/* Estilo para o input */
+#searchInput {
+  width: 100%; /* Largura total */
+  max-width: 400px; /* Largura máxima */
+  padding: 10px; /* Espaçamento interno */
+  border: 2px solid #28a745; /* Borda verde */
+  border-radius: 5px; /* Cantos arredondados */
+  font-size: 1em; /* Tamanho da fonte */
+  margin: 0 auto; /* Centraliza o input */
+  display: block; /* Exibe como bloco */
+  transition: border-color 0.3s; /* Transição suave para a borda */
+  margin-bottom: 10px;
+}
+
+/* Efeito ao focar no input */
+#searchInput:focus {
+  border-color: #218838; /* Verde mais escuro ao focar */
+  outline: none; /* Remove o contorno padrão */
+}
+
+        
+.hidden {
+  display: none;
+}
+    </style>
+     <script>
+      function searchProducts() {
+          const input = document.getElementById('searchInput').value.toLowerCase();
+          const cards = document.querySelectorAll('.card');
+
+          cards.forEach(card => {
+              const title = card.querySelector('.title').textContent.toLowerCase();
+              const code = card.querySelector('.card-info .title').textContent.toLowerCase();
+
+              // Verifica se a entrada do usuário está contida no título ou no código
+              if (title.includes(input) || code.includes(input)) {
+                  card.classList.remove('hidden');
+              } else {
+                  card.classList.add('hidden');
+              }
+          });
+      }
+  </script>
+
+        <h2 style="text-align: center;background-color: rgb(245 245 245);" class="title">ART NATIVA Página 2</h2>
+        <div class="page-btn">         
+          <a href="../page-artnativa/art-nativa.html"><span>1</span></a>
+          <a class="active-span" href="../page-artnativa/art-nativa-2.html"><span style="background:#198754; color: #fff;">2</span></a>
+          <!--<a href="solorgan-3.html"> <span>3</span></a>--> 
+        </div>
+
+
+        <div class="cards-container">
+
+          <div class="cards-container">
+           
+            <div class="card">
+              <p class="title">PROPOSEP XAROPE 150 ML</p>
+              <img class="img2" src="../public/images/art-nativa/proposepxarope.png" alt="PROPOSEP XAROPE 150 ML">
+              <div class="card-info">
+                <p class="title">COD: 608</p>
+                <p class="shipping">Entrega a combinar</p>
+              </div>
+              <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#productModal608">
+                Detalhes
+              </button>
+              <div class="modal fade" id="productModal608" tabindex="-1" aria-labelledby="productModalLabel608" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h5 class="modal-title" id="productModalLabel608">PROPOSEP XAROPE 150 ML</h5>
+                      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fechar"></button>
+                    </div>
+                    <div class="modal-body">
+                      <img class="imgmodal" src="../public/images/art-nativa/proposepxarope.png" alt="PROPOSEP XAROPE 150 ML">
+                      <p>Xarope indicado para o alívio de tosse e sintomas respiratórios, com ação expectorante.</p>
+                    </div>
+                    <div class="modal-footer">
+                      <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+            <div class="card">
+              <p class="title">SABONETE DE ACNOL 90 GR</p>
+              <img class="img2" src="../public/images/art-nativa/saboneteacnolSalicilico.png" alt="SABONETE DE ACNOL 90 GR">
+              <div class="card-info">
+                <p class="title">COD: 599</p>
+                <p class="shipping">Entrega a combinar</p>
+              </div>
+              <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#productModal599">
+                Detalhes
+              </button>
+              <div class="modal fade" id="productModal599" tabindex="-1" aria-labelledby="productModalLabel599" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h5 class="modal-title" id="productModalLabel599">SABONETE DE ACNOL 90 GR</h5>
+                      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fechar"></button>
+                    </div>
+                    <div class="modal-body">
+                      <img class="imgmodal" src="../public/images/art-nativa/saboneteacnolSalicilico.png" alt="SABONETE DE ACNOL 90 GR">
+                      <p>Sabonete indicado para o tratamento de acne, auxiliando na limpeza profunda da pele.</p>
+                    </div>
+                    <div class="modal-footer">
+                      <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+            <div class="card">
+              <p class="title">SABONETE DE AROEIRA 100 GR</p>
+              <img class="img2" src="../public/images/art-nativa/sabonetearoeira.png" alt="SABONETE DE AROEIRA 100 GR">
+              <div class="card-info">
+                <p class="title">COD: 609</p>
+                <p class="shipping">Entrega a combinar</p>
+              </div>
+              <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#productModal609">
+                Detalhes
+              </button>
+              <div class="modal fade" id="productModal609" tabindex="-1" aria-labelledby="productModalLabel609" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h5 class="modal-title" id="productModalLabel609">SABONETE DE AROEIRA 100 GR</h5>
+                      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fechar"></button>
+                    </div>
+                    <div class="modal-body">
+                      <img class="imgmodal" src="../public/images/art-nativa/sabonetearoeira.png" alt="SABONETE DE AROEIRA 100 GR">
+                      <p>Sabonete de aroeira para auxiliar no tratamento de peles oleosas e com acne, promovendo limpeza e frescor.</p>
+                    </div>
+                    <div class="modal-footer">
+                      <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+            <div class="card">
+              <p class="title">SABONETE DE COCO 100 GR</p>
+              <img class="img2" src="../public/images/art-nativa/sabonetecoco.png" alt="SABONETE DE COCO 100 GR">
+              <div class="card-info">
+                <p class="title">COD: 600</p>
+                <p class="shipping">Entrega a combinar</p>
+              </div>
+              <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#productModal600">
+                Detalhes
+              </button>
+              <div class="modal fade" id="productModal600" tabindex="-1" aria-labelledby="productModalLabel600" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h5 class="modal-title" id="productModalLabel600">SABONETE DE COCO 100 GR</h5>
+                      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fechar"></button>
+                    </div>
+                    <div class="modal-body">
+                      <img class="imgmodal" src="../public/images/art-nativa/sabonetecoco.png" alt="SABONETE DE COCO 100 GR">
+                      <p>Sabonete de coco, com propriedades hidratantes e nutritivas, ideal para a limpeza diária da pele.</p>
+                    </div>
+                    <div class="modal-footer">
+                      <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+            <div class="card">
+              <p class="title">SABONETE DE ENXOFRE 90GR</p>
+              <img class="img2" src="../public/images/art-nativa/saboneteEnxofre.png" alt="SABONETE DE ENXOFRE 90GR">
+              <div class="card-info">
+                <p class="title">COD: 601</p>
+                <p class="shipping">Entrega a combinar</p>
+              </div>
+              <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#productModal601">
+                Detalhes
+              </button>
+              <div class="modal fade" id="productModal601" tabindex="-1" aria-labelledby="productModalLabel601" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h5 class="modal-title" id="productModalLabel601">SABONETE DE ENXOFRE 90GR</h5>
+                      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fechar"></button>
+                    </div>
+                    <div class="modal-body">
+                      <img class="imgmodal" src="../public/images/art-nativa/saboneteEnxofre.png" alt="SABONETE DE ENXOFRE 90GR">
+                      <p>Sabonete com enxofre para o tratamento de peles oleosas, acneicas e com tendência a cravos.</p>
+                    </div>
+                    <div class="modal-footer">
+                      <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+            <div class="card">
+              <p class="title">SABONETE DE ENXOFRE SULFUROSO 90G</p>
+              <img class="img2" src="../public/images/art-nativa/sabonetesulfurosol.png" alt="SABONETE DE ENXOFRE SULFUROSO 90G">
+              <div class="card-info">
+                <p class="title">COD: 1293</p>
+                <p class="shipping">Entrega a combinar</p>
+              </div>
+              <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#productModal1293">
+                Detalhes
+              </button>
+              <div class="modal fade" id="productModal1293" tabindex="-1" aria-labelledby="productModalLabel1293" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h5 class="modal-title" id="productModalLabel1293">SABONETE DE ENXOFRE SULFUROSO 90G</h5>
+                      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fechar"></button>
+                    </div>
+                    <div class="modal-body">
+                      <img class="imgmodal" src="../public/images/art-nativa/sabonetesulfurosol.png" alt="SABONETE DE ENXOFRE SULFUROSO 90G">
+                      <p>Sabonete de enxofre sulfuroso, indicado para o controle de acne e outras imperfeições na pele.</p>
+                    </div>
+                    <div class="modal-footer">
+                      <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+            <div class="card">
+              <p class="title">SABONETE DE GLICERINA 100 GR</p>
+              <img class="img2" src="../public/images/art-nativa/saboneteGlicerinal.png" alt="SABONETE DE GLICERINA 100 GR">
+              <div class="card-info">
+                <p class="title">COD: 610</p>
+                <p class="shipping">Entrega a combinar</p>
+              </div>
+              <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#productModal610">
+                Detalhes
+              </button>
+              <div class="modal fade" id="productModal610" tabindex="-1" aria-labelledby="productModalLabel610" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h5 class="modal-title" id="productModalLabel610">SABONETE DE GLICERINA 100 GR</h5>
+                      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fechar"></button>
+                    </div>
+                    <div class="modal-body">
+                      <img class="imgmodal" src="../public/images/art-nativa/saboneteGlicerinal.png" alt="SABONETE DE GLICERINA 100 GR">
+                      <p>Sabonete de glicerina, altamente hidratante, indicado para peles secas e sensíveis.</p>
+                    </div>
+                    <div class="modal-footer">
+                      <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+            <div class="card">
+              <p class="title">TURBOVIT</p>
+              <img class="img2" src="../public/images/art-nativa/turbovit.png" alt="TURBOVIT">
+              <div class="card-info">
+                <p class="title">COD: 613</p>
+                <p class="shipping">Entrega a combinar</p>
+              </div>
+              <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#productModal613">
+                Detalhes
+              </button>
+              <div class="modal fade" id="productModal613" tabindex="-1" aria-labelledby="productModalLabel613" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h5 class="modal-title" id="productModalLabel613">TURBOVIT</h5>
+                      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fechar"></button>
+                    </div>
+                    <div class="modal-body">
+                      <img class="imgmodal" src="../public/images/art-nativa/turbovit.png" alt="TURBOVIT">
+                      <p>Suplemento vitamínico indicado para melhorar a disposição, energia e o bem-estar geral.</p>
+                    </div>
+                    <div class="modal-footer">
+                      <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>            
+
+      </div>
+    </section>
+    </br></br>
+     
+    </section>
+    </br></br> </section>
+
+
+    </br></br>
+    <!-------- PAGE BUTTONS------->
+    <div class="page-btn">         
+      <a href="../page-artnativa/art-nativa.html"><span>1</span></a>
+      <a class="active-span" href="../page-artnativa/art-nativa-2.html"><span style="background:#198754; color: #fff;">2</span></a>
+      <!--<a href="solorgan-3.html"> <span>3</span></a>--> 
+    </div>
+    <div class="divider-1"></div>
+
+  </main>
+
+  <section>
+
+    <section class="mapa" id="produtos">
+      <!--
+      <div class="fotos">
+        <h2 style="text-align: center;" class="title">Produtos Diversos</h2>
+        <div class="slider-principal">
+          <img src="../static/products-image/natumais/1.jpeg" />
+          <img src="../static/products-image/natumais/2.jpeg" />
+          <img src="../static/products-image/natumais/3.jpeg" />
+          <img src="../static/products-image/natumais/4.jpeg" />
+          <img src="../static/products-image/natumais/5.jpeg" />
+        </div>
+      -->
+
+
+      <h2 style="text-align: center; margin-top: 4%;" class="title">Mais Produtos</h2>
+      <p>(clique ou pare o cursor para visualizar)</p>
+      <div class="cardhover">
+        <div class="card2">
+          <div class="img-box">
+            <a href="../page-mentos/mentos.html">
+              <img src="../static/products-image/doces-chicletes-balas/balas.png">
+            </a>
+          </div>
+          <div class="content2">
+            <h2>Mentos</h2>
+            <p>
+              Confira a marca Mentos.
+            </p>
+            <a href="../page-mentos/mentos.html" class="read-more">
+              Ver Catálogo
+            </a>
+          </div>
+        </div>
+        <div class="card2">
+          <div class="img-box">
+            <a href="../page-fonte-verde/tipo-ftverde.html">
+              <img src="../static/products-image/natumais/Fonte verde/logoFonteVerde.png">
+            </a>
+          </div>
+          <div class="content2">
+            <h2>Fonte Verde</h2>
+            <p>
+              Confira os produtos da FONTE VERDE orgânicos que contribuem para a sua saúde, e possuem uma ampla gama de
+              benefícios para a
+              saúde, incluindo propriedades antioxidantes, anti-inflamatórias, relaxantes e digestivas.
+            </p>
+            <a href="page-fonte-verde/tipo-ftverde.html" class="read-more">
+              Ver Catálogo
+            </a>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="divider-1"></div>
+
+      <!-- CONTACT -->
+      <section class="section" id="contact">
+        <div class="container grid">
+          <div class="text">
+            <h2 class="title">Entre em contato com a gente!</h2>
+            <p>
+              Entre em contato conosco, queremos tirar suas dúvidas,
+              ouvir suas críticas e sugestões.
+            </p>
+            <a href="https://api.whatsapp.com/send?phone=553335631647&text=Oláa! Gostaria de um produto" class="button"
+              target="_blank"></i> Entrar em contato</a>
+          </div>
+
+          <div class="links">
+            <ul class="grid">
+              <li><i class="icon-phone"></i> <a href="tel:+55xxxxx"> (33) 333563-1647</a></li>
+              <li><i class="icon-map-pin"></i> Manhuaçu MG</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      </div>
+    </section>
+    <footer class="section">
+      <div class="container grid">
+        <div class="brand">
+          <a class="logo logo-alt" href="#home">Natu<span>Mais </span> ⠀</a>
+
+        </div>
+
+        <div class="social grid">
+          <p style="color: #fff;">Mídias Sociais:</p>
+          <a href="https://www.instagram.com/natumais_/" target="_blank">
+            <i class="icon-instagram"></i>
+          </a>
+          <a href="https://api.whatsapp.com/send?phone=553335631647&text=Oláa!" target="_blank">
+            <svg class="svgwpp" xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="#fff"
+              class="bi bi-whatsapp" viewBox="0 0 16 16">
+              <path
+                d="M13.601 2.326A7.854 7.854 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.933 7.933 0 0 0 3.79.965h.004c4.368 0 7.926-3.558 7.93-7.93A7.898 7.898 0 0 0 13.6 2.326zM7.994 14.521a6.573 6.573 0 0 1-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931 6.557 6.557 0 0 1 1.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592zm3.615-4.934c-.197-.099-1.17-.578-1.353-.646-.182-.065-.315-.099-.445.099-.133.197-.513.646-.627.775-.114.133-.232.148-.43.05-.197-.1-.836-.308-1.592-.985-.59-.525-.985-1.175-1.103-1.372-.114-.198-.011-.304.088-.403.087-.088.197-.232.296-.346.1-.114.133-.198.198-.33.065-.134.034-.248-.015-.347-.05-.099-.445-1.076-.612-1.47-.16-.389-.323-.335-.445-.34-.114-.007-.247-.007-.38-.007a.729.729 0 0 0-.529.247c-.182.198-.691.677-.691 1.654 0 .977.71 1.916.81 2.049.098.133 1.394 2.132 3.383 2.992.47.205.84.326 1.129.418.475.152.904.129 1.246.08.38-.058 1.171-.48 1.338-.943.164-.464.164-.86.114-.943-.049-.084-.182-.133-.38-.232z" />
+            </svg></a>
+        </div>
+        <div style="color: #fff;">
+
+          <script>var data = new Date();
+            var dias = new Array(
+              'Domingo', 'Segunda-feira', 'Terça-feira', 'Quarta-feira', 'Quinta-feira', 'Sexta-feira', 'Sábado'
+            );
+
+            document.write(dias[data.getDay()]);</script>
+          <p id="time"></p>
+        </div>
+      </div>
+    </footer>
+
+
+    <div class="dev" style="background: var(--base-color);">
+      <div style="align-items: center; color: #fff;" class="social grid">
+        <div class="col-md-12 text-center">
+
+
+
+
+
+          <script>var timeDisplay = document.getElementById("time");
+            function refreshTime() {
+              var dateString = new Date().toLocaleString("pt-BR", { timeZone: "America/Sao_Paulo" });
+              var formattedString = dateString.replace(", ", " - ");
+              timeDisplay.innerHTML = formattedString;
+            }
+
+            setInterval(refreshTime, 1000);</script>
+
+          <a style="color: #fff;" href="https://www.instagram.com/hericksouza.gg/" target="_blank"><p style="position: relative;" class="mt-5">byHerick&copy;
+          </p></a>
+
+        </div>
+
+      </div>
+      <p class="dev" style="top:100%; color: #fff; margin: 0 auto; font-size: 12px; text-align: center;">Natumais ©2024
+        - Todos os direitos reservados.</p>
+    </div>
+    </div>
+
+    <a href="#inicio" class="back-to-top"><i class="icon-arrow-up"></i></a>
+
+    <!-- swiper -->
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
+    <!-- scrollreveal -->
+    <script src="https://unpkg.com/scrollreveal"></script>
+
+    <!-- main.js <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3742.9054286502214!2d-42.030741723819375!3d-20.262756548758546!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xbb03c907812fbb%3A0xc1508199696bd20d!2sAlfa%20Odontologia!5e0!3m2!1spt-BR!2sbr!4v1682474612695!5m2!1spt-BR!2sbr"
+            width="600" height="450" allowfullscreen="" loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>-->
+    <script type="text/javascript" src="../CodejqueryMin.js"></script>
+    <script type="text/javascript" src="../jqueryMigrate.js"></script>
+    <script type="text/javascript" src="../slick.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.1.3/js/bootstrap.min.js"></script>
+
+    <script src="../main.js"></script>
+</body>
+
+</html>

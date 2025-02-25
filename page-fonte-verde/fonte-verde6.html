@@ -63,6 +63,61 @@
         <p class="title" style="text-align: center;color: rgb(0, 0, 0); font-size: 20px;">Confira nossos <span
             class="logo-detail">Novos Produtos!</span>
         </p>
+
+        <h1 class="searchh">Pesquisa de Produtos</h1>
+      <input type="text" id="searchInput" placeholder="Pesquisar produto..." onkeyup="searchProducts()">
+      <style>
+        /* Estilo para o título com a classe searchh */
+.searchh {
+  color: #28a745; /* Verde preferencial */
+  text-align: center; /* Centraliza o título */
+  font-size: 1.5em; /* Tamanho da fonte */
+  margin: 20px 0; /* Margens superior e inferior */
+}
+
+/* Estilo para o input */
+#searchInput {
+  width: 100%; /* Largura total */
+  max-width: 400px; /* Largura máxima */
+  padding: 10px; /* Espaçamento interno */
+  border: 2px solid #28a745; /* Borda verde */
+  border-radius: 5px; /* Cantos arredondados */
+  font-size: 1em; /* Tamanho da fonte */
+  margin: 0 auto; /* Centraliza o input */
+  display: block; /* Exibe como bloco */
+  transition: border-color 0.3s; /* Transição suave para a borda */
+  margin-bottom: 10px;
+}
+
+/* Efeito ao focar no input */
+#searchInput:focus {
+  border-color: #218838; /* Verde mais escuro ao focar */
+  outline: none; /* Remove o contorno padrão */
+}
+
+        
+.hidden {
+  display: none;
+}
+    </style>
+     <script>
+      function searchProducts() {
+          const input = document.getElementById('searchInput').value.toLowerCase();
+          const cards = document.querySelectorAll('.card');
+
+          cards.forEach(card => {
+              const title = card.querySelector('.title').textContent.toLowerCase();
+              const code = card.querySelector('.card-info .title').textContent.toLowerCase();
+
+              // Verifica se a entrada do usuário está contida no título ou no código
+              if (title.includes(input) || code.includes(input)) {
+                  card.classList.remove('hidden');
+              } else {
+                  card.classList.add('hidden');
+              }
+          });
+      }
+  </script>
         <div class="page-btn">
           <a class="active-span" href="fonte-verde.html"><span>1</span></a>
           <a class="active-span" href="fonte-verde2.html"><span>2</span></a>
@@ -76,66 +131,107 @@
         <div class="cards-container">
           <div class="card">
             <p class="title">30 ERVAS C/60 & 120 CAPS</p>
-            <img class="img2" src=".././public/images/fonte verde/30Ervas 60120caps.png"
-              alt="Pré-visualização do produto">
+            <img class="img2" src=".././public/images/fonte verde/30Ervas 60120caps.png" alt="30 ERVAS C/60 & 120 CAPS">
             <div class="card-info">
-              <!--<p class="tag">Fonte verde</p><-->
-              <p class="title">COD:11</p>
-              <p class="title">COD:12</p>
-
-              <!--<p class="shipping">12UN /CX</p>-->
-              <p class="shipping">Entrega a combinar</p>
+                <p class="title">COD:11</p>
+                <p class="title">COD:12</p>
+                <p class="shipping">Entrega a combinar</p>
             </div>
-
-            <div class="btinfo"><a class="button-buy">Detalhes</a>
-              <p class="info">Contém a combinação de 30 ervas, tais como:</br></br>
-                Abacateiro - Chá verde - Chapéu de Couro - </br>Cavalinha -
-                Melissa - Douradinha - Salsaparrilha - Erva de Bugre - </br></br>
-                e demais outras que ajudam na eliminação de líquidos acumulados e aumenta a saciedade.</p>
+            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#productModal11">Detalhes</button>
+            <!-- Modal -->
+            <div class="modal fade" id="productModal11" tabindex="-1" aria-labelledby="productModalLabel11" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="productModalLabel11">30 ERVAS C/60 & 120 CAPS</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fechar"></button>
+                        </div>
+                        <div class="modal-body">
+                            <img class="imgmodal" src=".././public/images/fonte verde/30Ervas 60120caps.png" alt="30 ERVAS C/60 & 120 CAPS">
+                            <p>Contém a combinação de 30 ervas, tais como:</p>
+                            <ul>
+                                <li>Abacateiro</li>
+                                <li>Chá verde</li>
+                                <li>Chapéu de Couro</li>
+                                <li>Cavalinha</li>
+                                <li>Melissa</li>
+                                <li>Douradinha</li>
+                                <li>Salsaparrilha</li>
+                                <li>Erva de Bugre</li>
+                            </ul>
+                            <p>Estas ervas ajudam na eliminação de líquidos acumulados e aumentam a saciedade.</p>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+                        </div>
+                    </div>
+                </div>
             </div>
-          </div>
-          <div class="card">
-            <p class="title">37 ERVAS C/60 CAPS</p>
-            <img class="img2" src="../public/images/fonte verde/37ervas 60caps.png" alt="Pré-visualização do produto">
-            <div class="card-info">
-              <!--<p class="tag">Fonte verde</p><-->
-              <p class="title">COD:13</p>
-
-
-              <!--<p class="shipping">12UN /CX</p>-->
-              <p class="shipping">Entrega a combinar</p>
-            </div>
-
-            <div class="btinfo"><a class="button-buy">Detalhes</a>
-              <p class="info">Contém 37 ervas que auxilia no Emagrecimento, atua nas causas da Obesidade e regula o
-                intestino a base de plantas medicinais.
-              </p>
-            </div>
-          </div>
-          <div class="card">
-            <p class="title">50 ERVAS C/60 CAPS</p>
-            <img class="img2" src="../public/images/fonte verde/50ervas 60caps.png" alt="Pré-visualização do produto">
-            <div class="card-info">
-              <!--<p class="tag">Fonte verde</p><-->
-              <p class="title">COD:14</p>
-
-              <!--<p class="shipping">12UN /CX</p>-->
-              <p class="shipping">Entrega a combinar</p>
-            </div>
-
-            <div class="btinfo"><a class="button-buy">Detalhes</a>
-              <p class="info">Contém 50 ervas que ajuda a regular os níveis de açucar no sangue, ajudando no tratamento
-                da diabetes.</br>
-                Alivia picadas de insetos e no tratamento da prisão de ventre, sendo eficaz também no processo de
-                desintoxicação.</p>
-
-            </div>
-          </div>
-
-
         </div>
-      </div>
-    </section>
+        
+        <div class="card">
+            <p class="title">37 ERVAS C/60 CAPS</p>
+            <img class="img2" src="../public/images/fonte verde/37ervas 60caps.png" alt="37 ERVAS C/60 CAPS">
+            <div class="card-info">
+                <p class="title">COD:13</p>
+                <p class="shipping">Entrega a combinar</p>
+            </div>
+            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#productModal13">Detalhes</button>
+            <!-- Modal -->
+            <div class="modal fade" id="productModal13" tabindex="-1" aria-labelledby="productModalLabel13" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="productModalLabel13">37 ERVAS C/60 CAPS</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fechar"></button>
+                        </div>
+                        <div class="modal-body">
+                            <img class="imgmodal" src="../public/images/fonte verde/37ervas 60caps.png" alt="37 ERVAS C/60 CAPS">
+                            <p>Contém 37 ervas que auxiliam no emagrecimento, atuam nas causas da obesidade e regulam o intestino, baseadas em plantas medicinais.</p>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="card">
+            <p class="title">50 ERVAS C/60 CAPS</p>
+            <img class="img2" src="../public/images/fonte verde/50ervas 60caps.png" alt="50 ERVAS C/60 CAPS">
+            <div class="card-info">
+                <p class="title">COD:14</p>
+                <p class="shipping">Entrega a combinar</p>
+            </div>
+            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#productModal14">Detalhes</button>
+            <!-- Modal -->
+            <div class="modal fade" id="productModal14" tabindex="-1" aria-labelledby="productModalLabel14" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="productModalLabel14">50 ERVAS C/60 CAPS</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fechar"></button>
+                        </div>
+                        <div class="modal-body">
+                            <img class="imgmodal" src="../public/images/fonte verde/50ervas 60caps.png" alt="50 ERVAS C/60 CAPS">
+                            <p>Contém 50 ervas que ajudam a regular os níveis de açúcar no sangue, ajudando no tratamento da diabetes. Também alivia picadas de insetos e trata a prisão de ventre, sendo eficaz no processo de desintoxicação.</p>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+
+
+          
+
+       
+      
+  
     </br></br>
 
     <div class="divider-1"></div>
@@ -322,7 +418,7 @@
 
             setInterval(refreshTime, 1000);</script>
 
-          <a style="color: #fff;" href="https://www.instagram.com/heerick.gg/" target="_blank"><p style="position: relative;" class="mt-5">byHerick&copy;
+          <a style="color: #fff;" href="https://www.instagram.com/hericksouza.gg/" target="_blank"><p style="position: relative;" class="mt-5">byHerick&copy;
           </p></a>
 
         </div>

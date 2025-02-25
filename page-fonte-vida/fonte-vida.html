@@ -42,7 +42,7 @@
         <ul class="grid">
           <li><a class="title" href="../index.html">Início </a></li>
           <li><a class="title" href="../index.html#produtos">Produtos</a></li>
-          <li><a style="color: red;" class="title" href="../index.html">Voltar</a></li>
+          <li><a style="color: red;" class="title" href="../grupos-encap-liq/encap-liq-marcas.html">Voltar</a></li>
         </ul>
       </div>
       <!-- /menu -->
@@ -66,6 +66,61 @@
             class="logo-detail">Novos Produtos!</span>
         </p>
 
+        <h1 class="searchh">Pesquisa de Produtos</h1>
+      <input type="text" id="searchInput" placeholder="Pesquisar produto..." onkeyup="searchProducts()">
+      <style>
+        /* Estilo para o título com a classe searchh */
+.searchh {
+  color: #28a745; /* Verde preferencial */
+  text-align: center; /* Centraliza o título */
+  font-size: 1.5em; /* Tamanho da fonte */
+  margin: 20px 0; /* Margens superior e inferior */
+}
+
+/* Estilo para o input */
+#searchInput {
+  width: 100%; /* Largura total */
+  max-width: 400px; /* Largura máxima */
+  padding: 10px; /* Espaçamento interno */
+  border: 2px solid #28a745; /* Borda verde */
+  border-radius: 5px; /* Cantos arredondados */
+  font-size: 1em; /* Tamanho da fonte */
+  margin: 0 auto; /* Centraliza o input */
+  display: block; /* Exibe como bloco */
+  transition: border-color 0.3s; /* Transição suave para a borda */
+  margin-bottom: 10px;
+}
+
+/* Efeito ao focar no input */
+#searchInput:focus {
+  border-color: #218838; /* Verde mais escuro ao focar */
+  outline: none; /* Remove o contorno padrão */
+}
+
+        
+.hidden {
+  display: none;
+}
+    </style>
+     <script>
+      function searchProducts() {
+          const input = document.getElementById('searchInput').value.toLowerCase();
+          const cards = document.querySelectorAll('.card');
+
+          cards.forEach(card => {
+              const title = card.querySelector('.title').textContent.toLowerCase();
+              const code = card.querySelector('.card-info .title').textContent.toLowerCase();
+
+              // Verifica se a entrada do usuário está contida no título ou no código
+              if (title.includes(input) || code.includes(input)) {
+                  card.classList.remove('hidden');
+              } else {
+                  card.classList.add('hidden');
+              }
+          });
+      }
+  </script>
+
         <h2 style="text-align: center;background-color: rgb(245 245 245);" class="title">Fonte Vida</h2>
         <div class="page-btn">
           <a class="active-span" href="fonte-vida.html"><span style="background:#198754; color: #fff;">1</span></a>
@@ -80,268 +135,354 @@
 
           <div class="card">
             <p class="title">TERMODTOX C/ 120CAPS</p>
-
-            <img class="img2" src="../public/images/fonte-vida/termodtox120caps.png" alt="Pré-visualização do produto">
+            <img class="img2" src="../public/images/fonte-vida/termodtox120caps.png" alt="TERMODTOX C/ 120CAPS">
             <div class="card-info">
-              <!--<p class="tag">Fonte verde</p><-->
-              <p class="title">COD: 546</p>
-
-              <!--<p class="shipping">12UN /CX</p>-->
-              <p class="shipping">Entrega a combinar</p>
+                <p class="title">COD: 546</p>
+                <p class="shipping">Entrega a combinar</p>
             </div>
-
-            <div class="btinfo"><a class="button-buy">Detalhes</a>
-              <p class="info">TermoDtox é um suplemento termogênico e emagrecedor e se destaca pela união de cafeína,
-                chá verde e taurina, com excelente ação diurética e estimulante.</p>
+            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#productModal546">Detalhes</button>
+            <!-- Modal -->
+            <div class="modal fade" id="productModal546" tabindex="-1" aria-labelledby="productModalLabel546" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="productModalLabel546">TERMODTOX C/ 120CAPS</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fechar"></button>
+                        </div>
+                        <div class="modal-body">
+                            <img class="imgmodal" src="../public/images/fonte-vida/termodtox120caps.png" alt="TERMODTOX C/ 120CAPS">
+                            <p>TermoDtox é um suplemento termogênico e emagrecedor e se destaca pela união de cafeína, chá verde e taurina, com excelente ação diurética e estimulante.</p>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+                        </div>
+                    </div>
+                </div>
             </div>
-          </div>
-          <div class="card">
-            <p class="title">MELÃO DE SÃO CAETANO 60CAPS</p>
-            <img class="img2" src="../public/images/fonte-vida/melaosaocaetano 60caps.png"
-              alt="Pré-visualização do produto">
-            <div class="card-info">
-              <!--<p class="tag">Fonte verde</p><-->
-              <p class="title">COD:569</p>
-
-              <!--<p class="shipping">12UN /CX</p>-->
-              <p class="shipping">Entrega a combinar</p>
-            </div>
-
-            <div class="btinfo"><a class="button-buy">Detalhes</a>
-              <p class="info">O Melão-de-São-Caetano, também conhecido como melão amargo é uma planta medicinal com ação
-                cicatrizante, antimicrobiana, hipoglicemiante, antidiabética e adstringente.
-              </p>
-
-            </div>
-          </div>
-          <div class="card">
-            <p class="title">BIOTIM B7 C/ 60CAPS</p>
-            <img class="img2" src="../public/images/fonte-vida/biotimb760caps.png" alt="Pré-visualização do produto">
-            <div class="card-info">
-              <!--<p class="tag">Fonte verde</p><-->
-              <p class="title">COD:713</p>
-
-
-              <!--<p class="shipping">12UN /CX</p>-->
-            </div>
-
-            <div class="btinfo"><a class="button-buy">Detalhes</a>
-              <p class="info"> Biotina, também conhecida como Vitamina H ou Vitamina B7, é uma vitamina hidrossolúvel do
-                complexo B essencial para função normal das células.</p>
-              <p class="shipping">Entrega a combinar</p>
-            </div>
-          </div>
-
-          <div class="card">
-            <p class="title">CLORETO MAGNESIO </br> C/ ORA PRO NOBIS 120CAPS</p>
-            <img class="img2" src="../public/images/fonte-vida/cloretocOraPronobis120caps.png"
-              alt="Pré-visualização do produto">
-            <div class="card-info">
-              <!--<p class="tag">Fonte verde</p><-->
-              <p class="title">Cod:854</p>
-
-
-              <!--<p class="shipping">12UN /CX</p>-->
-              <p class="shipping">Entrega a combinar</p>
-            </div>
-
-            <div class="btinfo"><a class="button-buy">Detalhes</a>
-              <p class="info">Regula a pressão sanguínea contribuindo para a saúde do coração e mantendo a pressão
-                arterial em equilíbrio. Aumento de energia combatendo a fadiga e aumento a vitalidade.</p>
-            </div>
-          </div>
-
-          <div class="card">
-            <p class="title">ORA PRO NOBIS + CURCUMA</br> + GENGIBRE 120CAPS</p>
-            <img class="img2" src="../public/images/fonte-vida/oraproCurcumaGengibre120caps.png"
-              alt="Pré-visualização do produto">
-            <div class="card-info">
-              <!--<p class="tag">Fonte verde</p><-->
-              <p class="title">COD:860</p>
-
-
-              <!--<p class="shipping">12UN /CX</p>-->
-              <p class="shipping">Entrega a combinar</p>
-            </div>
-
-            <div class="btinfo"><a class="button-buy">Detalhes</a>
-              <p class="info">Benefícios:</br>
-
-                Evitar o envelhecimento. Fortalecer os ossos e dentes. Cúrcuma: Antioxidante e Anti-inflamatória;</br>
-                Antibacteriana, antifúngica e antiviral; Antidiarreica, Antiescorbútica e Antiespasmódica;
-                Diurética;</br>
-                Auxilia na melhora da saúde do fígado, cirrose; Redutora dos níveis de colesterol.</p>
-            </div>
-          </div>
-
-          <div class="card">
-            <p class="title">CARVÃO VEGETAL 120CAPS</p>
-            <img class="img2" src="../public/images/fonte-vida/carvaovegetal120caps.png"
-              alt="Pré-visualização do produto">
-            <div class="card-info">
-              <!--<p class="tag">Fonte verde</p><-->
-              <p class="title">COD:974
-              </p>
-
-
-              <!--<p class="shipping">12UN /CX</p>-->
-              <p class="shipping">Entrega a combinar</p>
-            </div>
-
-            <div class="btinfo"><a class="button-buy">Detalhes</a>
-              <p class="info">Ajuda na ação desintoxicante, por ter capacidade de absorver toxinas.</br>
-                Auxilia na redução dos gases intestinais, por absorver o excesso de gases.</br>
-                Ajuda na redução da diarreia, pois absorve a água e as toxinas que causam a diarreia.
-              </p>
-            </div>
-          </div>
-
         </div>
+        
+        <div class="card">
+            <p class="title">MELÃO DE SÃO CAETANO 60CAPS</p>
+            <img class="img2" src="../public/images/fonte-vida/melaosaocaetano 60caps.png" alt="MELÃO DE SÃO CAETANO 60CAPS">
+            <div class="card-info">
+                <p class="title">COD:569</p>
+                <p class="shipping">Entrega a combinar</p>
+            </div>
+            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#productModal569">Detalhes</button>
+            <!-- Modal -->
+            <div class="modal fade" id="productModal569" tabindex="-1" aria-labelledby="productModalLabel569" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="productModalLabel569">MELÃO DE SÃO CAETANO 60CAPS</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fechar"></button>
+                        </div>
+                        <div class="modal-body">
+                            <img class="imgmodal" src="../public/images/fonte-vida/melaosaocaetano 60caps.png" alt="MELÃO DE SÃO CAETANO 60CAPS">
+                            <p>O Melão-de-São-Caetano, também conhecido como melão amargo, é uma planta medicinal com ação cicatrizante, antimicrobiana, hipoglicemiante, antidiabética e adstringente.</p>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="card">
+            <p class="title">BIOTIM B7 C/ 60CAPS</p>
+            <img class="img2" src="../public/images/fonte-vida/biotimb760caps.png" alt="BIOTIM B7 C/ 60CAPS">
+            <div class="card-info">
+                <p class="title">COD:713</p>
+            </div>
+            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#productModal713">Detalhes</button>
+            <!-- Modal -->
+            <div class="modal fade" id="productModal713" tabindex="-1" aria-labelledby="productModalLabel713" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="productModalLabel713">BIOTIM B7 C/ 60CAPS</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fechar"></button>
+                        </div>
+                        <div class="modal-body">
+                            <img class="imgmodal" src="../public/images/fonte-vida/biotimb760caps.png" alt="BIOTIM B7 C/ 60CAPS">
+                            <p>Biotina, também conhecida como Vitamina H ou Vitamina B7, é uma vitamina hidrossolúvel do complexo B essencial para função normal das células.</p>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="card">
+            <p class="title">CLORETO MAGNESIO C/ ORA PRO NOBIS 120CAPS</p>
+            <img class="img2" src="../public/images/fonte-vida/cloretocOraPronobis120caps.png" alt="CLORETO MAGNESIO C/ ORA PRO NOBIS 120CAPS">
+            <div class="card-info">
+                <p class="title">Cod:854</p>
+                <p class="shipping">Entrega a combinar</p>
+            </div>
+            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#productModal854">Detalhes</button>
+            <!-- Modal -->
+            <div class="modal fade" id="productModal854" tabindex="-1" aria-labelledby="productModalLabel854" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="productModalLabel854">CLORETO MAGNESIO C/ ORA PRO NOBIS 120CAPS</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fechar"></button>
+                        </div>
+                        <div class="modal-body">
+                            <img class="imgmodal" src="../public/images/fonte-vida/cloretocOraPronobis120caps.png" alt="CLORETO MAGNESIO C/ ORA PRO NOBIS 120CAPS">
+                            <p>Regula a pressão sanguínea, contribuindo para a saúde do coração e mantendo a pressão arterial em equilíbrio. Aumento de energia, combatendo a fadiga e aumentando a vitalidade.</p>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="card">
+            <p class="title">ORA PRO NOBIS + CURCUMA + GENGIBRE 120CAPS</p>
+            <img class="img2" src="../public/images/fonte-vida/oraproCurcumaGengibre120caps.png" alt="ORA PRO NOBIS + CURCUMA + GENGIBRE 120CAPS">
+            <div class="card-info">
+                <p class="title">COD:860</p>
+                <p class="shipping">Entrega a combinar</p>
+            </div>
+            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#productModal860">Detalhes</button>
+            <!-- Modal -->
+            <div class="modal fade" id="productModal860" tabindex="-1" aria-labelledby="productModalLabel860" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="productModalLabel860">ORA PRO NOBIS + CURCUMA + GENGIBRE 120CAPS</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fechar"></button>
+                        </div>
+                        <div class="modal-body">
+                            <img class="imgmodal" src="../public/images/fonte-vida/oraproCurcumaGengibre120caps.png" alt="ORA PRO NOBIS + CURCUMA + GENGIBRE 120CAPS">
+                            <p>Benefícios:</br> Evitar o envelhecimento. Fortalecer os ossos e dentes. Cúrcuma: Antioxidante e Anti-inflamatória;</br> Antibacteriana, antifúngica e antiviral; Antidiarreica, Antiescorbútica e Antiespasmódica;</br> Diurética; Auxilia na melhora da saúde do fígado, cirrose; Redutora dos níveis de colesterol.</p>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+
+        <div class="card">
+          <p class="title">CARVÃO VEGETAL 120CAPS</p>
+          <img class="img2" src="../public/images/fonte-vida/carvaovegetal120caps.png" alt="CARVÃO VEGETAL 120CAPS">
+          <div class="card-info">
+              <p class="title">COD:974</p>
+              <p class="shipping">Entrega a combinar</p>
+          </div>
+          <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#productModal974">Detalhes</button>
+          <!-- Modal -->
+          <div class="modal fade" id="productModal974" tabindex="-1" aria-labelledby="productModalLabel974" aria-hidden="true">
+              <div class="modal-dialog modal-dialog-centered">
+                  <div class="modal-content">
+                      <div class="modal-header">
+                          <h5 class="modal-title" id="productModalLabel974">CARVÃO VEGETAL 120CAPS</h5>
+                          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fechar"></button>
+                      </div>
+                      <div class="modal-body">
+                          <img class="imgmodal" src="../public/images/fonte-vida/carvaovegetal120caps.png" alt="CARVÃO VEGETAL 120CAPS">
+                          <p>Ajuda na ação desintoxicante, por ter capacidade de absorver toxinas.</br>
+                          Auxilia na redução dos gases intestinais, por absorver o excesso de gases.</br>
+                          Ajuda na redução da diarreia, pois absorve a água e as toxinas que causam a diarreia.</p>
+                      </div>
+                      <div class="modal-footer">
+                          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+                      </div>
+                  </div>
+              </div>
+          </div>
       </div>
-    </section>
+      
+
+          
+
+       
+      
+  
     </br></br>
 
     <div class="divider-1"></div>
 
 
-    <section class="product-list wrapper">
-
-
-      <div class="cards-container">
+    
         <div class="card">
           <p class="title">DIGESTIVO 60 CAPS</p>
-          <img class="img2" src="../public/images/fonte-vida/about.png" alt="Pré-visualização do produto">
+          <img class="img2" src="../public/images/fonte-vida/about.png" alt="DIGESTIVO 60 CAPS">
           <div class="card-info">
-            <!--<p class="tag">Fonte verde</p><-->
-            <p class="title">COD:1019
-            </p>
-
-            <!--<p class="shipping">12UN /CX</p>-->
-            <p class="shipping">Entrega a combinar</p>
+              <p class="title">COD:1019</p>
+              <p class="shipping">Entrega a combinar</p>
           </div>
-
-          <div class="btinfo"><a class="button-buy">Detalhes</a>
-            <p class="info">As enzimas digestivas são proteínas que auxiliam na quebra de alguns nutrientes como as
-              proteínas, lipídios e carboidratos. As enzimas quebram em moléculas menores para que sejam absorvidos os
-              nutrientes dos alimentos de modo adequado no organismo.</p>
-
+          <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#productModal1019">Detalhes</button>
+          <!-- Modal -->
+          <div class="modal fade" id="productModal1019" tabindex="-1" aria-labelledby="productModalLabel1019" aria-hidden="true">
+              <div class="modal-dialog modal-dialog-centered">
+                  <div class="modal-content">
+                      <div class="modal-header">
+                          <h5 class="modal-title" id="productModalLabel1019">DIGESTIVO 60 CAPS</h5>
+                          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fechar"></button>
+                      </div>
+                      <div class="modal-body">
+                          <img class="imgmodal" src="../public/images/fonte-vida/about.png" alt="DIGESTIVO 60 CAPS">
+                          <p>As enzimas digestivas são proteínas que auxiliam na quebra de alguns nutrientes como as proteínas, lipídios e carboidratos. As enzimas quebram em moléculas menores para que sejam absorvidos os nutrientes dos alimentos de modo adequado no organismo.</p>
+                      </div>
+                      <div class="modal-footer">
+                          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+                      </div>
+                  </div>
+              </div>
           </div>
-        </div>
-        <div class="card">
-          <p class="title">TRIBULLUS + MACA PERUANA 60/ 120CAPS</p>
-          <img class="img2" src="../public/images/fonte-vida/tribullusmacaperuana12060caps.png"
-            alt="Pré-visualização do produto">
+      </div>
+      
+      <div class="card">
+          <p class="title">TRIBULLUS + MACA PERUANA 60/120CAPS</p>
+          <img class="img2" src="../public/images/fonte-vida/tribullusmacaperuana12060caps.png" alt="TRIBULLUS + MACA PERUANA 60/120CAPS">
           <div class="card-info">
-            <!--<p class="tag">Fonte verde</p><-->
-            <p class="title">COD 60:1322</br>
-              COD 120:1176
-            </p>
-
-
-            <!--<p class="shipping">12UN /CX</p>-->
-            <p class="shipping">Entrega a combinar</p>
+              <p class="title">COD 60:1322</br>COD 120:1176</p>
+              <p class="shipping">Entrega a combinar</p>
           </div>
-
-          <div class="btinfo"><a class="button-buy">Detalhes</a>
-            <p class="info">O Kit Maca Peruana e Tribulus Terrestris, da Oficialfarma, turbina o desempenho sexual,
-              aumentando a libido e a produção natural de testosterona. Potencializa também o desempenho físico,
-              diminuindo a fadiga e dando mais força e energia para auxiliar no ganho de massa magra.</p>
+          <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#productModal1322">Detalhes</button>
+          <!-- Modal -->
+          <div class="modal fade" id="productModal1322" tabindex="-1" aria-labelledby="productModalLabel1322" aria-hidden="true">
+              <div class="modal-dialog modal-dialog-centered">
+                  <div class="modal-content">
+                      <div class="modal-header">
+                          <h5 class="modal-title" id="productModalLabel1322">TRIBULLUS + MACA PERUANA 60/120CAPS</h5>
+                          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fechar"></button>
+                      </div>
+                      <div class="modal-body">
+                          <img class="imgmodal" src="../public/images/fonte-vida/tribullusmacaperuana12060caps.png" alt="TRIBULLUS + MACA PERUANA 60/120CAPS">
+                          <p>O Kit Maca Peruana e Tribulus Terrestris, da Oficialfarma, turbina o desempenho sexual, aumentando a libido e a produção natural de testosterona. Potencializa também o desempenho físico, diminuindo a fadiga e dando mais força e energia para auxiliar no ganho de massa magra.</p>
+                      </div>
+                      <div class="modal-footer">
+                          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+                      </div>
+                  </div>
+              </div>
           </div>
-        </div>
-        <div class="card">
+      </div>
+      
+      <div class="card">
           <p class="title">UXI AMARELO + UNHA DE GATO 120CAPS</p>
-          <img class="img2" src="../public/images/fonte-vida/uxiAmareloUnhagato120caps.png"
-            alt="Pré-visualização do produto">
+          <img class="img2" src="../public/images/fonte-vida/uxiAmareloUnhagato120caps.png" alt="UXI AMARELO + UNHA DE GATO 120CAPS">
           <div class="card-info">
-            <!--<p class="tag">Fonte verde</p><-->
-            <p class="title">COD:1209
-            </p>
-
-            <!--<p class="shipping">12UN /CX</p>-->
-            <p class="shipping">Entrega a combinar</p>
+              <p class="title">COD:1209</p>
+              <p class="shipping">Entrega a combinar</p>
           </div>
-
-          <div class="btinfo"><a class="button-buy">Detalhes</a>
-            <p class="info">Combinação de dois super aliados da natureza que vem surpreendendo médicos e pacientes no
-              bem estar e na saúde da mulher.
-              </br></br>
-              Poucas pessoas sabem dos benefícios que esta combinação traz quando o
-              assunto se refere a miomas ou alguma inflamação dos ovários e útero.
-              </br></br>
-
-              O Uxi amarelo (Endopleura uchi) é uma árvore que pode chegar a 30m de altura. Sua casca é rica em
-              propriedades medicinais. Utilizada para tratar miomas, infecções urinárias, inflamações uterinas, quistos,
-              hemorragias e ovário policístico.</p>
-
+          <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#productModal1209">Detalhes</button>
+          <!-- Modal -->
+          <div class="modal fade" id="productModal1209" tabindex="-1" aria-labelledby="productModalLabel1209" aria-hidden="true">
+              <div class="modal-dialog modal-dialog-centered">
+                  <div class="modal-content">
+                      <div class="modal-header">
+                          <h5 class="modal-title" id="productModalLabel1209">UXI AMARELO + UNHA DE GATO 120CAPS</h5>
+                          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fechar"></button>
+                      </div>
+                      <div class="modal-body">
+                          <img class="imgmodal" src="../public/images/fonte-vida/uxiAmareloUnhagato120caps.png" alt="UXI AMARELO + UNHA DE GATO 120CAPS">
+                          <p>Combinação de dois super aliados da natureza que vem surpreendendo médicos e pacientes no bem estar e na saúde da mulher. O Uxi amarelo é utilizado para tratar miomas, infecções urinárias, inflamações uterinas, quistos, hemorragias e ovário policístico.</p>
+                      </div>
+                      <div class="modal-footer">
+                          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+                      </div>
+                  </div>
+              </div>
           </div>
-        </div>
-
-        <div class="card">
+      </div>
+      
+      <div class="card">
           <p class="title">DESINCHAR C/ 60/120CAPS</p>
-          <img class="img2" src="../public/images/fonte-vida/desinchar60120caps.png" alt="Pré-visualização do produto">
+          <img class="img2" src="../public/images/fonte-vida/desinchar60120caps.png" alt="DESINCHAR C/ 60/120CAPS">
           <div class="card-info">
-            <!--<p class="tag">Fonte verde</p><-->
-            <p class="title">COD 60:1258</br>
-              COD 120:1731
-            </p>
-
-
-            <!--<p class="shipping">12UN /CX</p>-->
-            <p class="shipping">Entrega a combinar</p>
+              <p class="title">COD 60:1258</br>COD 120:1731</p>
+              <p class="shipping">Entrega a combinar</p>
           </div>
-
-          <div class="btinfo"><a class="button-buy">Detalhes</a>
-            <p class="info">O desinchar em cápsulas é um suplemento alimentar composto por algumas ervas que tem a
-              combinação perfeita para ajudar no emagrecimento, acelarar o metabolismo entre outros inúmeros benefícios.
-            </p>
+          <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#productModal1258">Detalhes</button>
+          <!-- Modal -->
+          <div class="modal fade" id="productModal1258" tabindex="-1" aria-labelledby="productModalLabel1258" aria-hidden="true">
+              <div class="modal-dialog modal-dialog-centered">
+                  <div class="modal-content">
+                      <div class="modal-header">
+                          <h5 class="modal-title" id="productModalLabel1258">DESINCHAR C/ 60/120CAPS</h5>
+                          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fechar"></button>
+                      </div>
+                      <div class="modal-body">
+                          <img class="imgmodal" src="../public/images/fonte-vida/desinchar60120caps.png" alt="DESINCHAR C/ 60/120CAPS">
+                          <p>O desinchar em cápsulas é um suplemento alimentar composto por algumas ervas que tem a combinação perfeita para ajudar no emagrecimento, acelerar o metabolismo entre outros inúmeros benefícios.</p>
+                      </div>
+                      <div class="modal-footer">
+                          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+                      </div>
+                  </div>
+              </div>
           </div>
-        </div>
-
-        <div class="card">
-          <p class="title">CANELA DE VELHO </br> C/ ClORETO DE MAGNÉSIO</p>
-          <img class="img2" src="../public/images/fonte-vida/canelavelhoCloretoMag120caps.png"
-            alt="Pré-visualização do produto">
+      </div>
+      
+      <div class="card">
+          <p class="title">CANELA DE VELHO C/ CLORETO DE MAGNÉSIO</p>
+          <img class="img2" src="../public/images/fonte-vida/canelavelhoCloretoMag120caps.png" alt="CANELA DE VELHO C/ CLORETO DE MAGNÉSIO">
           <div class="card-info">
-            <!--<p class="tag">Fonte verde</p><-->
-            <p class="title">COD:1259
-            </p>
-
-
-            <!--<p class="shipping">12UN /CX</p>-->
-            <p class="shipping">Entrega a combinar</p>
+              <p class="title">COD:1259</p>
+              <p class="shipping">Entrega a combinar</p>
           </div>
-
-          <div class="btinfo"><a class="button-buy">Detalhes</a>
-            <p class="info">Canela de Velho Composta (Cloreto de Magnesio, unha de gato e garra do diabo) é muito
-              eficiente contra arrite, artrose e doresm causadas por inflamações diversas.</p>
+          <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#productModal1259">Detalhes</button>
+          <!-- Modal -->
+          <div class="modal fade" id="productModal1259" tabindex="-1" aria-labelledby="productModalLabel1259" aria-hidden="true">
+              <div class="modal-dialog modal-dialog-centered">
+                  <div class="modal-content">
+                      <div class="modal-header">
+                          <h5 class="modal-title" id="productModalLabel1259">CANELA DE VELHO C/ CLORETO DE MAGNÉSIO</h5>
+                          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fechar"></button>
+                      </div>
+                      <div class="modal-body">
+                          <img class="imgmodal" src="../public/images/fonte-vida/canelavelhoCloretoMag120caps.png" alt="CANELA DE VELHO C/ CLORETO DE MAGNÉSIO">
+                          <p>Canela de Velho Composta (Cloreto de Magnésio, unha de gato e garra do diabo) é muito eficiente contra artrite, artrose e dores causadas por inflamações diversas.</p>
+                      </div>
+                      <div class="modal-footer">
+                          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+                      </div>
+                  </div>
+              </div>
           </div>
-        </div>
-
-        <div class="card">
+      </div>
+      
+      <div class="card">
           <p class="title">MACA PERUANA 60/120CAPS</p>
-          <img class="img2" src="../public/images/fonte-vida/macaperuana12060caps.png"
-            alt="Pré-visualização do produto">
+          <img class="img2" src="../public/images/fonte-vida/macaperuana12060caps.png" alt="MACA PERUANA 60/120CAPS">
           <div class="card-info">
-            <!--<p class="tag">Fonte verde</p><-->
-            <p class="title">COD 60: 1299</br>
-              COD 120: 1315
-            </p>
-
-
-            <!--<p class="shipping">12UN /CX</p>-->
-            <p class="shipping">Entrega a combinar</p>
+              <p class="title">COD 60: 1299</br>COD 120: 1315</p>
+              <p class="shipping">Entrega a combinar</p>
           </div>
-
-          <div class="btinfo"><a class="button-buy">Detalhes</a>
-            <p class="info">A Maca pode aumentar a energia e a resistência física, sendo útil para atletas e pessoas que
-              buscam melhorar o desempenho físico. </br></br>
-              A Maca peruana pode ajudar a regular os níveis hormonais, o que é benéfico para mulheres durante a
-              menopausa e para homens com problemas de fertilidade.</br></br>
-              Devido às suas propriedades adaptogênicas, a Maca pode ajudar a melhorar o humor, reduzir a ansiedade e a
-              depressão.
-            </p>
+          <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#productModal1299">Detalhes</button>
+          <!-- Modal -->
+          <div class="modal fade" id="productModal1299" tabindex="-1" aria-labelledby="productModalLabel1299" aria-hidden="true">
+              <div class="modal-dialog modal-dialog-centered">
+                  <div class="modal-content">
+                      <div class="modal-header">
+                          <h5 class="modal-title" id="productModalLabel1299">MACA PERUANA 60/120CAPS</h5>
+                          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fechar"></button>
+                      </div>
+                      <div class="modal-body">
+                          <img class="imgmodal" src="../public/images/fonte-vida/macaperuana12060caps.png" alt="MACA PERUANA 60/120CAPS">
+                          <p>A Maca pode aumentar a energia e a resistência física, sendo útil para atletas e pessoas que buscam melhorar o desempenho físico. Além disso, pode ajudar a regular os níveis hormonais e melhorar o humor, reduzindo a ansiedade e a depressão.</p>
+                      </div>
+                      <div class="modal-footer">
+                          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+                      </div>
+                  </div>
+              </div>
           </div>
-        </div>
+      </div>
+      
     </section>
     </br></br> </section>
 
@@ -493,7 +634,7 @@
 
             setInterval(refreshTime, 1000);</script>
 
-          <a style="color: #fff;" href="https://www.instagram.com/heerick.gg/" target="_blank"><p style="position: relative;" class="mt-5">byHerick&copy;
+          <a style="color: #fff;" href="https://www.instagram.com/hericksouza.gg/" target="_blank"><p style="position: relative;" class="mt-5">byHerick&copy;
           </p></a>
 
         </div>

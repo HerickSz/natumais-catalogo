@@ -1,0 +1,1287 @@
+<!DOCTYPE html>
+<html lang="pt_BR">
+
+<head>
+  <!-- PAGE INFO -->
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>NATUFORME | 1</title>
+
+  <!-- Icones -->
+  <link rel="stylesheet" href="../assets/fonts/style.css" />
+  <link rel="icon" href="..//logo.png" type="icon/png" sizes="16x16">
+  <!-- Swiper -->
+  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" />
+
+
+  <!-- STYLES -->
+  <link rel="stylesheet" href="../style.css" />
+  <link rel="stylesheet" href="../css2/style2.css">
+  <link rel="stylesheet" href="../css2/nav-bar.css">
+  <link rel="stylesheet" href="../css2/super-offers.css">
+  <link rel="stylesheet" href="../css2/products.css">
+  <link rel="stylesheet" href="../csshover/style.css">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.gstatic.com" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Poppins:wght@400;500;700&display=swap"
+    rel="stylesheet" />
+
+
+
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/5.1.3/css/bootstrap.min.css" rel="stylesheet">
+</head>
+
+<body>
+  <header id="header">
+    <nav class="container">
+      <a class="logo" href="../index.html">Catálogo - Natu<span>Mais</span>
+
+      </a>
+      <!-- menu -->
+      <div class="menu">
+        <ul class="grid">
+          <li><a class="title" href="../index.html">Início </a></li>
+          <li><a class="title" href="../index.html#produtos">Produtos</a></li>
+          <li><a style="color: red;" class="title" href="../grupos-encap-liq/encap-liq-marcas.html">Voltar</a></li>
+        </ul>
+      </div>
+      <!-- /menu -->
+      <div class="toggle icon-menu"></div>
+      <div class="toggle icon-close"></div>
+    </nav>
+  </header>
+
+  <main>
+
+    <section id="inicio" class="super-offers-background">
+      <div id="inicio" class="header-image">
+
+        <img class="imgdesktop" src="../static/products-image/natuforme/headerNatuforme.png" alt="">
+        <img class="imgmobile" src="../static/products-image/natuforme/headermobileNatuforme.png" alt="">
+      </div>
+
+      <div class="super-offers wrapper">
+        <h3 style="text-align: center;"><span class="logo-detail">Ofertas do Mês</span> NatuMais</h3>
+        <p class="title" style="text-align: center;color: rgb(0, 0, 0); font-size: 20px;">Confira nossos <span
+            class="logo-detail">Novos Produtos!</span>
+        </p>
+
+        <h1 class="searchh">Pesquisa de Produtos</h1>
+      <input type="text" id="searchInput" placeholder="Pesquisar produto..." onkeyup="searchProducts()">
+      <style>
+        /* Estilo para o título com a classe searchh */
+.searchh {
+  color: #28a745; /* Verde preferencial */
+  text-align: center; /* Centraliza o título */
+  font-size: 1.5em; /* Tamanho da fonte */
+  margin: 20px 0; /* Margens superior e inferior */
+}
+
+/* Estilo para o input */
+#searchInput {
+  width: 100%; /* Largura total */
+  max-width: 400px; /* Largura máxima */
+  padding: 10px; /* Espaçamento interno */
+  border: 2px solid #28a745; /* Borda verde */
+  border-radius: 5px; /* Cantos arredondados */
+  font-size: 1em; /* Tamanho da fonte */
+  margin: 0 auto; /* Centraliza o input */
+  display: block; /* Exibe como bloco */
+  transition: border-color 0.3s; /* Transição suave para a borda */
+  margin-bottom: 10px;
+}
+
+/* Efeito ao focar no input */
+#searchInput:focus {
+  border-color: #218838; /* Verde mais escuro ao focar */
+  outline: none; /* Remove o contorno padrão */
+}
+
+        
+.hidden {
+  display: none;
+}
+    </style>
+     <script>
+      function searchProducts() {
+          const input = document.getElementById('searchInput').value.toLowerCase();
+          const cards = document.querySelectorAll('.card');
+
+          cards.forEach(card => {
+              const title = card.querySelector('.title').textContent.toLowerCase();
+              const code = card.querySelector('.card-info .title').textContent.toLowerCase();
+
+              // Verifica se a entrada do usuário está contida no título ou no código
+              if (title.includes(input) || code.includes(input)) {
+                  card.classList.remove('hidden');
+              } else {
+                  card.classList.add('hidden');
+              }
+          });
+      }
+  </script>
+
+        <h2 style="text-align: center;background-color: rgb(245 245 245);" class="title">NatuForme</h2>
+        <div class="page-btn">
+          <a class="active-span" href="./natuforme.html"><span style="background:#198754; color: #fff;">1</span></a>
+          <a href="./natuforme-2.html"> <span>2</span></a>
+         <!-- <a href="solorgan-3.html"> <span>3</span></a>--> 
+        </div>
+
+
+        <div class="cards-container">
+
+          <div class="cards-container">
+           
+            <div class="card">
+              <p class="title">6 MAGNESIOS C 60 COMP</p>
+              <img class="img2" src="../public/images/fonte-vida/about.png" alt="6 MAGNESIOS C 60 COMP">
+              <div class="card-info">
+                <p class="title">COD: 1770</p>
+                <p class="shipping">Entrega a combinar</p>
+              </div>
+              <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#productModal1770">
+                Detalhes
+              </button>
+              <div class="modal fade" id="productModal1770" tabindex="-1" aria-labelledby="productModalLabel1770" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h5 class="modal-title" id="productModalLabel1770">6 MAGNESIOS C 60 COMP</h5>
+                      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fechar"></button>
+                    </div>
+                    <div class="modal-body">
+                      <img class="imgmodal" src="../public/images/fonte-vida/about.png" alt="6 MAGNESIOS C 60 COMP">
+                      <p>Auxilia na manutenção da saúde respiratória e promove o bem-estar no dia a dia.</p>
+                    </div>
+                    <div class="modal-footer">
+                      <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+            
+            <div class="card">
+              <p class="title">CAFEINA C 120 CAPS</p>
+              <img class="img2" src="../public/images/fonte-vida/about.png" alt="CAFEINA C 120 CAPS">
+              <div class="card-info">
+                <p class="title">COD: 788</p>
+                <p class="shipping">Entrega a combinar</p>
+              </div>
+              <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#productModal788">
+                Detalhes
+              </button>
+              <div class="modal fade" id="productModal788" tabindex="-1" aria-labelledby="productModalLabel788" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h5 class="modal-title" id="productModalLabel788">CAFEINA C 120 CAPS</h5>
+                      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fechar"></button>
+                    </div>
+                    <div class="modal-body">
+                      <img class="imgmodal" src="../public/images/fonte-vida/about.png" alt="CAFEINA C 120 CAPS">
+                      <p>Aumenta a energia e a concentração, ideal para momentos de cansaço e fadiga mental.</p>
+                    </div>
+                    <div class="modal-footer">
+                      <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+            
+            <div class="card">
+              <p class="title">CAFEINA C 60 CAPS</p>
+              <img class="img2" src="../public/images/fonte-vida/about.png" alt="CAFEINA C 60 CAPS">
+              <div class="card-info">
+                <p class="title">COD: 1694</p>
+                <p class="shipping">Entrega a combinar</p>
+              </div>
+              <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#productModal1694">
+                Detalhes
+              </button>
+              <div class="modal fade" id="productModal1694" tabindex="-1" aria-labelledby="productModalLabel1694" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h5 class="modal-title" id="productModalLabel1694">CAFEINA C 60 CAPS</h5>
+                      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fechar"></button>
+                    </div>
+                    <div class="modal-body">
+                      <img class="imgmodal" src="../public/images/fonte-vida/about.png" alt="CAFEINA C 60 CAPS">
+                      <p>Aumenta a energia e a concentração, ideal para momentos de cansaço e fadiga mental.</p>
+                    </div>
+                    <div class="modal-footer">
+                      <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+            
+            <div class="card">
+              <p class="title">CANELA DE VELHO C 120 CAPS</p>
+              <img class="img2" src="../public/images/fonte-vida/about.png" alt="CANELA DE VELHO C 120 CAPS">
+              <div class="card-info">
+                <p class="title">COD: 1820</p>
+                <p class="shipping">Entrega a combinar</p>
+              </div>
+              <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#productModal1820">
+                Detalhes
+              </button>
+              <div class="modal fade" id="productModal1820" tabindex="-1" aria-labelledby="productModalLabel1820" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h5 class="modal-title" id="productModalLabel1820">CANELA DE VELHO C 120 CAPS</h5>
+                      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fechar"></button>
+                    </div>
+                    <div class="modal-body">
+                      <img class="imgmodal" src="../public/images/fonte-vida/about.png" alt="CANELA DE VELHO C 120 CAPS">
+                      <p>Auxilia na saúde das articulações e promove o bem-estar geral.</p>
+                    </div>
+                    <div class="modal-footer">
+                      <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+            
+            <div class="card">
+              <p class="title">CENTELLA ASIATICA C 60 CAPS</p>
+              <img class="img2" src="../public/images/fonte-vida/about.png" alt="CENTELLA ASIATICA C 60 CAPS">
+              <div class="card-info">
+                <p class="title">COD: 1183</p>
+                <p class="shipping">Entrega a combinar</p>
+              </div>
+              <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#productModal1183">
+                Detalhes
+              </button>
+              <div class="modal fade" id="productModal1183" tabindex="-1" aria-labelledby="productModalLabel1183" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h5 class="modal-title" id="productModalLabel1183">CENTELLA ASIATICA C 60 CAPS</h5>
+                      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fechar"></button>
+                    </div>
+                    <div class="modal-body">
+                      <img class="imgmodal" src="../public/images/fonte-vida/about.png" alt="CENTELLA ASIATICA C 60 CAPS">
+                      <p>Contribui para a saúde da pele e auxilia na cicatrização.</p>
+                    </div>
+                    <div class="modal-footer">
+                      <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+            
+            <div class="card">
+              <p class="title">CHA SECA BARRIGA</p>
+              <img class="img2" src="../public/images/fonte-vida/about.png" alt="CHA SECA BARRIGA">
+              <div class="card-info">
+                <p class="title">COD: 1533</p>
+                <p class="shipping">Entrega a combinar</p>
+              </div>
+              <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#productModal1533">
+                Detalhes
+              </button>
+              <div class="modal fade" id="productModal1533" tabindex="-1" aria-labelledby="productModalLabel1533" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h5 class="modal-title" id="productModalLabel1533">CHA SECA BARRIGA</h5>
+                      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fechar"></button>
+                    </div>
+                    <div class="modal-body">
+                      <img class="imgmodal" src="../public/images/fonte-vida/about.png" alt="CHA SECA BARRIGA">
+                      <p>Auxilia na digestão e ajuda a reduzir medidas da cintura.</p>
+                    </div>
+                    <div class="modal-footer">
+                      <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+            
+            <div class="card">
+              <p class="title">CHA VERDE C 60 CAPS</p>
+              <img class="img2" src="../public/images/fonte-vida/about.png" alt="CHA VERDE C 60 CAPS">
+              <div class="card-info">
+                <p class="title">COD: 1248</p>
+                <p class="shipping">Entrega a combinar</p>
+              </div>
+              <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#productModal1248">
+                Detalhes
+              </button>
+              <div class="modal fade" id="productModal1248" tabindex="-1" aria-labelledby="productModalLabel1248" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h5 class="modal-title" id="productModalLabel1248">CHA VERDE C 60 CAPS</h5>
+                      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fechar"></button>
+                    </div>
+                    <div class="modal-body">
+                      <img class="imgmodal" src="../public/images/fonte-vida/about.png" alt="CHA VERDE C 60 CAPS">
+                      <p>Auxilia no metabolismo e contribui para a perda de peso.</p>
+                    </div>
+                    <div class="modal-footer">
+                      <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+            
+            <div class="card">
+              <p class="title">CLORETO PA C 60 CAPS</p>
+              <img class="img2" src="../public/images/fonte-vida/about.png" alt="CLORETO PA C 60 CAPS">
+              <div class="card-info">
+                <p class="title">COD: 60</p>
+                <p class="shipping">Entrega a combinar</p>
+              </div>
+              <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#productModal60">
+                Detalhes
+              </button>
+              <div class="modal fade" id="productModal60" tabindex="-1" aria-labelledby="productModalLabel60" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h5 class="modal-title" id="productModalLabel60">CLORETO PA C 60 CAPS</h5>
+                      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fechar"></button>
+                    </div>
+                    <div class="modal-body">
+                      <img class="imgmodal" src="../public/images/fonte-vida/about.png" alt="CLORETO PA C 60 CAPS">
+                      <p>Auxilia na desintoxicação e fortalece o sistema imunológico.</p>
+                    </div>
+                    <div class="modal-footer">
+                      <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+          
+            <div class="card">
+              <p class="title">CLORETO PA C 60 CAPS</p>
+              <img class="img2" src="../public/images/fonte-vida/about.png" alt="CLORETO PA C 60 CAPS">
+              <div class="card-info">
+                <p class="title">COD: 60</p>
+                <p class="shipping">Entrega a combinar</p>
+              </div>
+              <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#productModal60">
+                Detalhes
+              </button>
+              <div class="modal fade" id="productModal60" tabindex="-1" aria-labelledby="productModalLabel60" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h5 class="modal-title" id="productModalLabel60">CLORETO PA C 60 CAPS</h5>
+                      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fechar"></button>
+                    </div>
+                    <div class="modal-body">
+                      <img class="imgmodal" src="../public/images/fonte-vida/about.png" alt="CLORETO PA C 60 CAPS">
+                      <p>Auxilia na desintoxicação e fortalece o sistema imunológico.</p>
+                    </div>
+                    <div class="modal-footer">
+                      <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+            
+            <div class="card">
+              <p class="title">COENZIMA Q10 C/ 60 CAPS</p>
+              <img class="img2" src="../public/images/fonte-vida/about.png" alt="COENZIMA Q10 60 CAPS">
+              <div class="card-info">
+                <p class="title">COD: 875</p>
+                <p class="shipping">Entrega a combinar</p>
+              </div>
+              <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#productModal875">
+                Detalhes
+              </button>
+              <div class="modal fade" id="productModal875" tabindex="-1" aria-labelledby="productModalLabel875" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h5 class="modal-title" id="productModalLabel875">COENZIMA Q10 C/ 60 CAPS</h5>
+                      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fechar"></button>
+                    </div>
+                    <div class="modal-body">
+                      <img class="imgmodal" src="../public/images/fonte-vida/about.png" alt="COENZIMA Q10 C/ 60 CAPS">
+                      <p>Auxilia na produção de energia celular e promove a saúde cardiovascular.</p>
+                    </div>
+                    <div class="modal-footer">
+                      <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+            
+            <div class="card">
+              <p class="title">COLÁGENO HIDROLISADO COM ÁCIDO HIALURÔNICO</p>
+              <img class="img2" src="../public/images/fonte-vida/about.png" alt="COLÁGENO HIDROLISADO COM ÁCIDO HIALURÔNICO">
+              <div class="card-info">
+                <p class="title">COD: 878</p>
+                <p class="shipping">Entrega a combinar</p>
+              </div>
+              <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#productModal878">
+                Detalhes
+              </button>
+              <div class="modal fade" id="productModal878" tabindex="-1" aria-labelledby="productModalLabel878" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h5 class="modal-title" id="productModalLabel878">COLÁGENO HIDROLISADO COM ÁCIDO HIALURÔNICO</h5>
+                      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fechar"></button>
+                    </div>
+                    <div class="modal-body">
+                      <img class="imgmodal" src="../public/images/fonte-vida/about.png" alt="COLÁGENO HIDROLISADO COM ÁCIDO HIALURÔNICO">
+                      <p>Contribui para a saúde da pele, articulações e cabelos, promovendo hidratação e elasticidade.</p>
+                    </div>
+                    <div class="modal-footer">
+                      <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+            
+            <div class="card">
+              <p class="title">COLÁGENO HIDROLISADO COM VITAMINA C</p>
+              <img class="img2" src="../public/images/fonte-vida/about.png" alt="COLÁGENO HIDROLISADO COM VITAMINA C">
+              <div class="card-info">
+                <p class="title">COD: 879</p>
+                <p class="shipping">Entrega a combinar</p>
+              </div>
+              <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#productModal879">
+                Detalhes
+              </button>
+              <div class="modal fade" id="productModal879" tabindex="-1" aria-labelledby="productModalLabel879" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h5 class="modal-title" id="productModalLabel879">COLÁGENO HIDROLISADO COM VITAMINA C</h5>
+                      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fechar"></button>
+                    </div>
+                    <div class="modal-body">
+                      <img class="imgmodal" src="../public/images/fonte-vida/about.png" alt="COLÁGENO HIDROLISADO COM VITAMINA C">
+                      <p>Ajuda a melhorar a firmeza da pele e a saúde das articulações, potencializando a absorção de colágeno.</p>
+                    </div>
+                    <div class="modal-footer">
+                      <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+            
+            <div class="card">
+              <p class="title">COLÁGENO TIPO 2 C 120 CAPS</p>
+              <img class="img2" src="../public/images/fonte-vida/about.png" alt="COLÁGENO TIPO 2 C 120 CAPS">
+              <div class="card-info">
+                <p class="title">COD: 876</p>
+                <p class="shipping">Entrega a combinar</p>
+              </div>
+              <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#productModal876">
+                Detalhes
+              </button>
+              <div class="modal fade" id="productModal876" tabindex="-1" aria-labelledby="productModalLabel876" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h5 class="modal-title" id="productModalLabel876">COLÁGENO TIPO 2 C 120 CAPS</h5>
+                      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fechar"></button>
+                    </div>
+                    <div class="modal-body">
+                      <img class="imgmodal" src="../public/images/fonte-vida/about.png" alt="COLÁGENO TIPO 2 C 120 CAPS">
+                      <p>Contribui para a saúde das articulações e melhora a mobilidade, sendo ideal para atletas e pessoas ativas.</p>
+                    </div>
+                    <div class="modal-footer">
+                      <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+            
+            <div class="card">
+              <p class="title">COLÁGENO TIPO 2 MASTIGÁVEL C 90 CAPS</p>
+              <img class="img2" src="../public/images/fonte-vida/about.png" alt="COLÁGENO TIPO 2 MASTIGÁVEL C 90 CAPS">
+              <div class="card-info">
+                <p class="title">COD: 877</p>
+                <p class="shipping">Entrega a combinar</p>
+              </div>
+              <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#productModal877">
+                Detalhes
+              </button>
+              <div class="modal fade" id="productModal877" tabindex="-1" aria-labelledby="productModalLabel877" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h5 class="modal-title" id="productModalLabel877">COLÁGENO TIPO 2 MASTIGÁVEL C 90 CAPS</h5>
+                      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fechar"></button>
+                    </div>
+                    <div class="modal-body">
+                      <img class="imgmodal" src="../public/images/fonte-vida/about.png" alt="COLÁGENO TIPO 2 MASTIGÁVEL C 90 CAPS">
+                      <p>Ajuda na manutenção da saúde das articulações e é fácil de consumir, ideal para quem busca praticidade.</p>
+                    </div>
+                    <div class="modal-footer">
+                      <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+            
+            <div class="card">
+              <p class="title">CREATINA C 120 CAPS</p>
+              <img class="img2" src="../public/images/fonte-vida/about.png" alt="CREATINA C 120 CAPS">
+              <div class="card-info">
+                <p class="title">COD: 1602</p>
+                <p class="shipping">Entrega a combinar</p>
+              </div>
+              <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#productModal1602">
+                Detalhes
+              </button>
+              <div class="modal fade" id="productModal1602" tabindex="-1" aria-labelledby="productModalLabel1602" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h5 class="modal-title" id="productModalLabel1602">CREATINA C 120 CAPS</h5>
+                      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fechar"></button>
+                    </div>
+                    <div class="modal-body">
+                      <img class="imgmodal" src="../public/images/fonte-vida/about.png" alt="CREATINA C 120 CAPS">
+                      <p>Aumenta a performance atlética e ajuda na recuperação muscular, ideal para treino intenso.</p>
+                    </div>
+                    <div class="modal-footer">
+                      <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+
+            <div class="card">
+              <p class="title">CURCUMA COM PIMENTA NEGRA C 60 CPS</p>
+              <img class="img2" src="../public/images/fonte-vida/about.png" alt="CURCUMA COM PIMENTA NEGRA C 60 CPS">
+              <div class="card-info">
+                <p class="title">COD: 1782</p>
+                <p class="shipping">Entrega a combinar</p>
+              </div>
+              <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#productModal1782">
+                Detalhes
+              </button>
+              <div class="modal fade" id="productModal1782" tabindex="-1" aria-labelledby="productModalLabel1782" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h5 class="modal-title" id="productModalLabel1782">CURCUMA COM PIMENTA NEGRA C 60 CPS</h5>
+                      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fechar"></button>
+                    </div>
+                    <div class="modal-body">
+                      <img class="imgmodal" src="../public/images/fonte-vida/about.png" alt="CURCUMA COM PIMENTA NEGRA C 60 CPS">
+                      <p>Possui propriedades anti-inflamatórias e antioxidantes, contribuindo para a saúde geral do organismo.</p>
+                    </div>
+                    <div class="modal-footer">
+                      <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+
+            <div class="card">
+              <p class="title">CURCUMA LONGA C 120 CAPS</p>
+              <img class="img2" src="../public/images/fonte-vida/about.png" alt="CURCUMA LONGA C 120 CAPS">
+              <div class="card-info">
+                <p class="title">COD: 1700</p>
+                <p class="shipping">Entrega a combinar</p>
+              </div>
+              <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#productModal1700">
+                Detalhes
+              </button>
+              <div class="modal fade" id="productModal1700" tabindex="-1" aria-labelledby="productModalLabel1700" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h5 class="modal-title" id="productModalLabel1700">CURCUMA LONGA C 120 CAPS</h5>
+                      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fechar"></button>
+                    </div>
+                    <div class="modal-body">
+                      <img class="imgmodal" src="../public/images/fonte-vida/about.png" alt="CURCUMA LONGA C 120 CAPS">
+                      <p>Possui propriedades anti-inflamatórias, auxiliando na digestão e promovendo bem-estar geral.</p>
+                    </div>
+                    <div class="modal-footer">
+                      <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+
+            <div class="card">
+              <p class="title">CURCUMA LONGA C 60 CAPS</p>
+              <img class="img2" src="../public/images/fonte-vida/about.png" alt="CURCUMA LONGA C 60 CAPS">
+              <div class="card-info">
+                <p class="title">COD: 1163</p>
+                <p class="shipping">Entrega a combinar</p>
+              </div>
+              <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#productModal1163">
+                Detalhes
+              </button>
+              <div class="modal fade" id="productModal1163" tabindex="-1" aria-labelledby="productModalLabel1163" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h5 class="modal-title" id="productModalLabel1163">CURCUMA LONGA C 60 CAPS</h5>
+                      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fechar"></button>
+                    </div>
+                    <div class="modal-body">
+                      <img class="imgmodal" src="../public/images/fonte-vida/about.png" alt="CURCUMA LONGA C 60 CAPS">
+                      <p>Auxilia na digestão e possui propriedades anti-inflamatórias, promovendo saúde e bem-estar.</p>
+                    </div>
+                    <div class="modal-footer">
+                      <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+
+            <div class="card">
+              <p class="title">ESPINHEIRA SANTA C 60 CAPS</p>
+              <img class="img2" src="../public/images/fonte-vida/about.png" alt="ESPINHEIRA SANTA C 60 CAPS">
+              <div class="card-info">
+                <p class="title">COD: 1174</p>
+                <p class="shipping">Entrega a combinar</p>
+              </div>
+              <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#productModal1174">
+                Detalhes
+              </button>
+              <div class="modal fade" id="productModal1174" tabindex="-1" aria-labelledby="productModalLabel1174" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h5 class="modal-title" id="productModalLabel1174">ESPINHEIRA SANTA C 60 CAPS</h5>
+                      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fechar"></button>
+                    </div>
+                    <div class="modal-body">
+                      <img class="imgmodal" src="../public/images/fonte-vida/about.png" alt="ESPINHEIRA SANTA C 60 CAPS">
+                      <p>Auxilia na saúde do fígado e possui propriedades anti-inflamatórias, contribuindo para o bem-estar geral.</p>
+                    </div>
+                    <div class="modal-footer">
+                      <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+
+            <div class="card">
+              <p class="title">EXTRATO DE PROPOLIS VERDE COM ALHO</p>
+              <img class="img2" src="../public/images/fonte-vida/about.png" alt="EXTRATO DE PROPOLIS VERDE COM ALHO C">
+              <div class="card-info">
+                <p class="title">COD: 1249</p>
+                <p class="shipping">Entrega a combinar</p>
+              </div>
+              <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#productModal1249">
+                Detalhes
+              </button>
+              <div class="modal fade" id="productModal1249" tabindex="-1" aria-labelledby="productModalLabel1249" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h5 class="modal-title" id="productModalLabel1249">EXTRATO DE PROPOLIS VERDE COM ALHO C</h5>
+                      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fechar"></button>
+                    </div>
+                    <div class="modal-body">
+                      <img class="imgmodal" src="../public/images/fonte-vida/about.png" alt="EXTRATO DE PROPOLIS VERDE COM ALHO C">
+                      <p>Fortalece o sistema imunológico e possui propriedades antimicrobianas, contribuindo para a saúde respiratória.</p>
+                    </div>
+                    <div class="modal-footer">
+                      <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+
+            <div class="card">
+              <p class="title">LEVEDO DE CERVEJA C 400 COMP</p>
+              <img class="img2" src="../public/images/fonte-vida/about.png" alt="LEVEDO DE CERVEJA C 400 COMP">
+              <div class="card-info">
+                <p class="title">COD: 881</p>
+                <p class="shipping">Entrega a combinar</p>
+              </div>
+              <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#productModal881">
+                Detalhes
+              </button>
+              <div class="modal fade" id="productModal881" tabindex="-1" aria-labelledby="productModalLabel881" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h5 class="modal-title" id="productModalLabel881">LEVEDO DE CERVEJA C 400 COMP</h5>
+                      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fechar"></button>
+                    </div>
+                    <div class="modal-body">
+                      <img class="imgmodal" src="../public/images/fonte-vida/about.png" alt="LEVEDO DE CERVEJA C 400 COMP">
+                      <p>Auxilia na digestão e é uma fonte rica de vitaminas do complexo B, contribuindo para a saúde da pele e cabelo.</p>
+                    </div>
+                    <div class="modal-footer">
+                      <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+
+            <div class="card">
+              <p class="title">MACA PERUANA HARDCORE 1500 MG</p>
+              <img class="img2" src="../public/images/fonte-vida/about.png" alt="MACA PERUANA HARDCORE 1500 MG">
+              <div class="card-info">
+                <p class="title">COD: 1075</p>
+                <p class="shipping">Entrega a combinar</p>
+              </div>
+              <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#productModal1075">
+                Detalhes
+              </button>
+              <div class="modal fade" id="productModal1075" tabindex="-1" aria-labelledby="productModalLabel1075" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h5 class="modal-title" id="productModalLabel1075">MACA PERUANA HARDCORE 1500 MG</h5>
+                      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fechar"></button>
+                    </div>
+                    <div class="modal-body">
+                      <img class="imgmodal" src="../public/images/fonte-vida/about.png" alt="MACA PERUANA HARDCORE 1500 MG">
+                      <p>Auxilia na melhora da energia e resistência, além de contribuir para a saúde hormonal.</p>
+                    </div>
+                    <div class="modal-footer">
+                      <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+
+            <div class="card">
+              <p class="title">MAGNESIO DIMALATO C 60 CAPS</p>
+              <img class="img2" src="../public/images/fonte-vida/about.png" alt="MAGNESIO DIMALATO C 60 CAPS">
+              <div class="card-info">
+                <p class="title">COD: 883</p>
+                <p class="shipping">Entrega a combinar</p>
+              </div>
+              <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#productModal883">
+                Detalhes
+              </button>
+              <div class="modal fade" id="productModal883" tabindex="-1" aria-labelledby="productModalLabel883" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h5 class="modal-title" id="productModalLabel883">MAGNESIO DIMALATO C 60 CAPS</h5>
+                      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fechar"></button>
+                    </div>
+                    <div class="modal-body">
+                      <img class="imgmodal" src="../public/images/fonte-vida/about.png" alt="MAGNESIO DIMALATO C 60 CAPS">
+                      <p>Contribui para a saúde muscular e ajuda a reduzir a fadiga, promovendo um melhor desempenho físico.</p>
+                    </div>
+                    <div class="modal-footer">
+                      <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+            <div class="card">
+              <p class="title">MAGNESTIL C 120 CAPS</p>
+              <img class="img2" src="../public/images/fonte-vida/about.png" alt="MAGNESTIL C 120 CAPS">
+              <div class="card-info">
+                <p class="title">COD: 1599</p>
+                <p class="shipping">Entrega a combinar</p>
+              </div>
+              <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#productModal1599">
+                Detalhes
+              </button>
+              <div class="modal fade" id="productModal1599" tabindex="-1" aria-labelledby="productModalLabel1599" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h5 class="modal-title" id="productModalLabel1599">MAGNESTIL C 120 CAPS</h5>
+                      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fechar"></button>
+                    </div>
+                    <div class="modal-body">
+                      <img class="imgmodal" src="../public/images/fonte-vida/about.png" alt="MAGNESTIL C 120 CAPS">
+                      <p>Auxilia na saúde imunológica e no combate ao estresse oxidativo, contribuindo para o bem-estar geral.</p>
+                    </div>
+                    <div class="modal-footer">
+                      <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+
+            <div class="card">
+              <p class="title">MELATONINA C 120 CAPS</p>
+              <img class="img2" src="../public/images/fonte-vida/about.png" alt="MELATONINA C 120 CAPS">
+              <div class="card-info">
+                <p class="title">COD: 10</p>
+                <p class="shipping">Entrega a combinar</p>
+              </div>
+              <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#productModal10">
+                Detalhes
+              </button>
+              <div class="modal fade" id="productModal10" tabindex="-1" aria-labelledby="productModalLabel10" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h5 class="modal-title" id="productModalLabel10">MELATONINA C 120 CAPS</h5>
+                      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fechar"></button>
+                    </div>
+                    <div class="modal-body">
+                      <img class="imgmodal" src="../public/images/fonte-vida/about.png" alt="MELATONINA C 120 CAPS">
+                      <p>Ajuda a regular o sono e melhora a qualidade do descanso, promovendo um sono mais reparador.</p>
+                    </div>
+                    <div class="modal-footer">
+                      <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+
+            <div class="card">
+              <p class="title">MELATONINA MASTICAVEL MARACUJA C 60 C</p>
+              <img class="img2" src="../public/images/fonte-vida/about.png" alt="MELATONINA MASTICAVEL MARACUJA C 60 C">
+              <div class="card-info">
+                <p class="title">COD: 1177</p>
+                <p class="shipping">Entrega a combinar</p>
+              </div>
+              <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#productModal1177">
+                Detalhes
+              </button>
+              <div class="modal fade" id="productModal1177" tabindex="-1" aria-labelledby="productModalLabel1177" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h5 class="modal-title" id="productModalLabel1177">MELATONINA MASTICAVEL MARACUJA C 60 C</h5>
+                      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fechar"></button>
+                    </div>
+                    <div class="modal-body">
+                      <img class="imgmodal" src="../public/images/fonte-vida/about.png" alt="MELATONINA MASTICAVEL MARACUJA C 60 C">
+                      <p>Auxilia na promoção do sono tranquilo e relaxante, ideal para quem busca um descanso reparador.</p>
+                    </div>
+                    <div class="modal-footer">
+                      <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+
+            <div class="card">
+              <p class="title">MELATONINA MASTIGAVEL MARACUJA C 120</p>
+              <img class="img2" src="../public/images/fonte-vida/about.png" alt="MELATONINA MASTIGAVEL MARACUJA C 120">
+              <div class="card-info">
+                <p class="title">COD: 884</p>
+                <p class="shipping">Entrega a combinar</p>
+              </div>
+              <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#productModal884">
+                Detalhes
+              </button>
+              <div class="modal fade" id="productModal884" tabindex="-1" aria-labelledby="productModalLabel884" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h5 class="modal-title" id="productModalLabel884">MELATONINA MASTIGAVEL MARACUJA C 120</h5>
+                      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fechar"></button>
+                    </div>
+                    <div class="modal-body">
+                      <img class="imgmodal" src="../public/images/fonte-vida/about.png" alt="MELATONINA MASTIGAVEL MARACUJA C 120">
+                      <p>Auxilia na promoção de um sono saudável e relaxante, contribuindo para o bem-estar geral.</p>
+                    </div>
+                    <div class="modal-footer">
+                      <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+
+            <div class="card">
+              <p class="title">MULUNGU C 120 CPS</p>
+              <img class="img2" src="../public/images/fonte-vida/about.png" alt="MULUNGU C 120 CPS">
+              <div class="card-info">
+                <p class="title">COD: 1267</p>
+                <p class="shipping">Entrega a combinar</p>
+              </div>
+              <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#productModal1267">
+                Detalhes
+              </button>
+              <div class="modal fade" id="productModal1267" tabindex="-1" aria-labelledby="productModalLabel1267" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h5 class="modal-title" id="productModalLabel1267">MULUNGU C 120 CPS</h5>
+                      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fechar"></button>
+                    </div>
+                    <div class="modal-body">
+                      <img class="imgmodal" src="../public/images/fonte-vida/about.png" alt="MULUNGU C 120 CPS">
+                      <p>Auxilia na redução da ansiedade e no relaxamento, contribuindo para um sono mais tranquilo.</p>
+                    </div>
+                    <div class="modal-footer">
+                      <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+
+            <div class="card">
+              <p class="title">PROPOLIS VERDE C ALHO C 60 CAPS</p>
+              <img class="img2" src="../public/images/fonte-vida/about.png" alt="PROPOLIS VERDE C ALHO C 60 CAPS">
+              <div class="card-info">
+                <p class="title">COD: 1510</p>
+                <p class="shipping">Entrega a combinar</p>
+              </div>
+              <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#productModal1510">
+                Detalhes
+              </button>
+              <div class="modal fade" id="productModal1510" tabindex="-1" aria-labelledby="productModalLabel1510" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h5 class="modal-title" id="productModalLabel1510">PROPOLIS VERDE C ALHO C 60 CAPS</h5>
+                      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fechar"></button>
+                    </div>
+                    <div class="modal-body">
+                      <img class="imgmodal" src="../public/images/fonte-vida/about.png" alt="PROPOLIS VERDE C ALHO C 60 CAPS">
+                      <p>Fortalece o sistema imunológico e auxilia na proteção contra infecções.</p>
+                    </div>
+                    <div class="modal-footer">
+                      <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+
+            <div class="card">
+              <p class="title">PROPOLIS VERDE COM ALHO C 60 CAPS</p>
+              <img class="img2" src="../public/images/fonte-vida/about.png" alt="PROPOLIS VERDE COM ALHO C 60 CAPS">
+              <div class="card-info">
+                <p class="title">COD: 1250</p>
+                <p class="shipping">Entrega a combinar</p>
+              </div>
+              <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#productModal1250">
+                Detalhes
+              </button>
+              <div class="modal fade" id="productModal1250" tabindex="-1" aria-labelledby="productModalLabel1250" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h5 class="modal-title" id="productModalLabel1250">PROPOLIS VERDE COM ALHO C 60 CAPS</h5>
+                      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fechar"></button>
+                    </div>
+                    <div class="modal-body">
+                      <img class="imgmodal" src="../public/images/fonte-vida/about.png" alt="PROPOLIS VERDE COM ALHO C 60 CAPS">
+                      <p>Auxilia no fortalecimento do sistema imunológico e na proteção contra infecções.</p>
+                    </div>
+                    <div class="modal-footer">
+                      <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+
+            <div class="card">
+              <p class="title">SECA BARRIGA GOJI BERRY MAIS COLAGENO</p>
+              <img class="img2" src="../public/images/fonte-vida/about.png" alt="SECA BARRIGA GOJI BERRY MAIS COLAGENK">
+              <div class="card-info">
+                <p class="title">COD: 889</p>
+                <p class="shipping">Entrega a combinar</p>
+              </div>
+              <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#productModal889">
+                Detalhes
+              </button>
+              <div class="modal fade" id="productModal889" tabindex="-1" aria-labelledby="productModalLabel889" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h5 class="modal-title" id="productModalLabel889">SECA BARRIGA GOJI BERRY MAIS COLAGENK</h5>
+                      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fechar"></button>
+                    </div>
+                    <div class="modal-body">
+                      <img class="imgmodal" src="../public/images/fonte-vida/about.png" alt="SECA BARRIGA GOJI BERRY MAIS COLAGENK">
+                      <p>Auxilia na redução de medidas e melhora a elasticidade da pele.</p>
+                    </div>
+                    <div class="modal-footer">
+                      <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+
+            <div class="card">
+              <p class="title">SECA BARRIGA COM HIBISCO MAIS COLAGENO</p>
+              <img class="img2" src="../public/images/fonte-vida/about.png" alt="SECA BARRIGA COM HIBISCO MAIS COLAGENO">
+              <div class="card-info">
+                <p class="title">COD: 886</p>
+                <p class="shipping">Entrega a combinar</p>
+              </div>
+              <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#productModal886">
+                Detalhes
+              </button>
+              <div class="modal fade" id="productModal886" tabindex="-1" aria-labelledby="productModalLabel886" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h5 class="modal-title" id="productModalLabel886">SECA BARRIGA COM HIBISCO MAIS COLAGENO</h5>
+                      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fechar"></button>
+                    </div>
+                    <div class="modal-body">
+                      <img class="imgmodal" src="../public/images/fonte-vida/about.png" alt="SECA BARRIGA COM HIBISCO MAIS COLAGENO">
+                      <p>Auxilia na redução de medidas e contribui para a saúde da pele.</p>
+                    </div>
+                    <div class="modal-footer">
+                      <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+          
+
+       
+      
+  
+    </br></br>
+     
+    </section>
+    </br></br> </section>
+
+
+    </br></br>
+    <!-------- PAGE BUTTONS------->
+    <div class="page-btn">
+      <a class="active-span" href="./natuforme.html"><span style="background:#198754; color: #fff;">1</span></a>
+      <a href="./natuforme-2.html"> <span>2</span></a>
+     <!-- <a href="solorgan-3.html"> <span>3</span></a>--> 
+    </div>
+    <div class="divider-1"></div>
+
+  </main>
+
+  <section>
+
+    <section class="mapa" id="produtos">
+      <!--
+      <div class="fotos">
+        <h2 style="text-align: center;" class="title">Produtos Diversos</h2>
+        <div class="slider-principal">
+          <img src="../static/products-image/natumais/1.jpeg" />
+          <img src="../static/products-image/natumais/2.jpeg" />
+          <img src="../static/products-image/natumais/3.jpeg" />
+          <img src="../static/products-image/natumais/4.jpeg" />
+          <img src="../static/products-image/natumais/5.jpeg" />
+        </div>
+      -->
+
+
+      <h2 style="text-align: center; margin-top: 4%;" class="title">Mais Produtos</h2>
+      <p>(clique ou pare o cursor para visualizar)</p>
+      <div class="cardhover">
+        <div class="card2">
+          <div class="img-box">
+            <a href="../page-mentos/mentos.html">
+              <img src="../static/products-image/doces-chicletes-balas/balas.png">
+            </a>
+          </div>
+          <div class="content2">
+            <h2>Mentos</h2>
+            <p>
+              Confira a marca Mentos.
+            </p>
+            <a href="../page-mentos/mentos.html" class="read-more">
+              Ver Catálogo
+            </a>
+          </div>
+        </div>
+        <div class="card2">
+          <div class="img-box">
+            <a href="../page-fonte-verde/tipo-ftverde.html">
+              <img src="../static/products-image/natumais/Fonte verde/logoFonteVerde.png">
+            </a>
+          </div>
+          <div class="content2">
+            <h2>Fonte Verde</h2>
+            <p>
+              Confira os produtos da FONTE VERDE orgânicos que contribuem para a sua saúde, e possuem uma ampla gama de
+              benefícios para a
+              saúde, incluindo propriedades antioxidantes, anti-inflamatórias, relaxantes e digestivas.
+            </p>
+            <a href="page-fonte-verde/tipo-ftverde.html" class="read-more">
+              Ver Catálogo
+            </a>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="divider-1"></div>
+
+      <!-- CONTACT -->
+      <section class="section" id="contact">
+        <div class="container grid">
+          <div class="text">
+            <h2 class="title">Entre em contato com a gente!</h2>
+            <p>
+              Entre em contato conosco, queremos tirar suas dúvidas,
+              ouvir suas críticas e sugestões.
+            </p>
+            <a href="https://api.whatsapp.com/send?phone=553335631647&text=Oláa! Gostaria de um produto" class="button"
+              target="_blank"></i> Entrar em contato</a>
+          </div>
+
+          <div class="links">
+            <ul class="grid">
+              <li><i class="icon-phone"></i> <a href="tel:+55xxxxx"> (33) 333563-1647</a></li>
+              <li><i class="icon-map-pin"></i> Manhuaçu MG</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      </div>
+    </section>
+    <footer class="section">
+      <div class="container grid">
+        <div class="brand">
+          <a class="logo logo-alt" href="#home">Natu<span>Mais </span> ⠀</a>
+
+        </div>
+
+        <div class="social grid">
+          <p style="color: #fff;">Mídias Sociais:</p>
+          <a href="https://www.instagram.com/natumais_/" target="_blank">
+            <i class="icon-instagram"></i>
+          </a>
+          <a href="https://api.whatsapp.com/send?phone=553335631647&text=Oláa!" target="_blank">
+            <svg class="svgwpp" xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="#fff"
+              class="bi bi-whatsapp" viewBox="0 0 16 16">
+              <path
+                d="M13.601 2.326A7.854 7.854 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.933 7.933 0 0 0 3.79.965h.004c4.368 0 7.926-3.558 7.93-7.93A7.898 7.898 0 0 0 13.6 2.326zM7.994 14.521a6.573 6.573 0 0 1-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931 6.557 6.557 0 0 1 1.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592zm3.615-4.934c-.197-.099-1.17-.578-1.353-.646-.182-.065-.315-.099-.445.099-.133.197-.513.646-.627.775-.114.133-.232.148-.43.05-.197-.1-.836-.308-1.592-.985-.59-.525-.985-1.175-1.103-1.372-.114-.198-.011-.304.088-.403.087-.088.197-.232.296-.346.1-.114.133-.198.198-.33.065-.134.034-.248-.015-.347-.05-.099-.445-1.076-.612-1.47-.16-.389-.323-.335-.445-.34-.114-.007-.247-.007-.38-.007a.729.729 0 0 0-.529.247c-.182.198-.691.677-.691 1.654 0 .977.71 1.916.81 2.049.098.133 1.394 2.132 3.383 2.992.47.205.84.326 1.129.418.475.152.904.129 1.246.08.38-.058 1.171-.48 1.338-.943.164-.464.164-.86.114-.943-.049-.084-.182-.133-.38-.232z" />
+            </svg></a>
+        </div>
+        <div style="color: #fff;">
+
+          <script>var data = new Date();
+            var dias = new Array(
+              'Domingo', 'Segunda-feira', 'Terça-feira', 'Quarta-feira', 'Quinta-feira', 'Sexta-feira', 'Sábado'
+            );
+
+            document.write(dias[data.getDay()]);</script>
+          <p id="time"></p>
+        </div>
+      </div>
+    </footer>
+
+
+    <div class="dev" style="background: var(--base-color);">
+      <div style="align-items: center; color: #fff;" class="social grid">
+        <div class="col-md-12 text-center">
+
+
+
+
+
+          <script>var timeDisplay = document.getElementById("time");
+            function refreshTime() {
+              var dateString = new Date().toLocaleString("pt-BR", { timeZone: "America/Sao_Paulo" });
+              var formattedString = dateString.replace(", ", " - ");
+              timeDisplay.innerHTML = formattedString;
+            }
+
+            setInterval(refreshTime, 1000);</script>
+
+          <a style="color: #fff;" href="https://www.instagram.com/hericksouza.gg/" target="_blank"><p style="position: relative;" class="mt-5">byHerick&copy;
+          </p></a>
+
+        </div>
+
+      </div>
+      <p class="dev" style="top:100%; color: #fff; margin: 0 auto; font-size: 12px; text-align: center;">Natumais ©2024
+        - Todos os direitos reservados.</p>
+    </div>
+    </div>
+
+    <a href="#inicio" class="back-to-top"><i class="icon-arrow-up"></i></a>
+
+    <!-- swiper -->
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
+    <!-- scrollreveal -->
+    <script src="https://unpkg.com/scrollreveal"></script>
+
+    <!-- main.js <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3742.9054286502214!2d-42.030741723819375!3d-20.262756548758546!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xbb03c907812fbb%3A0xc1508199696bd20d!2sAlfa%20Odontologia!5e0!3m2!1spt-BR!2sbr!4v1682474612695!5m2!1spt-BR!2sbr"
+            width="600" height="450" allowfullscreen="" loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>-->
+    <script type="text/javascript" src="../CodejqueryMin.js"></script>
+    <script type="text/javascript" src="../jqueryMigrate.js"></script>
+    <script type="text/javascript" src="../slick.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.1.3/js/bootstrap.min.js"></script>
+
+    <script src="../main.js"></script>
+</body>
+
+</html>

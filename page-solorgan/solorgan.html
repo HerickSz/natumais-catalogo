@@ -46,7 +46,7 @@
         <ul class="grid">
           <li><a class="title" href="../index.html">Início </a></li>
           <li><a class="title" href="../index.html#produtos">Produtos</a></li>
-          <li><a style="color: red;" class="title" href="../index.html">Voltar</a></li>
+          <li><a style="color: red;" class="title" href="../grupos-encap-liq/encap-liq-marcas.html">Voltar</a></li>
         </ul>
       </div>
       <!-- /menu -->
@@ -70,6 +70,61 @@
             class="logo-detail">Novos Produtos!</span>
         </p>
 
+        <h1 class="searchh">Pesquisa de Produtos</h1>
+      <input type="text" id="searchInput" placeholder="Pesquisar produto..." onkeyup="searchProducts()">
+      <style>
+        /* Estilo para o título com a classe searchh */
+.searchh {
+  color: #28a745; /* Verde preferencial */
+  text-align: center; /* Centraliza o título */
+  font-size: 1.5em; /* Tamanho da fonte */
+  margin: 20px 0; /* Margens superior e inferior */
+}
+
+/* Estilo para o input */
+#searchInput {
+  width: 100%; /* Largura total */
+  max-width: 400px; /* Largura máxima */
+  padding: 10px; /* Espaçamento interno */
+  border: 2px solid #28a745; /* Borda verde */
+  border-radius: 5px; /* Cantos arredondados */
+  font-size: 1em; /* Tamanho da fonte */
+  margin: 0 auto; /* Centraliza o input */
+  display: block; /* Exibe como bloco */
+  transition: border-color 0.3s; /* Transição suave para a borda */
+  margin-bottom: 10px;
+}
+
+/* Efeito ao focar no input */
+#searchInput:focus {
+  border-color: #218838; /* Verde mais escuro ao focar */
+  outline: none; /* Remove o contorno padrão */
+}
+
+        
+.hidden {
+  display: none;
+}
+    </style>
+     <script>
+      function searchProducts() {
+          const input = document.getElementById('searchInput').value.toLowerCase();
+          const cards = document.querySelectorAll('.card');
+
+          cards.forEach(card => {
+              const title = card.querySelector('.title').textContent.toLowerCase();
+              const code = card.querySelector('.card-info .title').textContent.toLowerCase();
+
+              // Verifica se a entrada do usuário está contida no título ou no código
+              if (title.includes(input) || code.includes(input)) {
+                  card.classList.remove('hidden');
+              } else {
+                  card.classList.add('hidden');
+              }
+          });
+      }
+  </script>
+
         <h2 style="text-align: center;background-color: rgb(245 245 245);" class="title">Solorgan</h2>
         <div class="page-btn">
           <a class="active-span" href="solorgan-2.html"><span style="background:#198754; color: #fff;">1</span></a>
@@ -82,296 +137,384 @@
 
           <div class="card">
             <p class="title">CANELA DE VELHO 60 CAPS</p>
-
-            <img class="img2" src="../public/images/solorgan/canelavelho60caps.png" alt="Pré-visualização do produto">
+            <img class="img2" src="../public/images/solorgan/canelavelho60caps.png" alt="CANELA DE VELHO 60 CAPS">
             <div class="card-info">
-              <!--<p class="tag">Fonte verde</p><-->
-              <p class="title">COD: 3</p>
-
-              <p class="shipping"></p>
-              <p class="shipping">Entrega a combinar</p>
+                <p class="title">COD: 3</p>
+                <p class="shipping">Entrega a combinar</p>
             </div>
-
             <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#productModal1">
-              Detalhes
+                Detalhes
             </button>
             <!-- Modal 1 -->
-            <div class="modal fade" id="productModal1" tabindex="-1" aria-labelledby="productModalLabel1"
-              aria-hidden="true">
-              <div class="modal-dialog modal-dialog-centered">
-                <div class="modal-content">
-                  <div class="modal-header">
-                    <h5 class="modal-title" id="productModalLabel1">CANELA DE VELHO 60 CAPS</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fechar"></button>
-                  </div>
-                  <div class="modal-body">
-                    <img class="imgmodal" src="../public/images/solorgan/canelavelho60caps.png"
-                      alt="Pré-visualização do produto">
-                    <p>Ela é utilizada para aliviar dores provenientes de outros tipos de inflamações além das
-                      articulares, como torcicolos, tendinites, reumatismos, bursites, torções nos pés, hérnias de disco
-                      e
-                      dores na coluna.</p>
-                  </div>
-                  <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
-                  </div>
+            <div class="modal fade" id="productModal1" tabindex="-1" aria-labelledby="productModalLabel1" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="productModalLabel1">CANELA DE VELHO 60 CAPS</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fechar"></button>
+                        </div>
+                        <div class="modal-body">
+                            <img class="imgmodal" src="../public/images/solorgan/canelavelho60caps.png" alt="CANELA DE VELHO 60 CAPS">
+                            <p>Ela é utilizada para aliviar dores provenientes de outros tipos de inflamações além das articulares, como torcicolos, tendinites, reumatismos, bursites, torções nos pés, hérnias de disco e dores na coluna.</p>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+                        </div>
+                    </div>
                 </div>
-              </div>
             </div>
-          </div>
-          <div class="card">
+        </div>
+        
+        <div class="card">
             <p class="title">AMORA MIÚRA 60/120 CAPS</p>
-            <img class="img2" src="../public/images/solorgan/amora60120caps.png" alt="Pré-visualização do produto">
+            <img class="img2" src="../public/images/solorgan/amora60120caps.png" alt="AMORA MIÚRA 60/120 CAPS">
             <div class="card-info">
-              <!--<p class="tag">Fonte verde</p><-->
-              <p class="title">COD 60: 318 </br>
-                COD 120: 1735</p>
-
-              <p class="shipping"></p>
-              <p class="shipping">Entrega a combinar</p>
+                <p class="title">COD 60: 318 <br> COD 120: 1735</p>
+                <p class="shipping">Entrega a combinar</p>
             </div>
             <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#productModal2">
-              Detalhes
+                Detalhes
             </button>
-
-
             <!-- Modal 2 -->
-            <div class="modal fade" id="productModal2" tabindex="-1" aria-labelledby="productModalLabel2"
-              aria-hidden="true">
-              <div class="modal-dialog modal-dialog-centered">
-                <div class="modal-content">
-                  <div class="modal-header">
-                    <h5 class="modal-title" id="productModalLabel2">AMORA MIÚRA 60/120 CAPS</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fechar"></button>
-                  </div>
-                  <div class="modal-body">
-                    <img src="../public/images/solorgan/amora60120caps.png" height="500px"
-                      alt="Pré-visualização do produto">
-                    <p>Ela atua nos sintomas da menopausa e TPM como irritabilidade, insônia, ansiedade,
-                      nervosismo, dores musculares e das articulações e calores excessivos (no caso da menopausa).</p>
-                  </div>
-                  <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
-                  </div>
+            <div class="modal fade" id="productModal2" tabindex="-1" aria-labelledby="productModalLabel2" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="productModalLabel2">AMORA MIÚRA 60/120 CAPS</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fechar"></button>
+                        </div>
+                        <div class="modal-body">
+                            <img src="../public/images/solorgan/amora60120caps.png" height="500px" alt="AMORA MIÚRA 60/120 CAPS">
+                            <p>Ela atua nos sintomas da menopausa e TPM como irritabilidade, insônia, ansiedade, nervosismo, dores musculares e das articulações e calores excessivos (no caso da menopausa).</p>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+                        </div>
+                    </div>
                 </div>
-              </div>
-
             </div>
-
-
-          </div>
-          <div class="card">
-            <p class="title">BIOTINA C/ 60 CAPS</p>
-            <img class="img2" src="../public/images/solorgan/biotina60caps.png" alt="Pré-visualização do produto">
-            <div class="card-info">
-              <!--<p class="tag">Fonte verde</p><-->
-              <p class="title">COD:320</p>
-
-
-              <p class="shipping"></p>
-            </div>
-
-            <div class="btinfo"><a class="button-buy">Detalhes</a>
-              <p class="info">Ideal para quem tem deficiência de Vitamina B7 no organismo ou necessita melhorar a saúde
-                da pele e cabelos. Sua fórmula possui 150% de ingestão diária recomendada de biotina por comprimido. O
-                suplemento fortalece os fios e as unhas, tornando-os menos quebradiços.</p>
-              <p class="shipping">Entrega a combinar</p>
-            </div>
-          </div>
-
-          <div class="card">
-            <p class="title">CAFÉ SLIM C/ 60 CAPS</p>
-            <img class="img2" src="../public/images/solorgan/cafe slim 60caps.png" alt="Pré-visualização do produto">
-            <div class="card-info">
-              <!--<p class="tag">Fonte verde</p><-->
-              <p class="title">Cod:321</p>
-
-
-              <p class="shipping"></p>
-              <p class="shipping">Entrega a combinar</p>
-            </div>
-
-            <div class="btinfo"><a class="button-buy">Detalhes</a>
-              <p class="info">Indicado para todas as pessoas que querem perder peso com saúde. Fórmula desenvolvida para
-                atender homens e mulheres de idades acima de 18 anos. Cada cápsula tem um mix de vitaminas. Auxilia na
-                redução de peso e dão energia para o dia a dia.</p>
-            </div>
-          </div>
-
-          <div class="card">
-            <p class="title">CLORETO DE MAGNÉSIO C/ 60/120</p>
-            <img class="img2" src="../public/images/solorgan/cloretomagnesio12060caps.png"
-              alt="Pré-visualização do produto">
-            <div class="card-info">
-              <!--<p class="tag">Fonte verde</p><-->
-              <p class="title">COD 60: 327 </br>
-                COD 120: 328</p>
-
-
-              <p class="shipping"></p>
-              <p class="shipping">Entrega a combinar</p>
-            </div>
-
-            <div class="btinfo"><a class="button-buy">Detalhes</a>
-              <p class="info">O Cloreto de Magnésio P.A é ideal para melhorar a formação de ossos e dentes, o
-                metabolismo energético, de proteínas, carboidratos e gorduras, o equilíbrio dos eletrólitos e o
-                funcionamento muscular.</p>
-            </div>
-          </div>
-
-          <div class="card">
-            <p class="title">CLORETO DE MAGNÉSIO P A C/33g</p>
-            <img class="img2" src="../public/images/solorgan/cloretomagPA3360120caps.png"
-              alt="Pré-visualização do produto">
-            <div class="card-info">
-              <!--<p class="tag">Fonte verde</p><-->
-              <p class="title">COD:329
-              </p>
-
-
-              <p class="shipping"></p>
-              <p class="shipping">Entrega a combinar</p>
-            </div>
-
-            <div class="btinfo"><a class="button-buy">Detalhes</a>
-              <p class="info">É ideal para melhorar a formação de ossos e dentes, o metabolismo energético, de
-                proteínas, carboidratos e gorduras, o equilíbrio dos eletrólitos e o funcionamento muscular.</p>
-            </div>
-          </div>
-
         </div>
+        
+        <div class="card">
+          <p class="title">BIOTINA C/ 60 CAPS</p>
+          <img class="img2" src="../public/images/solorgan/biotina60caps.png" alt="BIOTINA C/ 60 CAPS">
+          <div class="card-info">
+              <p class="title">COD: 320</p>
+              <p class="shipping">Entrega a combinar</p>
+          </div>
+          <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#productModal3">
+              Detalhes
+          </button>
+      
+          <!-- Modal 3 -->
+          <div class="modal fade" id="productModal3" tabindex="-1" aria-labelledby="productModalLabel3" aria-hidden="true">
+              <div class="modal-dialog modal-dialog-centered">
+                  <div class="modal-content">
+                      <div class="modal-header">
+                          <h5 class="modal-title" id="productModalLabel3">BIOTINA C/ 60 CAPS</h5>
+                          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fechar"></button>
+                      </div>
+                      <div class="modal-body">
+                          <img class="imgmodal" src="../public/images/solorgan/biotina60caps.png" alt="BIOTINA C/ 60 CAPS">
+                          <p>Ideal para quem tem deficiência de Vitamina B7 no organismo ou necessita melhorar a saúde da pele e cabelos. Sua fórmula possui 150% de ingestão diária recomendada de biotina por comprimido. O suplemento fortalece os fios e as unhas, tornando-os menos quebradiços.</p>
+                      </div>
+                      <div class="modal-footer">
+                          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+                      </div>
+                  </div>
+              </div>
+          </div>
       </div>
-    </section>
+      
+      
+      <div class="card">
+        <p class="title">CAFÉ SLIM C/ 60 CAPS</p>
+        <img class="img2" src="../public/images/solorgan/cafe slim 60caps.png" alt="CAFÉ SLIM C/ 60 CAPS">
+        <div class="card-info">
+            <p class="title">Cod: 321</p>
+            <p class="shipping">Entrega a combinar</p>
+        </div>
+        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#productModal4">
+            Detalhes
+        </button>
+    
+        <!-- Modal 4 -->
+        <div class="modal fade" id="productModal4" tabindex="-1" aria-labelledby="productModalLabel4" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="productModalLabel4">CAFÉ SLIM C/ 60 CAPS</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fechar"></button>
+                    </div>
+                    <div class="modal-body">
+                        <img class="imgmodal" src="../public/images/solorgan/cafe slim 60caps.png" alt="CAFÉ SLIM C/ 60 CAPS">
+                        <p>Indicado para todas as pessoas que querem perder peso com saúde. Fórmula desenvolvida para atender homens e mulheres de idades acima de 18 anos. Cada cápsula tem um mix de vitaminas. Auxilia na redução de peso e dá energia para o dia a dia.</p>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="card">
+        <p class="title">CLORETO DE MAGNÉSIO C/ 60/120</p>
+        <img class="img2" src="../public/images/solorgan/cloretomagnesio12060caps.png" alt="CLORETO DE MAGNÉSIO C/ 60/120">
+        <div class="card-info">
+            <p class="title">COD 60: 327 <br> COD 120: 328</p>
+            <p class="shipping">Entrega a combinar</p>
+        </div>
+        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#productModal5">
+            Detalhes
+        </button>
+    
+        <!-- Modal 5 -->
+        <div class="modal fade" id="productModal5" tabindex="-1" aria-labelledby="productModalLabel5" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="productModalLabel5">CLORETO DE MAGNÉSIO C/ 60/120</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fechar"></button>
+                    </div>
+                    <div class="modal-body">
+                        <img class="imgmodal" src="../public/images/solorgan/cloretomagnesio12060caps.png" alt="CLORETO DE MAGNÉSIO C/ 60/120">
+                        <p>O Cloreto de Magnésio P.A é ideal para melhorar a formação de ossos e dentes, o metabolismo energético, de proteínas, carboidratos e gorduras, o equilíbrio dos eletrólitos e o funcionamento muscular.</p>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="card">
+        <p class="title">CLORETO DE MAGNÉSIO P A C/33g</p>
+        <img class="img2" src="../public/images/solorgan/cloretomagPA3360120caps.png" alt="CLORETO DE MAGNÉSIO P A C/33g">
+        <div class="card-info">
+            <p class="title">COD: 329</p>
+            <p class="shipping">Entrega a combinar</p>
+        </div>
+        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#productModal6">
+            Detalhes
+        </button>
+    
+        <!-- Modal 6 -->
+        <div class="modal fade" id="productModal6" tabindex="-1" aria-labelledby="productModalLabel6" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="productModalLabel6">CLORETO DE MAGNÉSIO P A C/33g</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fechar"></button>
+                    </div>
+                    <div class="modal-body">
+                        <img class="imgmodal" src="../public/images/solorgan/cloretomagPA3360120caps.png" alt="CLORETO DE MAGNÉSIO P A C/33g">
+                        <p>É ideal para melhorar a formação de ossos e dentes, o metabolismo energético, de proteínas, carboidratos e gorduras, o equilíbrio dos eletrólitos e o funcionamento muscular.</p>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+   
     </br></br>
 
     <div class="divider-1"></div>
 
 
-    <section class="product-list wrapper">
-
-
-      <div class="cards-container">
+    
         <div class="card">
           <p class="title">CLORETO HIDROLISADO C/ 60/120 CAPS</p>
-          <img class="img2" src="../public/images/solorgan/colagenoHidrolizado60120caps.png"
-            alt="Pré-visualização do produto">
+          <img class="img2" src="../public/images/solorgan/colagenoHidrolizado60120caps.png" alt="CLORETO HIDROLISADO C/ 60/120 CAPS">
           <div class="card-info">
-            <!--<p class="tag">Fonte verde</p><-->
-            <p class="title">COD 60: 331 </br>
-              COD 120: 330</p>
-            </p>
-
-            <p class="shipping"></p>
-            <p class="shipping">Entrega a combinar</p>
+              <p class="title">COD 60: 331 <br> COD 120: 330</p>
+              <p class="shipping">Entrega a combinar</p>
           </div>
-
-          <div class="btinfo"><a class="button-buy">Detalhes</a>
-            <p class="info">Suplemento de colágeno do tipo I hidrolisado, indicado para a firmeza muscular, aumento da
-              saúde da pele, cabelos e unhas, e prevenção da perda óssea.</p>
-
+          <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#productModal7">
+              Detalhes
+          </button>
+      
+          <!-- Modal 7 -->
+          <div class="modal fade" id="productModal7" tabindex="-1" aria-labelledby="productModalLabel7" aria-hidden="true">
+              <div class="modal-dialog modal-dialog-centered">
+                  <div class="modal-content">
+                      <div class="modal-header">
+                          <h5 class="modal-title" id="productModalLabel7">CLORETO HIDROLISADO C/ 60/120 CAPS</h5>
+                          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fechar"></button>
+                      </div>
+                      <div class="modal-body">
+                          <img class="imgmodal" src="../public/images/solorgan/colagenoHidrolizado60120caps.png" alt="CLORETO HIDROLISADO C/ 60/120 CAPS">
+                          <p>Suplemento de colágeno do tipo I hidrolisado, indicado para a firmeza muscular, aumento da saúde da pele, cabelos e unhas, e prevenção da perda óssea.</p>
+                      </div>
+                      <div class="modal-footer">
+                          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+                      </div>
+                  </div>
+              </div>
           </div>
-        </div>
-        <div class="card">
+      </div>
+      
+      <div class="card">
           <p class="title">MACA PERUANA C/ 60/120 CAPS</p>
-          <img class="img2" src="../public/images/solorgan/macaperuana60120caps.png" alt="Pré-visualização do produto">
+          <img class="img2" src="../public/images/solorgan/macaperuana60120caps.png" alt="MACA PERUANA C/ 60/120 CAPS">
           <div class="card-info">
-            <!--<p class="tag">Fonte verde</p><-->
-            <p class="title">COD 60: 341 </br>
-              COD 120: 340</p>
-            </p>
-
-
-            <p class="shipping"></p>
-            <p class="shipping">Entrega a combinar</p>
+              <p class="title">COD 60: 341 <br> COD 120: 340</p>
+              <p class="shipping">Entrega a combinar</p>
           </div>
-
-          <div class="btinfo"><a class="button-buy">Detalhes</a>
-            <p class="info">Nutritivo e energético, o suplemento de maca peruana aumenta a vitalidade, combate o
-              estresse e o cansaço, promove a libido, aumenta a fertilidade, o desempenho sexual, auxilia em dietas de
-              emagrecimento e combate a osteoporose e a anemia.</p>
+          <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#productModal8">
+              Detalhes
+          </button>
+      
+          <!-- Modal 8 -->
+          <div class="modal fade" id="productModal8" tabindex="-1" aria-labelledby="productModalLabel8" aria-hidden="true">
+              <div class="modal-dialog modal-dialog-centered">
+                  <div class="modal-content">
+                      <div class="modal-header">
+                          <h5 class="modal-title" id="productModalLabel8">MACA PERUANA C/ 60/120 CAPS</h5>
+                          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fechar"></button>
+                      </div>
+                      <div class="modal-body">
+                          <img class="imgmodal" src="../public/images/solorgan/macaperuana60120caps.png" alt="MACA PERUANA C/ 60/120 CAPS">
+                          <p>Nutritivo e energético, o suplemento de maca peruana aumenta a vitalidade, combate o estresse e o cansaço, promove a libido, aumenta a fertilidade, o desempenho sexual, auxilia em dietas de emagrecimento e combate a osteoporose e a anemia.</p>
+                      </div>
+                      <div class="modal-footer">
+                          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+                      </div>
+                  </div>
+              </div>
           </div>
-        </div>
-        <div class="card">
+      </div>
+      
+      <div class="card">
           <p class="title">ÓLEO DE ALHO C/ 60 CAPS</p>
-          <img class="img2" src="../public/images/solorgan/oleoalho60caps.png" alt="Pré-visualização do produto">
+          <img class="img2" src="../public/images/solorgan/oleoalho60caps.png" alt="ÓLEO DE ALHO C/ 60 CAPS">
           <div class="card-info">
-            <!--<p class="tag">Fonte verde</p><-->
-            <p class="title">COD: 343
-            </p>
-
-            <p class="shipping"></p>
+              <p class="title">COD: 343</p>
+              <p class="shipping">Entrega a combinar</p>
+          </div>
+          <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#productModal9">
+              Detalhes
+          </button>
+      
+          <!-- Modal 9 -->
+          <div class="modal fade" id="productModal9" tabindex="-1" aria-labelledby="productModalLabel9" aria-hidden="true">
+              <div class="modal-dialog modal-dialog-centered">
+                  <div class="modal-content">
+                      <div class="modal-header">
+                          <h5 class="modal-title" id="productModalLabel9">ÓLEO DE ALHO C/ 60 CAPS</h5>
+                          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fechar"></button>
+                      </div>
+                      <div class="modal-body">
+                          <img class="imgmodal" src="../public/images/solorgan/oleoalho60caps.png" alt="ÓLEO DE ALHO C/ 60 CAPS">
+                          <p>Contém alicina e outros compostos sulfurados que ajudam a diminuir o colesterol "ruim" (LDL), aumentar os níveis de colesterol "bom" (HDL) e diminuir os níveis de triglicerídeos, contribuindo para melhorar a saúde cardiovascular e prevenindo doenças como AVC, aterosclerose e infarto.</p>
+                      </div>
+                      <div class="modal-footer">
+                          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+      
+      
+      <div class="card">
+        <p class="title">ÓLEO DE CÁRTAMO C/ VITAMINA E C/ 60/120 CAPS</p>
+        <img class="img2" src="../public/images/solorgan/oelocartamo60120caps.png" alt="ÓLEO DE CÁRTAMO C/ VITAMINA E C/ 60/120 CAPS">
+        <div class="card-info">
+            <p class="title">COD 60: 345 <br> COD 120: 344</p>
             <p class="shipping">Entrega a combinar</p>
-          </div>
-
-          <div class="btinfo"><a class="button-buy">Detalhes</a>
-            <p class="info">Contém alicina e outros compostos sulfurados que ajudam a diminuir o colesterol "ruim"
-              (LDL), aumentar os níveis de colesterol "bom" (HDL) e diminuir os níveis de triglicerídeos, contribuindo
-              para melhorar a saúde cardiovascular e prevenindo doenças como AVC, aterosclerose e infarto.</p>
-
-          </div>
         </div>
-
-        <div class="card">
-          <p class="title">ÓLEO DE CÁRTAMO C/ VITAMINA E </br>
-            C/ 60/120 CAPS </p>
-          <img class="img2" src="../public/images/solorgan/oelocartamo60120caps.png" alt="Pré-visualização do produto">
-          <div class="card-info">
-            <!--<p class="tag">Fonte verde</p><-->
-            <p class="title">COD 60: 345 </br>
-              COD 120: 344</p>
-            </p>
-
-
-            <p class="shipping"></p>
+        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#productModal10">
+            Detalhes
+        </button>
+    
+        <!-- Modal 10 -->
+        <div class="modal fade" id="productModal10" tabindex="-1" aria-labelledby="productModalLabel10" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="productModalLabel10">ÓLEO DE CÁRTAMO C/ VITAMINA E C/ 60/120 CAPS</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fechar"></button>
+                    </div>
+                    <div class="modal-body">
+                        <img class="imgmodal" src="../public/images/solorgan/oelocartamo60120caps.png" alt="ÓLEO DE CÁRTAMO C/ VITAMINA E C/ 60/120 CAPS">
+                        <p>O Óleo de Cártamo + Vitamina E é uma excelente opção para quem deseja cuidar da saúde e da beleza de forma natural. O óleo contém ácido linoleico, um ácido graxo essencial que ajuda a reduzir o colesterol ruim e promover a perda de peso saudável. Além disso, a fórmula é enriquecida com Vitamina E, um poderoso antioxidante que ajuda a proteger as células do organismo contra os danos causados pelos radicais livres.</p>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="card">
+        <p class="title">ÓLEO DE SEMENTE DE ABÓBORA C/ 60 CAPS</p>
+        <img class="img2" src="../public/images/solorgan/sementeabobora60caps.png" alt="ÓLEO DE SEMENTE DE ABÓBORA C/ 60 CAPS">
+        <div class="card-info">
+            <p class="title">COD: 378</p>
             <p class="shipping">Entrega a combinar</p>
-          </div>
-
-          <div class="btinfo"><a class="button-buy">Detalhes</a>
-            <p class="info">O Óleo de Cártamo + Vitamina E é uma excelente opção para quem deseja cuidar da saúde e da
-              beleza de forma natural. O óleo contém ácido linoleico, um ácido graxo essencial que ajuda a reduzir o
-              colesterol ruim e promover a perda de peso saudável. Além disso, a fórmula é enriquecida com Vitamina E,
-              um poderoso antioxidante que ajuda a proteger as células do organismo contra os danos causados pelos
-              radicais livres.</p>
-          </div>
         </div>
-
-        <div class="card">
-          <p class="title">ÓLEO DE SEMENTE DE ABÓBORA C/ 60 CAPS</p>
-          <img class="img2" src="../public/images/solorgan/sementeabobora60caps.png" alt="Pré-visualização do produto">
-          <div class="card-info">
-            <!--<p class="tag">Fonte verde</p><-->
-            <p class="title">COD: 378
-            </p>
-            <p class="shipping"></p>
+        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#productModal11">
+            Detalhes
+        </button>
+    
+        <!-- Modal 11 -->
+        <div class="modal fade" id="productModal11" tabindex="-1" aria-labelledby="productModalLabel11" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="productModalLabel11">ÓLEO DE SEMENTE DE ABÓBORA C/ 60 CAPS</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fechar"></button>
+                    </div>
+                    <div class="modal-body">
+                        <img class="imgmodal" src="../public/images/solorgan/sementeabobora60caps.png" alt="ÓLEO DE SEMENTE DE ABÓBORA C/ 60 CAPS">
+                        <p>O Óleo de Semente de Abóbora é rico em Potássio, Magnésio, Zinco, Vitaminas do Complexo B, Vitamina B9 e Ômegas 6 e 9, que ajudam na imunidade, saúde da próstata e do fígado, equalização dos níveis de colesterol e ação anti-inflamatória.</p>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="card">
+        <p class="title">ÓLEO DE COCO 60 CAPS</p>
+        <img class="img2" src="../public/images/solorgan/oleococo60120caps.png" alt="ÓLEO DE COCO 60 CAPS">
+        <div class="card-info">
+            <p class="title">COD 60: 349</p>
             <p class="shipping">Entrega a combinar</p>
-          </div>
-
-          <div class="btinfo"><a class="button-buy">Detalhes</a>
-            <p class="info">O Óleo de Semente de Abóbora é rico em Potássio, Magnésio, Zinco, Vitaminas do Complexo B,
-              Vitamina B9 e Ômegas 6 e 9, que ajudam na imunidade, saúda da próstata e do fígado, equalização dos níveis
-              de colesterol e ação anti-inflamatória.</p>
-          </div>
         </div>
-
-        <div class="card">
-          <p class="title">ÓLEO DE COCO 60 CAPS</p>
-          <img class="img2" src="../public/images/solorgan/oleococo60120caps.png" alt="Pré-visualização do produto">
-          <div class="card-info">
-            <!--<p class="tag">Fonte verde</p><-->
-            <p class="title">COD 60: 349 </br>
-            </p>
-            </p>
-
-
-            <p class="shipping"></p>
-            <p class="shipping">Entrega a combinar</p>
-          </div>
-
-          <div class="btinfo"><a class="button-buy">Detalhes</a>
-            <p class="info"> O óleo de coco auxilia na redução do LDL "colesterol ruim" e aumenta o HDL "colesterol
-              bom", contribuindo para a prevenção e tratamento de doenças cardiovasculares.</p>
-          </div>
+        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#productModal12">
+            Detalhes
+        </button>
+    
+        <!-- Modal 12 -->
+        <div class="modal fade" id="productModal12" tabindex="-1" aria-labelledby="productModalLabel12" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="productModalLabel12">ÓLEO DE COCO 60 CAPS</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fechar"></button>
+                    </div>
+                    <div class="modal-body">
+                        <img class="imgmodal" src="../public/images/solorgan/oleococo60120caps.png" alt="ÓLEO DE COCO 60 CAPS">
+                        <p>O óleo de coco auxilia na redução do LDL "colesterol ruim" e aumenta o HDL "colesterol bom", contribuindo para a prevenção e tratamento de doenças cardiovasculares.</p>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+                    </div>
+                </div>
+            </div>
         </div>
+    </div>
+    
+      
     </section>
     </br></br> </section>
 
@@ -521,7 +664,7 @@
 
             setInterval(refreshTime, 1000);</script>
 
-          <a style="color: #fff;" href="https://www.instagram.com/heerick.gg/" target="_blank"><p style="position: relative;" class="mt-5">byHerick&copy;
+          <a style="color: #fff;" href="https://www.instagram.com/hericksouza.gg/" target="_blank"><p style="position: relative;" class="mt-5">byHerick&copy;
           </p></a>
 
         </div>

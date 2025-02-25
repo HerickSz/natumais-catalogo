@@ -1,0 +1,1251 @@
+<!DOCTYPE html>
+<html lang="pt_BR">
+
+<head>
+  <!-- PAGE INFO -->
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>MENTOS| 2</title>
+
+  <!-- Icones -->
+  <link rel="stylesheet" href="../assets/fonts/style.css" />
+  <link rel="icon" href="../logo.png" type="icon/png" sizes="16x16">
+  <!-- Swiper -->
+  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" />
+
+
+  <!-- STYLES -->
+  <link rel="stylesheet" href="../style.css" />
+  <link rel="stylesheet" href="../css2/style2.css">
+  <link rel="stylesheet" href="../css2/nav-bar.css">
+  <link rel="stylesheet" href="../css2/super-offers.css">
+  <link rel="stylesheet" href="../css2/products.css">
+  <link rel="stylesheet" href="../csshover/style.css">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.gstatic.com" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Poppins:wght@400;500;700&display=swap"
+    rel="stylesheet" />
+</head>
+
+<body>
+  <header id="header">
+    <nav class="container">
+      <a class="logo" href="../index.html">Catálogo - Natu<span>Mais</span>
+
+      </a>
+      <!-- menu -->
+      <div class="menu">
+        <ul class="grid">
+          <li><a class="title" href="../index.html">Início </a></li>
+          <li><a class="title" href="../index.html#produtos">Produtos</a></li>
+          <li><a style="color: red;" class="title" href="../balas-chicletes-doces/tipo-diversos.html">Voltar</a></li>
+        </ul>
+      </div>
+      <!-- /menu -->
+      <div class="toggle icon-menu"></div>
+      <div class="toggle icon-close"></div>
+    </nav>
+  </header>
+
+  <main>
+
+    <section id="inicio" class="super-offers-background">
+      <div id="inicio" class="header-image">
+        <!-- <img class="imgdesktop" src="./static/products-image/natumais/Fonte verde/headerfonteverde.png" alt="">
+        <img class="imgmobile" src="./static/products-image/natumais/Fonte verde/headermobilefonteverde.png" alt="">-->
+      </div>
+      <div class="super-offers wrapper">
+        <h3 style="text-align: center;"><span class="logo-detail">Ofertas do Mês</span> NatuMais</h3>
+        <p class="title" style="text-align: center;color: rgb(0, 0, 0); font-size: 20px;">Confira nossos <span
+            class="logo-detail">Novos Produtos!</span>
+        </p>
+
+        <h1 class="searchh">Pesquisa de Produtos</h1>
+      <input type="text" id="searchInput" placeholder="Pesquisar produto..." onkeyup="searchProducts()">
+      <style>
+        /* Estilo para o título com a classe searchh */
+.searchh {
+  color: #28a745; /* Verde preferencial */
+  text-align: center; /* Centraliza o título */
+  font-size: 1.5em; /* Tamanho da fonte */
+  margin: 20px 0; /* Margens superior e inferior */
+}
+
+/* Estilo para o input */
+#searchInput {
+  width: 100%; /* Largura total */
+  max-width: 400px; /* Largura máxima */
+  padding: 10px; /* Espaçamento interno */
+  border: 2px solid #28a745; /* Borda verde */
+  border-radius: 5px; /* Cantos arredondados */
+  font-size: 1em; /* Tamanho da fonte */
+  margin: 0 auto; /* Centraliza o input */
+  display: block; /* Exibe como bloco */
+  transition: border-color 0.3s; /* Transição suave para a borda */
+  margin-bottom: 10px;
+}
+
+/* Efeito ao focar no input */
+#searchInput:focus {
+  border-color: #218838; /* Verde mais escuro ao focar */
+  outline: none; /* Remove o contorno padrão */
+}
+
+        
+.hidden {
+  display: none;
+}
+    </style>
+     <script>
+      function searchProducts() {
+          const input = document.getElementById('searchInput').value.toLowerCase();
+          const cards = document.querySelectorAll('.card');
+
+          cards.forEach(card => {
+              const title = card.querySelector('.title').textContent.toLowerCase();
+              const code = card.querySelector('.card-info .title').textContent.toLowerCase();
+
+              // Verifica se a entrada do usuário está contida no título ou no código
+              if (title.includes(input) || code.includes(input)) {
+                  card.classList.remove('hidden');
+              } else {
+                  card.classList.add('hidden');
+              }
+          });
+      }
+  </script>
+        <div class="page-btn">
+          <a href="../page-mentos/mentos.html"><span>1</span></a>
+          <a class="active-span" href="../page-mentos/mentos-2.html"><span style="background:#198754; color: #fff;">2</span></a>
+          <!--<a href="../page-mentos/mentos-3.html"> <span>3</span></a>
+           <a href="../page-farmel/farmel-4.html"><span>4</span></a>
+          <a href="../page-farmel/farmel-5.html"><span>5</span></a>
+          <a href="../page-farmel/farmel-6.html"><span>&#8594;</span></a>-->
+        </div>
+        <h2 style="text-align: center;background-color: rgb(245 245 245);" class="title">Mentos Página 2</h2>
+
+        <div class="cards-container">
+
+          <div class="card">
+            <p class="title">MENTOS 30MINUTOS CLEAR BREATH VITAMINA 1x12</p>
+
+            <img class="img2" src="../public/images/mentos/mentos30mvita1x12.png" alt="Pré-visualização do produto">
+            <div class="card-info">
+              <!--<p class="tag">Fonte verde</p><-->
+              <p class="title">COD: 1270</p>
+
+              <p class="shipping"></p>
+              <p class="shipping">Entrega a combinar</p>
+            </div>
+
+            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#productModal1">
+              Detalhes
+            </button>
+            <!-- Modal 1 -->
+            <div class="modal fade" id="productModal1" tabindex="-1" aria-labelledby="productModalLabel1"
+              aria-hidden="true">
+              <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h5 class="modal-title" id="productModalLabel1">MENTOS 30MINUTOS CLEAR BREATH VITAMINA 1x12</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fechar"></button>
+                  </div>
+                  <div class="modal-body">
+                    <img class="imgmodal" src="../public/images/mentos/mentos30mvita1x12.png" alt="Pré-visualização do produto">
+                    <p> Bala Mentos 30Minutos.
+                    </p>
+                  </div>
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="card">
+            <p class="title">MENTOS 30MINUTOS VITAMINA 1x12</p>
+
+            <img class="img2" src="../public/images/mentos/mentosvitamins.png" alt="Pré-visualização do produto">
+            <div class="card-info">
+              <!--<p class="tag">Fonte verde</p><-->
+              <p class="title">COD: 1656</p>
+
+              <p class="shipping"></p>
+              <p class="shipping">Entrega a combinar</p>
+            </div>
+
+            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#productModal2">
+              Detalhes
+            </button>
+            <!-- Modal 2 -->
+            <div class="modal fade" id="productModal2" tabindex="-1" aria-labelledby="productModalLabel2"
+              aria-hidden="true">
+              <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h5 class="modal-title" id="productModalLabel2">MENTOS 30MINUTOS VITAMINA 1x12</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fechar"></button>
+                  </div>
+                  <div class="modal-body">
+                    <img class="imgmodal" src="../public/images/mentos/mentosvitamins.png"
+                      alt="Pré-visualização do produto">
+                    <p>Bala Mentos 30minutos.</p>
+                  </div>
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="card">
+            <p class="title">MENTOS GARRAFA AZUL 1x6</p>
+
+            <img class="img2" src="../public/images/mentos/mentosgarrafa1x6azul.png" alt="Pré-visualização do produto">
+            <div class="card-info">
+              <!--<p class="tag">Fonte verde</p><-->
+              <p class="title">COD: 639</p>
+
+              <p class="shipping"></p>
+              <p class="shipping">Entrega a combinar</p>
+            </div>
+
+            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#productModal3">
+              Detalhes
+            </button>
+            <!-- Modal 3 -->
+            <div class="modal fade" id="productModal3" tabindex="-1" aria-labelledby="productModalLabel3"
+              aria-hidden="true">
+              <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h5 class="modal-title" id="productModalLabel3">MENTOS GARRAFA AZUL 1x6</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fechar"></button>
+                  </div>
+                  <div class="modal-body">
+                    <img class="imgmodal" src="../public/images/mentos/mentosgarrafa1x6azul.png"
+                      alt="Pré-visualização do produto">
+                    <p>Mentos Garrafa azul.</p>
+                  </div>
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="card">
+            <p class="title">MENTOS GARRAFA BIG AZUL 1x6</p>
+
+            <img class="img2" src="../public/images/mentos/mentosgarrafa1x6azulBIG.png" alt="Pré-visualização do produto">
+            <div class="card-info">
+              <!--<p class="tag">Fonte verde</p><-->
+              <p class="title">COD: 1376</p>
+
+              <p class="shipping"></p>
+              <p class="shipping">Entrega a combinar</p>
+            </div>
+
+            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#productModal4">
+              Detalhes
+            </button>
+            <!-- Modal 4 -->
+            <div class="modal fade" id="productModal4" tabindex="-1" aria-labelledby="productModalLabel4"
+              aria-hidden="true">
+              <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h5 class="modal-title" id="productModalLabel4">MENTOS GARRAFA BIG AZUL 1x6</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fechar"></button>
+                  </div>
+                  <div class="modal-body">
+                    <img class="imgmodal" src="../public/images/mentos/mentosgarrafa1x6azulBIG.png"
+                      alt="Pré-visualização do produto">
+                    <p>Mentos Garrafa azul.</p>
+                  </div>
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="card">
+            <p class="title">MENTOS GARRAFA BIG ROSA 1x6</p>
+
+            <img class="img2" src="../public/images/mentos/mentosgarrafa1x6arosaBIG.png" alt="Pré-visualização do produto">
+            <div class="card-info">
+              <!--<p class="tag">Fonte verde</p><-->
+              <p class="title">COD: 1377 </p>
+
+              <p class="shipping"></p>
+              <p class="shipping">Entrega a combinar</p>
+            </div>
+
+            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#productModal5">
+              Detalhes
+            </button>
+            <!-- Modal 5 -->
+            <div class="modal fade" id="productModal5" tabindex="-1" aria-labelledby="productModalLabel5"
+              aria-hidden="true">
+              <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h5 class="modal-title" id="productModalLabel5">MENTOS GARRAFA BIG ROSA 1x6</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fechar"></button>
+                  </div>
+                  <div class="modal-body">
+                    <img class="imgmodal" src="../public/images/mentos/mentosgarrafa1x6arosaBIG.png"
+                      alt="Pré-visualização do produto">
+                    <p>Mentos Garrafa rosa.</p>
+                  </div>
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="card">
+            <p class="title">MENTOS GARRAFA BIG VERDE 1x6</p>
+
+            <img class="img2" src="../public/images/mentos/mentosgarrafa1x6verdeBIG.png" alt="Pré-visualização do produto">
+            <div class="card-info">
+              <!--<p class="tag">Fonte verde</p><-->
+              <p class="title">COD: 1378</p>
+
+              <p class="shipping"></p>
+              <p class="shipping">Entrega a combinar</p>
+            </div>
+
+            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#productModal6">
+              Detalhes
+            </button>
+            <!-- Modal 6 -->
+            <div class="modal fade" id="productModal6" tabindex="-1" aria-labelledby="productModalLabel6"
+              aria-hidden="true">
+              <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h5 class="modal-title" id="productModalLabel6">MENTOS GARRAFA BIG VERDE 1x6</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fechar"></button>
+                  </div>
+                  <div class="modal-body">
+                    <img class="imgmodal" src="../public/images/mentos/mentosgarrafa1x6verdeBIG.png"
+                      alt="Pré-visualização do produto">
+                    <p>Mentos Garrafa verde.</p>
+                  </div>
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          
+
+       
+      
+  
+    </br></br>
+
+    <div class="divider-1"></div>
+
+
+    
+        <div class="card">
+          <p class="title">MENTOS GARRAFA BRANCO 1x6</p>
+
+          <img class="img2" src="../public/images/mentos/mentosgarrafa1x6branco.png" alt="Pré-visualização do produto">
+          <div class="card-info">
+            <!--<p class="tag">Fonte verde</p><-->
+            <p class="title">COD: 638</p>
+
+            <p class="shipping"></p>
+            <p class="shipping">Entrega a combinar</p>
+          </div>
+
+          <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#productModal7">
+            Detalhes
+          </button>
+          <!-- Modal 7 -->
+          <div class="modal fade" id="productModal7" tabindex="-1" aria-labelledby="productModalLabel7"
+            aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="productModalLabel7">MENTOS GARRAFA BRANCO 1x6</h5>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fechar"></button>
+                </div>
+                <div class="modal-body">
+                  <img class="imgmodal" src="../public/images/mentos/mentosgarrafa1x6branco.png"
+                    alt="Pré-visualização do produto">
+                  <p>Bala Mentos Garrafa Branco.</p>
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="card">
+          <p class="title">MENTOS GARRAFA MORANGO 1x6</p>
+
+          <img class="img2" src="../public/images/mentos/mentosgarrafa1x6morango.png" alt="Pré-visualização do produto">
+          <div class="card-info">
+            <!--<p class="tag">Fonte verde</p><-->
+            <p class="title">COD: 640</p>
+
+            <p class="shipping"></p>
+            <p class="shipping">Entrega a combinar</p>
+          </div>
+
+          <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#productModal8">
+            Detalhes
+          </button>
+          <!-- Modal 8 -->
+          <div class="modal fade" id="productModal8" tabindex="-1" aria-labelledby="productModalLabel8"
+            aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="productModalLabel8">MENTOS GARRAFA MORANGO 1x6</h5>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fechar"></button>
+                </div>
+                <div class="modal-body">
+                  <img class="imgmodal" src="../public/images/mentos/mentosgarrafa1x6morango.png" 
+                    alt="Pré-visualização do produto">
+                  <p>Bala Mentos Garrafa Morango.</p>
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="card">
+          <p class="title">MENTOS GARRAFA VERDE 1x6</p>
+
+          <img class="img2" src="../public/images/mentos/mentosgarrafa1x6verde.png" alt="Pré-visualização do produto">
+          <div class="card-info">
+            <!--<p class="tag">Fonte verde</p><-->
+            <p class="title">COD: 626</p>
+
+            <p class="shipping"></p>
+            <p class="shipping">Entrega a combinar</p>
+          </div>
+
+          <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#productModal9">
+            Detalhes
+          </button>
+          <!-- Modal 9 -->
+          <div class="modal fade" id="productModal9" tabindex="-1" aria-labelledby="productModalLabel9"
+            aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="productModalLabel9">MENTOS GARRAFA VERDE 1x6</h5>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fechar"></button>
+                </div>
+                <div class="modal-body">
+                  <img class="imgmodal" src="../public/images/mentos/mentosgarrafa1x6verde.png"
+                    alt="Pré-visualização do produto">
+                  <p>ala Mentos Garrafa Verde.</p>
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="card">
+          <p class="title">MENTOS GARRAFA UP2 1x6</p>
+
+          <img class="img2" src="../public/images/mentos/mentosUP21x6.png" alt="Pré-visualização do produto">
+          <div class="card-info">
+            <!--<p class="tag">Fonte verde</p><-->
+            <p class="title">COD: 1244</p>
+
+            <p class="shipping"></p>
+            <p class="shipping">Entrega a combinar</p>
+          </div>
+
+          <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#productModal10">
+            Detalhes
+          </button>
+          <!-- Modal 10 -->
+          <div class="modal fade" id="productModal10" tabindex="-1" aria-labelledby="productModalLabel10"
+            aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="productModalLabel10">MENTOS GARRAFA UP2 1x6</h5>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fechar"></button>
+                </div>
+                <div class="modal-body">
+                  <img class="imgmodal" src="../public/images/mentos/mentosUP21x6.png"
+                    alt="Pré-visualização do produto">
+                  <p>Bala Mentos Garrafa.</p>
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="card">
+          <p class="title">MENTOS GARRAFA VITAMINA 1x6</p>
+
+          <img class="img2" src="../public/images/mentos/mentosgarrafa1x6vitamins.png" alt="Pré-visualização do produto">
+          <div class="card-info">
+            <!--<p class="tag">Fonte verde</p><-->
+            <p class="title">COD: 1240</p>
+
+            <p class="shipping"></p>
+            <p class="shipping">Entrega a combinar</p>
+          </div>
+
+          <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#productModal11">
+            Detalhes
+          </button>
+          <!-- Modal 11 -->
+          <div class="modal fade" id="productModal11" tabindex="-1" aria-labelledby="productModalLabel11"
+            aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="productModalLabel11">MENTOS GARRAFA VITAMINA 1x6</h5>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fechar"></button>
+                </div>
+                <div class="modal-body">
+                  <img class="imgmodal" src="../public/images/mentos/mentosgarrafa1x6vitamins.png"
+                    alt="Pré-visualização do produto">
+                  <p>Bala Mentos Garrafa VITAMINA.</p>
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="card">
+          <p class="title">MENTOS KISS AZUL 1x12</p>
+
+          <img class="img2" src="../public/images/mentos/mentoskiss1x12azul.png" alt="Pré-visualização do produto">
+          <div class="card-info">
+            <!--<p class="tag">Fonte verde</p><-->
+            <p class="title">COD: 1239</p>
+
+            <p class="shipping"></p>
+            <p class="shipping">Entrega a combinar</p>
+          </div>
+
+          <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#productModal12">
+            Detalhes
+          </button>
+          <!-- Modal 12 -->
+          <div class="modal fade" id="productModal12" tabindex="-1" aria-labelledby="productModalLabel12"
+            aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="productModalLabel12">MENTOS KISS AZUL 1x12</h5>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fechar"></button>
+                </div>
+                <div class="modal-body">
+                  <img class="imgmodal" src="../public/images/mentos/mentoskiss1x12azul.png"
+                    alt="Pré-visualização do produto">
+                  <p>Bala Mentos Kiss Azul.</p>
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+    
+    </br></br>
+
+    <div class="divider-1"></div>
+   
+        <div class="card">
+          <p class="title">MENTOS KISS PRETO 1x12</p>
+
+          <img class="img2" src="../public/images/mentos/mentoskiss1x12preto.png" alt="Pré-visualização do produto">
+          <div class="card-info">
+            <!--<p class="tag">Fonte verde</p><-->
+            <p class="title">COD: 1238</p>
+
+            <p class="shipping"></p>
+            <p class="shipping">Entrega a combinar</p>
+          </div>
+
+          <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#productModal13">
+            Detalhes
+          </button>
+          <!-- Modal 13 -->
+          <div class="modal fade" id="productModal13" tabindex="-1" aria-labelledby="productModalLabel13"
+            aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="productModalLabel13">MENTOS KISS PRETO 1x12</h5>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fechar"></button>
+                </div>
+                <div class="modal-body">
+                  <img class="imgmodal" src="../public/images/mentos/mentoskiss1x12preto.png"
+                    alt="Pré-visualização do produto">
+                  <p>Bala Mentos Kiss Preto.</p>
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="card">
+          <p class="title">MENTOS KISS SOUR LIMAO 1x6</p>
+
+          <img class="img2" src="../public/images/mentos/mentossour1x6limao.png" alt="Pré-visualização do produto">
+          <div class="card-info">
+            <!--<p class="tag">Fonte verde</p><-->
+            <p class="title">COD: 1001</p>
+
+            <p class="shipping"></p>
+            <p class="shipping">Entrega a combinar</p>
+          </div>
+
+          <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#productModal14">
+            Detalhes
+          </button>
+          <!-- Modal 14 -->
+          <div class="modal fade" id="productModal14" tabindex="-1" aria-labelledby="productModalLabel14"
+            aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="productModalLabel14">MENTOS KISS SOUR LIMAO 1x6</h5>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fechar"></button>
+                </div>
+                <div class="modal-body">
+                  <img class="imgmodal" src="../public/images/mentos/mentossour1x6limao.png"
+                    alt="Pré-visualização do produto">
+                  <p>Bala Mentos Kiss Sour Limao.</p>
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="card">
+          <p class="title">MENTOS KISS SOUR MORANGO 1x6</p>
+
+          <img class="img2" src="../public/images/mentos/mentossour1x6morango.png" alt="Pré-visualização do produto">
+          <div class="card-info">
+            <!--<p class="tag">Fonte verde</p><-->
+            <p class="title">COD: 981</p>
+
+            <p class="shipping"></p>
+            <p class="shipping">Entrega a combinar</p>
+          </div>
+
+          <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#productModal15">
+            Detalhes
+          </button>
+          <!-- Modal 15 -->
+          <div class="modal fade" id="productModal15" tabindex="-1" aria-labelledby="productModalLabel15"
+            aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="productModalLabel15">MENTOS KISS SOUR MORANGO 1x6</h5>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fechar"></button>
+                </div>
+                <div class="modal-body">
+                  <img class="imgmodal" src="../public/images/mentos/mentossour1x6morango.png"
+                    alt="Pré-visualização do produto">
+                  <p>Bala Mentos Kiss Morango</p>
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+  
+    </br></br>
+
+    <div class="divider-1"></div>
+    
+        <div class="card">
+          <p class="title">MENTOS KISS VERMELHO 1x12</p>
+
+          <img class="img2" src="../public/images/mentos/mentoskiss1x12vermelho.png" alt="Pré-visualização do produto">
+          <div class="card-info">
+            <!--<p class="tag">Fonte verde</p><-->
+            <p class="title">COD: 643</p>
+
+            <p class="shipping"></p>
+            <p class="shipping">Entrega a combinar</p>
+          </div>
+
+          <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#productModal16">
+            Detalhes
+          </button>
+          <!-- Modal 16 -->
+          <div class="modal fade" id="productModal16" tabindex="-1" aria-labelledby="productModalLabel16"
+            aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="productModalLabel16">MENTOS KISS VERMELHO 1x12</h5>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fechar"></button>
+                </div>
+                <div class="modal-body">
+                  <img class="imgmodal" src="../public/images/mentos/mentoskiss1x12vermelho.png"
+                    alt="Pré-visualização do produto">
+                  <p>Bala Mentos Kiss Vermelho.</p>
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="card">
+          <p class="title">MENTOS STICK FANTA 1x16</p>
+
+          <img class="img2" src="../public/images/mentos/mentosstickfanta1x16.png" alt="Pré-visualização do produto">
+          <div class="card-info">
+            <!--<p class="tag">Fonte verde</p><-->
+            <p class="title">COD: 1653</p>
+
+            <p class="shipping"></p>
+            <p class="shipping">Entrega a combinar</p>
+          </div>
+
+          <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#productModal17">
+            Detalhes
+          </button>
+          <!-- Modal 17 -->
+          <div class="modal fade" id="productModal17" tabindex="-1" aria-labelledby="productModalLabel17"
+            aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="productModalLabel17">MENTOS STICK FANTA 1x16</h5>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fechar"></button>
+                </div>
+                <div class="modal-body">
+                  <img class="imgmodal" src="../public/images/mentos/mentosstickfanta1x16.png"
+                    alt="Pré-visualização do produto">
+                  <p>Bala Mentos Stick Fanta.</p>
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="card">
+          <p class="title">MENTOS STICK FRUIT 1x16</p>
+
+          <img class="img2" src="../public/images/mentos/mentosstickfruit1x16.png" alt="Pré-visualização do produto">
+          <div class="card-info">
+            <!--<p class="tag">Fonte verde</p><-->
+            <p class="title">COD: 634</p>
+
+            <p class="shipping"></p>
+            <p class="shipping">Entrega a combinar</p>
+          </div>
+
+          <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#productModal18">
+            Detalhes
+          </button>
+          <!-- Modal 18-->
+          <div class="modal fade" id="productModal18" tabindex="-1" aria-labelledby="productModalLabel18"
+            aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="productModalLabel18">MENTOS STICK FRUIT 1x16</h5>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fechar"></button>
+                </div>
+                <div class="modal-body">
+                  <img class="imgmodal" src="../public/images/mentos/mentosstickfruit1x16.png"
+                    alt="Pré-visualização do produto">
+                  <p>Bala Mentos Stick Fruit.</p>
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="card">
+          <p class="title">MENTOS STICK FRUTAS VERMELHAS 1x16</p>
+
+          <img class="img2" src="../public/images/mentos/mentosstickfrutasvermelhas1x16.png" alt="Pré-visualização do produto">
+          <div class="card-info">
+            <!--<p class="tag">Fonte verde</p><-->
+            <p class="title">Cod:635</p>
+
+            <p class="shipping"></p>
+            <p class="shipping">Entrega a combinar</p>
+          </div>
+
+          <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#productModal19">
+            Detalhes
+          </button>
+          <!-- Modal 19 -->
+          <div class="modal fade" id="productModal19" tabindex="-1" aria-labelledby="productModalLabel19"
+            aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="productModalLabel19">MENTOS STICK FRUTAS VERMELHAS 1x16</h5>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fechar"></button>
+                </div>
+                <div class="modal-body">
+                  <img class="imgmodal" src="../public/images/mentos/mentosstickfrutasvermelhas1x16.png"
+                    alt="Pré-visualização do produto">
+                  <p>Bala Mentos Stick Frutas Vermelhas.</p>
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+       
+        <div class="card">
+          <p class="title">MENTOS STICK MINT 1x16</p>
+
+          <img class="img2" src="../public/images/mentos/mentosstickmint1x16.png" alt="Pré-visualização do produto">
+          <div class="card-info">
+            <!--<p class="tag">Fonte verde</p><-->
+            <p class="title">Cod:1235</p>
+
+            <p class="shipping"></p>
+            <p class="shipping">Entrega a combinar</p>
+          </div>
+
+          <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#productModal20">
+            Detalhes
+          </button>
+          <!-- Modal 20 -->
+          <div class="modal fade" id="productModal20" tabindex="-1" aria-labelledby="productModalLabel20"
+            aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="productModalLabel20">MENTOS STICK MINT 1x16</h5>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fechar"></button>
+                </div>
+                <div class="modal-body">
+                  <img class="imgmodal" src="../public/images/mentos/mentosstickmint1x16.png"
+                    alt="Pré-visualização do produto">
+                  <p>Bala Mentos Stick Mint</p>
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="card">
+          <p class="title">MENTOS STICK MORANGO C/ YOGURT 1x16</p>
+
+          <img class="img2" src="../public/images/mentos/mentosstickyogurt1x16.png" alt="Pré-visualização do produto">
+          <div class="card-info">
+            <!--<p class="tag">Fonte verde</p><-->
+            <p class="title">Cod:637</p>
+
+            <p class="shipping"></p>
+            <p class="shipping">Entrega a combinar</p>
+          </div>
+
+          <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#productModal21">
+            Detalhes
+          </button>
+          <!-- Modal 21 -->
+          <div class="modal fade" id="productModal21" tabindex="-1" aria-labelledby="productModalLabel21"
+            aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="productModalLabel21">MENTOS STICK MORANGO C/ YOGURT 1x16</h5>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fechar"></button>
+                </div>
+                <div class="modal-body">
+                  <img class="imgmodal" src="../public/images/mentos/mentosstickyogurt1x16.png"
+                    alt="Pré-visualização do produto">
+                  <p>Bala Mentos Stick Morango com Yogurt.</p>
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="card">
+          <p class="title">MENTOS STICK RAINBOW 1x16 </p>
+
+          <img class="img2" src="../public/images/mentos/mentosstickrainbow1x16.png" alt="Pré-visualização do produto">
+          <div class="card-info">
+            <!--<p class="tag">Fonte verde</p><-->
+            <p class="title">Cod: 632</p>
+
+            <p class="shipping"></p>
+            <p class="shipping">Entrega a combinar</p>
+          </div>
+
+          <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#productModal22">
+            Detalhes
+          </button>
+          <!-- Modal 22 -->
+          <div class="modal fade" id="productModal22" tabindex="-1" aria-labelledby="productModalLabel22"
+            aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="productModalLabel22">MENTOS STICK RAINBOW 1x16</h5>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fechar"></button>
+                </div>
+                <div class="modal-body">
+                  <img class="imgmodal" src="../public/images/mentos/mentosstickrainbow1x16.png"
+                    alt="Pré-visualização do produto">
+                  <p>Bala Mentos Stick Rainbow.</p>
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="card">
+          <p class="title">MENTOS STICK TUTTI FRUTTI 1x16 </p>
+
+          <img class="img2" src="../public/images/mentos/mentossticktuttifrutti1x16.png" alt="Pré-visualização do produto">
+          <div class="card-info">
+            <!--<p class="tag">Fonte verde</p><-->
+            <p class="title">Cod: 633</p>
+
+            <p class="shipping"></p>
+            <p class="shipping">Entrega a combinar</p>
+          </div>
+
+          <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#productModal23">
+            Detalhes
+          </button>
+          <!-- Modal 23 -->
+          <div class="modal fade" id="productModal23" tabindex="-1" aria-labelledby="productModalLabel23"
+            aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="productModalLabel23">MENTOS STICK TUTTI FRUTTI 1x16</h5>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fechar"></button>
+                </div>
+                <div class="modal-body">
+                  <img class="imgmodal" src="../public/images/mentos/mentossticktuttifrutti1x16.png"
+                    alt="Pré-visualização do produto">
+                  <p>Bala Mentos Stick Tutti Frutti.</p>
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="card">
+          <p class="title">PIRULITO CHUPA CHUPS POTE 1x100 </p>
+
+          <img class="img2" src="../public/images/mentos/chupachupspirulito100.png" alt="Pré-visualização do produto">
+          <div class="card-info">
+            <!--<p class="tag">Fonte verde</p><-->
+            <p class="title">Cod: 1468</p>
+
+            <p class="shipping"></p>
+            <p class="shipping">Entrega a combinar</p>
+          </div>
+
+          <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#productModal24">
+            Detalhes
+          </button>
+          <!-- Modal 24 -->
+          <div class="modal fade" id="productModal24" tabindex="-1" aria-labelledby="productModalLabel24"
+            aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="productModalLabel24">PIRULITO CHUPA CHUPS POTE 1x100</h5>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fechar"></button>
+                </div>
+                <div class="modal-body">
+                  <img class="imgmodal" src="../public/images/mentos/chupachupspirulito100.png"
+                    alt="Pré-visualização do produto">
+                  <p>Pirulito Chupa Chups Pote.</p>
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+
+    </section>
+
+
+        <!-- <div style="width: 20rem;height: auto;" class="card">
+          <p class="title">ANTI DEPRESSIVO C/60 e 120</p>
+          <div class="card-info">
+            <div class="fotos">
+              <div class="slider-principal2">
+                <img src="../static/products-image/natumais/1.jpeg" />
+                <img src="../static/products-image/natumais/2.jpeg" />
+                <img src="../static/products-image/natumais/3.jpeg" />
+                <img src="../static/products-image/natumais/4.jpeg" />
+                <img src="../static/products-image/natumais/5.jpeg" />
+              </div>
+              <p class="tag">Fonte verde</p>
+        <p class="title">COD 60 :21
+          COD 120 :22
+        </p>
+        
+        <p class="info">medicamento rico de nutrientes naturais e contribui com a melhora
+          do sono e sem apresentar efeitos colaterais.</p>
+        <p class="shipping">Entrega a combinar</p>
+<p class="shipping">12UN /CX</p>-->
+      <!--</div>
+      </div>
+      <a href="https://wa.me/5514997972772?text=Olá, tenho interesse em produtos da sua loja"
+        class="button-buy">Detalhes</a>
+      </div>
+      <-->
+
+   
+
+
+    </br></br>
+    <!-------- PAGE BUTTONS------->
+    <div class="page-btn">
+      <a href="../page-mentos/mentos.html"><span>1</span></a>
+      <a class="active-span" href="../page-mentos/mentos-2.html"><span style="background:#198754; color: #fff;">2</span></a>
+      <!--<a href="../page-mentos/mentos-3.html"> <span>3</span></a>
+       <a href="../page-farmel/farmel-4.html"><span>4</span></a>
+      <a href="../page-farmel/farmel-5.html"><span>5</span></a>
+      <a href="../page-farmel/farmel-6.html"><span>&#8594;</span></a>-->
+    </div>
+    <div class="divider-1"></div>
+
+  </main>
+
+  <section>
+
+    <section class="mapa" id="produtos">
+      <!--
+      <div class="fotos">
+        <h2 style="text-align: center;" class="title">Produtos Diversos</h2>
+        <div class="slider-principal">
+          <img src="../static/products-image/natumais/1.jpeg" />
+          <img src="../static/products-image/natumais/2.jpeg" />
+          <img src="../static/products-image/natumais/3.jpeg" />
+          <img src="../static/products-image/natumais/4.jpeg" />
+          <img src="../static/products-image/natumais/5.jpeg" />
+        </div>
+      -->
+
+
+      <h2 style="text-align: center; margin-top: 4%;" class="title">Mais Produtos</h2>
+      <p>(clique ou pare o cursor para visualizar)</p>
+      <div class="cardhover">
+        <div class="card2">
+
+          <div class="img-box">
+            <a href="../page-trident/trident.html">
+              <img src="../static/products-image/doces-chicletes-balas/chicletes.png"></a>
+            </a>
+          </div>
+
+          <div class="content2">
+            <h2>Trident</h2>
+            <p>
+              Diversos Chicletes
+            </p>
+            <a href="../page-trident/trident.html" class="read-more">
+              Ver mais
+            </a>
+          </div>
+        </div>
+
+        <div class="card2">
+          <div class="img-box">
+            <a href="../page-farmel-doces/farmeldoces.html">
+              <img src="../static/products-image/farmel/rmobilefarmeltp.png"></a>
+          </div>
+          <div class="content2">
+            <h2>Farmel - Doces</h2>
+            <p>
+              Deliciosos Doces que vendemos com nossa parceira Far-mel, confira já!
+            </p>
+            <a href="../page-farmel-doces/farmeldoces.html" class="read-more">
+              Ver mais
+            </a>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="divider-1"></div>
+
+      <!-- CONTACT -->
+      <section class="section" id="contact">
+        <div class="container grid">
+          <div class="text">
+            <h2 class="title">Entre em contato com a gente!</h2>
+            <p>
+              Entre em contato conosco, queremos tirar suas dúvidas,
+              ouvir suas críticas e sugestões.
+            </p>
+            <a href="https://api.whatsapp.com/send?phone=553335631647&text=Oláa! Gostaria de um produto" class="button"
+              target="_blank"></i> Entrar em contato</a>
+          </div>
+
+          <div class="links">
+            <ul class="grid">
+              <li><i class="icon-phone"></i> <a href="tel:+55xxxxx"> (33) 333563-1647</a></li>
+              <li><i class="icon-map-pin"></i> Manhuaçu MG</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      </div>
+    </section>
+    <footer class="section">
+      <div class="container grid">
+        <div class="brand">
+          <a class="logo logo-alt" href="#home">Natu<span>Mais </span> ⠀</a>
+
+        </div>
+
+        <div class="social grid">
+          <p style="color: #fff;">Mídias Sociais:</p>
+          <a href="https://www.instagram.com/natumais_/" target="_blank">
+            <i class="icon-instagram"></i>
+          </a>
+          <a href="https://api.whatsapp.com/send?phone=553335631647&text=Oláa!" target="_blank">
+            <svg class="svgwpp" xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="#fff"
+              class="bi bi-whatsapp" viewBox="0 0 16 16">
+              <path
+                d="M13.601 2.326A7.854 7.854 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.933 7.933 0 0 0 3.79.965h.004c4.368 0 7.926-3.558 7.93-7.93A7.898 7.898 0 0 0 13.6 2.326zM7.994 14.521a6.573 6.573 0 0 1-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931 6.557 6.557 0 0 1 1.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592zm3.615-4.934c-.197-.099-1.17-.578-1.353-.646-.182-.065-.315-.099-.445.099-.133.197-.513.646-.627.775-.114.133-.232.148-.43.05-.197-.1-.836-.308-1.592-.985-.59-.525-.985-1.175-1.103-1.372-.114-.198-.011-.304.088-.403.087-.088.197-.232.296-.346.1-.114.133-.198.198-.33.065-.134.034-.248-.015-.347-.05-.099-.445-1.076-.612-1.47-.16-.389-.323-.335-.445-.34-.114-.007-.247-.007-.38-.007a.729.729 0 0 0-.529.247c-.182.198-.691.677-.691 1.654 0 .977.71 1.916.81 2.049.098.133 1.394 2.132 3.383 2.992.47.205.84.326 1.129.418.475.152.904.129 1.246.08.38-.058 1.171-.48 1.338-.943.164-.464.164-.86.114-.943-.049-.084-.182-.133-.38-.232z" />
+            </svg></a>
+        </div>
+        <div style="color: #fff;">
+
+          <script>var data = new Date();
+            var dias = new Array(
+              'Domingo', 'Segunda-feira', 'Terça-feira', 'Quarta-feira', 'Quinta-feira', 'Sexta-feira', 'Sábado'
+            );
+
+            document.write(dias[data.getDay()]);</script>
+          <p id="time"></p>
+        </div>
+      </div>
+    </footer>
+
+
+    <div class="dev" style="background: var(--base-color);">
+      <div style="align-items: center; color: #fff;" class="social grid">
+        <div class="col-md-12 text-center">
+
+
+
+
+
+          <script>var timeDisplay = document.getElementById("time");
+            function refreshTime() {
+              var dateString = new Date().toLocaleString("pt-BR", { timeZone: "America/Sao_Paulo" });
+              var formattedString = dateString.replace(", ", " - ");
+              timeDisplay.innerHTML = formattedString;
+            }
+
+            setInterval(refreshTime, 1000);</script>
+
+          <a style="color: #fff;" href="https://www.instagram.com/hericksouza.gg/" target="_blank"><p style="position: relative;" class="mt-5">byHerick&copy;
+          </p></a>
+
+        </div>
+
+      </div>
+      <p class="dev" style="top:100%; color: #fff; margin: 0 auto; font-size: 12px; text-align: center;">Natumais ©2024
+        - Todos os direitos reservados.</p>
+    </div>
+    </div>
+
+    <a href="#inicio" class="back-to-top"><i class="icon-arrow-up"></i></a>
+
+    <!-- swiper -->
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
+    <!-- scrollreveal -->
+    <script src="https://unpkg.com/scrollreveal"></script>
+
+    <!-- main.js <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3742.9054286502214!2d-42.030741723819375!3d-20.262756548758546!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xbb03c907812fbb%3A0xc1508199696bd20d!2sAlfa%20Odontologia!5e0!3m2!1spt-BR!2sbr!4v1682474612695!5m2!1spt-BR!2sbr"
+            width="600" height="450" allowfullscreen="" loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>-->
+    <script type="text/javascript" src="../CodejqueryMin.js"></script>
+    <script type="text/javascript" src="../jqueryMigrate.js"></script>
+    <script type="text/javascript" src="../slick.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+
+    <script src="../main.js"></script>
+</body>
+
+</html>

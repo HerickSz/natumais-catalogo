@@ -66,6 +66,61 @@
             class="logo-detail">Novos Produtos!</span>
         </p>
 
+        <h1 class="searchh">Pesquisa de Produtos</h1>
+      <input type="text" id="searchInput" placeholder="Pesquisar produto..." onkeyup="searchProducts()">
+      <style>
+        /* Estilo para o título com a classe searchh */
+.searchh {
+  color: #28a745; /* Verde preferencial */
+  text-align: center; /* Centraliza o título */
+  font-size: 1.5em; /* Tamanho da fonte */
+  margin: 20px 0; /* Margens superior e inferior */
+}
+
+/* Estilo para o input */
+#searchInput {
+  width: 100%; /* Largura total */
+  max-width: 400px; /* Largura máxima */
+  padding: 10px; /* Espaçamento interno */
+  border: 2px solid #28a745; /* Borda verde */
+  border-radius: 5px; /* Cantos arredondados */
+  font-size: 1em; /* Tamanho da fonte */
+  margin: 0 auto; /* Centraliza o input */
+  display: block; /* Exibe como bloco */
+  transition: border-color 0.3s; /* Transição suave para a borda */
+  margin-bottom: 10px;
+}
+
+/* Efeito ao focar no input */
+#searchInput:focus {
+  border-color: #218838; /* Verde mais escuro ao focar */
+  outline: none; /* Remove o contorno padrão */
+}
+
+        
+.hidden {
+  display: none;
+}
+    </style>
+     <script>
+      function searchProducts() {
+          const input = document.getElementById('searchInput').value.toLowerCase();
+          const cards = document.querySelectorAll('.card');
+
+          cards.forEach(card => {
+              const title = card.querySelector('.title').textContent.toLowerCase();
+              const code = card.querySelector('.card-info .title').textContent.toLowerCase();
+
+              // Verifica se a entrada do usuário está contida no título ou no código
+              if (title.includes(input) || code.includes(input)) {
+                  card.classList.remove('hidden');
+              } else {
+                  card.classList.add('hidden');
+              }
+          });
+      }
+  </script>
+
         <h2 style="text-align: center;background-color: rgb(245 245 245);" class="title">Fonte Verde Página 1</h2>
         <div class="page-btn">
           <a class="active-span" href="fonte-verde.html"><span style="background:#198754; color: #fff;">1</span></a>
@@ -80,384 +135,546 @@
         <div class="cards-container">
 
           <div class="card">
-            <p class="title">ÁCIDO URICO C/60⠀⠀</p>
-
-            <img class="img2" src="../public/images/fonte verde/acido urico.png" alt="Pré-visualização do produto">
+            <p class="title">ÁCIDO URICO C/60</p>
+            <img class="img2" src="../public/images/fonte verde/acido urico.png" alt="ÁCIDO URICO C/60">
             <div class="card-info">
-              <!--<p class="tag">Fonte verde</p><-->
               <p class="title">COD: 16</p>
-
-              <!--<p class="shipping">12UN /CX</p>-->
               <p class="shipping">Entrega a combinar</p>
             </div>
-
-            <div class="btinfo"><a class="button-buy">Detalhes</a>
-              <p class="info">Um extrato rico em taninos e derivado dos frutos comestíveis,
-                desempenham funções em nosso material genético e na neurotransmissão.</p>
+            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#productModal16">
+              Detalhes
+            </button>
+            <div class="modal fade" id="productModal16" tabindex="-1" aria-labelledby="productModalLabel16" aria-hidden="true">
+              <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h5 class="modal-title" id="productModalLabel16">ÁCIDO URICO C/60</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fechar"></button>
+                  </div>
+                  <div class="modal-body">
+                    <img class="imgmodal" src="../public/images/fonte verde/acido urico.png" alt="ÁCIDO URICO C/60">
+                    <p>Um extrato rico em taninos e derivado dos frutos comestíveis, desempenham funções em nosso material genético e na neurotransmissão.</p>
+                  </div>
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
+          
           <div class="card">
-            <p class="title">ALGONIADA C/60⠀⠀</p>
-            <img class="img2" src="../public/images/fonte verde/agoniada.png" alt="Pré-visualização do produto">
+            <p class="title">ALGONIADA C/60</p>
+            <img class="img2" src="../public/images/fonte verde/agoniada.png" alt="ALGONIADA C/60">
             <div class="card-info">
-              <!--<p class="tag">Fonte verde</p><-->
-              <p class="title">COD:17</p>
-
-              <!--<p class="shipping">12UN /CX</p>-->
+              <p class="title">COD: 17</p>
               <p class="shipping">Entrega a combinar</p>
             </div>
-
-            <div class="btinfo"><a class="button-buy">Detalhes</a>
-              <p class="info">Utilizada no tratamento da asma, bronquite crônica ansiedade e
-                desinflamações e combate à dificuldade de engravidar.</p>
-
+            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#productModal17">
+              Detalhes
+            </button>
+            <div class="modal fade" id="productModal17" tabindex="-1" aria-labelledby="productModalLabel17" aria-hidden="true">
+              <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h5 class="modal-title" id="productModalLabel17">ALGONIADA C/60</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fechar"></button>
+                  </div>
+                  <div class="modal-body">
+                    <img class="imgmodal" src="../public/images/fonte verde/agoniada.png" alt="ALGONIADA C/60">
+                    <p>Utilizada no tratamento da asma, bronquite crônica ansiedade e desinflamações e combate à dificuldade de engravidar.</p>
+                  </div>
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
+          
           <div class="card">
             <p class="title">ALCACHOFRA C/60</p>
-            <img class="img2" src="../public/images/fonte verde/alcachofra.png" alt="Pré-visualização do produto">
+            <img class="img2" src="../public/images/fonte verde/alcachofra.png" alt="ALCACHOFRA C/60">
             <div class="card-info">
-              <!--<p class="tag">Fonte verde</p><-->
-              <p class="title">COD:18</p>
-
-
-              <!--<p class="shipping">12UN /CX</p>-->
-            </div>
-
-            <div class="btinfo"><a class="button-buy">Detalhes</a>
-              <p class="info">Proporciona bem estar ao organismo, contém alcachofra
-                medicinal.</p>
+              <p class="title">COD: 18</p>
               <p class="shipping">Entrega a combinar</p>
             </div>
+            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#productModal18">
+              Detalhes
+            </button>
+            <div class="modal fade" id="productModal18" tabindex="-1" aria-labelledby="productModalLabel18" aria-hidden="true">
+              <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h5 class="modal-title" id="productModalLabel18">ALCACHOFRA C/60</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fechar"></button>
+                  </div>
+                  <div class="modal-body">
+                    <img class="imgmodal" src="../public/images/fonte verde/alcachofra.png" alt="ALCACHOFRA C/60">
+                    <p>Proporciona bem estar ao organismo, contém alcachofra medicinal.</p>
+                  </div>
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
-
+          
           <div class="card">
-            <p class="title">AMORA C/60⠀⠀</p>
-            <img class="img2" src="../public/images/fonte verde/amora 60 caps.png" alt="Pré-visualização do produto">⠀⠀
+            <p class="title">AMORA C/60</p>
+            <img class="img2" src="../public/images/fonte verde/amora 60 caps.png" alt="AMORA C/60">
             <div class="card-info">
-              <!--<p class="tag">Fonte verde</p><-->
-              <p class="title">Cod:19</p>
-
-
-              <!--<p class="shipping">12UN /CX</p>-->
+              <p class="title">COD: 19</p>
               <p class="shipping">Entrega a combinar</p>
             </div>
-
-            <div class="btinfo"><a class="button-buy">Detalhes</a>
-              <p class="info">Amora é uma fruta que ajuda no tratamento e prevenção de
-                diabetes, infarto e pressão alta.</p>
+            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#productModal19">
+              Detalhes
+            </button>
+            <div class="modal fade" id="productModal19" tabindex="-1" aria-labelledby="productModalLabel19" aria-hidden="true">
+              <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h5 class="modal-title" id="productModalLabel19">AMORA C/60</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fechar"></button>
+                  </div>
+                  <div class="modal-body">
+                    <img class="imgmodal" src="../public/images/fonte verde/amora 60 caps.png" alt="AMORA C/60">
+                    <p>Amora é uma fruta que ajuda no tratamento e prevenção de diabetes, infarto e pressão alta.</p>
+                  </div>
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
-
+          
           <div class="card">
             <p class="title">AMORA MIURA C/60</p>
-            <img class="img2" src="../public/images/fonte verde/amora miura 60caps.png"
-              alt="Pré-visualização do produto">⠀⠀
+            <img class="img2" src="../public/images/fonte verde/amora miura 60caps.png" alt="AMORA MIURA C/60">
             <div class="card-info">
-              <!--<p class="tag">Fonte verde</p><-->
-              <p class="title">COD:20</p>
-
-
-              <!--<p class="shipping">12UN /CX</p>-->
+              <p class="title">COD: 20</p>
               <p class="shipping">Entrega a combinar</p>
             </div>
-
-            <div class="btinfo"><a class="button-buy">Detalhes</a>
-              <p class="info">Amora é uma fruta que ajuda no tratamento e prevenção de
-                diabetes, infarto e pressão alta.</p>
+            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#productModal20">
+              Detalhes
+            </button>
+            <div class="modal fade" id="productModal20" tabindex="-1" aria-labelledby="productModalLabel20" aria-hidden="true">
+              <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h5 class="modal-title" id="productModalLabel20">AMORA MIURA C/60</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fechar"></button>
+                  </div>
+                  <div class="modal-body">
+                    <img class="imgmodal" src="../public/images/fonte verde/amora miura 60caps.png" alt="AMORA MIURA C/60">
+                    <p>Amora é uma fruta que ajuda no tratamento e prevenção de diabetes, infarto e pressão alta.</p>
+                  </div>
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
-
+          
           <div class="card">
             <p class="title">ANTI DEPRESSIVO 60 & 120 CAPS</p>
-            <img class="img2" src="../public/images/fonte verde/antidepressivo 60120caps.png"
-              alt="Pré-visualização do produto">
+            <img class="img2" src="../public/images/fonte verde/antidepressivo 60120caps.png" alt="ANTI DEPRESSIVO 60 & 120 CAPS">
             <div class="card-info">
-              <!--<p class="tag">Fonte verde</p><-->
-              <p class="title">COD 60 :21</br>
-                COD 120 :22
-              </p>
-
-
-              <!--<p class="shipping">12UN /CX</p>-->
+              <p class="title">COD 60: 21<br>COD 120: 22</p>
               <p class="shipping">Entrega a combinar</p>
             </div>
-
-            <div class="btinfo"><a class="button-buy">Detalhes</a>
-              <p class="info">Medicamento rico de nutrientes naturais e contribui com a melhora
-                do sono e sem apresentar efeitos colaterais.</p>
+            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#productModal21">
+              Detalhes
+            </button>
+            <div class="modal fade" id="productModal21" tabindex="-1" aria-labelledby="productModalLabel21" aria-hidden="true">
+              <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h5 class="modal-title" id="productModalLabel21">ANTI DEPRESSIVO 60 & 120 CAPS</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fechar"></button>
+                  </div>
+                  <div class="modal-body">
+                    <img class="imgmodal" src="../public/images/fonte verde/antidepressivo 60120caps.png" alt="ANTI DEPRESSIVO 60 & 120 CAPS">
+                    <p>Medicamento rico de nutrientes naturais e contribui com a melhora do sono e sem apresentar efeitos colaterais.</p>
+                  </div>
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
-
-        </div>
-      </div>
-    </section>
+          
+        
+   
+    
     </br></br>
 
     <div class="divider-1"></div>
 
 
-    <section class="product-list wrapper">
-
-
-      <div class="cards-container">
+    
         <div class="card">
-          <p class="title">ANTI INFLAMATORIO C/60 CAPS</p>
-          <img class="img2" src="../public/images/fonte verde/antiinflamatorio 60caps.png"
-            alt="Pré-visualização do produto">
+          <p class="title">ANTI INFLAMATÓRIO C/60 CAPS</p>
+          <img class="img2" src="../public/images/fonte verde/antiinflamatorio 60caps.png" alt="ANTI INFLAMATÓRIO C/60 CAPS">
           <div class="card-info">
-            <!--<p class="tag">Fonte verde</p><-->
-            <p class="title">COD:23
-            </p>
-
-            <!--<p class="shipping">12UN /CX</p>-->
+            <p class="title">COD: 23</p>
             <p class="shipping">Entrega a combinar</p>
           </div>
-
-          <div class="btinfo"><a class="button-buy">Detalhes</a>
-            <p class="info">Age contra: Gripe, resfriados, diarréias, náuseas e vômitos.</p>
-
+          <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#productModal23">
+            Detalhes
+          </button>
+          <div class="modal fade" id="productModal23" tabindex="-1" aria-labelledby="productModalLabel23" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="productModalLabel23">ANTI INFLAMATÓRIO C/60 CAPS</h5>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fechar"></button>
+                </div>
+                <div class="modal-body">
+                  <img class="imgmodal" src="../public/images/fonte verde/antiinflamatorio 60caps.png" alt="ANTI INFLAMATÓRIO C/60 CAPS">
+                  <p>Age contra: gripe, resfriados, diarreias, náuseas e vômitos.</p>
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
+        
         <div class="card">
-          <p class="title">BERINGELA COM ALCACHOFRA 120 & 60 CAPS</p>
-          <img class="img2" src="../public/images/fonte verde/Alcachofra cBerinjela 60120caps.png"
-            alt="Pré-visualização do produto">
+          <p class="title">BERINJELA COM ALCACHOFRA 120 & 60 CAPS</p>
+          <img class="img2" src="../public/images/fonte verde/Alcachofra cBerinjela 60120caps.png" alt="BERINJELA COM ALCACHOFRA 120 & 60 CAPS">
           <div class="card-info">
-            <!--<p class="tag">Fonte verde</p><-->
-            <p class="title">COD:27
-            </p>
-
-
-            <!--<p class="shipping">12UN /CX</p>-->
+            <p class="title">COD: 27</p>
             <p class="shipping">Entrega a combinar</p>
           </div>
-
-          <div class="btinfo"><a class="button-buy">Detalhes</a>
-            <p class="info">Beringela auxilia na redução dos níveis de Colesterol, Glicose e Ácido Úrico, além de
-              reduzir as dores do Reumatismo.</br>
-              A Alcachofra ajuda no tratamento de doenças e tem ação diurética.</p>
+          <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#productModal27">
+            Detalhes
+          </button>
+          <div class="modal fade" id="productModal27" tabindex="-1" aria-labelledby="productModalLabel27" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="productModalLabel27">BERINJELA COM ALCACHOFRA 120 & 60 CAPS</h5>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fechar"></button>
+                </div>
+                <div class="modal-body">
+                  <img class="imgmodal" src="../public/images/fonte verde/Alcachofra cBerinjela 60120caps.png" alt="BERINJELA COM ALCACHOFRA 120 & 60 CAPS">
+                  <p>Beringela auxilia na redução dos níveis de colesterol, glicose e ácido úrico, além de reduzir as dores do reumatismo. A alcachofra ajuda no tratamento de doenças e tem ação diurética.</p>
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
+        
         <div class="card">
           <p class="title">CACTINEA C/60 CAPS</p>
-          <img class="img2" src="../public/images/fonte verde/cactinea 60caps.png" alt="Pré-visualização do produto">
+          <img class="img2" src="../public/images/fonte verde/cactinea 60caps.png" alt="CACTINEA C/60 CAPS">
           <div class="card-info">
-            <!--<p class="tag">Fonte verde</p><-->
-            <p class="title">COD:32
-            </p>
-
-            <!--<p class="shipping">12UN /CX</p>-->
+            <p class="title">COD: 32</p>
             <p class="shipping">Entrega a combinar</p>
           </div>
-
-          <div class="btinfo"><a class="button-buy">Detalhes</a>
-            <p class="info">Conhecida por ajudar no emagrecimento e acelera o metabolismo, além de reduzir as gorduras
-              do corpo.</p>
-
+          <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#productModal32">
+            Detalhes
+          </button>
+          <div class="modal fade" id="productModal32" tabindex="-1" aria-labelledby="productModalLabel32" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="productModalLabel32">CACTINEA C/60 CAPS</h5>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fechar"></button>
+                </div>
+                <div class="modal-body">
+                  <img class="imgmodal" src="../public/images/fonte verde/cactinea 60caps.png" alt="CACTINEA C/60 CAPS">
+                  <p>Conhecida por ajudar no emagrecimento e acelerar o metabolismo, além de reduzir as gorduras do corpo.</p>
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
-
+        
         <div class="card">
-          <p class="title">CAFEINA ANIDRA C/ 60 & 120 CAPS</p>
-          <img class="img2" src="../public/images/fonte verde/cafeina anidra 120 60caps.png"
-            alt="Pré-visualização do produto">
+          <p class="title">CAFEÍNA ANIDRA C/ 60 & 120 CAPS</p>
+          <img class="img2" src="../public/images/fonte verde/cafeina anidra 120 60caps.png" alt="CAFEÍNA ANIDRA C/ 60 & 120 CAPS">
           <div class="card-info">
-            <!--<p class="tag">Fonte verde</p><-->
-            <p class="title">COD 60 :32 </br>
-              COD 120 :33
-            </p>
-
-
-            <!--<p class="shipping">12UN /CX</p>-->
+            <p class="title">COD 60: 32<br>COD 120: 33</p>
             <p class="shipping">Entrega a combinar</p>
           </div>
-
-          <div class="btinfo"><a class="button-buy">Detalhes</a>
-            <p class="info">Cafeína que ajuda na queima da gordura corporal, ajuda no emagrecimento e que pode durar até
-              8 horas.</p>
+          <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#productModal33">
+            Detalhes
+          </button>
+          <div class="modal fade" id="productModal33" tabindex="-1" aria-labelledby="productModalLabel33" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="productModalLabel33">CAFEÍNA ANIDRA C/ 60 & 120 CAPS</h5>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fechar"></button>
+                </div>
+                <div class="modal-body">
+                  <img class="imgmodal" src="../public/images/fonte verde/cafeina anidra 120 60caps.png" alt="CAFEÍNA ANIDRA C/ 60 & 120 CAPS">
+                  <p>Cafeína que ajuda na queima da gordura corporal, contribui para o emagrecimento e pode ter efeito de até 8 horas.</p>
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
-
+        
         <div class="card">
           <p class="title">CALMANTE C/ 60 CAPS</p>
-          <img class="img2" src="../public/images/fonte verde/calmante 60caps.png" alt="Pré-visualização do produto">
+          <img class="img2" src="../public/images/fonte verde/calmante 60caps.png" alt="CALMANTE C/ 60 CAPS">
           <div class="card-info">
-            <!--<p class="tag">Fonte verde</p><-->
-            <p class="title">COD:37
-            </p>
-
-
-            <!--<p class="shipping">12UN /CX</p>-->
+            <p class="title">COD: 37</p>
             <p class="shipping">Entrega a combinar</p>
           </div>
-
-          <div class="btinfo"><a class="button-buy">Detalhes</a>
-            <p class="info">Ajuda no relaxamento muscular, dimunui o nível de estresse e tensão nervosa. Auxilia no
-              combate à insônia e reduzir a ansiedade.</p>
-          </div>
+          <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#productModal37">
+            Detalhes
+          </button>
+          <div class="modal fade" id="productModal37" tabindex="-1" aria-labelledby="productModalLabel37" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="productModalLabel37">CALMANTE C/ 60 CAPS</h5>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fechar"></button>
+                </div>
+                <div class="modal-body">
+                  <img class="imgmodal" src="../public/images/fonte verde/calmante 60caps.png" alt="CALMANTE C/ 60 CAPS">
+                  <p>Ajuda no relaxamento muscular, reduz o nível de estresse e tensão nervosa, combate a insônia e diminui a ansiedade.</p>
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+                </div>
+              </div>
+            </div>
+          </div>  
         </div>
+        
 
         <div class="card">
           <p class="title">CANELA DE VELHO C/60 & 120 CAPS</p>
-          <img class="img2" src="../public/images/fonte verde/caneladvelho 120cps.png"
-            alt="Pré-visualização do produto">
+          <img class="img2" src="../public/images/fonte verde/caneladvelho 120cps.png" alt="CANELA DE VELHO C/60 & 120 CAPS">
           <div class="card-info">
-            <!--<p class="tag">Fonte verde</p><-->
-            <p class="title">COD 120 :38</br>
-              COD 60 :39
-            </p>
-
-
-            <!--<p class="shipping">12UN /CX</p>-->
+            <p class="title">COD 120: 38</br>COD 60: 39</p>
             <p class="shipping">Entrega a combinar</p>
           </div>
-
-          <div class="btinfo"><a class="button-buy">Detalhes</a>
-            <p class="info">Auxilía na Artrose, reumatismo, circulação, aumenta a defesa do corpo e previne o
-              envelhecimento.</p>
+          <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#productModal38">
+            Detalhes
+          </button>
+          <div class="modal fade" id="productModal38" tabindex="-1" aria-labelledby="productModalLabel38" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="productModalLabel38">CANELA DE VELHO C/60 & 120 CAPS</h5>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fechar"></button>
+                </div>
+                <div class="modal-body">
+                  <img class="imgmodal" src="../public/images/fonte verde/caneladvelho 120cps.png" alt="CANELA DE VELHO C/60 & 120 CAPS">
+                  <p>Auxilia na Artrose, reumatismo, circulação, aumenta a defesa do corpo e previne o envelhecimento.</p>
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
-    </section>
-    </br></br>
-
-    <div class="divider-1"></div>
-    <section class="product-list wrapper">
-
-      <div class="cards-container">
+        
         <div class="card">
           <p class="title">CANELA DE VELHO C/ CLORETO MAGNÉSIO 60 & 120 CAPS</p>
-          <img class="img2" src="../public/images/fonte verde/caneladvelhoCLORETO 60120cps.png"
-            alt="Pré-visualização do produto">
+          <img class="img2" src="../public/images/fonte verde/caneladvelhoCLORETO 60120cps.png" alt="CANELA DE VELHO C/ CLORETO MAGNÉSIO 60 & 120 CAPS">
           <div class="card-info">
-            <!--<p class="tag">Fonte verde</p><-->
-            <p class="title">COD 60 :40 </br>
-              COD 120 :41
-            </p>
-
-
-            <!--<p class="shipping">12UN /CX</p>-->
+            <p class="title">COD 60: 40</br>COD 120: 41</p>
             <p class="shipping">Entrega a combinar</p>
-
           </div>
-          <div class="btinfo"><a class="button-buy">Detalhes</a>
-            <p class="info">Auxilía na Artrose, reumatismo, circulação, aumenta a defesa do corpo e previne o
-              envelhecimento.</br>Suplemento que repõe o magnésio no sangue.</p>
+          <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#productModal40">
+            Detalhes
+          </button>
+          <div class="modal fade" id="productModal40" tabindex="-1" aria-labelledby="productModalLabel40" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="productModalLabel40">CANELA DE VELHO C/ CLORETO MAGNÉSIO 60 & 120 CAPS</h5>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fechar"></button>
+                </div>
+                <div class="modal-body">
+                  <img class="imgmodal" src="../public/images/fonte verde/caneladvelhoCLORETO 60120cps.png" alt="CANELA DE VELHO C/ CLORETO MAGNÉSIO 60 & 120 CAPS">
+                  <p>Auxilia na Artrose, reumatismo, circulação, aumenta a defesa do corpo e previne o envelhecimento.</br>Suplemento que repõe o magnésio no sangue.</p>
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+                </div>
+              </div>
+            </div>
           </div>
-
         </div>
-
+        
         <div class="card">
           <p class="title">CANELA DE VELHO C/ SUCUPIRA 60 & 120 CAPS</p>
-          <img class="img2" src="../public/images/fonte verde/caneladvelhoSUCUPIRA 60120cps.png"
-            alt="Pré-visualização do produto">
+          <img class="img2" src="../public/images/fonte verde/caneladvelhoSUCUPIRA 60120cps.png" alt="CANELA DE VELHO C/ SUCUPIRA 60 & 120 CAPS">
           <div class="card-info">
-            <!--<p class="tag">Fonte verde</p><-->
-            <p class="title">COD 120 :42</br>
-              COD 60 :43
-            </p>
-
-
-            <!--<p class="shipping">12UN /CX</p>-->
+            <p class="title">COD 120: 42</br>COD 60: 43</p>
             <p class="shipping">Entrega a combinar</p>
-
           </div>
-          <div class="btinfo"><a class="button-buy">Detalhes</a>
-            <p class="info">Auxilía na Artrose, reumatismo, circulação, aumenta a defesa do corpo e previne o
-              envelhecimento.</br>A Sucupira faz o tratamento de úlcera no estômago, feridas na pele, alivía a dor e
-              inflamações no organismo..</p>
+          <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#productModal42">
+            Detalhes
+          </button>
+          <div class="modal fade" id="productModal42" tabindex="-1" aria-labelledby="productModalLabel42" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="productModalLabel42">CANELA DE VELHO C/ SUCUPIRA 60 & 120 CAPS</h5>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fechar"></button>
+                </div>
+                <div class="modal-body">
+                  <img class="imgmodal" src="../public/images/fonte verde/caneladvelhoSUCUPIRA 60120cps.png" alt="CANELA DE VELHO C/ SUCUPIRA 60 & 120 CAPS">
+                  <p>Auxilia na Artrose, reumatismo, circulação, aumenta a defesa do corpo e previne o envelhecimento.</br>A Sucupira faz o tratamento de úlcera no estômago, feridas na pele, alivia a dor e inflamações no organismo.</p>
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+                </div>
+              </div>
+            </div>
           </div>
-
         </div>
+        
         <div class="card">
-          <p class="title">CARQUEJA C/ 60 CAPS ⠀ ⠀ ⠀ ⠀ ⠀ ⠀</p>
-          <img class="img2" src="../public/images/fonte verde/carqueja 60caps.png" alt="Pré-visualização do produto">
+          <p class="title">CARQUEJA C/ 60 CAPS</p>
+          <img class="img2" src="../public/images/fonte verde/carqueja 60caps.png" alt="CARQUEJA C/ 60 CAPS">
           <div class="card-info">
-            <!--<p class="tag">Fonte verde</p><-->
-            <p class="title">COD:44
-            </p>
-
-
-            <!--<p class="shipping">12UN /CX</p>-->
+            <p class="title">COD: 44</p>
             <p class="shipping">Entrega a combinar</p>
           </div>
-
-          <div class="btinfo"><a class="button-buy">Detalhes</a>
-            <p class="info">A Carqueja purifica e elimina toxínas no sangue e ajuda no sistema imunológico, melhora a
-              digestão e combate os gases.</p>
+          <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#productModal44">
+            Detalhes
+          </button>
+          <div class="modal fade" id="productModal44" tabindex="-1" aria-labelledby="productModalLabel44" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="productModalLabel44">CARQUEJA C/ 60 CAPS</h5>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fechar"></button>
+                </div>
+                <div class="modal-body">
+                  <img class="imgmodal" src="../public/images/fonte verde/carqueja 60caps.png" alt="CARQUEJA C/ 60 CAPS">
+                  <p>A Carqueja purifica e elimina toxinas no sangue e ajuda no sistema imunológico, melhora a digestão e combate os gases.</p>
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
-
-
-    </section>
+        
     </br></br>
 
     <div class="divider-1"></div>
-    <section class="product-list wrapper">
+    
       <!--<h2 style="text-align: center;">produtos
         <span class="material-symbols-outlined">Totalmente Naturais</span>
       </h2><-->
 
-      <div class="cards-container">
+     
         <div class="card">
           <p class="title">CARTILAGEM DE TUBARÃO C/ 60 CAPS</p>
-          <img class="img2" src="../public/images/fonte verde/CartiTubarao 60caps.png"
-            alt="Pré-visualização do produto">
+          <img class="img2" src="../public/images/fonte verde/CartiTubarao 60caps.png" alt="CARTILAGEM DE TUBARÃO C/ 60 CAPS">
           <div class="card-info">
-            <!--<p class="tag">Fonte verde</p><-->
-            <p class="title">COD:45
-            </p>
-
-
-            <!--<p class="shipping">12UN /CX</p>-->
+            <p class="title">COD: 45</p>
             <p class="shipping">Entrega a combinar</p>
           </div>
-
-          <div class="btinfo"><a class="button-buy">Detalhes</a>
-            <p class="info">Ajuda ao Combate à enfermidades Crônicas como Câncer, artrose, artrite, reumatoide. É
-              inibidor de tumores sólidos e beneficía as articulações.</p>
+          <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#productModal45">
+            Detalhes
+          </button>
+          <div class="modal fade" id="productModal45" tabindex="-1" aria-labelledby="productModalLabel45" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="productModalLabel45">CARTILAGEM DE TUBARÃO C/ 60 CAPS</h5>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fechar"></button>
+                </div>
+                <div class="modal-body">
+                  <img class="imgmodal" src="../public/images/fonte verde/CartiTubarao 60caps.png" alt="CARTILAGEM DE TUBARÃO C/ 60 CAPS">
+                  <p>Ajuda ao combate a enfermidades crônicas como câncer, artrose, artrite, reumatoide. É inibidor de tumores sólidos e beneficia as articulações.</p>
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
-
+        
         <div class="card">
           <p class="title">CARVÃO VEGETAL C/60 CAPS</p>
-          <img class="img2" src="../public/images/fonte verde/carvaovegetal 60caps.png"
-            alt="Pré-visualização do produto">
+          <img class="img2" src="../public/images/fonte verde/carvaovegetal 60caps.png" alt="CARVÃO VEGETAL C/60 CAPS">
           <div class="card-info">
-            <!--<p class="tag">Fonte verde</p><-->
-            <p class="title">COD:46
-            </p>
-
-
-            <!--<p class="shipping">12UN /CX</p>-->
+            <p class="title">COD: 46</p>
             <p class="shipping">Entrega a combinar</p>
           </div>
-
-          <div class="btinfo"><a class="button-buy">Detalhes</a>
-            <p class="info">Tem a capacidade de absorver e reduzir inchaços e dores. Absorve químicas como bebídas
-              alcoólicas e adoçantes artificiais, ajuda a reduzir os sintomas de ressaca.</p>
+          <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#productModal46">
+            Detalhes
+          </button>
+          <div class="modal fade" id="productModal46" tabindex="-1" aria-labelledby="productModalLabel46" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="productModalLabel46">CARVÃO VEGETAL C/60 CAPS</h5>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fechar"></button>
+                </div>
+                <div class="modal-body">
+                  <img class="imgmodal" src="../public/images/fonte verde/carvaovegetal 60caps.png" alt="CARVÃO VEGETAL C/60 CAPS">
+                  <p>Tem a capacidade de absorver e reduzir inchaços e dores. Absorve químicas como bebidas alcoólicas e adoçantes artificiais, ajudando a reduzir os sintomas de ressaca.</p>
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
-
+        
         <div class="card">
-          <p class="title">CASCARA SAGRADA C/60 CAPS</p>
-          <img class="img2" src="../public/images/fonte verde/cascara sagrada60caps.png"
-            alt="Pré-visualização do produto">
+          <p class="title">CÁSCARA SAGRADA C/60 CAPS</p>
+          <img class="img2" src="../public/images/fonte verde/cascara sagrada60caps.png" alt="CÁSCARA SAGRADA C/60 CAPS">
           <div class="card-info">
-            <!--<p class="tag">Fonte verde</p><-->
-            <p class="title">COD:47
-            </p>
-
-
-            <!--<p class="shipping">12UN /CX</p>-->
+            <p class="title">COD: 47</p>
             <p class="shipping">Entrega a combinar</p>
           </div>
-
-          <div class="btinfo"><a class="button-buy">Detalhes</a>
-            <p class="info">É utilizada como laxante, facilita a digestão de gorduras e combate a prisão de ventre e
-              entre outros problemas intestinais.</p>
+          <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#productModal47">
+            Detalhes
+          </button>
+          <div class="modal fade" id="productModal47" tabindex="-1" aria-labelledby="productModalLabel47" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="productModalLabel47">CÁSCARA SAGRADA C/60 CAPS</h5>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fechar"></button>
+                </div>
+                <div class="modal-body">
+                  <img class="imgmodal" src="../public/images/fonte verde/cascara sagrada60caps.png" alt="CÁSCARA SAGRADA C/60 CAPS">
+                  <p>É utilizada como laxante, facilita a digestão de gorduras e combate a prisão de ventre, além de outros problemas intestinais.</p>
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
+        
 
 
 
@@ -610,7 +827,7 @@
 
             setInterval(refreshTime, 1000);</script>
 
-          <a style="color: #fff;" href="https://www.instagram.com/heerick.gg/" target="_blank"><p style="position: relative;" class="mt-5">byHerick&copy;
+          <a style="color: #fff;" href="https://www.instagram.com/hericksouza.gg/" target="_blank"><p style="position: relative;" class="mt-5">byHerick&copy;
           </p></a>
 
         </div>

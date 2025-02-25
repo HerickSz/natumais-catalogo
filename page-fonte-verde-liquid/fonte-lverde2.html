@@ -63,6 +63,61 @@
         <p class="title" style="text-align: center;color: rgb(0, 0, 0); font-size: 20px;">Confira nossos <span
             class="logo-detail">Novos Produtos!</span>
         </p>
+
+        <h1 class="searchh">Pesquisa de Produtos</h1>
+      <input type="text" id="searchInput" placeholder="Pesquisar produto..." onkeyup="searchProducts()">
+      <style>
+        /* Estilo para o título com a classe searchh */
+.searchh {
+  color: #28a745; /* Verde preferencial */
+  text-align: center; /* Centraliza o título */
+  font-size: 1.5em; /* Tamanho da fonte */
+  margin: 20px 0; /* Margens superior e inferior */
+}
+
+/* Estilo para o input */
+#searchInput {
+  width: 100%; /* Largura total */
+  max-width: 400px; /* Largura máxima */
+  padding: 10px; /* Espaçamento interno */
+  border: 2px solid #28a745; /* Borda verde */
+  border-radius: 5px; /* Cantos arredondados */
+  font-size: 1em; /* Tamanho da fonte */
+  margin: 0 auto; /* Centraliza o input */
+  display: block; /* Exibe como bloco */
+  transition: border-color 0.3s; /* Transição suave para a borda */
+  margin-bottom: 10px;
+}
+
+/* Efeito ao focar no input */
+#searchInput:focus {
+  border-color: #218838; /* Verde mais escuro ao focar */
+  outline: none; /* Remove o contorno padrão */
+}
+
+        
+.hidden {
+  display: none;
+}
+    </style>
+     <script>
+      function searchProducts() {
+          const input = document.getElementById('searchInput').value.toLowerCase();
+          const cards = document.querySelectorAll('.card');
+
+          cards.forEach(card => {
+              const title = card.querySelector('.title').textContent.toLowerCase();
+              const code = card.querySelector('.card-info .title').textContent.toLowerCase();
+
+              // Verifica se a entrada do usuário está contida no título ou no código
+              if (title.includes(input) || code.includes(input)) {
+                  card.classList.remove('hidden');
+              } else {
+                  card.classList.add('hidden');
+              }
+          });
+      }
+  </script>
         <div class="page-btn">
           <a class="active-span" href="../page-fonte-verde-liquid/fonte-lverde.html"><span>1</span></a>
           <a class="active-span" href="fonte-verde2.html"><span style="background:#198754; color: #fff;">2</span></a>
@@ -76,124 +131,179 @@
         <div class="cards-container">
           <div class="card">
             <p class="title">PRESSÃO ALTA 500ML</p>
-            <img class="img2" src=".././public/images/fonte verde/pressaoalta500ml.png"
-              alt="Pré-visualização do produto">
+            <img class="img2" src=".././public/images/fonte verde/pressaoalta500ml.png" alt="PRESSÃO ALTA 500ML">
             <div class="card-info">
-              <!--<p class="tag">Fonte verde</p><-->
-              <p class="title">COD:231</p>
-
-
-
-              <p class="shipping"></p>
-              <p class="shipping">Entrega a combinar</p>
+                <p class="title">COD:231</p>
+                <p class="shipping">Entrega a combinar</p>
             </div>
-
-            <div class="btinfo"><a class="button-buy">Detalhes</a>
-              <p class="info">Baixa pouco a pouco a pressão, combate o colesterol, ajuda a emagrecer e purifica o
-                sangue.</br>
-                Ajuda no combate ao reumatismo.</p>
+            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#productModal231">Detalhes</button>
+            <!-- Modal -->
+            <div class="modal fade" id="productModal231" tabindex="-1" aria-labelledby="productModalLabel231" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="productModalLabel231">PRESSÃO ALTA 500ML</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fechar"></button>
+                        </div>
+                        <div class="modal-body">
+                            <img class="imgmodal" src=".././public/images/fonte verde/pressaoalta500ml.png" alt="PRESSÃO ALTA 500ML">
+                            <p>Baixa pouco a pouco a pressão, combate o colesterol, ajuda a emagrecer e purifica o sangue.</p>
+                            <p>Ajuda no combate ao reumatismo.</p>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+                        </div>
+                    </div>
+                </div>
             </div>
-          </div>
-          <div class="card">
-            <p class="title">RINS 500ML</p>
-            <img class="img2" src=".././public/images/fonte verde/Rins500ml.png" alt="Pré-visualização do produto">
-            <div class="card-info">
-              <!--<p class="tag">Fonte verde</p><-->
-              <p class="title">COD:237</p>
-
-
-              <p class="shipping"></p>
-              <p class="shipping">Entrega a combinar</p>
-            </div>
-
-            <div class="btinfo"><a class="button-buy">Detalhes</a>
-              <p class="info">Indicada para a manutenção dos rins, otimiza a filtragem de toxínas, trata o problema de
-                pedra nos rins e demais infecções urinárias.</p>
-            </div>
-          </div>
-          <div class="card">
-            <p class="title">RINS E PRÓSTATA 500ML</p>
-            <img class="img2" src=".././public/images/fonte verde/RinsProstata500ml.png"
-              alt="Pré-visualização do produto">
-            <div class="card-info">
-              <!--<p class="tag">Fonte verde</p><-->
-              <p class="title">COD:238</p>
-
-
-              <p class="shipping"></p>
-              <p class="shipping">Entrega a combinar</p>
-            </div>
-
-            <div class="btinfo"><a class="button-buy">Detalhes</a>
-              <p class="info">Indicada para a manutenção dos rins e da Próstata, otimiza a filtragem de toxínas, trata o
-                problema de
-                pedra nos rins e demais infecções urinárias.</p>
-            </div>
-          </div>
-
-          <div class="card">
-            <p class="title">SAÚDE DA MULHER 500ML</p>
-            <img class="img2" src=".././public/images/fonte verde/saudemulher500ml.png"
-              alt="Pré-visualização do produto">
-            <div class="card-info">
-              <!--<p class="tag">Fonte verde</p><-->
-              <p class="title">Cod:239</p>
-
-
-              <p class="shipping"></p>
-              <p class="shipping">Entrega a combinar</p>
-            </div>
-
-            <div class="btinfo"><a class="button-buy">Detalhes</a>
-              <p class="info">Atual como regulador menstrual e trata o excesso de fluco e dores provocado pelas cólicas.
-              </p>
-            </div>
-          </div>
-
-          <div class="card">
-            <p class="title">SAÚDE DO HOMEM 500ML</p>
-            <img class="img2" src=".././public/images/fonte verde/saudehomem 500ml.png "
-              alt="Pré-visualização do produto">
-            <div class="card-info">
-              <!--<p class="tag">Fonte verde</p><-->
-              <p class="title">Cod:240</p>
-
-
-              <p class="shipping"></p>
-              <p class="shipping">Entrega a combinar</p>
-            </div>
-
-            <div class="btinfo"><a class="button-buy">Detalhes</a>
-              <p class="info">combate o reumatismo, ácido úrico, anti-inflamatório e possui vitamina C,
-                além de sais minerais como ferro, sódio, magnésio e cálcio.</p>
-            </div>
-
-
-          </div>
-
-          <div class="card">
-            <p class="title">SUPER AMARGO 500ML</p>
-            <img class="img2" src=".././public/images/fonte verde/superamargo500ml.png"
-              alt="Pré-visualização do produto">
-            <div class="card-info">
-              <!--<p class="tag">Fonte verde</p><-->
-              <p class="title">Cod:246</p>
-
-
-              <p class="shipping"></p>
-              <p class="shipping">Entrega a combinar</p>
-            </div>
-
-            <div class="btinfo"><a class="button-buy">Detalhes</a>
-              <p class="info">É um concentrador de ervas para combater o sistema gastro-intestinal, regula o intestino e
-                ajuda no combate à gastrite.
-              </p>
-            </div>
-          </div>
-
         </div>
-      </div>
-    </section>
+        
+        <div class="card">
+            <p class="title">RINS 500ML</p>
+            <img class="img2" src=".././public/images/fonte verde/Rins500ml.png" alt="RINS 500ML">
+            <div class="card-info">
+                <p class="title">COD:237</p>
+                <p class="shipping">Entrega a combinar</p>
+            </div>
+            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#productModal237">Detalhes</button>
+            <!-- Modal -->
+            <div class="modal fade" id="productModal237" tabindex="-1" aria-labelledby="productModalLabel237" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="productModalLabel237">RINS 500ML</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fechar"></button>
+                        </div>
+                        <div class="modal-body">
+                            <img class="imgmodal" src=".././public/images/fonte verde/Rins500ml.png" alt="RINS 500ML">
+                            <p>Indicada para a manutenção dos rins, otimiza a filtragem de toxinas, trata o problema de pedra nos rins e demais infecções urinárias.</p>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="card">
+            <p class="title">RINS E PRÓSTATA 500ML</p>
+            <img class="img2" src=".././public/images/fonte verde/RinsProstata500ml.png" alt="RINS E PRÓSTATA 500ML">
+            <div class="card-info">
+                <p class="title">COD:238</p>
+                <p class="shipping">Entrega a combinar</p>
+            </div>
+            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#productModal238">Detalhes</button>
+            <!-- Modal -->
+            <div class="modal fade" id="productModal238" tabindex="-1" aria-labelledby="productModalLabel238" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="productModalLabel238">RINS E PRÓSTATA 500ML</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fechar"></button>
+                        </div>
+                        <div class="modal-body">
+                            <img class="imgmodal" src=".././public/images/fonte verde/RinsProstata500ml.png" alt="RINS E PRÓSTATA 500ML">
+                            <p>Indicada para a manutenção dos rins e da próstata, otimiza a filtragem de toxinas, trata o problema de pedra nos rins e demais infecções urinárias.</p>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="card">
+            <p class="title">SAÚDE DA MULHER 500ML</p>
+            <img class="img2" src=".././public/images/fonte verde/saudemulher500ml.png" alt="SAÚDE DA MULHER 500ML">
+            <div class="card-info">
+                <p class="title">Cod:239</p>
+                <p class="shipping">Entrega a combinar</p>
+            </div>
+            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#productModal239">Detalhes</button>
+            <!-- Modal -->
+            <div class="modal fade" id="productModal239" tabindex="-1" aria-labelledby="productModalLabel239" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="productModalLabel239">SAÚDE DA MULHER 500ML</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fechar"></button>
+                        </div>
+                        <div class="modal-body">
+                            <img class="imgmodal" src=".././public/images/fonte verde/saudemulher500ml.png" alt="SAÚDE DA MULHER 500ML">
+                            <p>Atua como regulador menstrual e trata o excesso de fluxo e dores provocadas pelas cólicas.</p>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="card">
+            <p class="title">SAÚDE DO HOMEM 500ML</p>
+            <img class="img2" src=".././public/images/fonte verde/saudehomem 500ml.png" alt="SAÚDE DO HOMEM 500ML">
+            <div class="card-info">
+                <p class="title">Cod:240</p>
+                <p class="shipping">Entrega a combinar</p>
+            </div>
+            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#productModal240">Detalhes</button>
+            <!-- Modal -->
+            <div class="modal fade" id="productModal240" tabindex="-1" aria-labelledby="productModalLabel240" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="productModalLabel240">SAÚDE DO HOMEM 500ML</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fechar"></button>
+                        </div>
+                        <div class="modal-body">
+                            <img class="imgmodal" src=".././public/images/fonte verde/saudehomem 500ml.png" alt="SAÚDE DO HOMEM 500ML">
+                            <p>Combate o reumatismo, ácido úrico, anti-inflamatório e possui vitamina C, além de sais minerais como ferro, sódio, magnésio e cálcio.</p>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="card">
+            <p class="title">SUPER AMARGO 500ML</p>
+            <img class="img2" src=".././public/images/fonte verde/superamargo500ml.png" alt="SUPER AMARGO 500ML">
+            <div class="card-info">
+                <p class="title">Cod:246</p>
+                <p class="shipping">Entrega a combinar</p>
+            </div>
+            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#productModal246">Detalhes</button>
+            <!-- Modal -->
+            <div class="modal fade" id="productModal246" tabindex="-1" aria-labelledby="productModalLabel246" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="productModalLabel246">SUPER AMARGO 500ML</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fechar"></button>
+                        </div>
+                        <div class="modal-body">
+                            <img class="imgmodal" src=".././public/images/fonte verde/superamargo500ml.png" alt="SUPER AMARGO 500ML">
+                            <p>É um concentrado de ervas para combater o sistema gastro-intestinal, regula o intestino e ajuda no combate à gastrite.</p>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+
+          
+
+       
+      
+  
     </br></br>
 
     <div class="divider-1"></div>
@@ -381,7 +491,7 @@
 
             setInterval(refreshTime, 1000);</script>
 
-          <a style="color: #fff;" href="https://www.instagram.com/heerick.gg/" target="_blank"><p style="position: relative;" class="mt-5">byHerick&copy;
+          <a style="color: #fff;" href="https://www.instagram.com/hericksouza.gg/" target="_blank"><p style="position: relative;" class="mt-5">byHerick&copy;
           </p></a>
 
         </div>

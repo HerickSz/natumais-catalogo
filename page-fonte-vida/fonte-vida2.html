@@ -64,6 +64,61 @@
             class="logo-detail">Novos Produtos!</span>
         </p>
 
+        <h1 class="searchh">Pesquisa de Produtos</h1>
+      <input type="text" id="searchInput" placeholder="Pesquisar produto..." onkeyup="searchProducts()">
+      <style>
+        /* Estilo para o título com a classe searchh */
+.searchh {
+  color: #28a745; /* Verde preferencial */
+  text-align: center; /* Centraliza o título */
+  font-size: 1.5em; /* Tamanho da fonte */
+  margin: 20px 0; /* Margens superior e inferior */
+}
+
+/* Estilo para o input */
+#searchInput {
+  width: 100%; /* Largura total */
+  max-width: 400px; /* Largura máxima */
+  padding: 10px; /* Espaçamento interno */
+  border: 2px solid #28a745; /* Borda verde */
+  border-radius: 5px; /* Cantos arredondados */
+  font-size: 1em; /* Tamanho da fonte */
+  margin: 0 auto; /* Centraliza o input */
+  display: block; /* Exibe como bloco */
+  transition: border-color 0.3s; /* Transição suave para a borda */
+  margin-bottom: 10px;
+}
+
+/* Efeito ao focar no input */
+#searchInput:focus {
+  border-color: #218838; /* Verde mais escuro ao focar */
+  outline: none; /* Remove o contorno padrão */
+}
+
+        
+.hidden {
+  display: none;
+}
+    </style>
+     <script>
+      function searchProducts() {
+          const input = document.getElementById('searchInput').value.toLowerCase();
+          const cards = document.querySelectorAll('.card');
+
+          cards.forEach(card => {
+              const title = card.querySelector('.title').textContent.toLowerCase();
+              const code = card.querySelector('.card-info .title').textContent.toLowerCase();
+
+              // Verifica se a entrada do usuário está contida no título ou no código
+              if (title.includes(input) || code.includes(input)) {
+                  card.classList.remove('hidden');
+              } else {
+                  card.classList.add('hidden');
+              }
+          });
+      }
+  </script>
+
         <h2 style="text-align: center;background-color: rgb(245 245 245);" class="title">Fonte Vida Página 2</h2>
         <div class="page-btn">
           <a href="fonte-vida.html"> <span>1</span></a>
@@ -77,269 +132,350 @@
 
           <div class="card">
             <p class="title">ISOFLAVONA COM AMORA 60/120 CAPS</p>
-
-            <img class="img2" src="../public/images/fonte-vida/isoflavonaAmora60120caps.png"
-              alt="Pré-visualização do produto">
+            <img class="img2" src="../public/images/fonte-vida/isoflavonaAmora60120caps.png" alt="ISOFLAVONA COM AMORA 60/120 CAPS">
             <div class="card-info">
-              <!--<p class="tag">Fonte verde</p><-->
-              <p class="title">COD 60: 1300</br>
-                COD 120: 1470
-              </p>
-
-              <!--<p class="shipping">12UN /CX</p>-->
-              <p class="shipping">Entrega a combinar</p>
+                <p class="title">COD 60: 1300</br>COD 120: 1470</p>
+                <p class="shipping">Entrega a combinar</p>
             </div>
-
-            <div class="btinfo"><a class="button-buy">Detalhes</a>
-              <p class="info">Ajuda na absorção do ferro das refeições. Auxilia na saúde cardiovascular, que ajuda a
-                proteger o coração de danos causados pelos radicais livres. Ajuda a melhorar a visão, por ser rica em
-                vitamina A, que é essencial para a saúde da visão.</p>
+            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#productModal1300">Detalhes</button>
+            <!-- Modal -->
+            <div class="modal fade" id="productModal1300" tabindex="-1" aria-labelledby="productModalLabel1300" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="productModalLabel1300">ISOFLAVONA COM AMORA 60/120 CAPS</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fechar"></button>
+                        </div>
+                        <div class="modal-body">
+                            <img class="imgmodal" src="../public/images/fonte-vida/isoflavonaAmora60120caps.png" alt="ISOFLAVONA COM AMORA 60/120 CAPS">
+                            <p>Ajuda na absorção do ferro das refeições. Auxilia na saúde cardiovascular, que ajuda a proteger o coração de danos causados pelos radicais livres. Ajuda a melhorar a visão, por ser rica em vitamina A, que é essencial para a saúde da visão.</p>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+                        </div>
+                    </div>
+                </div>
             </div>
-          </div>
-          <div class="card">
-            <p class="title">SECA BARRIGA SLIM 60/120 CAPS</p>
-            <img class="img2" src="../public/images/fonte-vida/secabarrigaslim60120caps.png"
-              alt="Pré-visualização do produto">
-            <div class="card-info">
-              <!--<p class="tag">Fonte verde</p><-->
-              <p class="title">COD 60:1301</br>
-                COD 120: 1302
-              </p>
-
-              <!--<p class="shipping">12UN /CX</p>-->
-              <p class="shipping">Entrega a combinar</p>
-            </div>
-
-            <div class="btinfo"><a class="button-buy">Detalhes</a>
-              <p class="info">Auxilia na perda de peso diminuindo a fome, diminuindo a absorção de gordura, aumentando
-                o
-                metabolismo, efeito termogênico e diurético (diminuindo a retenção líquida).
-              </p>
-
-            </div>
-          </div>
-          <div class="card">
-            <p class="title">VALERIANA 60/120 CAPS</p>
-            <img class="img2" src="../public/images/fonte-vida/valeriana60120caps.png"
-              alt="Pré-visualização do produto">
-            <div class="card-info">
-              <!--<p class="tag">Fonte verde</p><-->
-              <p class="title">COD 60:1302</br>
-                COD 120: 1628
-              </p>
-
-
-              <!--<p class="shipping">12UN /CX</p>-->
-            </div>
-
-            <div class="btinfo"><a class="button-buy">Detalhes</a>
-              <p class="info"> É indicado como sedativo moderado, como agente promotor do sono e no tratamento de
-                distúrbios do sono associados à ansiedade.</p>
-              <p class="shipping">Entrega a combinar</p>
-            </div>
-          </div>
-
-          <div class="card">
-            <p class="title">TRIBULLUS TERRESTRIS 60/120 CAPS</p>
-            <img class="img2" src="../public/images/fonte-vida/tribullusTerrestris60120caps.png"
-              alt="Pré-visualização do produto">
-            <div class="card-info">
-              <!--<p class="tag">Fonte verde</p><-->
-              <p class="title">COD 60:1316</br>
-                COD 120: 1485
-              </p>
-
-
-              <!--<p class="shipping">12UN /CX</p>-->
-              <p class="shipping">Entrega a combinar</p>
-            </div>
-
-            <div class="btinfo"><a class="button-buy">Detalhes</a>
-              <p class="info">estimulante sexual e aumento da libido: contém propriedades afrodisíacas, que auxilia na
-                melhora da libido em homens e mulheres; melhora da fertilidade e controle hormonal. </br>
-                Suas ações antioxidantes e anti-inflamatórias ajudam na imunidade do organismo.</p>
-            </div>
-          </div>
-
-          <div class="card">
-            <p class="title">PASSIFLORA 60 CAPS</p>
-            <img class="img2" src="../public/images/fonte-vida/passiflora60caps.png" alt="Pré-visualização do produto">
-            <div class="card-info">
-              <!--<p class="tag">Fonte verde</p><-->
-              <p class="title">COD 60:1368</br>
-              </p>
-              <!--<p class="shipping">12UN /CX</p>-->
-            </div>
-
-            <div class="btinfo"><a class="button-buy">Detalhes</a>
-              <p class="info"> É indicado como sedativo moderado, como agente promotor do sono e no tratamento de
-                distúrbios do sono associados à ansiedade.</p>
-              <p class="shipping">Entrega a combinar</p>
-            </div>
-          </div>
-
-          <div class="card">
-            <p class="title">ORA PRO NÓBIS 60/120 CAPS</p>
-            <img class="img2" src="../public/images/fonte-vida/orapronobis120caps.png"
-              alt="Pré-visualização do produto">
-            <div class="card-info">
-              <!--<p class="tag">Fonte verde</p><-->
-              <p class="title">COD 60:1380</br>
-                COD 120: 1317
-              </p>
-
-
-              <!--<p class="shipping">12UN /CX</p>-->
-              <p class="shipping">Entrega a combinar</p>
-            </div>
-
-            <div class="btinfo"><a class="button-buy">Detalhes</a>
-              <p class="info">A ora-pro-nóbis é uma planta comestível com várias propriedades medicinais, fornecendo
-                diversos benefícios para a saúde, como prevenção da anemia, melhora do funcionamento do intestino,
-                perda
-                de peso, prevenção do envelhecimento precoce e diminuição do colesterol.
-              </p>
-            </div>
-          </div>
-
         </div>
-      </div>
-    </section>
+        
+        <div class="card">
+            <p class="title">SECA BARRIGA SLIM 60/120 CAPS</p>
+            <img class="img2" src="../public/images/fonte-vida/secabarrigaslim60120caps.png" alt="SECA BARRIGA SLIM 60/120 CAPS">
+            <div class="card-info">
+                <p class="title">COD 60:1301</br>COD 120: 1302</p>
+                <p class="shipping">Entrega a combinar</p>
+            </div>
+            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#productModal1301">Detalhes</button>
+            <!-- Modal -->
+            <div class="modal fade" id="productModal1301" tabindex="-1" aria-labelledby="productModalLabel1301" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="productModalLabel1301">SECA BARRIGA SLIM 60/120 CAPS</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fechar"></button>
+                        </div>
+                        <div class="modal-body">
+                            <img class="imgmodal" src="../public/images/fonte-vida/secabarrigaslim60120caps.png" alt="SECA BARRIGA SLIM 60/120 CAPS">
+                            <p>Auxilia na perda de peso diminuindo a fome, diminuindo a absorção de gordura, aumentando o metabolismo, efeito termogênico e diurético (diminuindo a retenção líquida).</p>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="card">
+            <p class="title">VALERIANA 60/120 CAPS</p>
+            <img class="img2" src="../public/images/fonte-vida/valeriana60120caps.png" alt="VALERIANA 60/120 CAPS">
+            <div class="card-info">
+                <p class="title">COD 60:1302</br>COD 120: 1628</p>
+            </div>
+            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#productModal1302">Detalhes</button>
+            <!-- Modal -->
+            <div class="modal fade" id="productModal1302" tabindex="-1" aria-labelledby="productModalLabel1302" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="productModalLabel1302">VALERIANA 60/120 CAPS</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fechar"></button>
+                        </div>
+                        <div class="modal-body">
+                            <img class="imgmodal" src="../public/images/fonte-vida/valeriana60120caps.png" alt="VALERIANA 60/120 CAPS">
+                            <p>É indicado como sedativo moderado, como agente promotor do sono e no tratamento de distúrbios do sono associados à ansiedade.</p>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="card">
+            <p class="title">TRIBULLUS TERRESTRIS 60/120 CAPS</p>
+            <img class="img2" src="../public/images/fonte-vida/tribullusTerrestris60120caps.png" alt="TRIBULLUS TERRESTRIS 60/120 CAPS">
+            <div class="card-info">
+                <p class="title">COD 60:1316</br>COD 120: 1485</p>
+                <p class="shipping">Entrega a combinar</p>
+            </div>
+            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#productModal1316">Detalhes</button>
+            <!-- Modal -->
+            <div class="modal fade" id="productModal1316" tabindex="-1" aria-labelledby="productModalLabel1316" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="productModalLabel1316">TRIBULLUS TERRESTRIS 60/120 CAPS</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fechar"></button>
+                        </div>
+                        <div class="modal-body">
+                            <img class="imgmodal" src="../public/images/fonte-vida/tribullusTerrestris60120caps.png" alt="TRIBULLUS TERRESTRIS 60/120 CAPS">
+                            <p>Estimulante sexual e aumento da libido: contém propriedades afrodisíacas, que auxilia na melhora da libido em homens e mulheres; melhora da fertilidade e controle hormonal. Suas ações antioxidantes e anti-inflamatórias ajudam na imunidade do organismo.</p>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="card">
+            <p class="title">PASSIFLORA 60 CAPS</p>
+            <img class="img2" src="../public/images/fonte-vida/passiflora60caps.png" alt="PASSIFLORA 60 CAPS">
+            <div class="card-info">
+                <p class="title">COD 60:1368</p>
+            </div>
+            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#productModal1368">Detalhes</button>
+            <!-- Modal -->
+            <div class="modal fade" id="productModal1368" tabindex="-1" aria-labelledby="productModalLabel1368" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="productModalLabel1368">PASSIFLORA 60 CAPS</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fechar"></button>
+                        </div>
+                        <div class="modal-body">
+                            <img class="imgmodal" src="../public/images/fonte-vida/passiflora60caps.png" alt="PASSIFLORA 60 CAPS">
+                            <p>É indicado como sedativo moderado, como agente promotor do sono e no tratamento de distúrbios do sono associados à ansiedade.</p>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="card">
+            <p class="title">ORA PRO NÓBIS 60/120 CAPS</p>
+            <img class="img2" src="../public/images/fonte-vida/orapronobis120caps.png" alt="ORA PRO NÓBIS 60/120 CAPS">
+            <div class="card-info">
+                <p class="title">COD 60:1380</br>COD 120: 1317</p>
+                <p class="shipping">Entrega a combinar</p>
+            </div>
+            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#productModal1380">Detalhes</button>
+            <!-- Modal -->
+            <div class="modal fade" id="productModal1380" tabindex="-1" aria-labelledby="productModalLabel1380" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="productModalLabel1380">ORA PRO NÓBIS 60/120 CAPS</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fechar"></button>
+                        </div>
+                        <div class="modal-body">
+                            <img class="imgmodal" src="../public/images/fonte-vida/orapronobis120caps.png" alt="ORA PRO NÓBIS 60/120 CAPS">
+                            <p>A ora-pro-nóbis é uma planta comestível com várias propriedades medicinais, fornecendo diversos benefícios para a saúde, como prevenção da anemia, melhora do funcionamento do intestino, perda de peso, prevenção do envelhecimento precoce e diminuição do colesterol.</p>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+
+          
+
+       
+      
+  
     </br></br>
 
     <div class="divider-1"></div>
 
 
-    <section class="product-list wrapper">
-
-
-      <div class="cards-container">
+    
         <div class="card">
           <p class="title">CANELA DE VELHO </br> C/ SUCUPIRA 60/120CAPS</p>
-          <img class="img2" src="../public/images/fonte-vida/canelavelhoSucupira60120caps.png"
-            alt="Pré-visualização do produto">
+          <img class="img2" src="../public/images/fonte-vida/canelavelhoSucupira60120caps.png" alt="CANELA DE VELHO C/ SUCUPIRA 60/120 CAPS">
           <div class="card-info">
-            <!--<p class="tag">Fonte verde</p><-->
-            <p class="title">COD 60:1318</br>
-              COD 120: 1537
-            </p>
-
-            <!--<p class="shipping">12UN /CX</p>-->
-            <p class="shipping">Entrega a combinar</p>
+              <p class="title">COD 60:1318</br>COD 120: 1537</p>
+              <p class="shipping">Entrega a combinar</p>
           </div>
-
-          <div class="btinfo"><a class="button-buy">Detalhes</a>
-            <p class="info">É indicado para auxiliar no tratamento contra as dores provocadas pela artrose, artrite e
-              demais enfermidades nas articulações. Sua fórmula é enriquecida com elementos que atuam também no sistema
-              digestivo, podendo aliviar dores estomacais e intestinais.</p>
-
+          <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#productModal1318">Detalhes</button>
+          <!-- Modal -->
+          <div class="modal fade" id="productModal1318" tabindex="-1" aria-labelledby="productModalLabel1318" aria-hidden="true">
+              <div class="modal-dialog modal-dialog-centered">
+                  <div class="modal-content">
+                      <div class="modal-header">
+                          <h5 class="modal-title" id="productModalLabel1318">CANELA DE VELHO C/ SUCUPIRA 60/120CAPS</h5>
+                          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fechar"></button>
+                      </div>
+                      <div class="modal-body">
+                          <img class="imgmodal" src="../public/images/fonte-vida/canelavelhoSucupira60120caps.png" alt="CANELA DE VELHO C/ SUCUPIRA 60/120 CAPS">
+                          <p>É indicado para auxiliar no tratamento contra as dores provocadas pela artrose, artrite e demais enfermidades nas articulações. Sua fórmula é enriquecida com elementos que atuam também no sistema digestivo, podendo aliviar dores estomacais e intestinais.</p>
+                      </div>
+                      <div class="modal-footer">
+                          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+                      </div>
+                  </div>
+              </div>
           </div>
-        </div>
-        <div class="card">
+      </div>
+      
+      <div class="card">
           <p class="title">CALMAX C/60 CAPS</p>
-          <img class="img2" src="../public/images/fonte-vida/calmax60caps.png" alt="Pré-visualização do produto">
+          <img class="img2" src="../public/images/fonte-vida/calmax60caps.png" alt="CALMAX C/60 CAPS">
           <div class="card-info">
-            <!--<p class="tag">Fonte verde</p><-->
-            <p class="title">COD:1319
-            </p>
-
-
-            <!--<p class="shipping">12UN /CX</p>-->
-            <p class="shipping">Entrega a combinar</p>
+              <p class="title">COD:1319</p>
+              <p class="shipping">Entrega a combinar</p>
           </div>
-
-          <div class="btinfo"><a class="button-buy">Detalhes</a>
-            <p class="info">O Calmax é um suplemento alimentar líquido a base de maracujá, funcho, camomila e valeriana.
-              Estes ingredientes são conhecidos por suas propriedades calmantes, portanto o Calmax age como relaxante do
-              sistema nervoso, sendo muito indicado como um indutor natural do sono.</p>
+          <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#productModal1319">Detalhes</button>
+          <!-- Modal -->
+          <div class="modal fade" id="productModal1319" tabindex="-1" aria-labelledby="productModalLabel1319" aria-hidden="true">
+              <div class="modal-dialog modal-dialog-centered">
+                  <div class="modal-content">
+                      <div class="modal-header">
+                          <h5 class="modal-title" id="productModalLabel1319">CALMAX C/60 CAPS</h5>
+                          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fechar"></button>
+                      </div>
+                      <div class="modal-body">
+                          <img class="imgmodal" src="../public/images/fonte-vida/calmax60caps.png" alt="CALMAX C/60 CAPS">
+                          <p>O Calmax é um suplemento alimentar líquido à base de maracujá, funcho, camomila e valeriana. Estes ingredientes são conhecidos por suas propriedades calmantes, portanto o Calmax age como relaxante do sistema nervoso, sendo muito indicado como um indutor natural do sono.</p>
+                      </div>
+                      <div class="modal-footer">
+                          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+                      </div>
+                  </div>
+              </div>
           </div>
-        </div>
-        <div class="card">
+      </div>
+      
+      <div class="card">
           <p class="title">ALCACHOFRA C/ BERINJELA 60CAPS</p>
-          <img class="img2" src="../public/images/fonte-vida/alcachofraBeringela120caps.png"
-            alt="Pré-visualização do produto">
+          <img class="img2" src="../public/images/fonte-vida/alcachofraBeringela120caps.png" alt="ALCACHOFRA C/ BERINJELA 60 CAPS">
           <div class="card-info">
-            <!--<p class="tag">Fonte verde</p><-->
-            <p class="title">COD:1320
-            </p>
-
-            <!--<p class="shipping">12UN /CX</p>-->
-            <p class="shipping">Entrega a combinar</p>
+              <p class="title">COD:1320</p>
+              <p class="shipping">Entrega a combinar</p>
           </div>
-
-          <div class="btinfo"><a class="button-buy">Detalhes</a>
-            <p class="info">Possui ação hepatoprotetora;</br>
-              Melhora a secreção de bile;</br>
-              Auxilia no controle da glicose no sangue;</br>
-              Estimula a eliminação de toxinas;</br>
-              Ajuda no controle do colesterol;</br>
-              Favorece o gerenciamento de peso corporal.</p>
-
+          <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#productModal1320">Detalhes</button>
+          <!-- Modal -->
+          <div class="modal fade" id="productModal1320" tabindex="-1" aria-labelledby="productModalLabel1320" aria-hidden="true">
+              <div class="modal-dialog modal-dialog-centered">
+                  <div class="modal-content">
+                      <div class="modal-header">
+                          <h5 class="modal-title" id="productModalLabel1320">ALCACHOFRA C/ BERINJELA 60CAPS</h5>
+                          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fechar"></button>
+                      </div>
+                      <div class="modal-body">
+                          <img class="imgmodal" src="../public/images/fonte-vida/alcachofraBeringela120caps.png" alt="ALCACHOFRA C/ BERINJELA 60 CAPS">
+                          <p>Possui ação hepatoprotetora; Melhora a secreção de bile; Auxilia no controle da glicose no sangue; Estimula a eliminação de toxinas; Ajuda no controle do colesterol; Favorece o gerenciamento de peso corporal.</p>
+                      </div>
+                      <div class="modal-footer">
+                          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+                      </div>
+                  </div>
+              </div>
           </div>
-        </div>
-
-        <div class="card">
+      </div>
+      
+      <div class="card">
           <p class="title">AMORA MIÚRA 60/120 CAPS</p>
-          <img class="img2" src="../public/images/fonte-vida/amoramiura60120caps.png" alt="Pré-visualização do produto">
+          <img class="img2" src="../public/images/fonte-vida/amoramiura60120caps.png" alt="AMORA MIÚRA 60/120 CAPS">
           <div class="card-info">
-            <!--<p class="tag">Fonte verde</p><-->
-            <p class="title">COD 60:1321</br>
-              COD 120: 1584
-            </p>
-
-
-            <!--<p class="shipping">12UN /CX</p>-->
-            <p class="shipping">Entrega a combinar</p>
+              <p class="title">COD 60:1321</br>COD 120: 1584</p>
+              <p class="shipping">Entrega a combinar</p>
           </div>
-
-          <div class="btinfo"><a class="button-buy">Detalhes</a>
-            <p class="info">Ela atua nos sintomas da menopausa e TPM como irritabilidade, insônia, ansiedade,
-              nervosismo, dores musculares e das articulações e calores excessivos (no caso da menopausa). Outra
-              utilização é como tônico muscular nas práticas desportivas, pois possui alto teor de cálcio e potássio.
-            </p>
+          <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#productModal1321">Detalhes</button>
+          <!-- Modal -->
+          <div class="modal fade" id="productModal1321" tabindex="-1" aria-labelledby="productModalLabel1321" aria-hidden="true">
+              <div class="modal-dialog modal-dialog-centered">
+                  <div class="modal-content">
+                      <div class="modal-header">
+                          <h5 class="modal-title" id="productModalLabel1321">AMORA MIÚRA 60/120 CAPS</h5>
+                          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fechar"></button>
+                      </div>
+                      <div class="modal-body">
+                          <img class="imgmodal" src="../public/images/fonte-vida/amoramiura60120caps.png" alt="AMORA MIÚRA 60/120 CAPS">
+                          <p>Ela atua nos sintomas da menopausa e TPM como irritabilidade, insônia, ansiedade, nervosismo, dores musculares e das articulações e calores excessivos (no caso da menopausa). Outra utilização é como tônico muscular nas práticas desportivas, pois possui alto teor de cálcio e potássio.</p>
+                      </div>
+                      <div class="modal-footer">
+                          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+                      </div>
+                  </div>
+              </div>
           </div>
-        </div>
-
-        <div class="card">
+      </div>
+      
+      <div class="card">
           <p class="title">COLAGENO 60 CAPS</p>
-          <img class="img2" src="../public/images/fonte-vida/colageno60caps.png" alt="Pré-visualização do produto">
+          <img class="img2" src="../public/images/fonte-vida/colageno60caps.png" alt="COLÁGENO 60 CAPS">
           <div class="card-info">
-            <!--<p class="tag">Fonte verde</p><-->
-            <p class="title">COD:1331
-            </p>
-
-
-            <!--<p class="shipping">12UN /CX</p>-->
-            <p class="shipping">Entrega a combinar</p>
+              <p class="title">COD:1331</p>
+              <p class="shipping">Entrega a combinar</p>
           </div>
-
-          <div class="btinfo"><a class="button-buy">Detalhes</a>
-            <p class="info">Proporciona firmeza e elasticidade, além de combater a flacidez e o envelhecimento da pele.
-              Esse suplemento também contribui para o fortalecimento dos cabelos e unhas.</p>
+          <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#productModal1331">Detalhes</button>
+          <!-- Modal -->
+          <div class="modal fade" id="productModal1331" tabindex="-1" aria-labelledby="productModalLabel1331" aria-hidden="true">
+              <div class="modal-dialog modal-dialog-centered">
+                  <div class="modal-content">
+                      <div class="modal-header">
+                          <h5 class="modal-title" id="productModalLabel1331">COLÁGENO 60 CAPS</h5>
+                          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fechar"></button>
+                      </div>
+                      <div class="modal-body">
+                          <img class="imgmodal" src="../public/images/fonte-vida/colageno60caps.png" alt="COLÁGENO 60 CAPS">
+                          <p>Proporciona firmeza e elasticidade, além de combater a flacidez e o envelhecimento da pele. Esse suplemento também contribui para o fortalecimento dos cabelos e unhas.</p>
+                      </div>
+                      <div class="modal-footer">
+                          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+                      </div>
+                  </div>
+              </div>
           </div>
-        </div>
-
-        <div class="card">
+      </div>
+      
+      <div class="card">
           <p class="title">CREATINA C/ 120CAPS</p>
-          <img class="img2" src="../public/images/fonte-vida/creatina120caps.png" alt="Pré-visualização do produto">
+          <img class="img2" src="../public/images/fonte-vida/creatina120caps.png" alt="CREATINA C/120 CAPS">
           <div class="card-info">
-            <!--<p class="tag">Fonte verde</p><-->
-            <p class="title">
-              COD 120: 1335
-            </p>
-
-
-            <!--<p class="shipping">12UN /CX</p>-->
-            <p class="shipping">Entrega a combinar</p>
+              <p class="title">COD 120: 1335</p>
+              <p class="shipping">Entrega a combinar</p>
           </div>
-
-          <div class="btinfo"><a class="button-buy">Detalhes</a>
-            <p class="info">Auxilia no aumento dos estoques e no armazenamento da creatina dentro do músculo, o que é
-              fundamental para a produção da energia usada na contração muscular. A Creatina é um suplemento
-              indispensável para quem deseja ganho de força e aumento de massa muscular.
-            </p>
+          <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#productModal1335">Detalhes</button>
+          <!-- Modal -->
+          <div class="modal fade" id="productModal1335" tabindex="-1" aria-labelledby="productModalLabel1335" aria-hidden="true">
+              <div class="modal-dialog modal-dialog-centered">
+                  <div class="modal-content">
+                      <div class="modal-header">
+                          <h5 class="modal-title" id="productModalLabel1335">CREATINA C/ 120CAPS</h5>
+                          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fechar"></button>
+                      </div>
+                      <div class="modal-body">
+                          <img class="imgmodal" src="../public/images/fonte-vida/creatina120caps.png" alt="CREATINA C/120 CAPS">
+                          <p>Auxilia no aumento dos estoques e no armazenamento da creatina dentro do músculo, o que é fundamental para a produção da energia usada na contração muscular. A Creatina é um suplemento indispensável para quem deseja ganho de força e aumento de massa muscular.</p>
+                      </div>
+                      <div class="modal-footer">
+                          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+                      </div>
+                  </div>
+              </div>
           </div>
-        </div>
+      </div>
+      
     </section>
     </br></br> </section>
 
@@ -491,7 +627,7 @@
 
             setInterval(refreshTime, 1000);</script>
 
-          <a style="color: #fff;" href="https://www.instagram.com/heerick.gg/" target="_blank"><p style="position: relative;" class="mt-5">byHerick&copy;
+          <a style="color: #fff;" href="https://www.instagram.com/hericksouza.gg/" target="_blank"><p style="position: relative;" class="mt-5">byHerick&copy;
           </p></a>
 
         </div>

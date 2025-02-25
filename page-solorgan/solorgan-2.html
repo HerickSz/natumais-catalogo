@@ -63,6 +63,61 @@
             class="logo-detail">Novos Produtos!</span>
         </p>
 
+        <h1 class="searchh">Pesquisa de Produtos</h1>
+      <input type="text" id="searchInput" placeholder="Pesquisar produto..." onkeyup="searchProducts()">
+      <style>
+        /* Estilo para o título com a classe searchh */
+.searchh {
+  color: #28a745; /* Verde preferencial */
+  text-align: center; /* Centraliza o título */
+  font-size: 1.5em; /* Tamanho da fonte */
+  margin: 20px 0; /* Margens superior e inferior */
+}
+
+/* Estilo para o input */
+#searchInput {
+  width: 100%; /* Largura total */
+  max-width: 400px; /* Largura máxima */
+  padding: 10px; /* Espaçamento interno */
+  border: 2px solid #28a745; /* Borda verde */
+  border-radius: 5px; /* Cantos arredondados */
+  font-size: 1em; /* Tamanho da fonte */
+  margin: 0 auto; /* Centraliza o input */
+  display: block; /* Exibe como bloco */
+  transition: border-color 0.3s; /* Transição suave para a borda */
+  margin-bottom: 10px;
+}
+
+/* Efeito ao focar no input */
+#searchInput:focus {
+  border-color: #218838; /* Verde mais escuro ao focar */
+  outline: none; /* Remove o contorno padrão */
+}
+
+        
+.hidden {
+  display: none;
+}
+    </style>
+     <script>
+      function searchProducts() {
+          const input = document.getElementById('searchInput').value.toLowerCase();
+          const cards = document.querySelectorAll('.card');
+
+          cards.forEach(card => {
+              const title = card.querySelector('.title').textContent.toLowerCase();
+              const code = card.querySelector('.card-info .title').textContent.toLowerCase();
+
+              // Verifica se a entrada do usuário está contida no título ou no código
+              if (title.includes(input) || code.includes(input)) {
+                  card.classList.remove('hidden');
+              } else {
+                  card.classList.add('hidden');
+              }
+          });
+      }
+  </script>
+
         <h2 style="text-align: center;background-color: rgb(245 245 245);" class="title">Solorgan Página 2</h2>
         <div class="page-btn">
           <a href="solorgan.html"> <span>1</span></a>
@@ -76,265 +131,384 @@
 
           <div class="card">
             <p class="title">ÓLEO DE LINHAÇA C/ 60/120 CAPS</p>
-
-            <img class="img2" src="../public/images/solorgan/oleolinhaca60caps.png" alt="Pré-visualização do produto">
+            <img class="img2" src="../public/images/solorgan/oleolinhaca60caps.png" alt="ÓLEO DE LINHAÇA C/ 60/120 CAPS">
             <div class="card-info">
-              <!--<p class="tag">Fonte verde</p><-->
-              <p class="title">COD 60: 1417 </br>
-                COD 120: 350</p>
-
-              <p class="shipping"></p>
-              <p class="shipping">Entrega a combinar</p>
+                <p class="title">COD 60: 1417 </br> COD 120: 350</p>
+                <p class="shipping">Entrega a combinar</p>
             </div>
-
-            <div class="btinfo"><a class="button-buy">Detalhes</a>
-              <p class="info">O óleo de linhaça é um estimulador da produção de cálcio no organismo, e com isso ajuda no
-                fortalecimento dos ossos e na prevenção da osteoporose.</p>
+            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#productModal13">
+                Detalhes
+            </button>
+        
+            <!-- Modal 13 -->
+            <div class="modal fade" id="productModal13" tabindex="-1" aria-labelledby="productModalLabel13" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="productModalLabel13">ÓLEO DE LINHAÇA C/ 60/120 CAPS</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fechar"></button>
+                        </div>
+                        <div class="modal-body">
+                            <img class="imgmodal" src="../public/images/solorgan/oleolinhaca60caps.png" alt="ÓLEO DE LINHAÇA C/ 60/120 CAPS">
+                            <p>O óleo de linhaça é um estimulador da produção de cálcio no organismo, e com isso ajuda no fortalecimento dos ossos e na prevenção da osteoporose.</p>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+                        </div>
+                    </div>
+                </div>
             </div>
-          </div>
-          <div class="card">
-            <p class="title">ÓLEO DE PRÍMULA C/ 60 CAPS</p>
-            <img class="img2" src="../public/images/solorgan/oleoprimula60caps.png" alt="Pré-visualização do produto">
-            <div class="card-info">
-              <!--<p class="tag">Fonte verde</p><-->
-              <p class="title">COD 60: 352 </p>
-
-              <p class="shipping"></p>
-              <p class="shipping">Entrega a combinar</p>
-            </div>
-
-            <div class="btinfo"><a class="button-buy">Detalhes</a>
-              <p class="info">Auxilia na redução dos sintomas da tensão pré-menstrual, contribui para o equilíbrio dos
-                hormônios femininos, além de ajudar na redução das inflamações da pele.
-              </p>
-
-            </div>
-          </div>
-          <div class="card">
-            <p class="title"> ÔMEGA TRIO 3,6,9 C/ 60/120 CAPS</p>
-            <img class="img2" src="../public/images/solorgan/omegatrio36960caps.png" alt="Pré-visualização do produto">
-            <div class="card-info">
-              <!--<p class="tag">Fonte verde</p><-->
-              <p class="title">COD 60: 355 </br>
-                COD 120: 356
-              </p>
-
-
-              <p class="shipping"></p>
-            </div>
-
-            <div class="btinfo"><a class="button-buy">Detalhes</a>
-              <p class="info">Os ômega 3, 6 e 9 servem para manter a estrutura das células e do sistema nervoso, baixar
-                o colesterol ruim, aumentar o colesterol bom, prevenir doenças do coração, além de aumentar o bem estar,
-                melhorar a imunidade.</p>
-              <p class="shipping">Entrega a combinar</p>
-            </div>
-          </div>
-
-          <div class="card">
-            <p class="title">PICOLINATO DE CROMO C/ 60 CAPS</p>
-            <img class="img2" src="../public/images/solorgan/picolinatocromo60caps.png"
-              alt="Pré-visualização do produto">
-            <div class="card-info">
-              <!--<p class="tag">Fonte verde</p><-->
-              <p class="title">Cod:358</p>
-
-
-              <p class="shipping"></p>
-              <p class="shipping">Entrega a combinar</p>
-            </div>
-
-            <div class="btinfo"><a class="button-buy">Detalhes</a>
-              <p class="info">O Picolinato de Cromo é coadjuvante no tratamento da diabetes (pacientes com baixos níveis
-                de cromo apresentam diminuição de tolerância à glicose) e tem como principal função a potencialização
-                dos efeitos da insulina e, por meio dela, alterar o metabolismo da glicose, de aminoácidos e lipídios.
-              </p>
-            </div>
-          </div>
-
-          <div class="card">
-            <p class="title">COLÁGENO TIPO II C/ 60/120</p>
-            <img class="img2" src="../public/images/solorgan/colagenotp260120caps.png"
-              alt="Pré-visualização do produto">
-            <div class="card-info">
-              <!--<p class="tag">Fonte verde</p><-->
-              <p class="title">COD 60: 363 </br>
-                COD 120: 1200</p>
-
-
-              <p class="shipping"></p>
-              <p class="shipping">Entrega a combinar</p>
-            </div>
-
-            <div class="btinfo"><a class="button-buy">Detalhes</a>
-              <p class="info">O colágeno tipo 2 é um tipo de colágeno encontrado principalmente nas cartilagens. Ele é
-                importante para manter a elasticidade e a força das cartilagens, o que pode ajudar a proteger as
-                articulações contra a dor e a deformidade.</p>
-            </div>
-          </div>
-
-          <div class="card">
-            <p class="title">AMORA BRANCA C/ 60/120</p>
-            <img class="img2" src="../public/images/solorgan/amorabranca60120caps.png"
-              alt="Pré-visualização do produto">
-            <div class="card-info">
-              <!--<p class="tag">Fonte verde</p><-->
-              <p class="title">COD 60: 706 </br>
-                COD 120: 1676</p>
-
-
-              <p class="shipping"></p>
-              <p class="shipping">Entrega a combinar</p>
-            </div>
-
-            <div class="btinfo"><a class="button-buy">Detalhes</a>
-              <p class="info">Ela atua nos sintomas da menopausa e TPM como irritabilidade, insônia, ansiedade,
-                nervosismo, dores musculares e das articulações e calores excessivos (no caso da menopausa). </br>
-                A amora
-                contém pectina em abundância, uma fibra solúvel que ajuda a reduzir os níveis de colesterol no sangue.
-              </p>
-            </div>
-          </div>
         </div>
-    </section>
+        
+        <div class="card">
+            <p class="title">ÓLEO DE PRÍMULA C/ 60 CAPS</p>
+            <img class="img2" src="../public/images/solorgan/oleoprimula60caps.png" alt="ÓLEO DE PRÍMULA C/ 60 CAPS">
+            <div class="card-info">
+                <p class="title">COD 60: 352</p>
+                <p class="shipping">Entrega a combinar</p>
+            </div>
+            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#productModal14">
+                Detalhes
+            </button>
+        
+            <!-- Modal 14 -->
+            <div class="modal fade" id="productModal14" tabindex="-1" aria-labelledby="productModalLabel14" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="productModalLabel14">ÓLEO DE PRÍMULA C/ 60 CAPS</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fechar"></button>
+                        </div>
+                        <div class="modal-body">
+                            <img class="imgmodal" src="../public/images/solorgan/oleoprimula60caps.png" alt="ÓLEO DE PRÍMULA C/ 60 CAPS">
+                            <p>Auxilia na redução dos sintomas da tensão pré-menstrual, contribui para o equilíbrio dos hormônios femininos, além de ajudar na redução das inflamações da pele.</p>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="card">
+            <p class="title">ÔMEGA TRIO 3,6,9 C/ 60/120 CAPS</p>
+            <img class="img2" src="../public/images/solorgan/omegatrio36960caps.png" alt="ÔMEGA TRIO 3,6,9 C/ 60/120 CAPS">
+            <div class="card-info">
+                <p class="title">COD 60: 355 </br> COD 120: 356</p>
+                <p class="shipping">Entrega a combinar</p>
+            </div>
+            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#productModal15">
+                Detalhes
+            </button>
+        
+            <!-- Modal 15 -->
+            <div class="modal fade" id="productModal15" tabindex="-1" aria-labelledby="productModalLabel15" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="productModalLabel15">ÔMEGA TRIO 3,6,9 C/ 60/120 CAPS</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fechar"></button>
+                        </div>
+                        <div class="modal-body">
+                            <img class="imgmodal" src="../public/images/solorgan/omegatrio36960caps.png" alt="ÔMEGA TRIO 3,6,9 C/ 60/120 CAPS">
+                            <p>Os ômega 3, 6 e 9 servem para manter a estrutura das células e do sistema nervoso, baixar o colesterol ruim, aumentar o colesterol bom, prevenir doenças do coração, além de aumentar o bem estar e melhorar a imunidade.</p>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="card">
+            <p class="title">PICOLINATO DE CROMO C/ 60 CAPS</p>
+            <img class="img2" src="../public/images/solorgan/picolinatocromo60caps.png" alt="PICOLINATO DE CROMO C/ 60 CAPS">
+            <div class="card-info">
+                <p class="title">Cod: 358</p>
+                <p class="shipping">Entrega a combinar</p>
+            </div>
+            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#productModal16">
+                Detalhes
+            </button>
+        
+            <!-- Modal 16 -->
+            <div class="modal fade" id="productModal16" tabindex="-1" aria-labelledby="productModalLabel16" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="productModalLabel16">PICOLINATO DE CROMO C/ 60 CAPS</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fechar"></button>
+                        </div>
+                        <div class="modal-body">
+                            <img class="imgmodal" src="../public/images/solorgan/picolinatocromo60caps.png" alt="PICOLINATO DE CROMO C/ 60 CAPS">
+                            <p>O Picolinato de Cromo é coadjuvante no tratamento da diabetes e tem como principal função a potencialização dos efeitos da insulina e, por meio dela, alterar o metabolismo da glicose, de aminoácidos e lipídios.</p>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="card">
+            <p class="title">COLÁGENO TIPO II C/ 60/120</p>
+            <img class="img2" src="../public/images/solorgan/colagenotp260120caps.png" alt="COLÁGENO TIPO II C/ 60/120 CAPS">
+            <div class="card-info">
+                <p class="title">COD 60: 363 </br> COD 120: 1200</p>
+                <p class="shipping">Entrega a combinar</p>
+            </div>
+            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#productModal17">
+                Detalhes
+            </button>
+        
+            <!-- Modal 17 -->
+            <div class="modal fade" id="productModal17" tabindex="-1" aria-labelledby="productModalLabel17" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="productModalLabel17">COLÁGENO TIPO II C/ 60/120 CAPS</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fechar"></button>
+                        </div>
+                        <div class="modal-body">
+                            <img class="imgmodal" src="../public/images/solorgan/colagenotp260120caps.png" alt="COLÁGENO TIPO II C/ 60/120 CAPS">
+                            <p>O colágeno tipo 2 é importante para manter a elasticidade e a força das cartilagens, ajudando a proteger as articulações contra a dor e a deformidade.</p>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="card">
+            <p class="title">AMORA BRANCA C/ 60/120</p>
+            <img class="img2" src="../public/images/solorgan/amorabranca60120caps.png" alt="AMORA BRANCA C/ 60/120 CAPS">
+            <div class="card-info">
+                <p class="title">COD 60: 706 </br> COD 120: 1676</p>
+                <p class="shipping">Entrega a combinar</p>
+            </div>
+            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#productModal18">
+                Detalhes
+            </button>
+        
+            <!-- Modal 18 -->
+            <div class="modal fade" id="productModal18" tabindex="-1" aria-labelledby="productModalLabel18" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="productModalLabel18">AMORA BRANCA C/ 60/120 CAPS</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fechar"></button>
+                        </div>
+                        <div class="modal-body">
+                            <img class="imgmodal" src="../public/images/solorgan/amorabranca60120caps.png" alt="AMORA BRANCA C/ 60/120 CAPS">
+                            <p>A amora branca atua nos sintomas da menopausa e TPM, como irritabilidade, insônia, ansiedade, nervosismo, dores musculares e calores excessivos. Além disso, contém pectina, uma fibra que ajuda a reduzir os níveis de colesterol.</p>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        
+        
+        </div>
+    
     </br></br>
 
     <div class="divider-1"></div>
 
 
-    <section class="product-list wrapper">
-
-
-      <div class="cards-container">
+    
         <div class="card">
           <p class="title">CLORETO HIDROLISADO C/ 60/120 CAPS</p>
-          <img class="img2" src="../public/images/solorgan/berinjela60caps.png" alt="Pré-visualização do produto">
+          <img class="img2" src="../public/images/solorgan/berinjela60caps.png" alt="CLORETO HIDROLISADO C/ 60/120 CAPS">
           <div class="card-info">
-            <!--<p class="tag">Fonte verde</p><-->
-            <p class="title">COD 60: 766
-            </p>
-            </p>
-
-            <p class="shipping"></p>
-            <p class="shipping">Entrega a combinar</p>
+              <p class="title">COD 60: 766</p>
+              <p class="shipping">Entrega a combinar</p>
           </div>
-
-          <div class="btinfo"><a class="button-buy">Detalhes</a>
-            <p class="info">1- Melhora o colesterol bom (HDL) no organismo; </br>2- Auxilia na diminuição de placas de
-              gorduras nas artérias; </br>3- Aumenta a secreção da bile, isto é, auxilia no emagrecimento, pois a bile é
-              responsável por quebrar as gorduras na alimentação.</p>
-
+          <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#productModal19">
+              Detalhes
+          </button>
+      
+          <!-- Modal 19 -->
+          <div class="modal fade" id="productModal19" tabindex="-1" aria-labelledby="productModalLabel19" aria-hidden="true">
+              <div class="modal-dialog modal-dialog-centered">
+                  <div class="modal-content">
+                      <div class="modal-header">
+                          <h5 class="modal-title" id="productModalLabel19">CLORETO HIDROLISADO C/ 60/120 CAPS</h5>
+                          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fechar"></button>
+                      </div>
+                      <div class="modal-body">
+                          <img class="imgmodal" src="../public/images/solorgan/berinjela60caps.png" alt="CLORETO HIDROLISADO C/ 60/120 CAPS">
+                          <p>1- Melhora o colesterol bom (HDL) no organismo;<br> 2- Auxilia na diminuição de placas de gorduras nas artérias;<br> 3- Aumenta a secreção da bile, auxiliando no emagrecimento, pois a bile é responsável por quebrar as gorduras na alimentação.</p>
+                      </div>
+                      <div class="modal-footer">
+                          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+                      </div>
+                  </div>
+              </div>
           </div>
-        </div>
-        <div class="card">
+      </div>
+      
+      <div class="card">
           <p class="title">ORA PRÓ NÓBIS + CÚRCUMA + GENGIBRE </br>C/ 60 CAPS</p>
-          <img class="img2" src="../public/images/solorgan/orapronobiscurgen60caps.png"
-            alt="Pré-visualização do produto">
+          <img class="img2" src="../public/images/solorgan/orapronobiscurgen60caps.png" alt="ORA PRÓ NÓBIS + CÚRCUMA + GENGIBRE C/ 60 CAPS">
           <div class="card-info">
-            <!--<p class="tag">Fonte verde</p><-->
-            <p class="title">COD 60: 868
-            </p>
-            </p>
-
-
-            <p class="shipping"></p>
-            <p class="shipping">Entrega a combinar</p>
+              <p class="title">COD 60: 868</p>
+              <p class="shipping">Entrega a combinar</p>
           </div>
-
-          <div class="btinfo"><a class="button-buy">Detalhes</a>
-            <p class="info">Benefícios:</br></br>
-              Evitar o envelhecimento. </br>Fortalecer os ossos e dentes. </br></br>Cúrcuma: Antioxidante e
-              Anti-inflamatória; Antibacteriana, antifúngica e antiviral; Antidiarreica, Antiescorbútica e
-              Antiespasmódica; Diurética; Auxilia na melhora da saúde do fígado, cirrose; Redutora dos níveis de
-              colesterol.</p>
+          <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#productModal20">
+              Detalhes
+          </button>
+      
+          <!-- Modal 20 -->
+          <div class="modal fade" id="productModal20" tabindex="-1" aria-labelledby="productModalLabel20" aria-hidden="true">
+              <div class="modal-dialog modal-dialog-centered">
+                  <div class="modal-content">
+                      <div class="modal-header">
+                          <h5 class="modal-title" id="productModalLabel20">ORA PRÓ NÓBIS + CÚRCUMA + GENGIBRE C/ 60 CAPS</h5>
+                          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fechar"></button>
+                      </div>
+                      <div class="modal-body">
+                          <img class="imgmodal" src="../public/images/solorgan/orapronobiscurgen60caps.png" alt="ORA PRÓ NÓBIS + CÚRCUMA + GENGIBRE C/ 60 CAPS">
+                          <p>Benefícios:<br><br> Evitar o envelhecimento.<br> Fortalecer os ossos e dentes.<br><br>Cúrcuma: Antioxidante e anti-inflamatória; antibacteriana, antifúngica e antiviral; auxilia na saúde do fígado e redução dos níveis de colesterol.</p>
+                      </div>
+                      <div class="modal-footer">
+                          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+                      </div>
+                  </div>
+              </div>
           </div>
-        </div>
-        <div class="card">
+      </div>
+      
+      <div class="card">
           <p class="title">GINKGO BILOBA C/ 60 CAPS</p>
-          <img class="img2" src="../public/images/solorgan/ginkgobiloba60caps.png" alt="Pré-visualização do produto">
+          <img class="img2" src="../public/images/solorgan/ginkgobiloba60caps.png" alt="GINKGO BILOBA C/ 60 CAPS">
           <div class="card-info">
-            <!--<p class="tag">Fonte verde</p><-->
-            <p class="title">COD: 872
-            </p>
-
-            <p class="shipping"></p>
-            <p class="shipping">Entrega a combinar</p>
+              <p class="title">COD: 872</p>
+              <p class="shipping">Entrega a combinar</p>
           </div>
-
-          <div class="btinfo"><a class="button-buy">Detalhes</a>
-            <p class="info">É indicado nos casos de deficiência do fluxo sanguíneo cerebral como problemas de memória,
-              função cognitiva, tonturas, dor de cabeça, vertigem, zumbidos, estágio iniciais de demências, além de
-              distúrbios circulatórios periféricos e problemas de retina.</p>
-
+          <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#productModal21">
+              Detalhes
+          </button>
+      
+          <!-- Modal 21 -->
+          <div class="modal fade" id="productModal21" tabindex="-1" aria-labelledby="productModalLabel21" aria-hidden="true">
+              <div class="modal-dialog modal-dialog-centered">
+                  <div class="modal-content">
+                      <div class="modal-header">
+                          <h5 class="modal-title" id="productModalLabel21">GINKGO BILOBA C/ 60 CAPS</h5>
+                          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fechar"></button>
+                      </div>
+                      <div class="modal-body">
+                          <img class="imgmodal" src="../public/images/solorgan/ginkgobiloba60caps.png" alt="GINKGO BILOBA C/ 60 CAPS">
+                          <p>É indicado nos casos de deficiência do fluxo sanguíneo cerebral, como problemas de memória, função cognitiva, tonturas, dor de cabeça, vertigem, zumbidos, estágios iniciais de demências, além de distúrbios circulatórios periféricos e problemas de retina.</p>
+                      </div>
+                      <div class="modal-footer">
+                          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+                      </div>
+                  </div>
+              </div>
           </div>
-        </div>
-
-        <div class="card">
-          <p class="title">ORA PRÓ NOBIS
-            C/ 60/120 CAPS </p>
-          <img class="img2" src="../public/images/solorgan/orapronobis120caps.png" alt="Pré-visualização do produto">
+      </div>
+      
+      <div class="card">
+          <p class="title">ORA PRÓ NOBIS C/ 60/120 CAPS</p>
+          <img class="img2" src="../public/images/solorgan/orapronobis120caps.png" alt="ORA PRÓ NOBIS C/ 60/120 CAPS">
           <div class="card-info">
-            <!--<p class="tag">Fonte verde</p><-->
-            <p class="title">
-              COD: 60: 1632 </br>
-              COD 120: 1078</p>
-            </p>
-
-
-            <p class="shipping"></p>
-            <p class="shipping">Entrega a combinar</p>
+              <p class="title">COD 60: 1632</br> COD 120: 1078</p>
+              <p class="shipping">Entrega a combinar</p>
           </div>
-
-          <div class="btinfo"><a class="button-buy">Detalhes</a>
-            <p class="info">Evita a oxidação das células de gordura, controlando os níveis de colesterol e
-              triglicerídeos no sangue e ajudando, assim, a evitar o surgimento de situações como infarto, aterosclerose
-              e derrame.</p>
+          <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#productModal22">
+              Detalhes
+          </button>
+      
+          <!-- Modal 22 -->
+          <div class="modal fade" id="productModal22" tabindex="-1" aria-labelledby="productModalLabel22" aria-hidden="true">
+              <div class="modal-dialog modal-dialog-centered">
+                  <div class="modal-content">
+                      <div class="modal-header">
+                          <h5 class="modal-title" id="productModalLabel22">ORA PRÓ NOBIS C/ 60/120 CAPS</h5>
+                          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fechar"></button>
+                      </div>
+                      <div class="modal-body">
+                          <img class="imgmodal" src="../public/images/solorgan/orapronobis120caps.png" alt="ORA PRÓ NOBIS C/ 60/120 CAPS">
+                          <p>Evita a oxidação das células de gordura, controlando os níveis de colesterol e triglicerídeos no sangue, ajudando a evitar infarto, aterosclerose e derrame.</p>
+                      </div>
+                      <div class="modal-footer">
+                          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+                      </div>
+                  </div>
+              </div>
           </div>
-        </div>
-
-        <div class="card">
+      </div>
+      
+      <div class="card">
           <p class="title">ZINCO QUELATO 60/120 CAPS</p>
-          <img class="img2" src="../public/images/solorgan/zincoquelato60120caps.png" alt="Pré-visualização do produto">
+          <img class="img2" src="../public/images/solorgan/zincoquelato60120caps.png" alt="ZINCO QUELATO 60/120 CAPS">
           <div class="card-info">
-            <!--<p class="tag">Fonte verde</p><-->
-            <p class="title">COD 60: 1161 </br>
-              COD 120: 1695</br>
-            </p>
-            </p>
-
-
-            <p class="shipping"></p>
-            <p class="shipping">Entrega a combinar</p>
+              <p class="title">COD 60: 1161</br> COD 120: 1695</p>
+              <p class="shipping">Entrega a combinar</p>
           </div>
-
-          <div class="btinfo"><a class="button-buy">Detalhes</a>
-            <p class="info"> O zinco tem estímulo positivo na memória, aprendizado, fertilidade, saúde dos ossos,
-              prevenção de Alzheimer e doenças cardiovasculares, além de atuar contra os sintomas da depressão, aumento
-              da imunidade e saúde e beleza da pele, cabelos e unhas.</p>
+          <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#productModal23">
+              Detalhes
+          </button>
+      
+          <!-- Modal 23 -->
+          <div class="modal fade" id="productModal23" tabindex="-1" aria-labelledby="productModalLabel23" aria-hidden="true">
+              <div class="modal-dialog modal-dialog-centered">
+                  <div class="modal-content">
+                      <div class="modal-header">
+                          <h5 class="modal-title" id="productModalLabel23">ZINCO QUELATO 60/120 CAPS</h5>
+                          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fechar"></button>
+                      </div>
+                      <div class="modal-body">
+                          <img class="imgmodal" src="../public/images/solorgan/zincoquelato60120caps.png" alt="ZINCO QUELATO 60/120 CAPS">
+                          <p>O zinco tem um efeito positivo na memória, aprendizado, fertilidade, saúde dos ossos, prevenção de Alzheimer e doenças cardiovasculares, além de atuar contra os sintomas da depressão e aumentar a imunidade e a saúde da pele, cabelos e unhas.</p>
+                      </div>
+                      <div class="modal-footer">
+                          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+                      </div>
+                  </div>
+              </div>
           </div>
-        </div>
-
-        <div class="card">
+      </div>
+      
+      <div class="card">
           <p class="title">UNHA DE GATO C/ 60 CAPS</p>
-          <img class="img2" src="../public/images/solorgan/unhadegato60caps.png" alt="Pré-visualização do produto">
+          <img class="img2" src="../public/images/solorgan/unhadegato60caps.png" alt="UNHA DE GATO C/ 60 CAPS">
           <div class="card-info">
-            <!--<p class="tag">Fonte verde</p><-->
-            <p class="title">COD 60: 1185
-              </br>
-            </p>
-            </p>
-
-
-            <p class="shipping"></p>
-            <p class="shipping">Entrega a combinar</p>
+              <p class="title">COD 60: 1185</p>
+              <p class="shipping">Entrega a combinar</p>
           </div>
-
-          <div class="btinfo"><a class="button-buy">Detalhes</a>
-            <p class="info"> É um excelente anti-inflamatório e também antibiótico natural. Doenças não só do útero mas
-              também do corpo como um todo podem serajudadas com unha de gato. Desde infecções comuns até gripe e
-              inflamações como artrose.</p>
+          <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#productModal24">
+              Detalhes
+          </button>
+      
+          <!-- Modal 24 -->
+          <div class="modal fade" id="productModal24" tabindex="-1" aria-labelledby="productModalLabel24" aria-hidden="true">
+              <div class="modal-dialog modal-dialog-centered">
+                  <div class="modal-content">
+                      <div class="modal-header">
+                          <h5 class="modal-title" id="productModalLabel24">UNHA DE GATO C/ 60 CAPS</h5>
+                          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fechar"></button>
+                      </div>
+                      <div class="modal-body">
+                          <img class="imgmodal" src="../public/images/solorgan/unhadegato60caps.png" alt="UNHA DE GATO C/ 60 CAPS">
+                          <p>É um excelente anti-inflamatório e antibiótico natural. Trata desde infecções comuns até inflamações como artrose.</p>
+                      </div>
+                      <div class="modal-footer">
+                          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+                      </div>
+                  </div>
+              </div>
           </div>
-        </div>
+      </div>
+      
     </section>
     </br></br> </section>
 
@@ -485,7 +659,7 @@
 
             setInterval(refreshTime, 1000);</script>
 
-          <a style="color: #fff;" href="https://www.instagram.com/heerick.gg/" target="_blank"><p style="position: relative;" class="mt-5">byHerick&copy;
+          <a style="color: #fff;" href="https://www.instagram.com/hericksouza.gg/" target="_blank"><p style="position: relative;" class="mt-5">byHerick&copy;
           </p></a>
 
         </div>

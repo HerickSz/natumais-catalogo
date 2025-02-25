@@ -1,0 +1,904 @@
+<!DOCTYPE html>
+<html lang="pt_BR">
+
+<head>
+  <!-- PAGE INFO -->
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CIMED | 2</title>
+
+  <!-- Icones -->
+  <link rel="stylesheet" href="../assets/fonts/style.css" />
+  <link rel="icon" href="..//logo.png" type="icon/png" sizes="16x16">
+  <!-- Swiper -->
+  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" />
+
+
+  <!-- STYLES -->
+  <link rel="stylesheet" href="../style.css" />
+  <link rel="stylesheet" href="../css2/style2.css">
+  <link rel="stylesheet" href="../css2/nav-bar.css">
+  <link rel="stylesheet" href="../css2/super-offers.css">
+  <link rel="stylesheet" href="../css2/products.css">
+  <link rel="stylesheet" href="../csshover/style.css">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.gstatic.com" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Poppins:wght@400;500;700&display=swap"
+    rel="stylesheet" />
+
+
+
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/5.1.3/css/bootstrap.min.css" rel="stylesheet">
+</head>
+
+<body>
+  <header id="header">
+    <nav class="container">
+      <a class="logo" href="../index.html">Catálogo - Natu<span>Mais</span>
+
+      </a>
+      <!-- menu -->
+      <div class="menu">
+        <ul class="grid">
+          <li><a class="title" href="../index.html">Início </a></li>
+          <li><a class="title" href="../index.html#produtos">Produtos</a></li>
+          <li><a style="color: red;" class="title" href="../page-medic-diversos/medic-diversos.html">Voltar</a></li>
+        </ul>
+      </div>
+      <!-- /menu -->
+      <div class="toggle icon-menu"></div>
+      <div class="toggle icon-close"></div>
+    </nav>
+  </header>
+
+  <main>
+
+    <section id="inicio" class="super-offers-background">
+      <div id="inicio" class="header-image">
+
+
+      </div>
+
+      <div class="super-offers wrapper">
+        <h3 style="text-align: center;"><span class="logo-detail">Ofertas do Mês</span> NatuMais</h3>
+        <p class="title" style="text-align: center;color: rgb(0, 0, 0); font-size: 20px;">Confira nossos <span
+            class="logo-detail">Novos Produtos!</span>
+        </p>
+
+        <h1 class="searchh">Pesquisa de Produtos</h1>
+      <input type="text" id="searchInput" placeholder="Pesquisar produto..." onkeyup="searchProducts()">
+      <style>
+        /* Estilo para o título com a classe searchh */
+.searchh {
+  color: #28a745; /* Verde preferencial */
+  text-align: center; /* Centraliza o título */
+  font-size: 1.5em; /* Tamanho da fonte */
+  margin: 20px 0; /* Margens superior e inferior */
+}
+
+/* Estilo para o input */
+#searchInput {
+  width: 100%; /* Largura total */
+  max-width: 400px; /* Largura máxima */
+  padding: 10px; /* Espaçamento interno */
+  border: 2px solid #28a745; /* Borda verde */
+  border-radius: 5px; /* Cantos arredondados */
+  font-size: 1em; /* Tamanho da fonte */
+  margin: 0 auto; /* Centraliza o input */
+  display: block; /* Exibe como bloco */
+  transition: border-color 0.3s; /* Transição suave para a borda */
+  margin-bottom: 10px;
+}
+
+/* Efeito ao focar no input */
+#searchInput:focus {
+  border-color: #218838; /* Verde mais escuro ao focar */
+  outline: none; /* Remove o contorno padrão */
+}
+
+        
+.hidden {
+  display: none;
+}
+    </style>
+     <script>
+      function searchProducts() {
+          const input = document.getElementById('searchInput').value.toLowerCase();
+          const cards = document.querySelectorAll('.card');
+
+          cards.forEach(card => {
+              const title = card.querySelector('.title').textContent.toLowerCase();
+              const code = card.querySelector('.card-info .title').textContent.toLowerCase();
+
+              // Verifica se a entrada do usuário está contida no título ou no código
+              if (title.includes(input) || code.includes(input)) {
+                  card.classList.remove('hidden');
+              } else {
+                  card.classList.add('hidden');
+              }
+          });
+      }
+  </script>
+
+        <h2 style="text-align: center;background-color: rgb(245 245 245);" class="title">Medicamentos Diversos | 2</h2>
+        <div class="page-btn"> 
+          <a href="../page-medic-diversos/medic-diversos.html"> <span>1</span></a>
+          <a class="active-span" href="../page-medic-diversos/medic-diversos-2.html"><span style="background:#198754; color: #fff;">2</span></a>
+        </div>
+
+
+        <div class="cards-container">
+
+          <div class="cards-container">
+            
+            <div class="card">
+              <p class="title">ENO LIMAO C 60 ENVELOPES</p>
+              <img class="img2" src="../public/images/fonte-vida/about.png" alt="ENO LIMAO C 60 ENVELOPES">
+              <div class="card-info">
+                <p class="title">COD: 1097</p>
+                <p class="shipping">Entrega a combinar</p>
+              </div>
+              <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#productModal1097">
+                Detalhes
+              </button>
+              <div class="modal fade" id="productModal1097" tabindex="-1" aria-labelledby="productModalLabel1097" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h5 class="modal-title" id="productModalLabel1097">ENO LIMAO C 60 ENVELOPES</h5>
+                      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fechar"></button>
+                    </div>
+                    <div class="modal-body">
+                      <img class="imgmodal" src="../public/images/fonte-vida/about.png" alt="ENO LIMAO C 60 ENVELOPES">
+                      <p>Antiácido efervescente com 60 envelopes de sabor limão.</p>
+                    </div>
+                    <div class="modal-footer">
+                      <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+            <div class="card">
+              <p class="title">ENO TRADICIONAL C 60 ENVELOPES</p>
+              <img class="img2" src="../public/images/fonte-vida/about.png" alt="ENO TRADICIONAL C 60 ENVELOPES">
+              <div class="card-info">
+                <p class="title">COD: 1094</p>
+                <p class="shipping">Entrega a combinar</p>
+              </div>
+              <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#productModal1094">
+                Detalhes
+              </button>
+              <div class="modal fade" id="productModal1094" tabindex="-1" aria-labelledby="productModalLabel1094" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h5 class="modal-title" id="productModalLabel1094">ENO TRADICIONAL C 60 ENVELOPES</h5>
+                      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fechar"></button>
+                    </div>
+                    <div class="modal-body">
+                      <img class="imgmodal" src="../public/images/fonte-vida/about.png" alt="ENO TRADICIONAL C 60 ENVELOPES">
+                      <p>Antiácido efervescente com 60 envelopes de sabor tradicional.</p>
+                    </div>
+                    <div class="modal-footer">
+                      <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+            <div class="card">
+              <p class="title">GRIPINEW C 150 COMP</p>
+              <img class="img2" src="../public/images/fonte-vida/about.png" alt="GRIPINEW C 150 COMP">
+              <div class="card-info">
+                <p class="title">COD: 1101</p>
+                <p class="shipping">Entrega a combinar</p>
+              </div>
+              <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#productModal1101">
+                Detalhes
+              </button>
+              <div class="modal fade" id="productModal1101" tabindex="-1" aria-labelledby="productModalLabel1101" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h5 class="modal-title" id="productModalLabel1101">GRIPINEW C 150 COMP</h5>
+                      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fechar"></button>
+                    </div>
+                    <div class="modal-body">
+                      <img class="imgmodal" src="../public/images/fonte-vida/about.png" alt="GRIPINEW C 150 COMP">
+                      <p>Analgésico, antitérmico e descongestionante com 150 comprimidos.</p>
+                    </div>
+                    <div class="modal-footer">
+                      <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+            <div class="card">
+              <p class="title">GRIPINEW C 20 COMP</p>
+              <img class="img2" src="../public/images/fonte-vida/about.png" alt="GRIPINEW C 20 COMP">
+              <div class="card-info">
+                <p class="title">COD: 1586</p>
+                <p class="shipping">Entrega a combinar</p>
+              </div>
+              <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#productModal1586">
+                Detalhes
+              </button>
+              <div class="modal fade" id="productModal1586" tabindex="-1" aria-labelledby="productModalLabel1586" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h5 class="modal-title" id="productModalLabel1586">GRIPINEW C 20 COMP</h5>
+                      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fechar"></button>
+                    </div>
+                    <div class="modal-body">
+                      <img class="imgmodal" src="../public/images/fonte-vida/about.png" alt="GRIPINEW C 20 COMP">
+                      <p>Analgésico, antitérmico e descongestionante com 20 comprimidos.</p>
+                    </div>
+                    <div class="modal-footer">
+                      <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+            <div class="card">
+              <p class="title">IBUPRIL 600 MG 20 COMP</p>
+              <img class="img2" src="../public/images/fonte-vida/about.png" alt="IBUPRIL 600 MG 20 COMP">
+              <div class="card-info">
+                <p class="title">COD: 1476</p>
+                <p class="shipping">Entrega a combinar</p>
+              </div>
+              <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#productModal1476">
+                Detalhes
+              </button>
+              <div class="modal fade" id="productModal1476" tabindex="-1" aria-labelledby="productModalLabel1476" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h5 class="modal-title" id="productModalLabel1476">IBUPRIL 600 MG 20 COMP</h5>
+                      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fechar"></button>
+                    </div>
+                    <div class="modal-body">
+                      <img class="imgmodal" src="../public/images/fonte-vida/about.png" alt="IBUPRIL 600 MG 20 COMP">
+                      <p>Anti-inflamatório não esteroidal com 20 comprimidos de 600mg.</p>
+                    </div>
+                    <div class="modal-footer">
+                      <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+            
+            <div class="card">
+              <p class="title">IBUPROFENO 100 MG 20 ML</p>
+              <img class="img2" src="../public/images/fonte-vida/about.png" alt="IBUPROFENO 100 MG 20 ML">
+              <div class="card-info">
+                <p class="title">COD: 1387</p>
+                <p class="shipping">Entrega a combinar</p>
+              </div>
+              <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#productModal1387">
+                Detalhes
+              </button>
+              <div class="modal fade" id="productModal1387" tabindex="-1" aria-labelledby="productModalLabel1387" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h5 class="modal-title" id="productModalLabel1387">IBUPROFENO 100 MG 20 ML</h5>
+                      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fechar"></button>
+                    </div>
+                    <div class="modal-body">
+                      <img class="imgmodal" src="../public/images/fonte-vida/about.png" alt="IBUPROFENO 100 MG 20 ML">
+                      <p>Anti-inflamatório não esteroidal em solução oral com 20ml de 100mg.</p>
+                    </div>
+                    <div class="modal-footer">
+                      <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+            <div class="card">
+              <p class="title">NEOSALDINA C 20 COMP</p>
+              <img class="img2" src="../public/images/fonte-vida/about.png" alt="NEOSALDINA C 20 COMP">
+              <div class="card-info">
+                <p class="title">COD: 1688</p>
+                <p class="shipping">Entrega a combinar</p>
+              </div>
+              <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#productModal1688">
+                Detalhes
+              </button>
+              <div class="modal fade" id="productModal1688" tabindex="-1" aria-labelledby="productModalLabel1688" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h5 class="modal-title" id="productModalLabel1688">NEOSALDINA C 20 COMP</h5>
+                      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fechar"></button>
+                    </div>
+                    <div class="modal-body">
+                      <img class="imgmodal" src="../public/images/fonte-vida/about.png" alt="NEOSALDINA C 20 COMP">
+                      <p>Analgésico, antitérmico e antiemético com 20 comprimidos.</p>
+                    </div>
+                    <div class="modal-footer">
+                      <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+            <div class="card">
+              <p class="title">NEOSALDINA C 30 COMP</p>
+              <img class="img2" src="../public/images/fonte-vida/about.png" alt="NEOSALDINA C 30 COMP">
+              <div class="card-info">
+                <p class="title">COD: 1102</p>
+                <p class="shipping">Entrega a combinar</p>
+              </div>
+              <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#productModal1102">
+                Detalhes
+              </button>
+              <div class="modal fade" id="productModal1102" tabindex="-1" aria-labelledby="productModalLabel1102" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h5 class="modal-title" id="productModalLabel1102">NEOSALDINA C 30 COMP</h5>
+                      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fechar"></button>
+                    </div>
+                    <div class="modal-body">
+                      <img class="imgmodal" src="../public/images/fonte-vida/about.png" alt="NEOSALDINA C 30 COMP">
+                      <p>Analgésico, antitérmico e antiemético com 30 comprimidos.</p>
+                    </div>
+                    <div class="modal-footer">
+                      <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+            <div class="card">
+              <p class="title">NEOSORO 30 ML</p>
+              <img class="img2" src="../public/images/fonte-vida/about.png" alt="NEOSORO 30 ML">
+              <div class="card-info">
+                <p class="title">COD: 1514</p>
+                <p class="shipping">Entrega a combinar</p>
+              </div>
+              <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#productModal1514">
+                Detalhes
+              </button>
+              <div class="modal fade" id="productModal1514" tabindex="-1" aria-labelledby="productModalLabel1514" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h5 class="modal-title" id="productModalLabel1514">NEOSORO 30 ML</h5>
+                      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fechar"></button>
+                    </div>
+                    <div class="modal-body">
+                      <img class="imgmodal" src="../public/images/fonte-vida/about.png" alt="NEOSORO 30 ML">
+                      <p>Descongestionante nasal em solução oral com 30ml.</p>
+                    </div>
+                    <div class="modal-footer">
+                      <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+            <div class="card">
+              <p class="title">PARACETAMOL 750MG C 20 COMP</p>
+              <img class="img2" src="../public/images/fonte-vida/about.png" alt="PARACETAMOL 750MG C 20 COMP">
+              <div class="card-info">
+                <p class="title">COD: 1598</p>
+                <p class="shipping">Entrega a combinar</p>
+              </div>
+              <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#productModal1598">
+                Detalhes
+              </button>
+              <div class="modal fade" id="productModal1598" tabindex="-1" aria-labelledby="productModalLabel1598" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h5 class="modal-title" id="productModalLabel1598">PARACETAMOL 750MG C 20 COMP</h5>
+                      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fechar"></button>
+                    </div>
+                    <div class="modal-body">
+                      <img class="imgmodal" src="../public/images/fonte-vida/about.png" alt="PARACETAMOL 750MG C 20 COMP">
+                      <p>Analgésico e antitérmico com 20 comprimidos de 750mg.</p>
+                    </div>
+                    <div class="modal-footer">
+                      <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="card">
+              <p class="title">PARACETAMOL 750MG C 200 COMP</p>
+              <img class="img2" src="../public/images/fonte-vida/about.png" alt="PARACETAMOL 750MG C 200 COMP">
+              <div class="card-info">
+                <p class="title">COD: 1105</p>
+                <p class="shipping">Entrega a combinar</p>
+              </div>
+              <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#productModal1105">
+                Detalhes
+              </button>
+              <div class="modal fade" id="productModal1105" tabindex="-1" aria-labelledby="productModalLabel1105" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h5 class="modal-title" id="productModalLabel1105">PARACETAMOL 750MG C 200 COMP</h5>
+                      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fechar"></button>
+                    </div>
+                    <div class="modal-body">
+                      <img class="imgmodal" src="../public/images/fonte-vida/about.png" alt="PARACETAMOL 750MG C 200 COMP">
+                      <p>Analgésico e antitérmico com 200 comprimidos de 750mg.</p>
+                    </div>
+                    <div class="modal-footer">
+                      <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+            <div class="card">
+              <p class="title">PARACETAMOL GOTAS 15 ML</p>
+              <img class="img2" src="../public/images/fonte-vida/about.png" alt="PARACETAMOL GOTAS 15 ML">
+              <div class="card-info">
+                <p class="title">COD: 1498</p>
+                <p class="shipping">Entrega a combinar</p>
+              </div>
+              <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#productModal1498">
+                Detalhes
+              </button>
+              <div class="modal fade" id="productModal1498" tabindex="-1" aria-labelledby="productModalLabel1498" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h5 class="modal-title" id="productModalLabel1498">PARACETAMOL GOTAS 15 ML</h5>
+                      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fechar"></button>
+                    </div>
+                    <div class="modal-body">
+                      <img class="imgmodal" src="../public/images/fonte-vida/about.png" alt="PARACETAMOL GOTAS 15 ML">
+                      <p>Analgésico e antitérmico em solução oral com 15ml.</p>
+                    </div>
+                    <div class="modal-footer">
+                      <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+            <div class="card">
+              <p class="title">RESFEDRYL 200 COMP</p>
+              <img class="img2" src="../public/images/fonte-vida/about.png" alt="RESFEDRYL 200 COMP">
+              <div class="card-info">
+                <p class="title">COD: 1109</p>
+                <p class="shipping">Entrega a combinar</p>
+              </div>
+              <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#productModal1109">
+                Detalhes
+              </button>
+              <div class="modal fade" id="productModal1109" tabindex="-1" aria-labelledby="productModalLabel1109" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h5 class="modal-title" id="productModalLabel1109">RESFEDRYL 200 COMP</h5>
+                      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fechar"></button>
+                    </div>
+                    <div class="modal-body">
+                      <img class="imgmodal" src="../public/images/fonte-vida/about.png" alt="RESFEDRYL 200 COMP">
+                      <p>Descongestionante, antialérgico e antitérmico com 200 comprimidos.</p>
+                    </div>
+                    <div class="modal-footer">
+                      <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+            <div class="card">
+              <p class="title">RESFEDRYL C 20 COMP</p>
+              <img class="img2" src="../public/images/fonte-vida/about.png" alt="RESFEDRYL C 20 COMP">
+              <div class="card-info">
+                <p class="title">COD: 1513</p>
+                <p class="shipping">Entrega a combinar</p>
+              </div>
+              <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#productModal1513">
+                Detalhes
+              </button>
+              <div class="modal fade" id="productModal1513" tabindex="-1" aria-labelledby="productModalLabel1513" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h5 class="modal-title" id="productModalLabel1513">RESFEDRYL C 20 COMP</h5>
+                      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fechar"></button>
+                    </div>
+                    <div class="modal-body">
+                      <img class="imgmodal" src="../public/images/fonte-vida/about.png" alt="RESFEDRYL C 20 COMP">
+                      <p>Descongestionante, antialérgico e antitérmico com 20 comprimidos.</p>
+                    </div>
+                    <div class="modal-footer">
+                      <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+            <div class="card">
+              <p class="title">SONRISAL C 60 ENVELOPES</p>
+              <img class="img2" src="../public/images/fonte-vida/about.png" alt="SONRISAL C 60 ENVELOPES">
+              <div class="card-info">
+                <p class="title">COD: 1110</p>
+                <p class="shipping">Entrega a combinar</p>
+              </div>
+              <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#productModal1110">
+                Detalhes
+              </button>
+              <div class="modal fade" id="productModal1110" tabindex="-1" aria-labelledby="productModalLabel1110" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h5 class="modal-title" id="productModalLabel1110">SONRISAL C 60 ENVELOPES</h5>
+                      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fechar"></button>
+                    </div>
+                    <div class="modal-body">
+                      <img class="imgmodal" src="../public/images/fonte-vida/about.png" alt="SONRISAL C 60 ENVELOPES">
+                      <p>Antiácido efervescente com 60 envelopes.</p>
+                    </div>
+                    <div class="modal-footer">
+                      <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="card">
+  <p class="title">STOMALIV ABACAXI (ENO) C 60 ENV</p>
+  <img class="img2" src="../public/images/fonte-vida/about.png" alt="STOMALIV ABACAXI (ENO) C 60 ENV">
+  <div class="card-info">
+    <p class="title">COD: 1781</p>
+    <p class="shipping">Entrega a combinar</p>
+  </div>
+  <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#productModal1781">
+    Detalhes
+  </button>
+  <div class="modal fade" id="productModal1781" tabindex="-1" aria-labelledby="productModalLabel1781" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="productModalLabel1781">STOMALIV ABACAXI (ENO) C 60 ENV</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fechar"></button>
+        </div>
+        <div class="modal-body">
+          <img class="imgmodal" src="../public/images/fonte-vida/about.png" alt="STOMALIV ABACAXI (ENO) C 60 ENV">
+          <p>Antiácido efervescente com 60 envelopes de sabor abacaxi.</p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="card">
+  <p class="title">STOMALIV GUARANA (ENO) C 50 ENV</p>
+  <img class="img2" src="../public/images/fonte-vida/about.png" alt="STOMALIV GUARANA (ENO) C 50 ENV">
+  <div class="card-info">
+    <p class="title">COD: 990</p>
+    <p class="shipping">Entrega a combinar</p>
+  </div>
+  <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#productModal990">
+    Detalhes
+  </button>
+  <div class="modal fade" id="productModal990" tabindex="-1" aria-labelledby="productModalLabel990" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="productModalLabel990">STOMALIV GUARANA (ENO) C 50 ENV</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fechar"></button>
+        </div>
+        <div class="modal-body">
+          <img class="imgmodal" src="../public/images/fonte-vida/about.png" alt="STOMALIV GUARANA (ENO) C 50 ENV">
+          <p>Antiácido efervescente com 50 envelopes de sabor guaraná.</p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="card">
+  <p class="title">STOMALIV TRADICIONAL (ENO) C 50 ENV</p>
+  <img class="img2" src="../public/images/fonte-vida/about.png" alt="STOMALIV TRADICIONAL (ENO) C 50 ENV">
+  <div class="card-info">
+    <p class="title">COD: 1780</p>
+    <p class="shipping">Entrega a combinar</p>
+  </div>
+  <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#productModal1780">
+    Detalhes
+  </button>
+  <div class="modal fade" id="productModal1780" tabindex="-1" aria-labelledby="productModalLabel1780" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="productModalLabel1780">STOMALIV TRADICIONAL (ENO) C 50 ENV</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fechar"></button>
+        </div>
+        <div class="modal-body">
+          <img class="imgmodal" src="../public/images/fonte-vida/about.png" alt="STOMALIV TRADICIONAL (ENO) C 50 ENV">
+          <p>Antiácido efervescente tradicional com 50 envelopes.</p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="card">
+  <p class="title">TORSILAX C 100 COMP</p>
+  <img class="img2" src="../public/images/fonte-vida/about.png" alt="TORSILAX C 100 COMP">
+  <div class="card-info">
+    <p class="title">COD: 1111</p>
+    <p class="shipping">Entrega a combinar</p>
+  </div>
+  <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#productModal1111">
+    Detalhes
+  </button>
+  <div class="modal fade" id="productModal1111" tabindex="-1" aria-labelledby="productModalLabel1111" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="productModalLabel1111">TORSILAX C 100 COMP</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fechar"></button>
+        </div>
+        <div class="modal-body">
+          <img class="imgmodal" src="../public/images/fonte-vida/about.png" alt="TORSILAX C 100 COMP">
+          <p>Analgésico e relaxante muscular com 100 comprimidos.</p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="card">
+  <p class="title">TORSILAX C 200 COMP</p>
+  <img class="img2" src="../public/images/fonte-vida/about.png" alt="TORSILAX C 200 COMP">
+  <div class="card-info">
+    <p class="title">COD: 1330</p>
+    <p class="shipping">Entrega a combinar</p>
+  </div>
+  <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#productModal1330">
+    Detalhes
+  </button>
+  <div class="modal fade" id="productModal1330" tabindex="-1" aria-labelledby="productModalLabel1330" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="productModalLabel1330">TORSILAX C 200 COMP</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fechar"></button>
+        </div>
+        <div class="modal-body">
+          <img class="imgmodal" src="../public/images/fonte-vida/about.png" alt="TORSILAX C 200 COMP">
+          <p>Analgésico e relaxante muscular com 200 comprimidos.</p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+      </div>
+    </section>
+    </br></br>
+     
+    </section>
+    </br></br> </section>
+
+
+    </br></br>
+    <!-------- PAGE BUTTONS------->
+    <div class="page-btn"> 
+      <a href="../page-medic-diversos/medic-diversos.html"> <span>1</span></a>
+      <a class="active-span" href="../page-medic-diversos/medic-diversos-2.html"><span style="background:#198754; color: #fff;">2</span></a>
+    </div>
+    <div class="divider-1"></div>
+
+  </main>
+
+  <section>
+
+    <section class="mapa" id="produtos">
+      <!--
+      <div class="fotos">
+        <h2 style="text-align: center;" class="title">Produtos Diversos</h2>
+        <div class="slider-principal">
+          <img src="../static/products-image/natumais/1.jpeg" />
+          <img src="../static/products-image/natumais/2.jpeg" />
+          <img src="../static/products-image/natumais/3.jpeg" />
+          <img src="../static/products-image/natumais/4.jpeg" />
+          <img src="../static/products-image/natumais/5.jpeg" />
+        </div>
+      -->
+
+
+      <h2 style="text-align: center; margin-top: 4%;" class="title">Mais Produtos</h2>
+      <p>(clique ou pare o cursor para visualizar)</p>
+      <div class="cardhover">
+        <div class="card2">
+          <div class="img-box">
+            <a href="../page-mentos/mentos.html">
+              <img src="../static/products-image/doces-chicletes-balas/balas.png">
+            </a>
+          </div>
+          <div class="content2">
+            <h2>Mentos</h2>
+            <p>
+              Confira a marca Mentos.
+            </p>
+            <a href="../page-mentos/mentos.html" class="read-more">
+              Ver Catálogo
+            </a>
+          </div>
+        </div>
+        <div class="card2">
+          <div class="img-box">
+            <a href="../page-fonte-verde/tipo-ftverde.html">
+              <img src="../static/products-image/natumais/Fonte verde/logoFonteVerde.png">
+            </a>
+          </div>
+          <div class="content2">
+            <h2>Fonte Verde</h2>
+            <p>
+              Confira os produtos da FONTE VERDE orgânicos que contribuem para a sua saúde, e possuem uma ampla gama de
+              benefícios para a
+              saúde, incluindo propriedades antioxidantes, anti-inflamatórias, relaxantes e digestivas.
+            </p>
+            <a href="page-fonte-verde/tipo-ftverde.html" class="read-more">
+              Ver Catálogo
+            </a>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="divider-1"></div>
+
+      <!-- CONTACT -->
+      <section class="section" id="contact">
+        <div class="container grid">
+          <div class="text">
+            <h2 class="title">Entre em contato com a gente!</h2>
+            <p>
+              Entre em contato conosco, queremos tirar suas dúvidas,
+              ouvir suas críticas e sugestões.
+            </p>
+            <a href="https://api.whatsapp.com/send?phone=553335631647&text=Oláa! Gostaria de um produto" class="button"
+              target="_blank"></i> Entrar em contato</a>
+          </div>
+
+          <div class="links">
+            <ul class="grid">
+              <li><i class="icon-phone"></i> <a href="tel:+55xxxxx"> (33) 333563-1647</a></li>
+              <li><i class="icon-map-pin"></i> Manhuaçu MG</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      </div>
+    </section>
+    <footer class="section">
+      <div class="container grid">
+        <div class="brand">
+          <a class="logo logo-alt" href="#home">Natu<span>Mais </span> ⠀</a>
+
+        </div>
+
+        <div class="social grid">
+          <p style="color: #fff;">Mídias Sociais:</p>
+          <a href="https://www.instagram.com/natumais_/" target="_blank">
+            <i class="icon-instagram"></i>
+          </a>
+          <a href="https://api.whatsapp.com/send?phone=553335631647&text=Oláa!" target="_blank">
+            <svg class="svgwpp" xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="#fff"
+              class="bi bi-whatsapp" viewBox="0 0 16 16">
+              <path
+                d="M13.601 2.326A7.854 7.854 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.933 7.933 0 0 0 3.79.965h.004c4.368 0 7.926-3.558 7.93-7.93A7.898 7.898 0 0 0 13.6 2.326zM7.994 14.521a6.573 6.573 0 0 1-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931 6.557 6.557 0 0 1 1.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592zm3.615-4.934c-.197-.099-1.17-.578-1.353-.646-.182-.065-.315-.099-.445.099-.133.197-.513.646-.627.775-.114.133-.232.148-.43.05-.197-.1-.836-.308-1.592-.985-.59-.525-.985-1.175-1.103-1.372-.114-.198-.011-.304.088-.403.087-.088.197-.232.296-.346.1-.114.133-.198.198-.33.065-.134.034-.248-.015-.347-.05-.099-.445-1.076-.612-1.47-.16-.389-.323-.335-.445-.34-.114-.007-.247-.007-.38-.007a.729.729 0 0 0-.529.247c-.182.198-.691.677-.691 1.654 0 .977.71 1.916.81 2.049.098.133 1.394 2.132 3.383 2.992.47.205.84.326 1.129.418.475.152.904.129 1.246.08.38-.058 1.171-.48 1.338-.943.164-.464.164-.86.114-.943-.049-.084-.182-.133-.38-.232z" />
+            </svg></a>
+        </div>
+        <div style="color: #fff;">
+
+          <script>var data = new Date();
+            var dias = new Array(
+              'Domingo', 'Segunda-feira', 'Terça-feira', 'Quarta-feira', 'Quinta-feira', 'Sexta-feira', 'Sábado'
+            );
+
+            document.write(dias[data.getDay()]);</script>
+          <p id="time"></p>
+        </div>
+      </div>
+    </footer>
+
+
+    <div class="dev" style="background: var(--base-color);">
+      <div style="align-items: center; color: #fff;" class="social grid">
+        <div class="col-md-12 text-center">
+
+
+
+
+
+          <script>var timeDisplay = document.getElementById("time");
+            function refreshTime() {
+              var dateString = new Date().toLocaleString("pt-BR", { timeZone: "America/Sao_Paulo" });
+              var formattedString = dateString.replace(", ", " - ");
+              timeDisplay.innerHTML = formattedString;
+            }
+
+            setInterval(refreshTime, 1000);</script>
+
+          <a style="color: #fff;" href="https://www.instagram.com/hericksouza.gg/" target="_blank"><p style="position: relative;" class="mt-5">byHerick&copy;
+          </p></a>
+
+        </div>
+
+      </div>
+      <p class="dev" style="top:100%; color: #fff; margin: 0 auto; font-size: 12px; text-align: center;">Natumais ©2024
+        - Todos os direitos reservados.</p>
+    </div>
+    </div>
+
+    <a href="#inicio" class="back-to-top"><i class="icon-arrow-up"></i></a>
+
+    <!-- swiper -->
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
+    <!-- scrollreveal -->
+    <script src="https://unpkg.com/scrollreveal"></script>
+
+    <!-- main.js <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3742.9054286502214!2d-42.030741723819375!3d-20.262756548758546!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xbb03c907812fbb%3A0xc1508199696bd20d!2sAlfa%20Odontologia!5e0!3m2!1spt-BR!2sbr!4v1682474612695!5m2!1spt-BR!2sbr"
+            width="600" height="450" allowfullscreen="" loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>-->
+    <script type="text/javascript" src="../CodejqueryMin.js"></script>
+    <script type="text/javascript" src="../jqueryMigrate.js"></script>
+    <script type="text/javascript" src="../slick.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.1.3/js/bootstrap.min.js"></script>
+
+    <script src="../main.js"></script>
+</body>
+
+</html>

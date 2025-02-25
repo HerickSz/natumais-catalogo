@@ -1,0 +1,1405 @@
+<!DOCTYPE html>
+<html lang="pt_BR">
+
+<head>
+  <!-- PAGE INFO -->
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SOL NATUS | 4</title>
+
+  <!-- Icones -->
+  <link rel="stylesheet" href="../assets/fonts/style.css" />
+  <link rel="icon" href="..//logo.png" type="icon/png" sizes="16x16">
+  <!-- Swiper -->
+  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" />
+
+
+  <!-- STYLES -->
+  <link rel="stylesheet" href="../style.css" />
+  <link rel="stylesheet" href="../css2/style2.css">
+  <link rel="stylesheet" href="../css2/nav-bar.css">
+  <link rel="stylesheet" href="../css2/super-offers.css">
+  <link rel="stylesheet" href="../css2/products.css">
+  <link rel="stylesheet" href="../csshover/style.css">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.gstatic.com" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Poppins:wght@400;500;700&display=swap"
+    rel="stylesheet" />
+
+
+
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/5.1.3/css/bootstrap.min.css" rel="stylesheet">
+</head>
+
+<body>
+  <header id="header">
+    <nav class="container">
+      <a class="logo" href="../index.html">Catálogo - Natu<span>Mais</span>
+
+      </a>
+      <!-- menu -->
+      <div class="menu">
+        <ul class="grid">
+          <li><a class="title" href="../index.html">Início </a></li>
+          <li><a class="title" href="../index.html#produtos">Produtos</a></li>
+          <li><a style="color: red;" class="title" href="../page-solnatus/solnatus-3.html">Voltar</a></li>
+        </ul>
+      </div>
+      <!-- /menu -->
+      <div class="toggle icon-menu"></div>
+      <div class="toggle icon-close"></div>
+    </nav>
+  </header>
+
+  <main>
+
+    <section id="inicio" class="super-offers-background">
+      <div id="inicio" class="header-image">
+
+        
+      </div>
+
+      <div class="super-offers wrapper">
+        <h3 style="text-align: center;"><span class="logo-detail">Ofertas do Mês</span> NatuMais</h3>
+        <p class="title" style="text-align: center;color: rgb(0, 0, 0); font-size: 20px;">Confira nossos <span
+            class="logo-detail">Novos Produtos!</span>
+        </p>
+
+        <h1 class="searchh">Pesquisa de Produtos</h1>
+      <input type="text" id="searchInput" placeholder="Pesquisar produto..." onkeyup="searchProducts()">
+      <style>
+        /* Estilo para o título com a classe searchh */
+.searchh {
+  color: #28a745; /* Verde preferencial */
+  text-align: center; /* Centraliza o título */
+  font-size: 1.5em; /* Tamanho da fonte */
+  margin: 20px 0; /* Margens superior e inferior */
+}
+
+/* Estilo para o input */
+#searchInput {
+  width: 100%; /* Largura total */
+  max-width: 400px; /* Largura máxima */
+  padding: 10px; /* Espaçamento interno */
+  border: 2px solid #28a745; /* Borda verde */
+  border-radius: 5px; /* Cantos arredondados */
+  font-size: 1em; /* Tamanho da fonte */
+  margin: 0 auto; /* Centraliza o input */
+  display: block; /* Exibe como bloco */
+  transition: border-color 0.3s; /* Transição suave para a borda */
+  margin-bottom: 10px;
+}
+
+/* Efeito ao focar no input */
+#searchInput:focus {
+  border-color: #218838; /* Verde mais escuro ao focar */
+  outline: none; /* Remove o contorno padrão */
+}
+
+        
+.hidden {
+  display: none;
+}
+    </style>
+     <script>
+      function searchProducts() {
+          const input = document.getElementById('searchInput').value.toLowerCase();
+          const cards = document.querySelectorAll('.card');
+
+          cards.forEach(card => {
+              const title = card.querySelector('.title').textContent.toLowerCase();
+              const code = card.querySelector('.card-info .title').textContent.toLowerCase();
+
+              // Verifica se a entrada do usuário está contida no título ou no código
+              if (title.includes(input) || code.includes(input)) {
+                  card.classList.remove('hidden');
+              } else {
+                  card.classList.add('hidden');
+              }
+          });
+      }
+  </script>
+
+        <h2 style="text-align: center;background-color: rgb(245 245 245);" class="title">Sol Natus Página 4</h2>
+        <div class="page-btn">
+          <a href="solnatus.html"> <span>1</span></a>
+      <a href="solnatus-2.html"> <span>2</span></a> 
+  <a href="solnatus-3.html"> <span>3</span></a>
+  <a class="active-span" href="solnatus-4.html"><span style="background:#198754; color: #fff;">4</span></a>
+  <a href="solnatus-5.html"> <span>5</span></a>
+  <a href="solnatus-6.html"> <span>6</span></a>
+        </div>
+
+
+        <div class="cards-container">
+
+          <div class="cards-container">
+           
+
+            <div class="card">
+              <p class="title">CHA URTIGA RAIZ 50 GR</p>
+              <img class="img2" src="../public/images/fonte-vida/about.png" alt="CHA URTIGA RAIZ 50 GR">
+              <div class="card-info">
+                <p class="title">COD: 472</p>
+                <p class="shipping">Entrega a combinar</p>
+              </div>
+              <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#productModal472">
+                Detalhes
+              </button>
+              <div class="modal fade" id="productModal472" tabindex="-1" aria-labelledby="productModalLabel472" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h5 class="modal-title" id="productModalLabel472">CHA URTIGA RAIZ 50 GR</h5>
+                      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fechar"></button>
+                    </div>
+                    <div class="modal-body">
+                      <img class="imgmodal" src="../public/images/fonte-vida/about.png" alt="CHA URTIGA RAIZ 50 GR">
+                      <p>Chá de urtiga raiz em embalagem de 50g. Utilizado para auxiliar na saúde urinária e possui propriedades anti-inflamatórias.</p>
+                    </div>
+                    <div class="modal-footer">
+                      <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+            <div class="card">
+              <p class="title">CHA UXI AMARELO 50 GR</p>
+              <img class="img2" src="../public/images/fonte-vida/about.png" alt="CHA UXI AMARELO 50 GR">
+              <div class="card-info">
+                <p class="title">COD: 473</p>
+                <p class="shipping">Entrega a combinar</p>
+              </div>
+              <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#productModal473">
+                Detalhes
+              </button>
+              <div class="modal fade" id="productModal473" tabindex="-1" aria-labelledby="productModalLabel473" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h5 class="modal-title" id="productModalLabel473">CHA UXI AMARELO 50 GR</h5>
+                      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fechar"></button>
+                    </div>
+                    <div class="modal-body">
+                      <img class="imgmodal" src="../public/images/fonte-vida/about.png" alt="CHA UXI AMARELO 50 GR">
+                      <p>Chá uxi amarelo em embalagem de 50g. Conhecido por suas propriedades anti-inflamatórias e diuréticas, é utilizado para auxiliar na saúde do fígado e rins.</p>
+                    </div>
+                    <div class="modal-footer">
+                      <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+            <div class="card">
+              <p class="title">CHA VALERIANA 50 GR</p>
+              <img class="img2" src="../public/images/fonte-vida/about.png" alt="CHA VALERIANA 50 GR">
+              <div class="card-info">
+                <p class="title">COD: 474</p>
+                <p class="shipping">Entrega a combinar</p>
+              </div>
+              <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#productModal474">
+                Detalhes
+              </button>
+              <div class="modal fade" id="productModal474" tabindex="-1" aria-labelledby="productModalLabel474" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h5 class="modal-title" id="productModalLabel474">CHA VALERIANA 50 GR</h5>
+                      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fechar"></button>
+                    </div>
+                    <div class="modal-body">
+                      <img class="imgmodal" src="../public/images/fonte-vida/about.png" alt="CHA VALERIANA 50 GR">
+                      <p>Chá de valeriana em embalagem de 50g. Utilizado como calmante natural, é conhecido por ajudar a reduzir a ansiedade e melhorar a qualidade do sono.</p>
+                    </div>
+                    <div class="modal-footer">
+                      <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+            <div class="card">
+              <p class="title">CHA VERDE BANCHA 100 GR</p>
+              <img class="img2" src="../public/images/fonte-vida/about.png" alt="CHA VERDE BANCHA 100 GR">
+              <div class="card-info">
+                <p class="title">COD: 414</p>
+                <p class="shipping">Entrega a combinar</p>
+              </div>
+              <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#productModal414">
+                Detalhes
+              </button>
+              <div class="modal fade" id="productModal414" tabindex="-1" aria-labelledby="productModalLabel414" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h5 class="modal-title" id="productModalLabel414">CHA VERDE BANCHA 100 GR</h5>
+                      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fechar"></button>
+                    </div>
+                    <div class="modal-body">
+                      <img class="imgmodal" src="../public/images/fonte-vida/about.png" alt="CHA VERDE BANCHA 100 GR">
+                      <p>Chá verde bancha em embalagem de 100g. Rico em antioxidantes, é conhecido por ajudar na perda de peso e promover a saúde cardiovascular.</p>
+                    </div>
+                    <div class="modal-footer">
+                      <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+            <div class="card">
+              <p class="title">CHA VERDE IMPORTADO 100 GR</p>
+              <img class="img2" src="../public/images/fonte-vida/about.png" alt="CHA VERDE IMPORTADO 100 GR">
+              <div class="card-info">
+                <p class="title">COD: 415</p>
+                <p class="shipping">Entrega a combinar</p>
+              </div>
+              <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#productModal415">
+                Detalhes
+              </button>
+              <div class="modal fade" id="productModal415" tabindex="-1" aria-labelledby="productModalLabel415" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h5 class="modal-title" id="productModalLabel415">CHA VERDE IMPORTADO 100 GR</h5>
+                      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fechar"></button>
+                    </div>
+                    <div class="modal-body">
+                      <img class="imgmodal" src="../public/images/fonte-vida/about.png" alt="CHA VERDE IMPORTADO 100 GR">
+                      <p>Chá verde importado em embalagem de 100g. Apreciado por suas propriedades energéticas, é utilizado para aumentar a concentração e melhorar o metabolismo.</p>
+                    </div>
+                    <div class="modal-footer">
+                      <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+      
+            <div class="card">
+              <p class="title">COLAGENO HIDROLIZADO 150 GR</p>
+              <img class="img2" src="../public/images/fonte-vida/about.png" alt="COLAGENO HIDROLIZADO 150 GR">
+              <div class="card-info">
+                <p class="title">COD: 513</p>
+                <p class="shipping">Entrega a combinar</p>
+              </div>
+              <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#productModal513">
+                Detalhes
+              </button>
+              <div class="modal fade" id="productModal513" tabindex="-1" aria-labelledby="productModalLabel513" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h5 class="modal-title" id="productModalLabel513">COLAGENO HIDROLIZADO 150 GR</h5>
+                      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fechar"></button>
+                    </div>
+                    <div class="modal-body">
+                      <img class="imgmodal" src="../public/images/fonte-vida/about.png" alt="COLAGENO HIDROLIZADO 150 GR">
+                      <p>Colágeno hidrolizado em embalagem de 150g. Suplemento que auxilia na saúde da pele, cabelos, unhas e articulações.</p>
+                    </div>
+                    <div class="modal-footer">
+                      <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+            <div class="card">
+              <p class="title">CRAVO DA INDIA 30G</p>
+              <img class="img2" src="../public/images/fonte-vida/about.png" alt="CRAVO DA INDIA 30G">
+              <div class="card-info">
+                <p class="title">COD: 1581</p>
+                <p class="shipping">Entrega a combinar</p>
+              </div>
+              <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#productModal1581">
+                Detalhes
+              </button>
+              <div class="modal fade" id="productModal1581" tabindex="-1" aria-labelledby="productModalLabel1581" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h5 class="modal-title" id="productModalLabel1581">CRAVO DA INDIA 30G</h5>
+                      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fechar"></button>
+                    </div>
+                    <div class="modal-body">
+                      <img class="imgmodal" src="../public/images/fonte-vida/about.png" alt="CRAVO DA INDIA 30G">
+                      <p>Cravo da Índia em embalagem de 30g. Usado como tempero e na medicina natural, possui propriedades antioxidantes e anti-inflamatórias.</p>
+                    </div>
+                    <div class="modal-footer">
+                      <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+            <div class="card">
+              <p class="title">ERVILHA 250 GR</p>
+              <img class="img2" src="../public/images/fonte-vida/about.png" alt="ERVILHA 250 GR">
+              <div class="card-info">
+                <p class="title">COD: 511</p>
+                <p class="shipping">Entrega a combinar</p>
+              </div>
+              <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#productModal511">
+                Detalhes
+              </button>
+              <div class="modal fade" id="productModal511" tabindex="-1" aria-labelledby="productModalLabel511" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h5 class="modal-title" id="productModalLabel511">ERVILHA 250 GR</h5>
+                      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fechar"></button>
+                    </div>
+                    <div class="modal-body">
+                      <img class="imgmodal" src="../public/images/fonte-vida/about.png" alt="ERVILHA 250 GR">
+                      <p>Ervilha em embalagem de 250g. Fonte de proteínas e fibras, é um ótimo complemento para uma dieta balanceada.</p>
+                    </div>
+                    <div class="modal-footer">
+                      <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+            <div class="card">
+              <p class="title">EXTRATO DE SOJA 500 GR</p>
+              <img class="img2" src="../public/images/fonte-vida/about.png" alt="EXTRATO DE SOJA 500 GR">
+              <div class="card-info">
+                <p class="title">COD: 481</p>
+                <p class="shipping">Entrega a combinar</p>
+              </div>
+              <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#productModal481">
+                Detalhes
+              </button>
+              <div class="modal fade" id="productModal481" tabindex="-1" aria-labelledby="productModalLabel481" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h5 class="modal-title" id="productModalLabel481">EXTRATO DE SOJA 500 GR</h5>
+                      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fechar"></button>
+                    </div>
+                    <div class="modal-body">
+                      <img class="imgmodal" src="../public/images/fonte-vida/about.png" alt="EXTRATO DE SOJA 500 GR">
+                      <p>Extrato de soja em embalagem de 500g. Rico em proteínas, é uma excelente alternativa para dietas vegetarianas e veganas.</p>
+                    </div>
+                    <div class="modal-footer">
+                      <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+            <div class="card">
+              <p class="title">EXTRATO DE SOJA 500 GR</p>
+              <img class="img2" src="../public/images/fonte-vida/about.png" alt="EXTRATO DE SOJA 500 GR">
+              <div class="card-info">
+                <p class="title">COD: 510</p>
+                <p class="shipping">Entrega a combinar</p>
+              </div>
+              <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#productModal510">
+                Detalhes
+              </button>
+              <div class="modal fade" id="productModal510" tabindex="-1" aria-labelledby="productModalLabel510" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h5 class="modal-title" id="productModalLabel510">EXTRATO DE SOJA 500 GR</h5>
+                      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fechar"></button>
+                    </div>
+                    <div class="modal-body">
+                      <img class="imgmodal" src="../public/images/fonte-vida/about.png" alt="EXTRATO DE SOJA 500 GR">
+                      <p>Extrato de soja em embalagem de 500g. Ideal para preparar pratos ricos em proteínas e com baixo teor de gordura.</p>
+                    </div>
+                    <div class="modal-footer">
+                      <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+  
+            <div class="card">
+              <p class="title">EXTRATO DE SOJA BANANA 400 GR</p>
+              <img class="img2" src="../public/images/fonte-vida/about.png" alt="EXTRATO DE SOJA BANANA 400 GR">
+              <div class="card-info">
+                <p class="title">COD: 509</p>
+                <p class="shipping">Entrega a combinar</p>
+              </div>
+              <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#productModal509">
+                Detalhes
+              </button>
+              <div class="modal fade" id="productModal509" tabindex="-1" aria-labelledby="productModalLabel509" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h5 class="modal-title" id="productModalLabel509">EXTRATO DE SOJA BANANA 400 GR</h5>
+                      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fechar"></button>
+                    </div>
+                    <div class="modal-body">
+                      <img class="imgmodal" src="../public/images/fonte-vida/about.png" alt="EXTRATO DE SOJA BANANA 400 GR">
+                      <p>Extrato de soja sabor banana em embalagem de 400g. Ideal para adicionar em vitaminas e receitas saudáveis, rico em proteínas.</p>
+                    </div>
+                    <div class="modal-footer">
+                      <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+            <div class="card">
+              <p class="title">EXTRATO DE SOJA CHOCOLATE 400 GR</p>
+              <img class="img2" src="../public/images/fonte-vida/about.png" alt="EXTRATO DE SOJA CHOCOLATE 400 GR">
+              <div class="card-info">
+                <p class="title">COD: 507</p>
+                <p class="shipping">Entrega a combinar</p>
+              </div>
+              <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#productModal507">
+                Detalhes
+              </button>
+              <div class="modal fade" id="productModal507" tabindex="-1" aria-labelledby="productModalLabel507" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h5 class="modal-title" id="productModalLabel507">EXTRATO DE SOJA CHOCOLATE 400 GR</h5>
+                      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fechar"></button>
+                    </div>
+                    <div class="modal-body">
+                      <img class="imgmodal" src="../public/images/fonte-vida/about.png" alt="EXTRATO DE SOJA CHOCOLATE 400 GR">
+                      <p>Extrato de soja sabor chocolate em embalagem de 400g. Perfeito para preparar shakes e sobremesas, adicionando sabor e nutrição.</p>
+                    </div>
+                    <div class="modal-footer">
+                      <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+            <div class="card">
+              <p class="title">EXTRATO DE SOJA MORANGO 400 GR</p>
+              <img class="img2" src="../public/images/fonte-vida/about.png" alt="EXTRATO DE SOJA MORANGO 400 GR">
+              <div class="card-info">
+                <p class="title">COD: 506</p>
+                <p class="shipping">Entrega a combinar</p>
+              </div>
+              <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#productModal506">
+                Detalhes
+              </button>
+              <div class="modal fade" id="productModal506" tabindex="-1" aria-labelledby="productModalLabel506" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h5 class="modal-title" id="productModalLabel506">EXTRATO DE SOJA MORANGO 400 GR</h5>
+                      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fechar"></button>
+                    </div>
+                    <div class="modal-body">
+                      <img class="imgmodal" src="../public/images/fonte-vida/about.png" alt="EXTRATO DE SOJA MORANGO 400 GR">
+                      <p>Extrato de soja sabor morango em embalagem de 400g. Uma opção deliciosa para enriquecer smoothies e receitas saudáveis.</p>
+                    </div>
+                    <div class="modal-footer">
+                      <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+            <div class="card">
+              <p class="title">FARELO DE ARROZ 250 GR</p>
+              <img class="img2" src="../public/images/fonte-vida/about.png" alt="FARELO DE ARROZ 250 GR">
+              <div class="card-info">
+                <p class="title">COD: 505</p>
+                <p class="shipping">Entrega a combinar</p>
+              </div>
+              <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#productModal505">
+                Detalhes
+              </button>
+              <div class="modal fade" id="productModal505" tabindex="-1" aria-labelledby="productModalLabel505" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h5 class="modal-title" id="productModalLabel505">FARELO DE ARROZ 250 GR</h5>
+                      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fechar"></button>
+                    </div>
+                    <div class="modal-body">
+                      <img class="imgmodal" src="../public/images/fonte-vida/about.png" alt="FARELO DE ARROZ 250 GR">
+                      <p>Farelo de arroz em embalagem de 250g. Rico em fibras, é utilizado para melhorar a digestão e pode ser adicionado a diversas receitas.</p>
+                    </div>
+                    <div class="modal-footer">
+                      <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+            <div class="card">
+              <p class="title">FARELO DE AVEIA 250 GR</p>
+              <img class="img2" src="../public/images/fonte-vida/about.png" alt="FARELO DE AVEIA 250 GR">
+              <div class="card-info">
+                <p class="title">COD: 504</p>
+                <p class="shipping">Entrega a combinar</p>
+              </div>
+              <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#productModal504">
+                Detalhes
+              </button>
+              <div class="modal fade" id="productModal504" tabindex="-1" aria-labelledby="productModalLabel504" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h5 class="modal-title" id="productModalLabel504">FARELO DE AVEIA 250 GR</h5>
+                      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fechar"></button>
+                    </div>
+                    <div class="modal-body">
+                      <img class="imgmodal" src="../public/images/fonte-vida/about.png" alt="FARELO DE AVEIA 250 GR">
+                      <p>Farelo de aveia em embalagem de 250g. Excelente fonte de fibras, ajuda na saciedade e é ideal para incluir em receitas saudáveis.</p>
+                    </div>
+                    <div class="modal-footer">
+                      <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+  
+            <div class="card">
+              <p class="title">FARELO DE SOJA 200 GR</p>
+              <img class="img2" src="../public/images/fonte-vida/about.png" alt="FARELO DE SOJA 200 GR">
+              <div class="card-info">
+                <p class="title">COD: 503</p>
+                <p class="shipping">Entrega a combinar</p>
+              </div>
+              <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#productModal503">
+                Detalhes
+              </button>
+              <div class="modal fade" id="productModal503" tabindex="-1" aria-labelledby="productModalLabel503" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h5 class="modal-title" id="productModalLabel503">FARELO DE SOJA 200 GR</h5>
+                      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fechar"></button>
+                    </div>
+                    <div class="modal-body">
+                      <img class="imgmodal" src="../public/images/fonte-vida/about.png" alt="FARELO DE SOJA 200 GR">
+                      <p>Farelo de soja em embalagem de 200g. Rico em proteínas e fibras, ideal para enriquecer receitas e auxiliar na dieta.</p>
+                    </div>
+                    <div class="modal-footer">
+                      <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+            <div class="card">
+              <p class="title">FARINHA DE AMENDOAS 150G</p>
+              <img class="img2" src="../public/images/fonte-vida/about.png" alt="FARINHA DE AMENDOAS 150G">
+              <div class="card-info">
+                <p class="title">COD: 1524</p>
+                <p class="shipping">Entrega a combinar</p>
+              </div>
+              <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#productModal1524">
+                Detalhes
+              </button>
+              <div class="modal fade" id="productModal1524" tabindex="-1" aria-labelledby="productModalLabel1524" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h5 class="modal-title" id="productModalLabel1524">FARINHA DE AMENDOAS 150G</h5>
+                      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fechar"></button>
+                    </div>
+                    <div class="modal-body">
+                      <img class="imgmodal" src="../public/images/fonte-vida/about.png" alt="FARINHA DE AMENDOAS 150G">
+                      <p>Farinha de amêndoas em embalagem de 150g. Ótima para receitas sem glúten e rica em gorduras saudáveis e proteínas.</p>
+                    </div>
+                    <div class="modal-footer">
+                      <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+            <div class="card">
+              <p class="title">FARINHA DE ARROZ 500G</p>
+              <img class="img2" src="../public/images/fonte-vida/about.png" alt="FARINHA DE ARROZ 500G">
+              <div class="card-info">
+                <p class="title">COD: 1465</p>
+                <p class="shipping">Entrega a combinar</p>
+              </div>
+              <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#productModal1465">
+                Detalhes
+              </button>
+              <div class="modal fade" id="productModal1465" tabindex="-1" aria-labelledby="productModalLabel1465" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h5 class="modal-title" id="productModalLabel1465">FARINHA DE ARROZ 500G</h5>
+                      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fechar"></button>
+                    </div>
+                    <div class="modal-body">
+                      <img class="imgmodal" src="../public/images/fonte-vida/about.png" alt="FARINHA DE ARROZ 500G">
+                      <p>Farinha de arroz em embalagem de 500g. Ideal para preparar receitas sem glúten e como espessante em molhos e sopas.</p>
+                    </div>
+                    <div class="modal-footer">
+                      <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+            <div class="card">
+              <p class="title">FARINHA DE AVEIA 500 GR</p>
+              <img class="img2" src="../public/images/fonte-vida/about.png" alt="FARINHA DE AVEIA 500 GR">
+              <div class="card-info">
+                <p class="title">COD: 500</p>
+                <p class="shipping">Entrega a combinar</p>
+              </div>
+              <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#productModal500">
+                Detalhes
+              </button>
+              <div class="modal fade" id="productModal500" tabindex="-1" aria-labelledby="productModalLabel500" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h5 class="modal-title" id="productModalLabel500">FARINHA DE AVEIA 500 GR</h5>
+                      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fechar"></button>
+                    </div>
+                    <div class="modal-body">
+                      <img class="imgmodal" src="../public/images/fonte-vida/about.png" alt="FARINHA DE AVEIA 500 GR">
+                      <p>Farinha de aveia em embalagem de 500g. Rica em fibras, ideal para preparar mingaus, panquecas e receitas saudáveis.</p>
+                    </div>
+                    <div class="modal-footer">
+                      <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+            <div class="card">
+              <p class="title">FARINHA DE BANANA VERDE 250 GR</p>
+              <img class="img2" src="../public/images/fonte-vida/about.png" alt="FARINHA DE BANANA VERDE 250 GR">
+              <div class="card-info">
+                <p class="title">COD: 499</p>
+                <p class="shipping">Entrega a combinar</p>
+              </div>
+              <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#productModal499">
+                Detalhes
+              </button>
+              <div class="modal fade" id="productModal499" tabindex="-1" aria-labelledby="productModalLabel499" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h5 class="modal-title" id="productModalLabel499">FARINHA DE BANANA VERDE 250 GR</h5>
+                      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fechar"></button>
+                    </div>
+                    <div class="modal-body">
+                      <img class="imgmodal" src="../public/images/fonte-vida/about.png" alt="FARINHA DE BANANA VERDE 250 GR">
+                      <p>Farinha de banana verde em embalagem de 250g. Rica em fibras e amido resistente, ótima para dietas e receitas saudáveis.</p>
+                    </div>
+                    <div class="modal-footer">
+                      <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="card">
+              <p class="title">FARINHA DE BERINJELA 125 GR</p>
+              <img class="img2" src="../public/images/fonte-vida/about.png" alt="FARINHA DE BERINJELA 125 GR">
+              <div class="card-info">
+                <p class="title">COD: 498</p>
+                <p class="shipping">Entrega a combinar</p>
+              </div>
+              <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#productModal498">
+                Detalhes
+              </button>
+              <div class="modal fade" id="productModal498" tabindex="-1" aria-labelledby="productModalLabel498" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h5 class="modal-title" id="productModalLabel498">FARINHA DE BERINJELA 125 GR</h5>
+                      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fechar"></button>
+                    </div>
+                    <div class="modal-body">
+                      <img class="imgmodal" src="../public/images/fonte-vida/about.png" alt="FARINHA DE BERINJELA 125 GR">
+                      <p>Farinha de berinjela em embalagem de 125g. Auxilia na redução de peso e no controle do colesterol, ideal para receitas saudáveis.</p>
+                    </div>
+                    <div class="modal-footer">
+                      <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+            <div class="card">
+              <p class="title">FARINHA DE CHIA 100G</p>
+              <img class="img2" src="../public/images/fonte-vida/about.png" alt="FARINHA DE CHIA 100G">
+              <div class="card-info">
+                <p class="title">COD: 1464</p>
+                <p class="shipping">Entrega a combinar</p>
+              </div>
+              <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#productModal1464">
+                Detalhes
+              </button>
+              <div class="modal fade" id="productModal1464" tabindex="-1" aria-labelledby="productModalLabel1464" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h5 class="modal-title" id="productModalLabel1464">FARINHA DE CHIA 100G</h5>
+                      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fechar"></button>
+                    </div>
+                    <div class="modal-body">
+                      <img class="imgmodal" src="../public/images/fonte-vida/about.png" alt="FARINHA DE CHIA 100G">
+                      <p>Farinha de chia em embalagem de 100g. Rica em fibras e ômega-3, ideal para adicionar em smoothies, pães e bolos.</p>
+                    </div>
+                    <div class="modal-footer">
+                      <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+            <div class="card">
+              <p class="title">FARINHA DE COCO 150 GR</p>
+              <img class="img2" src="../public/images/fonte-vida/about.png" alt="FARINHA DE COCO 150 GR">
+              <div class="card-info">
+                <p class="title">COD: 555</p>
+                <p class="shipping">Entrega a combinar</p>
+              </div>
+              <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#productModal555">
+                Detalhes
+              </button>
+              <div class="modal fade" id="productModal555" tabindex="-1" aria-labelledby="productModalLabel555" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h5 class="modal-title" id="productModalLabel555">FARINHA DE COCO 150 GR</h5>
+                      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fechar"></button>
+                    </div>
+                    <div class="modal-body">
+                      <img class="imgmodal" src="../public/images/fonte-vida/about.png" alt="FARINHA DE COCO 150 GR">
+                      <p>Farinha de coco em embalagem de 150g. Ótima para receitas sem glúten e rica em fibras, ideal para bolos e pães.</p>
+                    </div>
+                    <div class="modal-footer">
+                      <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+            <div class="card">
+              <p class="title">FARINHA DE FEIJÃO BRANCO 150 G</p>
+              <img class="img2" src="../public/images/fonte-vida/about.png" alt="FARINHA DE FEIJÃO BRANCO 150 G">
+              <div class="card-info">
+                <p class="title">COD: 1793</p>
+                <p class="shipping">Entrega a combinar</p>
+              </div>
+              <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#productModal1793">
+                Detalhes
+              </button>
+              <div class="modal fade" id="productModal1793" tabindex="-1" aria-labelledby="productModalLabel1793" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h5 class="modal-title" id="productModalLabel1793">FARINHA DE FEIJÃO BRANCO 150 G</h5>
+                      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fechar"></button>
+                    </div>
+                    <div class="modal-body">
+                      <img class="imgmodal" src="../public/images/fonte-vida/about.png" alt="FARINHA DE FEIJÃO BRANCO 150 G">
+                      <p>Farinha de feijão branco em embalagem de 150g. Ajuda na saciedade e é uma excelente fonte de proteínas e fibras.</p>
+                    </div>
+                    <div class="modal-footer">
+                      <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+            <div class="card">
+              <p class="title">FARINHA DE LINHACA DOURADA 200 GR</p>
+              <img class="img2" src="../public/images/fonte-vida/about.png" alt="FARINHA DE LINHACA DOURADA 200 GR">
+              <div class="card-info">
+                <p class="title">COD: 495</p>
+                <p class="shipping">Entrega a combinar</p>
+              </div>
+              <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#productModal495">
+                Detalhes
+              </button>
+              <div class="modal fade" id="productModal495" tabindex="-1" aria-labelledby="productModalLabel495" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h5 class="modal-title" id="productModalLabel495">FARINHA DE LINHACA DOURADA 200 GR</h5>
+                      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fechar"></button>
+                    </div>
+                    <div class="modal-body">
+                      <img class="imgmodal" src="../public/images/fonte-vida/about.png" alt="FARINHA DE LINHACA DOURADA 200 GR">
+                      <p>Farinha de linhaca dourada em embalagem de 200g. Rica em fibras e ácidos graxos ômega-3, ideal para receitas saudáveis.</p>
+                    </div>
+                    <div class="modal-footer">
+                      <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="card">
+              <p class="title">FARINHA DE LINHACA MARROM 200 GR</p>
+              <img class="img2" src="../public/images/fonte-vida/about.png" alt="FARINHA DE LINHACA MARROM 200 GR">
+              <div class="card-info">
+                <p class="title">COD: 494</p>
+                <p class="shipping">Entrega a combinar</p>
+              </div>
+              <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#productModal494">
+                Detalhes
+              </button>
+              <div class="modal fade" id="productModal494" tabindex="-1" aria-labelledby="productModalLabel494" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h5 class="modal-title" id="productModalLabel494">FARINHA DE LINHACA MARROM 200 GR</h5>
+                      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fechar"></button>
+                    </div>
+                    <div class="modal-body">
+                      <img class="imgmodal" src="../public/images/fonte-vida/about.png" alt="FARINHA DE LINHACA MARROM 200 GR">
+                      <p>Farinha de linhaca marrom em embalagem de 200g. Rica em fibras e ácidos graxos essenciais, ideal para enriquecer receitas.</p>
+                    </div>
+                    <div class="modal-footer">
+                      <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+            <div class="card">
+              <p class="title">FARINHA DE MARACUJÁ 100 GR</p>
+              <img class="img2" src="../public/images/fonte-vida/about.png" alt="FARINHA DE MARACUJÁ 100 GR">
+              <div class="card-info">
+                <p class="title">COD: 493</p>
+                <p class="shipping">Entrega a combinar</p>
+              </div>
+              <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#productModal493">
+                Detalhes
+              </button>
+              <div class="modal fade" id="productModal493" tabindex="-1" aria-labelledby="productModalLabel493" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h5 class="modal-title" id="productModalLabel493">FARINHA DE MARACUJÁ 100 GR</h5>
+                      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fechar"></button>
+                    </div>
+                    <div class="modal-body">
+                      <img class="imgmodal" src="../public/images/fonte-vida/about.png" alt="FARINHA DE MARACUJÁ 100 GR">
+                      <p>Farinha de maracujá em embalagem de 100g. Auxilia na digestão e é rica em fibras, ideal para adicionar em smoothies e receitas.</p>
+                    </div>
+                    <div class="modal-footer">
+                      <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+            <div class="card">
+              <p class="title">FARINHA DE SOJA 400 GR</p>
+              <img class="img2" src="../public/images/fonte-vida/about.png" alt="FARINHA DE SOJA 400 GR">
+              <div class="card-info">
+                <p class="title">COD: 492</p>
+                <p class="shipping">Entrega a combinar</p>
+              </div>
+              <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#productModal492">
+                Detalhes
+              </button>
+              <div class="modal fade" id="productModal492" tabindex="-1" aria-labelledby="productModalLabel492" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h5 class="modal-title" id="productModalLabel492">FARINHA DE SOJA 400 GR</h5>
+                      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fechar"></button>
+                    </div>
+                    <div class="modal-body">
+                      <img class="imgmodal" src="../public/images/fonte-vida/about.png" alt="FARINHA DE SOJA 400 GR">
+                      <p>Farinha de soja em embalagem de 400g. Rica em proteínas, ideal para enriquecer receitas e auxiliar na dieta.</p>
+                    </div>
+                    <div class="modal-footer">
+                      <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+            <div class="card">
+              <p class="title">FARINHA DE TRIGO INTEGRAL 500 GR</p>
+              <img class="img2" src="../public/images/fonte-vida/about.png" alt="FARINHA DE TRIGO INTEGRAL 500 GR">
+              <div class="card-info">
+                <p class="title">COD: 491</p>
+                <p class="shipping">Entrega a combinar</p>
+              </div>
+              <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#productModal491">
+                Detalhes
+              </button>
+              <div class="modal fade" id="productModal491" tabindex="-1" aria-labelledby="productModalLabel491" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h5 class="modal-title" id="productModalLabel491">FARINHA DE TRIGO INTEGRAL 500 GR</h5>
+                      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fechar"></button>
+                    </div>
+                    <div class="modal-body">
+                      <img class="imgmodal" src="../public/images/fonte-vida/about.png" alt="FARINHA DE TRIGO INTEGRAL 500 GR">
+                      <p>Farinha de trigo integral em embalagem de 500g. Rica em fibras e nutrientes, ideal para pães e receitas saudáveis.</p>
+                    </div>
+                    <div class="modal-footer">
+                      <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+            <div class="card">
+              <p class="title">FIBRA DE MACA 200 GR</p>
+              <img class="img2" src="../public/images/fonte-vida/about.png" alt="FIBRA DE MACA 200 GR">
+              <div class="card-info">
+                <p class="title">COD: 1213</p>
+                <p class="shipping">Entrega a combinar</p>
+              </div>
+              <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#productModal1213">
+                Detalhes
+              </button>
+              <div class="modal fade" id="productModal1213" tabindex="-1" aria-labelledby="productModalLabel1213" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h5 class="modal-title" id="productModalLabel1213">FIBRA DE MACA 200 GR</h5>
+                      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fechar"></button>
+                    </div>
+                    <div class="modal-body">
+                      <img class="imgmodal" src="../public/images/fonte-vida/about.png" alt="FIBRA DE MACA 200 GR">
+                      <p>Fibra de maca em embalagem de 200g. Ajuda na digestão e é rica em nutrientes, ideal para smoothies e receitas saudáveis.</p>
+                    </div>
+                    <div class="modal-footer">
+                      <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+  
+            <div class="card">
+              <p class="title">FIBRA DE SOJA 300 GR</p>
+              <img class="img2" src="../public/images/fonte-vida/about.png" alt="FIBRA DE SOJA 300 GR">
+              <div class="card-info">
+                <p class="title">COD: 490</p>
+                <p class="shipping">Entrega a combinar</p>
+              </div>
+              <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#productModal490">
+                Detalhes
+              </button>
+              <div class="modal fade" id="productModal490" tabindex="-1" aria-labelledby="productModalLabel490" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h5 class="modal-title" id="productModalLabel490">FIBRA DE SOJA 300 GR</h5>
+                      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fechar"></button>
+                    </div>
+                    <div class="modal-body">
+                      <img class="imgmodal" src="../public/images/fonte-vida/about.png" alt="FIBRA DE SOJA 300 GR">
+                      <p>Fibra de soja em embalagem de 300g. Rica em proteínas e fibras, ideal para enriquecer receitas e auxiliar na dieta.</p>
+                    </div>
+                    <div class="modal-footer">
+                      <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+            <div class="card">
+              <p class="title">FIBRA DE TRIGO 300 GR</p>
+              <img class="img2" src="../public/images/fonte-vida/about.png" alt="FIBRA DE TRIGO 300 GR">
+              <div class="card-info">
+                <p class="title">COD: 489</p>
+                <p class="shipping">Entrega a combinar</p>
+              </div>
+              <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#productModal489">
+                Detalhes
+              </button>
+              <div class="modal fade" id="productModal489" tabindex="-1" aria-labelledby="productModalLabel489" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h5 class="modal-title" id="productModalLabel489">FIBRA DE TRIGO 300 GR</h5>
+                      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fechar"></button>
+                    </div>
+                    <div class="modal-body">
+                      <img class="imgmodal" src="../public/images/fonte-vida/about.png" alt="FIBRA DE TRIGO 300 GR">
+                      <p>Fibra de trigo em embalagem de 300g. Ajuda na digestão e é rica em fibras, ideal para adicionar em pães e receitas.</p>
+                    </div>
+                    <div class="modal-footer">
+                      <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+            <div class="card">
+              <p class="title">FRUTAS CRISTALIZADAS 200 GR</p>
+              <img class="img2" src="../public/images/fonte-vida/about.png" alt="FRUTAS CRISTALIZADAS 200 GR">
+              <div class="card-info">
+                <p class="title">COD: 487</p>
+                <p class="shipping">Entrega a combinar</p>
+              </div>
+              <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#productModal487">
+                Detalhes
+              </button>
+              <div class="modal fade" id="productModal487" tabindex="-1" aria-labelledby="productModalLabel487" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h5 class="modal-title" id="productModalLabel487">FRUTAS CRISTALIZADAS 200 GR</h5>
+                      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fechar"></button>
+                    </div>
+                    <div class="modal-body">
+                      <img class="imgmodal" src="../public/images/fonte-vida/about.png" alt="FRUTAS CRISTALIZADAS 200 GR">
+                      <p>Frutas cristalizadas em embalagem de 200g. Deliciosas e práticas, ideais para bolos, tortas e como lanche.</p>
+                    </div>
+                    <div class="modal-footer">
+                      <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+            <div class="card">
+              <p class="title">GENGIBRE EM PÓ 100 GR</p>
+              <img class="img2" src="../public/images/fonte-vida/about.png" alt="GENGIBRE EM PÓ 100 GR">
+              <div class="card-info">
+                <p class="title">COD: 434</p>
+                <p class="shipping">Entrega a combinar</p>
+              </div>
+              <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#productModal434">
+                Detalhes
+              </button>
+              <div class="modal fade" id="productModal434" tabindex="-1" aria-labelledby="productModalLabel434" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h5 class="modal-title" id="productModalLabel434">GENGIBRE EM PÓ 100 GR</h5>
+                      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fechar"></button>
+                    </div>
+                    <div class="modal-body">
+                      <img class="imgmodal" src="../public/images/fonte-vida/about.png" alt="GENGIBRE EM PÓ 100 GR">
+                      <p>Gengibre em pó em embalagem de 100g. Excelente para temperar pratos e preparar chás, conhecido por suas propriedades anti-inflamatórias.</p>
+                    </div>
+                    <div class="modal-footer">
+                      <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="card">
+              <p class="title">GERGELIM PRETO 200 GR</p>
+              <img class="img2" src="../public/images/fonte-vida/about.png" alt="GERGELIM PRETO 200 GR">
+              <div class="card-info">
+                <p class="title">COD: 485</p>
+                <p class="shipping">Entrega a combinar</p>
+              </div>
+              <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#productModal485">
+                Detalhes
+              </button>
+              <div class="modal fade" id="productModal485" tabindex="-1" aria-labelledby="productModalLabel485" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h5 class="modal-title" id="productModalLabel485">GERGELIM PRETO 200 GR</h5>
+                      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fechar"></button>
+                    </div>
+                    <div class="modal-body">
+                      <img class="imgmodal" src="../public/images/fonte-vida/about.png" alt="GERGELIM PRETO 200 GR">
+                      <p>Gergelim preto em embalagem de 200g. Rico em cálcio e antioxidantes, ideal para adicionar em saladas, pães e receitas.</p>
+                    </div>
+                    <div class="modal-footer">
+                      <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+            <div class="card">
+              <p class="title">GERGELIM SEM CASCA 200 GR</p>
+              <img class="img2" src="../public/images/fonte-vida/about.png" alt="GERGELIM SEM CASCA 200 GR">
+              <div class="card-info">
+                <p class="title">COD: 1133</p>
+                <p class="shipping">Entrega a combinar</p>
+              </div>
+              <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#productModal1133">
+                Detalhes
+              </button>
+              <div class="modal fade" id="productModal1133" tabindex="-1" aria-labelledby="productModalLabel1133" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h5 class="modal-title" id="productModalLabel1133">GERGELIM SEM CASCA 200 GR</h5>
+                      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fechar"></button>
+                    </div>
+                    <div class="modal-body">
+                      <img class="imgmodal" src="../public/images/fonte-vida/about.png" alt="GERGELIM SEM CASCA 200 GR">
+                      <p>Gergelim sem casca em embalagem de 200g. Excelente fonte de proteína e fibras, ideal para enriquecer pratos e receitas.</p>
+                    </div>
+                    <div class="modal-footer">
+                      <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+            <div class="card">
+              <p class="title">GERMEN DE TRIGO 300 GR</p>
+              <img class="img2" src="../public/images/fonte-vida/about.png" alt="GERMEN DE TRIGO 300 GR">
+              <div class="card-info">
+                <p class="title">COD: 483</p>
+                <p class="shipping">Entrega a combinar</p>
+              </div>
+              <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#productModal483">
+                Detalhes
+              </button>
+              <div class="modal fade" id="productModal483" tabindex="-1" aria-labelledby="productModalLabel483" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h5 class="modal-title" id="productModalLabel483">GERMEN DE TRIGO 300 GR</h5>
+                      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fechar"></button>
+                    </div>
+                    <div class="modal-body">
+                      <img class="imgmodal" src="../public/images/fonte-vida/about.png" alt="GERMEN DE TRIGO 300 GR">
+                      <p>Germen de trigo em embalagem de 300g. Rico em vitaminas e minerais, ideal para adicionar em iogurtes, smoothies e receitas.</p>
+                    </div>
+                    <div class="modal-footer">
+                      <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          
+      </div>
+    </section>
+    </br></br>
+     
+    </section>
+    </br></br> </section>
+
+
+    </br></br>
+    <!-------- PAGE BUTTONS------->
+    <div class="page-btn">
+      <a href="solnatus.html"> <span>1</span></a>
+  <a href="solnatus-2.html"> <span>2</span></a> 
+<a href="solnatus-3.html"> <span>3</span></a>
+<a class="active-span" href="solnatus-4.html"><span style="background:#198754; color: #fff;">4</span></a>
+<a href="solnatus-5.html"> <span>5</span></a>
+<a href="solnatus-6.html"> <span>6</span></a>
+    </div>
+    <div class="divider-1"></div>
+
+  </main>
+
+  <section>
+
+    <section class="mapa" id="produtos">
+      <!--
+      <div class="fotos">
+        <h2 style="text-align: center;" class="title">Produtos Diversos</h2>
+        <div class="slider-principal">
+          <img src="../static/products-image/natumais/1.jpeg" />
+          <img src="../static/products-image/natumais/2.jpeg" />
+          <img src="../static/products-image/natumais/3.jpeg" />
+          <img src="../static/products-image/natumais/4.jpeg" />
+          <img src="../static/products-image/natumais/5.jpeg" />
+        </div>
+      -->
+
+
+      <h2 style="text-align: center; margin-top: 4%;" class="title">Mais Produtos</h2>
+      <p>(clique ou pare o cursor para visualizar)</p>
+      <div class="cardhover">
+        <div class="card2">
+          <div class="img-box">
+            <a href="../page-mentos/mentos.html">
+              <img src="../static/products-image/doces-chicletes-balas/balas.png">
+            </a>
+          </div>
+          <div class="content2">
+            <h2>Mentos</h2>
+            <p>
+              Confira a marca Mentos.
+            </p>
+            <a href="../page-mentos/mentos.html" class="read-more">
+              Ver Catálogo
+            </a>
+          </div>
+        </div>
+        <div class="card2">
+          <div class="img-box">
+            <a href="../page-fonte-verde/tipo-ftverde.html">
+              <img src="../static/products-image/natumais/Fonte verde/logoFonteVerde.png">
+            </a>
+          </div>
+          <div class="content2">
+            <h2>Fonte Verde</h2>
+            <p>
+              Confira os produtos da FONTE VERDE orgânicos que contribuem para a sua saúde, e possuem uma ampla gama de
+              benefícios para a
+              saúde, incluindo propriedades antioxidantes, anti-inflamatórias, relaxantes e digestivas.
+            </p>
+            <a href="page-fonte-verde/tipo-ftverde.html" class="read-more">
+              Ver Catálogo
+            </a>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="divider-1"></div>
+
+      <!-- CONTACT -->
+      <section class="section" id="contact">
+        <div class="container grid">
+          <div class="text">
+            <h2 class="title">Entre em contato com a gente!</h2>
+            <p>
+              Entre em contato conosco, queremos tirar suas dúvidas,
+              ouvir suas críticas e sugestões.
+            </p>
+            <a href="https://api.whatsapp.com/send?phone=553335631647&text=Oláa! Gostaria de um produto" class="button"
+              target="_blank"></i> Entrar em contato</a>
+          </div>
+
+          <div class="links">
+            <ul class="grid">
+              <li><i class="icon-phone"></i> <a href="tel:+55xxxxx"> (33) 333563-1647</a></li>
+              <li><i class="icon-map-pin"></i> Manhuaçu MG</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      </div>
+    </section>
+    <footer class="section">
+      <div class="container grid">
+        <div class="brand">
+          <a class="logo logo-alt" href="#home">Natu<span>Mais </span> ⠀</a>
+
+        </div>
+
+        <div class="social grid">
+          <p style="color: #fff;">Mídias Sociais:</p>
+          <a href="https://www.instagram.com/natumais_/" target="_blank">
+            <i class="icon-instagram"></i>
+          </a>
+          <a href="https://api.whatsapp.com/send?phone=553335631647&text=Oláa!" target="_blank">
+            <svg class="svgwpp" xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="#fff"
+              class="bi bi-whatsapp" viewBox="0 0 16 16">
+              <path
+                d="M13.601 2.326A7.854 7.854 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.933 7.933 0 0 0 3.79.965h.004c4.368 0 7.926-3.558 7.93-7.93A7.898 7.898 0 0 0 13.6 2.326zM7.994 14.521a6.573 6.573 0 0 1-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931 6.557 6.557 0 0 1 1.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592zm3.615-4.934c-.197-.099-1.17-.578-1.353-.646-.182-.065-.315-.099-.445.099-.133.197-.513.646-.627.775-.114.133-.232.148-.43.05-.197-.1-.836-.308-1.592-.985-.59-.525-.985-1.175-1.103-1.372-.114-.198-.011-.304.088-.403.087-.088.197-.232.296-.346.1-.114.133-.198.198-.33.065-.134.034-.248-.015-.347-.05-.099-.445-1.076-.612-1.47-.16-.389-.323-.335-.445-.34-.114-.007-.247-.007-.38-.007a.729.729 0 0 0-.529.247c-.182.198-.691.677-.691 1.654 0 .977.71 1.916.81 2.049.098.133 1.394 2.132 3.383 2.992.47.205.84.326 1.129.418.475.152.904.129 1.246.08.38-.058 1.171-.48 1.338-.943.164-.464.164-.86.114-.943-.049-.084-.182-.133-.38-.232z" />
+            </svg></a>
+        </div>
+        <div style="color: #fff;">
+
+          <script>var data = new Date();
+            var dias = new Array(
+              'Domingo', 'Segunda-feira', 'Terça-feira', 'Quarta-feira', 'Quinta-feira', 'Sexta-feira', 'Sábado'
+            );
+
+            document.write(dias[data.getDay()]);</script>
+          <p id="time"></p>
+        </div>
+      </div>
+    </footer>
+
+
+    <div class="dev" style="background: var(--base-color);">
+      <div style="align-items: center; color: #fff;" class="social grid">
+        <div class="col-md-12 text-center">
+
+
+
+
+
+          <script>var timeDisplay = document.getElementById("time");
+            function refreshTime() {
+              var dateString = new Date().toLocaleString("pt-BR", { timeZone: "America/Sao_Paulo" });
+              var formattedString = dateString.replace(", ", " - ");
+              timeDisplay.innerHTML = formattedString;
+            }
+
+            setInterval(refreshTime, 1000);</script>
+
+          <a style="color: #fff;" href="https://www.instagram.com/hericksouza.gg/" target="_blank"><p style="position: relative;" class="mt-5">byHerick&copy;
+          </p></a>
+
+        </div>
+
+      </div>
+      <p class="dev" style="top:100%; color: #fff; margin: 0 auto; font-size: 12px; text-align: center;">Natumais ©2024
+        - Todos os direitos reservados.</p>
+    </div>
+    </div>
+
+    <a href="#inicio" class="back-to-top"><i class="icon-arrow-up"></i></a>
+
+    <!-- swiper -->
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
+    <!-- scrollreveal -->
+    <script src="https://unpkg.com/scrollreveal"></script>
+
+    <!-- main.js <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3742.9054286502214!2d-42.030741723819375!3d-20.262756548758546!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xbb03c907812fbb%3A0xc1508199696bd20d!2sAlfa%20Odontologia!5e0!3m2!1spt-BR!2sbr!4v1682474612695!5m2!1spt-BR!2sbr"
+            width="600" height="450" allowfullscreen="" loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>-->
+    <script type="text/javascript" src="../CodejqueryMin.js"></script>
+    <script type="text/javascript" src="../jqueryMigrate.js"></script>
+    <script type="text/javascript" src="../slick.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.1.3/js/bootstrap.min.js"></script>
+
+    <script src="../main.js"></script>
+</body>
+
+</html>

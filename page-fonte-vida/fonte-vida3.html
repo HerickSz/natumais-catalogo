@@ -64,6 +64,61 @@
             class="logo-detail">Novos Produtos!</span>
         </p>
 
+        <h1 class="searchh">Pesquisa de Produtos</h1>
+      <input type="text" id="searchInput" placeholder="Pesquisar produto..." onkeyup="searchProducts()">
+      <style>
+        /* Estilo para o título com a classe searchh */
+.searchh {
+  color: #28a745; /* Verde preferencial */
+  text-align: center; /* Centraliza o título */
+  font-size: 1.5em; /* Tamanho da fonte */
+  margin: 20px 0; /* Margens superior e inferior */
+}
+
+/* Estilo para o input */
+#searchInput {
+  width: 100%; /* Largura total */
+  max-width: 400px; /* Largura máxima */
+  padding: 10px; /* Espaçamento interno */
+  border: 2px solid #28a745; /* Borda verde */
+  border-radius: 5px; /* Cantos arredondados */
+  font-size: 1em; /* Tamanho da fonte */
+  margin: 0 auto; /* Centraliza o input */
+  display: block; /* Exibe como bloco */
+  transition: border-color 0.3s; /* Transição suave para a borda */
+  margin-bottom: 10px;
+}
+
+/* Efeito ao focar no input */
+#searchInput:focus {
+  border-color: #218838; /* Verde mais escuro ao focar */
+  outline: none; /* Remove o contorno padrão */
+}
+
+        
+.hidden {
+  display: none;
+}
+    </style>
+     <script>
+      function searchProducts() {
+          const input = document.getElementById('searchInput').value.toLowerCase();
+          const cards = document.querySelectorAll('.card');
+
+          cards.forEach(card => {
+              const title = card.querySelector('.title').textContent.toLowerCase();
+              const code = card.querySelector('.card-info .title').textContent.toLowerCase();
+
+              // Verifica se a entrada do usuário está contida no título ou no código
+              if (title.includes(input) || code.includes(input)) {
+                  card.classList.remove('hidden');
+              } else {
+                  card.classList.add('hidden');
+              }
+          });
+      }
+  </script>
+
         <h2 style="text-align: center;background-color: rgb(245 245 245);" class="title">Fonte Vida Página 3</h2>
         <div class="page-btn">
           <a href="fonte-vida.html"> <span>1</span></a>
@@ -78,254 +133,352 @@
 
           <div class="card">
             <p class="title">CÚRCUMA C/ 60/120CAPS</p>
-
-            <img class="img2" src="../public/images/fonte-vida/curcuma60120caps.png" alt="Pré-visualização do produto">
+            <img class="img2" src="../public/images/fonte-vida/curcuma60120caps.png" alt="CÚRCUMA C/ 60/120 CAPS">
             <div class="card-info">
-              <!--<p class="tag">Fonte verde</p><-->
-              <p class="title">COD 60: 1348</br>
-                COD 120: 1527</p>
-
-              <!--<p class="shipping">12UN /CX</p>-->
-              <p class="shipping">Entrega a combinar</p>
+                <p class="title">COD 60: 1348</br>COD 120: 1527</p>
+                <p class="shipping">Entrega a combinar</p>
             </div>
-
-            <div class="btinfo"><a class="button-buy">Detalhes</a>
-              <p class="info">É indicada para problemas como resfriados, sinusites, infecções bacterianas, alterações no
-                fígado, diabetes, lesões, anorexia e reumatismo.</p>
+            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#productModal1348">Detalhes</button>
+            <!-- Modal -->
+            <div class="modal fade" id="productModal1348" tabindex="-1" aria-labelledby="productModalLabel1348" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="productModalLabel1348">CÚRCUMA C/ 60/120CAPS</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fechar"></button>
+                        </div>
+                        <div class="modal-body">
+                            <img class="imgmodal" src="../public/images/fonte-vida/curcuma60120caps.png" alt="CÚRCUMA C/ 60/120 CAPS">
+                            <p>É indicada para problemas como resfriados, sinusites, infecções bacterianas, alterações no fígado, diabetes, lesões, anorexia e reumatismo.</p>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+                        </div>
+                    </div>
+                </div>
             </div>
-          </div>
-          <div class="card">
-            <p class="title">DIABÉTICO</p>
-            <img class="img2" src="../public/images/fonte-vida/diabetico60caps.png" alt="Pré-visualização do produto">
-            <div class="card-info">
-              <!--<p class="tag">Fonte verde</p><-->
-              <p class="title">
-                COD 60: 1349
-              </p>
-
-              <!--<p class="shipping">12UN /CX</p>-->
-              <p class="shipping">Entrega a combinar</p>
-            </div>
-
-            <div class="btinfo"><a class="button-buy">Detalhes</a>
-              <p class="info">Auxilia na melhora do quadro de diabetes atuando em várias frentes importantes.
-              </p>
-
-            </div>
-          </div>
-          <div class="card">
-            <p class="title">CÚRCUMA PIMENTA PRETA 120 CAPS</p>
-            <img class="img2" src="../public/images/fonte-vida/curcumapimentapreta120caps.png"
-              alt="Pré-visualização do produto">
-            <div class="card-info">
-              <!--<p class="tag">Fonte verde</p><-->
-              <p class="title">COD 120:1382</br>
-              </p>
-              <!--<p class="shipping">12UN /CX</p>-->
-            </div>
-
-            <div class="btinfo"><a class="button-buy">Detalhes</a>
-              <p class="info"> É indicada para problemas como resfriados, sinusites, infecções bacterianas, alterações
-                no
-                fígado, diabetes, lesões, anorexia e reumatismo.</p>
-              <p class="shipping">Entrega a combinar</p>
-            </div>
-          </div>
-
-          <div class="card">
-            <p class="title">VIAGRON C/ 120CAPS</p>
-            <img class="img2" src="../public/images/fonte-vida/viagron120caps.png" alt="Pré-visualização do produto">
-            <div class="card-info">
-              <!--<p class="tag">Fonte verde</p><-->
-              <p class="title">
-                COD 120: 1407
-              </p>
-
-
-              <!--<p class="shipping">12UN /CX</p>-->
-              <p class="shipping">Entrega a combinar</p>
-            </div>
-
-            <div class="btinfo"><a class="button-buy">Detalhes</a>
-              <p class="info">Este suplemento pode ajudar a promover a saúde sexual masculina, aumentando a libido e a
-                energia.</p>
-            </div>
-          </div>
-
-          <div class="card">
-            <p class="title">ESPINHEIRA SANTA C/ 60CAPS</p>
-            <img class="img2" src="../public/images/fonte-vida/espinheirasanta120caps.png"
-              alt="Pré-visualização do produto">
-            <div class="card-info">
-              <!--<p class="tag">Fonte verde</p><-->
-              <p class="title">COD:1452</p>
-
-
-              <!--<p class="shipping">12UN /CX</p>-->
-              <p class="shipping">Entrega a combinar</p>
-            </div>
-
-            <div class="btinfo"><a class="button-buy">Detalhes</a>
-              <p class="info">utilizada na medicina popular no tratamento de gastrite e indigestão.</p>
-            </div>
-          </div>
-
-          <div class="card">
-            <p class="title">SECA BARRIGA C/ COLÁGENO 60/120caps</p>
-            <img class="img2" src="../public/images/fonte-vida/secabarrigacolageno12060.png"
-              alt="Pré-visualização do produto">
-            <div class="card-info">
-              <!--<p class="tag">Fonte verde</p><-->
-              <p class="title">COD 60:1473</br>
-                COD 120: 1466
-              </p>
-
-
-              <!--<p class="shipping">12UN /CX</p>-->
-              <p class="shipping">Entrega a combinar</p>
-            </div>
-
-            <div class="btinfo"><a class="button-buy">Detalhes</a>
-              <p class="info">Elimina retenção de líquidos e ajuda a manter a elasticidade da pele firme devida ao
-                colágeno.
-              </p>
-            </div>
-          </div>
-
         </div>
-      </div>
-    </section>
+        
+        <div class="card">
+            <p class="title">DIABÉTICO</p>
+            <img class="img2" src="../public/images/fonte-vida/diabetico60caps.png" alt="DIABÉTICO">
+            <div class="card-info">
+                <p class="title">COD 60: 1349</p>
+                <p class="shipping">Entrega a combinar</p>
+            </div>
+            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#productModal1349">Detalhes</button>
+            <!-- Modal -->
+            <div class="modal fade" id="productModal1349" tabindex="-1" aria-labelledby="productModalLabel1349" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="productModalLabel1349">DIABÉTICO</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fechar"></button>
+                        </div>
+                        <div class="modal-body">
+                            <img class="imgmodal" src="../public/images/fonte-vida/diabetico60caps.png" alt="DIABÉTICO">
+                            <p>Auxilia na melhora do quadro de diabetes atuando em várias frentes importantes.</p>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="card">
+            <p class="title">CÚRCUMA PIMENTA PRETA 120 CAPS</p>
+            <img class="img2" src="../public/images/fonte-vida/curcumapimentapreta120caps.png" alt="CÚRCUMA PIMENTA PRETA 120 CAPS">
+            <div class="card-info">
+                <p class="title">COD 120:1382</p>
+                <p class="shipping">Entrega a combinar</p>
+            </div>
+            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#productModal1382">Detalhes</button>
+            <!-- Modal -->
+            <div class="modal fade" id="productModal1382" tabindex="-1" aria-labelledby="productModalLabel1382" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="productModalLabel1382">CÚRCUMA PIMENTA PRETA 120 CAPS</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fechar"></button>
+                        </div>
+                        <div class="modal-body">
+                            <img class="imgmodal" src="../public/images/fonte-vida/curcumapimentapreta120caps.png" alt="CÚRCUMA PIMENTA PRETA 120 CAPS">
+                            <p>É indicada para problemas como resfriados, sinusites, infecções bacterianas, alterações no fígado, diabetes, lesões, anorexia e reumatismo.</p>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="card">
+            <p class="title">VIAGRON C/ 120CAPS</p>
+            <img class="img2" src="../public/images/fonte-vida/viagron120caps.png" alt="VIAGRON C/ 120 CAPS">
+            <div class="card-info">
+                <p class="title">COD 120: 1407</p>
+                <p class="shipping">Entrega a combinar</p>
+            </div>
+            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#productModal1407">Detalhes</button>
+            <!-- Modal -->
+            <div class="modal fade" id="productModal1407" tabindex="-1" aria-labelledby="productModalLabel1407" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="productModalLabel1407">VIAGRON C/ 120CAPS</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fechar"></button>
+                        </div>
+                        <div class="modal-body">
+                            <img class="imgmodal" src="../public/images/fonte-vida/viagron120caps.png" alt="VIAGRON C/ 120 CAPS">
+                            <p>Este suplemento pode ajudar a promover a saúde sexual masculina, aumentando a libido e a energia.</p>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="card">
+            <p class="title">ESPINHEIRA SANTA C/ 60CAPS</p>
+            <img class="img2" src="../public/images/fonte-vida/espinheirasanta120caps.png" alt="ESPINHEIRA SANTA C/ 60 CAPS">
+            <div class="card-info">
+                <p class="title">COD:1452</p>
+                <p class="shipping">Entrega a combinar</p>
+            </div>
+            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#productModal1452">Detalhes</button>
+            <!-- Modal -->
+            <div class="modal fade" id="productModal1452" tabindex="-1" aria-labelledby="productModalLabel1452" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="productModalLabel1452">ESPINHEIRA SANTA C/ 60CAPS</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fechar"></button>
+                        </div>
+                        <div class="modal-body">
+                            <img class="imgmodal" src="../public/images/fonte-vida/espinheirasanta120caps.png" alt="ESPINHEIRA SANTA C/ 60 CAPS">
+                            <p>Utilizada na medicina popular no tratamento de gastrite e indigestão.</p>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="card">
+            <p class="title">SECA BARRIGA C/ COLÁGENO 60/120 CAPS</p>
+            <img class="img2" src="../public/images/fonte-vida/secabarrigacolageno12060.png" alt="SECA BARRIGA C/ COLÁGENO 60/120 CAPS">
+            <div class="card-info">
+                <p class="title">COD 60:1473</br>COD 120: 1466</p>
+                <p class="shipping">Entrega a combinar</p>
+            </div>
+            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#productModal1473">Detalhes</button>
+            <!-- Modal -->
+            <div class="modal fade" id="productModal1473" tabindex="-1" aria-labelledby="productModalLabel1473" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="productModalLabel1473">SECA BARRIGA C/ COLÁGENO 60/120 CAPS</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fechar"></button>
+                        </div>
+                        <div class="modal-body">
+                            <img class="imgmodal" src="../public/images/fonte-vida/secabarrigacolageno12060.png" alt="SECA BARRIGA C/ COLÁGENO 60/120 CAPS">
+                            <p>Elimina retenção de líquidos e ajuda a manter a elasticidade da pele firme devido ao colágeno.</p>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+
+          
+
+       
+      
+  
     </br></br>
 
     <div class="divider-1"></div>
 
 
-    <section class="product-list wrapper">
-
-
-      <div class="cards-container">
+    
         <div class="card">
           <p class="title">GINKGO BILOBA + GINSENG 120CAPS</p>
-          <img class="img2" src="../public/images/fonte-vida/ginkComGinseng120caps.png"
-            alt="Pré-visualização do produto">
+          <img class="img2" src="../public/images/fonte-vida/ginkComGinseng120caps.png" alt="GINKGO BILOBA + GINSENG 120 CAPS">
           <div class="card-info">
-            <!--<p class="tag">Fonte verde</p><-->
-            <p class="title">
-              COD 120: 1477
-            </p>
-
-            <!--<p class="shipping">12UN /CX</p>-->
-            <p class="shipping">Entrega a combinar</p>
+              <p class="title">COD 120: 1477</p>
+              <p class="shipping">Entrega a combinar</p>
           </div>
-
-          <div class="btinfo"><a class="button-buy">Detalhes</a>
-            <p class="info">O ginkgo biloba é usado na medicina tradicional chinesa como tratamento popular para dores
-              de cabeça e enxaqueca. </br>O benefício ocorre por conta dos efeitos anti-inflamatórios e antioxidantes
-              presentes na planta medicinal. Além disso, ajuda a diminuir o estresse e aumenta o fluxo sanguíneo, o que
-              melhora os sintomas.</p>
-
+          <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#productModal1477">Detalhes</button>
+          <!-- Modal -->
+          <div class="modal fade" id="productModal1477" tabindex="-1" aria-labelledby="productModalLabel1477" aria-hidden="true">
+              <div class="modal-dialog modal-dialog-centered">
+                  <div class="modal-content">
+                      <div class="modal-header">
+                          <h5 class="modal-title" id="productModalLabel1477">GINKGO BILOBA + GINSENG 120CAPS</h5>
+                          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fechar"></button>
+                      </div>
+                      <div class="modal-body">
+                          <img class="imgmodal" src="../public/images/fonte-vida/ginkComGinseng120caps.png" alt="GINKGO BILOBA + GINSENG 120 CAPS">
+                          <p>O ginkgo biloba é usado na medicina tradicional chinesa como tratamento popular para dores de cabeça e enxaqueca. O benefício ocorre por conta dos efeitos anti-inflamatórios e antioxidantes presentes na planta medicinal. Além disso, ajuda a diminuir o estresse e aumenta o fluxo sanguíneo, o que melhora os sintomas.</p>
+                      </div>
+                      <div class="modal-footer">
+                          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+                      </div>
+                  </div>
+              </div>
           </div>
-        </div>
-        <div class="card">
+      </div>
+      
+      <div class="card">
           <p class="title">SPIRULINA C/60 CAPS</p>
-          <img class="img2" src="../public/images/fonte-vida/about.png" alt="Pré-visualização do produto">
+          <img class="img2" src="../public/images/fonte-vida/about.png" alt="SPIRULINA C/60 CAPS">
           <div class="card-info">
-            <!--<p class="tag">Fonte verde</p><-->
-            <p class="title">COD 60 :1483
-            </p>
-
-
-            <!--<p class="shipping">12UN /CX</p>-->
-            <p class="shipping">Entrega a combinar</p>
+              <p class="title">COD 60: 1483</p>
+              <p class="shipping">Entrega a combinar</p>
           </div>
-
-          <div class="btinfo"><a class="button-buy">Detalhes</a>
-            <p class="info">Ela é fonte de proteínas, aminoácidos, vitamina A, vitaminas do complexo B, vitamina E,
-              minerais e ácidos fenólicos. Por conter todas essas substâncias, os benefícios da Spirulina vão do auxílio
-              no tratamento da osteoporose até a prevenção do envelhecimento precoce.</p>
+          <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#productModal1483">Detalhes</button>
+          <!-- Modal -->
+          <div class="modal fade" id="productModal1483" tabindex="-1" aria-labelledby="productModalLabel1483" aria-hidden="true">
+              <div class="modal-dialog modal-dialog-centered">
+                  <div class="modal-content">
+                      <div class="modal-header">
+                          <h5 class="modal-title" id="productModalLabel1483">SPIRULINA C/60 CAPS</h5>
+                          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fechar"></button>
+                      </div>
+                      <div class="modal-body">
+                          <img class="imgmodal" src="../public/images/fonte-vida/about.png" alt="SPIRULINA C/60 CAPS">
+                          <p>Ela é fonte de proteínas, aminoácidos, vitamina A, vitaminas do complexo B, vitamina E, minerais e ácidos fenólicos. Por conter todas essas substâncias, os benefícios da Spirulina vão do auxílio no tratamento da osteoporose até a prevenção do envelhecimento precoce.</p>
+                      </div>
+                      <div class="modal-footer">
+                          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+                      </div>
+                  </div>
+              </div>
           </div>
-        </div>
-        <div class="card">
+      </div>
+      
+      <div class="card">
           <p class="title">DETOX C/ 120CAPS</p>
-          <img class="img2" src="../public/images/fonte-vida/detox120caps.png" alt="Pré-visualização do produto">
+          <img class="img2" src="../public/images/fonte-vida/detox120caps.png" alt="DETOX C/ 120 CAPS">
           <div class="card-info">
-            <!--<p class="tag">Fonte verde</p><-->
-            <p class="title">COD:1484
-            </p>
-
-            <!--<p class="shipping">12UN /CX</p>-->
-            <p class="shipping">Entrega a combinar</p>
+              <p class="title">COD: 1484</p>
+              <p class="shipping">Entrega a combinar</p>
           </div>
-
-          <div class="btinfo"><a class="button-buy">Detalhes</a>
-            <p class="info">Possui ação desintoxicante do organismo ao mesmo tempo em que acelera o seu metabolismo e
-              ajuda na diminuição da compulsão por doces.</p>
-
+          <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#productModal1484">Detalhes</button>
+          <!-- Modal -->
+          <div class="modal fade" id="productModal1484" tabindex="-1" aria-labelledby="productModalLabel1484" aria-hidden="true">
+              <div class="modal-dialog modal-dialog-centered">
+                  <div class="modal-content">
+                      <div class="modal-header">
+                          <h5 class="modal-title" id="productModalLabel1484">DETOX C/ 120CAPS</h5>
+                          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fechar"></button>
+                      </div>
+                      <div class="modal-body">
+                          <img class="imgmodal" src="../public/images/fonte-vida/detox120caps.png" alt="DETOX C/ 120 CAPS">
+                          <p>Possui ação desintoxicante do organismo ao mesmo tempo em que acelera o seu metabolismo e ajuda na diminuição da compulsão por doces.</p>
+                      </div>
+                      <div class="modal-footer">
+                          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+                      </div>
+                  </div>
+              </div>
           </div>
-        </div>
-
-        <div class="card">
+      </div>
+      
+      <div class="card">
           <p class="title">ALCACHOFRA C/60 CAPS</p>
-          <img class="img2" src="../public/images/fonte-vida/alcachofra60caps.png" alt="Pré-visualização do produto">
+          <img class="img2" src="../public/images/fonte-vida/alcachofra60caps.png" alt="ALCACHOFRA C/60 CAPS">
           <div class="card-info">
-            <!--<p class="tag">Fonte verde</p><-->
-            <p class="title">COD 60: 1486
-            </p>
-
-
-            <!--<p class="shipping">12UN /CX</p>-->
-            <p class="shipping">Entrega a combinar</p>
+              <p class="title">COD 60: 1486</p>
+              <p class="shipping">Entrega a combinar</p>
           </div>
-
-          <div class="btinfo"><a class="button-buy">Detalhes</a>
-            <p class="info">Alcachofra Herbarium é indicada para facilitar a digestão e aliviar o desconforto abdominal
-              gases e náuseas resultantes de deficiência na produção e eliminação da bile. E atua na diminuição do
-              colesterol presente no sangue.
-            </p>
+          <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#productModal1486">Detalhes</button>
+          <!-- Modal -->
+          <div class="modal fade" id="productModal1486" tabindex="-1" aria-labelledby="productModalLabel1486" aria-hidden="true">
+              <div class="modal-dialog modal-dialog-centered">
+                  <div class="modal-content">
+                      <div class="modal-header">
+                          <h5 class="modal-title" id="productModalLabel1486">ALCACHOFRA C/60 CAPS</h5>
+                          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fechar"></button>
+                      </div>
+                      <div class="modal-body">
+                          <img class="imgmodal" src="../public/images/fonte-vida/alcachofra60caps.png" alt="ALCACHOFRA C/60 CAPS">
+                          <p>Alcachofra Herbarium é indicada para facilitar a digestão e aliviar o desconforto abdominal, gases e náuseas resultantes de deficiência na produção e eliminação da bile. E atua na diminuição do colesterol presente no sangue.</p>
+                      </div>
+                      <div class="modal-footer">
+                          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+                      </div>
+                  </div>
+              </div>
           </div>
-        </div>
-
-        <div class="card">
+      </div>
+      
+      <div class="card">
           <p class="title">CASTANHA DA INDIA C/60 CAPS</p>
-          <img class="img2" src="../public/images/fonte-vida/castanhaIndia60cps.png" alt="Pré-visualização do produto">
+          <img class="img2" src="../public/images/fonte-vida/castanhaIndia60cps.png" alt="CASTANHA DA INDIA C/60 CAPS">
           <div class="card-info">
-            <!--<p class="tag">Fonte verde</p><-->
-            <p class="title">COD 60: 1526
-            </p>
-
-
-            <!--<p class="shipping">12UN /CX</p>-->
-            <p class="shipping">Entrega a combinar</p>
+              <p class="title">COD 60: 1526</p>
+              <p class="shipping">Entrega a combinar</p>
           </div>
-
-          <div class="btinfo"><a class="button-buy">Detalhes</a>
-            <p class="info">A Castanha da Índia Herbarium atua no tratamento de sintomas de insuficiência venosa, como
-              sensação de dor e peso nas pernas, inchaço, cãibras e prurido, e fragilidade capilar. Pernas leves, como
-              todas nós merecemos.</p>
+          <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#productModal1526">Detalhes</button>
+          <!-- Modal -->
+          <div class="modal fade" id="productModal1526" tabindex="-1" aria-labelledby="productModalLabel1526" aria-hidden="true">
+              <div class="modal-dialog modal-dialog-centered">
+                  <div class="modal-content">
+                      <div class="modal-header">
+                          <h5 class="modal-title" id="productModalLabel1526">CASTANHA DA INDIA C/60 CAPS</h5>
+                          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fechar"></button>
+                      </div>
+                      <div class="modal-body">
+                          <img class="imgmodal" src="../public/images/fonte-vida/castanhaIndia60cps.png" alt="CASTANHA DA INDIA C/60 CAPS">
+                          <p>A Castanha da Índia Herbarium atua no tratamento de sintomas de insuficiência venosa, como sensação de dor e peso nas pernas, inchaço, cãibras e prurido, e fragilidade capilar. Pernas leves, como todas nós merecemos.</p>
+                      </div>
+                      <div class="modal-footer">
+                          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+                      </div>
+                  </div>
+              </div>
           </div>
-        </div>
-
-        <div class="card">
+      </div>
+      
+      <div class="card">
           <p class="title">SENE C/ 120CAPS</p>
-          <img class="img2" src="../public/images/fonte-vida/sene120caps.png" alt="Pré-visualização do produto">
+          <img class="img2" src="../public/images/fonte-vida/sene120caps.png" alt="SENE C/ 120 CAPS">
           <div class="card-info">
-            <!--<p class="tag">Fonte verde</p><-->
-            <p class="title">
-              COD 120: 1585
-            </p>
-
-
-            <!--<p class="shipping">12UN /CX</p>-->
-            <p class="shipping">Entrega a combinar</p>
+              <p class="title">COD 120: 1585</p>
+              <p class="shipping">Entrega a combinar</p>
           </div>
-
-          <div class="btinfo"><a class="button-buy">Detalhes</a>
-            <p class="info">É muito utilizada para tratar a prisão de ventre, especialmente devido às suas fortes
-              propriedades laxativas e purgantes, que não produzem irritação estomacal e/ou intestinal. O uso do Sene
-              também estimula as contrações no intestino grosso, resultando em um trânsito acelerado do bolo fecal.
-            </p>
+          <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#productModal1585">Detalhes</button>
+          <!-- Modal -->
+          <div class="modal fade" id="productModal1585" tabindex="-1" aria-labelledby="productModalLabel1585" aria-hidden="true">
+              <div class="modal-dialog modal-dialog-centered">
+                  <div class="modal-content">
+                      <div class="modal-header">
+                          <h5 class="modal-title" id="productModalLabel1585">SENE C/ 120CAPS</h5>
+                          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fechar"></button>
+                      </div>
+                      <div class="modal-body">
+                          <img class="imgmodal" src="../public/images/fonte-vida/sene120caps.png" alt="SENE C/ 120 CAPS">
+                          <p>É muito utilizada para tratar a prisão de ventre, especialmente devido às suas fortes propriedades laxativas e purgantes, que não produzem irritação estomacal e/ou intestinal. O uso do Sene também estimula as contrações no intestino grosso, resultando em um trânsito acelerado do bolo fecal.</p>
+                      </div>
+                      <div class="modal-footer">
+                          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+                      </div>
+                  </div>
+              </div>
           </div>
-        </div>
+      </div>
+      
     </section>
     </br></br> </section>
 
@@ -477,7 +630,7 @@
 
             setInterval(refreshTime, 1000);</script>
 
-          <a style="color: #fff;" href="https://www.instagram.com/heerick.gg/" target="_blank"><p style="position: relative;" class="mt-5">byHerick&copy;
+          <a style="color: #fff;" href="https://www.instagram.com/hericksouza.gg/" target="_blank"><p style="position: relative;" class="mt-5">byHerick&copy;
           </p></a>
 
         </div>
